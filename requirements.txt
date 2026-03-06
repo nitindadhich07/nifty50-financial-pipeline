@@ -1,0 +1,9 @@
+sqlalchemy
+requests
+fastapi
+uvicorn
+pdfplumber
+pytesseract
+beautifulsoup4
+pandas
+python-multipart

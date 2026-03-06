@@ -1,0 +1,19 @@
+# Data
+data/financial_results/
+data/*.pdf
+data/*.json
+data/*.txt
+db/*.db
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# System/IDE
+.DS_Store
+.vscode/
+.idea/
+
+# Temp
+/tmp/
