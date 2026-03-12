@@ -1,0 +1,22 @@
+{
+  "quarterly": [
+    {
+      "label": "Mar 2025",
+      "path": "data/RELIANCE/raw/quarterly_pdf/Mar_2025.pdf",
+      "status": "success",
+      "url": "",
+      "date": "",
+      "source": "disk"
+    }
+  ],
+  "annual": [
+    {
+      "label": "FY2025",
+      "path": "data/RELIANCE/raw/annual_pdf/FY2025_Annual_Report.pdf",
+      "status": "success",
+      "url": "",
+      "date": "",
+      "source": "disk"
+    }
+  ]
+}

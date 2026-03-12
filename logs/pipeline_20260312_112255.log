@@ -1,0 +1,123 @@
+2026-03-12 11:22:55,379 [INFO] main: 
+############################################################
+  FINANCIAL PIPELINE v2 — RELIANCE
+  2026-03-12T05:52:55.379766+00:00
+############################################################
+2026-03-12 11:22:55,379 [INFO] main: 
+############################################################
+STEP 1: NSE XBRL — RELIANCE
+############################################################
+2026-03-12 11:22:57,513 [INFO] pipeline.xbrl_parser: NSE XBRL session ready
+2026-03-12 11:22:57,513 [INFO] pipeline.xbrl_parser: Fetching NSE XBRL Quarterly for RELIANCE...
+2026-03-12 11:22:57,627 [INFO] pipeline.xbrl_parser:   Got 5 Quarterly periods from NSE XBRL
+2026-03-12 11:22:57,631 [INFO] pipeline.xbrl_parser:   [Dec 2024] Sales=128260.0 | NetProfit=8721.0 | OPM=11.86%
+2026-03-12 11:22:57,631 [INFO] pipeline.xbrl_parser:   [Sep 2024] Sales=134054.0 | NetProfit=7713.0 | OPM=10.01%
+2026-03-12 11:22:57,631 [INFO] pipeline.xbrl_parser:   [Jun 2024] Sales=134331.0 | NetProfit=7611.0 | OPM=10.66%
+2026-03-12 11:22:57,631 [INFO] pipeline.xbrl_parser:   [Mar 2024] Sales=151014.0 | NetProfit=11283.0 | OPM=13.26%
+2026-03-12 11:22:57,631 [INFO] pipeline.xbrl_parser:   [Dec 2023] Sales=130579.0 | NetProfit=9924.0 | OPM=13.45%
+2026-03-12 11:22:57,631 [INFO] pipeline.xbrl_parser: Fetching NSE XBRL Annual for RELIANCE...
+2026-03-12 11:22:57,683 [INFO] pipeline.xbrl_parser:   Got 5 Annual periods from NSE XBRL
+2026-03-12 11:22:57,683 [INFO] pipeline.xbrl_parser:   [FY2025] Sales=128260.0 | NetProfit=8721.0 | OPM=11.86%
+2026-03-12 11:22:57,683 [INFO] pipeline.xbrl_parser:   [FY2025] Sales=134054.0 | NetProfit=7713.0 | OPM=10.01%
+2026-03-12 11:22:57,684 [INFO] pipeline.xbrl_parser:   [FY2025] Sales=134331.0 | NetProfit=7611.0 | OPM=10.66%
+2026-03-12 11:22:57,684 [INFO] pipeline.xbrl_parser:   [FY2024] Sales=151014.0 | NetProfit=11283.0 | OPM=13.26%
+2026-03-12 11:22:57,684 [INFO] pipeline.xbrl_parser:   [FY2024] Sales=130579.0 | NetProfit=9924.0 | OPM=13.45%
+2026-03-12 11:22:57,684 [INFO] main: XBRL: 5 quarterly periods | 2 annual periods with sales data
+2026-03-12 11:22:57,687 [INFO] main: 
+############################################################
+STEP 2: PDF DOWNLOAD — RELIANCE
+############################################################
+2026-03-12 11:22:57,688 [INFO] pipeline.downloader: NSE cookie handshake...
+2026-03-12 11:22:59,815 [INFO] pipeline.downloader: BSE cookie handshake...
+2026-03-12 11:23:01,492 [INFO] pipeline.downloader: 
+============================================================
+2026-03-12 11:23:01,493 [INFO] pipeline.downloader: NSE Quarterly Download: RELIANCE (01-01-2024 → 31-03-2026)
+2026-03-12 11:23:02,401 [INFO] pipeline.downloader: Found 593 total NSE announcements
+2026-03-12 11:23:02,402 [INFO] pipeline.downloader:   → [Dec 2025] Outcome of Board Meeting
+2026-03-12 11:23:02,403 [INFO] pipeline.downloader:       es.nseindia.com/corporate/kavinavora_16012026190810_FR_1.pdf
+2026-03-12 11:23:02,862 [INFO] pipeline.downloader:   [SAVED] 4663 KB → data/reliance/quarterly/Dec_2025.pdf
+2026-03-12 11:23:03,868 [INFO] pipeline.downloader:   → [Sep 2025] Outcome of Board Meeting
+2026-03-12 11:23:03,868 [INFO] pipeline.downloader:       es.nseindia.com/corporate/kavinavora_17102025190048_SE_F.pdf
+2026-03-12 11:23:04,260 [INFO] pipeline.downloader:   [SAVED] 7313 KB → data/reliance/quarterly/Sep_2025.pdf
+2026-03-12 11:23:05,263 [INFO] pipeline.downloader:   → [Jun 2025] Outcome of Board Meeting
+2026-03-12 11:23:05,263 [INFO] pipeline.downloader:       s.nseindia.com/corporate/kavinavora_18072025193102_SE_FR.pdf
+2026-03-12 11:23:05,698 [INFO] pipeline.downloader:   [SAVED] 9116 KB → data/reliance/quarterly/Jun_2025.pdf
+2026-03-12 11:23:06,704 [INFO] pipeline.downloader:   → [Mar 2025] Outcome of Board Meeting
+2026-03-12 11:23:06,705 [INFO] pipeline.downloader:       s.nseindia.com/corporate/kavinavora_25042025200131_SE_FR.pdf
+2026-03-12 11:23:07,358 [INFO] pipeline.downloader:   [SAVED] 11115 KB → data/reliance/quarterly/Mar_2025.pdf
+2026-03-12 11:23:08,363 [INFO] pipeline.downloader:   [DUP] Mar 2025 already queued, skipping
+2026-03-12 11:23:08,365 [INFO] pipeline.downloader:   → [Dec 2023] Outcome of Board Meeting
+2026-03-12 11:23:08,365 [INFO] pipeline.downloader:       ndia.com/corporate/RELIANCE_19012024182113_RILLR19012024.pdf
+2026-03-12 11:23:08,497 [INFO] pipeline.downloader:   [SAVED] 1377 KB → data/reliance/quarterly/Dec_2023.pdf
+2026-03-12 11:23:09,501 [INFO] pipeline.downloader: NSE Quarterly: 5/5 downloaded
+2026-03-12 11:23:09,503 [INFO] pipeline.downloader: 
+============================================================
+2026-03-12 11:23:09,503 [INFO] pipeline.downloader: NSE Annual Download: RELIANCE (01-01-2020 → 31-03-2026)
+2026-03-12 11:23:10,966 [INFO] pipeline.downloader:   → [FY2022] Outcome of Board Meeting
+2026-03-12 11:23:11,950 [INFO] pipeline.downloader:   [SAVED] 19319 KB → data/reliance/annual/FY2022_Annual_Report.pdf
+2026-03-12 11:23:13,158 [INFO] pipeline.downloader:   → [FY2021] Disclosure of other UPSI/material event
+2026-03-12 11:23:13,249 [INFO] pipeline.downloader:   [SAVED] 40 KB → data/reliance/annual/FY2021_Annual_Report.pdf
+2026-03-12 11:23:14,458 [INFO] pipeline.downloader:   → [FY2020] Updates
+2026-03-12 11:23:15,931 [INFO] pipeline.downloader:   [SAVED] 24120 KB → data/reliance/annual/FY2020_Annual_Report.pdf
+2026-03-12 11:23:17,142 [INFO] pipeline.downloader: NSE Annual: 3/3 downloaded
+2026-03-12 11:23:17,153 [INFO] main: 
+############################################################
+STEP 3: PARSE & EXTRACT — RELIANCE
+############################################################
+2026-03-12 11:23:17,154 [INFO] main: XBRL has 5 quarterly periods — skipping quarterly PDFs
+2026-03-12 11:23:17,154 [INFO] main: 
+  Annual PDF [FY2022]: data/reliance/annual/FY2022_Annual_Report.pdf
+2026-03-12 11:23:17,154 [INFO] pipeline.pdf_parser: Parsing: data/reliance/annual/FY2022_Annual_Report.pdf
+2026-03-12 11:23:17,187 [INFO] pipeline.pdf_parser:   pdfplumber: 37 pages
+2026-03-12 11:23:20,669 [INFO] main:   Parsed 37 pages
+2026-03-12 11:23:20,680 [INFO] main:   BS extracted: ['FY2023']
+2026-03-12 11:23:20,692 [INFO] main:   CF extracted: ['FY2023']
+2026-03-12 11:23:20,692 [INFO] main: 
+  Annual PDF [FY2021]: data/reliance/annual/FY2021_Annual_Report.pdf
+2026-03-12 11:23:20,692 [INFO] pipeline.pdf_parser: Parsing: data/reliance/annual/FY2021_Annual_Report.pdf
+2026-03-12 11:23:20,693 [INFO] pipeline.pdf_parser:   pdfplumber: 1 pages
+2026-03-12 11:23:20,737 [INFO] main:   Parsed 1 pages
+2026-03-12 11:23:20,737 [INFO] main:   BS extracted: ['FY2025', 'FY2024']
+2026-03-12 11:23:20,738 [INFO] main:   CF extracted: ['FY2025', 'FY2024']
+2026-03-12 11:23:20,738 [INFO] main: 
+  Annual PDF [FY2020]: data/reliance/annual/FY2020_Annual_Report.pdf
+2026-03-12 11:23:20,738 [INFO] pipeline.pdf_parser: Parsing: data/reliance/annual/FY2020_Annual_Report.pdf
+2026-03-12 11:23:21,332 [INFO] pipeline.pdf_parser:   pdfplumber: 230 pages
+2026-03-12 11:24:11,108 [INFO] main:   Parsed 230 pages
+2026-03-12 11:24:11,199 [INFO] main:   BS extracted: ['FY2021', 'FY2020']
+2026-03-12 11:24:11,399 [INFO] main:   CF extracted: ['FY2021', 'FY2020']
+2026-03-12 11:24:11,399 [INFO] main: 
+Extraction complete: Q P&L=5 | A P&L=2 | BS=5 | CF=5
+2026-03-12 11:24:11,418 [INFO] main: 
+############################################################
+STEP 4: VALIDATE — RELIANCE
+############################################################
+2026-03-12 11:24:11,418 [INFO] pipeline.validator:   ✓ P&L [Dec 2024]: OK
+2026-03-12 11:24:11,418 [INFO] pipeline.validator:   ✓ P&L [Sep 2024]: OK
+2026-03-12 11:24:11,418 [INFO] pipeline.validator:   ✓ P&L [Jun 2024]: OK
+2026-03-12 11:24:11,418 [INFO] pipeline.validator:   ✓ P&L [Mar 2024]: OK
+2026-03-12 11:24:11,419 [INFO] pipeline.validator:   ✓ P&L [Dec 2023]: OK
+2026-03-12 11:24:11,419 [INFO] pipeline.validator:   ✓ P&L [FY2025]: OK
+2026-03-12 11:24:11,419 [INFO] pipeline.validator:   ✓ P&L [FY2024]: OK
+2026-03-12 11:24:11,419 [WARNING] pipeline.validator:   ✗ VALIDATION: [FY2023] BS equation: Assets=326622.0, Eq+Liab=1197207.0, diff=72.7%
+2026-03-12 11:24:11,419 [WARNING] pipeline.validator:   ✗ VALIDATION: [FY2025] Missing: total_assets
+2026-03-12 11:24:11,419 [WARNING] pipeline.validator:   ✗ VALIDATION: [FY2024] Missing: total_assets
+2026-03-12 11:24:11,419 [WARNING] pipeline.validator:   ✗ VALIDATION: [FY2021] BS equation: Assets=180716.0, Eq+Liab=293173.0, diff=38.4%
+2026-03-12 11:24:11,419 [WARNING] pipeline.validator:   ✗ VALIDATION: [FY2020] BS equation: Assets=1321212.0, Eq+Liab=949974.0, diff=39.1%
+2026-03-12 11:24:11,419 [WARNING] pipeline.validator:   ✗ VALIDATION: [FY2023] CF: CFO+CFI+CFF=-46182.0 vs net=34252.0, diff=174.2%
+2026-03-12 11:24:11,419 [WARNING] pipeline.validator:   ✗ VALIDATION: [FY2025] Missing: cash_from_operating_activities
+2026-03-12 11:24:11,419 [WARNING] pipeline.validator:   ✗ VALIDATION: [FY2024] Missing: cash_from_operating_activities
+2026-03-12 11:24:11,419 [INFO] pipeline.validator:   ✓ CF [FY2021]: OK
+2026-03-12 11:24:11,419 [INFO] pipeline.validator:   ✓ CF [FY2020]: OK
+2026-03-12 11:24:11,419 [INFO] pipeline.validator: 
+VALIDATION SUMMARY: ✗ ISSUES FOUND | 8 issue categories
+2026-03-12 11:24:11,419 [INFO] main: 
+############################################################
+STEP 5: EXPORT — RELIANCE
+############################################################
+2026-03-12 11:24:11,421 [INFO] pipeline.export_json: JSON saved → output/RELIANCE.json (12 KB)
+2026-03-12 11:24:11,423 [INFO] pipeline.export_json: JSON saved → output/reliance/financial_data.json (12 KB)
+2026-03-12 11:24:11,424 [INFO] pipeline.export_json: JSON saved → output/reliance/financial_data_20260312_112411.json (12 KB)
+2026-03-12 11:24:11,424 [INFO] main: 
+✓ Done! Output → output/RELIANCE.json
+2026-03-12 11:24:11,424 [INFO] main:   Log → logs/pipeline_20260312_112255.log

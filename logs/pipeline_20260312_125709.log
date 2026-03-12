@@ -1,0 +1,50 @@
+2026-03-12 12:57:09,999 [INFO] main: 
+############################################################
+  FINANCIAL PIPELINE v2 — RELIANCE
+  2026-03-12T07:27:09.999946+00:00
+############################################################
+2026-03-12 12:57:10,000 [INFO] main: Existing PDFs: 1 quarterly | 1 annual
+2026-03-12 12:57:10,000 [INFO] main: 
+############################################################
+STEP 3: PARSE & EXTRACT — RELIANCE
+############################################################
+2026-03-12 12:57:10,000 [INFO] main: Falling back to PDF extraction for quarterly data
+2026-03-12 12:57:10,000 [INFO] main:   Quarterly PDF: [Mar 2025] data/RELIANCE/raw/quarterly_pdf/Mar_2025.pdf
+2026-03-12 12:57:10,000 [INFO] pipeline.pdf_parser: Parsing: data/RELIANCE/raw/quarterly_pdf/Mar_2025.pdf
+2026-03-12 12:57:10,261 [INFO] pipeline.pdf_parser:   pdfplumber-optimized: 37 pages (Identified 9 relevant)
+2026-03-12 12:57:11,267 [INFO] pipeline.financial_extractor:   [TABLE MATCH] interest row: 'finance costs' -> [6179.0, 23118.0]
+2026-03-12 12:57:11,267 [INFO] pipeline.financial_extractor:   [TABLE MATCH] depreciation row: 'depreciation / a' -> [13181.0, 50832.0]
+2026-03-12 12:57:11,287 [INFO] main:   PDF extracted 3 quarterly period(s)
+2026-03-12 12:57:11,287 [INFO] main: 
+  Annual PDF [FY2025]: data/RELIANCE/raw/annual_pdf/FY2025_Annual_Report.pdf
+2026-03-12 12:57:11,288 [INFO] pipeline.pdf_parser: Parsing: data/RELIANCE/raw/annual_pdf/FY2025_Annual_Report.pdf
+2026-03-12 12:57:13,065 [INFO] pipeline.pdf_parser:   pdfplumber-optimized: 146 pages (Identified 53 relevant)
+2026-03-12 12:57:26,339 [INFO] main:   Parsed 146 pages
+2026-03-12 12:57:26,342 [INFO] pipeline.financial_extractor:   Targeted BALANCE SHEET to 13 pages
+2026-03-12 12:57:26,396 [INFO] main:   BS extracted: ['FY2025', 'FY2024', 'FY2023', 'FY2022', 'FY2021']
+2026-03-12 12:57:26,399 [INFO] pipeline.financial_extractor:   Targeted CASH FLOW to 14 pages
+2026-03-12 12:57:26,457 [INFO] main:   CF extracted: ['FY2025', 'FY2024', 'FY2023', 'FY2022', 'FY2021']
+2026-03-12 12:57:26,461 [INFO] pipeline.financial_extractor:   Targeted PROFIT AND LOSS to 10 pages
+2026-03-12 12:57:26,484 [WARNING] main: FY2025 missing from annual_pnl after extraction
+2026-03-12 12:57:26,484 [INFO] main: 
+Extraction complete (FY2025 Filtered): Q P&L=0 | A P&L=0 | BS=1 | CF=1
+2026-03-12 12:57:26,484 [INFO] main: 
+############################################################
+STEP 4: VALIDATE — RELIANCE
+############################################################
+2026-03-12 12:57:26,485 [INFO] pipeline.validator:   ✓ BS [FY2025]: OK
+2026-03-12 12:57:26,485 [INFO] pipeline.validator:   ✓ CF [FY2025]: OK
+2026-03-12 12:57:26,485 [INFO] pipeline.validator: 
+VALIDATION SUMMARY: ✓ PASSED | 0 issue categories
+2026-03-12 12:57:26,485 [INFO] main: 
+############################################################
+STEP 5: EXPORT — RELIANCE
+############################################################
+2026-03-12 12:57:26,486 [INFO] pipeline.export_json: JSON saved → data/RELIANCE/extracted/profit_loss_quarterly.json (0 KB)
+2026-03-12 12:57:26,486 [INFO] pipeline.export_json: JSON saved → data/RELIANCE/extracted/profit_loss_yearly.json (0 KB)
+2026-03-12 12:57:26,486 [INFO] pipeline.export_json: JSON saved → data/RELIANCE/extracted/balance_sheet.json (0 KB)
+2026-03-12 12:57:26,486 [INFO] pipeline.export_json: JSON saved → data/RELIANCE/extracted/cash_flow.json (0 KB)
+2026-03-12 12:57:26,486 [INFO] pipeline.export_json: JSON saved → data/RELIANCE/final/company_financials.json (2 KB)
+2026-03-12 12:57:26,486 [INFO] main: 
+✓ Done! Output → data/RELIANCE/final/company_financials.json
+2026-03-12 12:57:26,486 [INFO] main:   Log → logs/pipeline_20260312_125709.log

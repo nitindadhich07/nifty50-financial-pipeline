@@ -1,9 +1,22 @@
-sqlalchemy
-requests
-fastapi
-uvicorn
-pdfplumber
-pytesseract
-beautifulsoup4
-pandas
+# Core HTTP
+requests>=2.31.0
+
+# PDF Parsing
+pdfplumber>=0.10.3
+PyMuPDF>=1.23.0
+
+# Data handling
+pandas>=2.0.0
+
+# API server (existing)
+fastapi>=0.110.0
+uvicorn>=0.27.0
+sqlalchemy>=2.0.0
+
+# Utilities (existing)
 python-multipart
+beautifulsoup4
+
+# Optional: tabula-py (requires Java) and camelot for complex tables
+# tabula-py>=2.9.0
+# camelot-py[cv]>=0.11.0

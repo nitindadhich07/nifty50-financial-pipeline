@@ -1,0 +1,81 @@
+2026-03-12 13:03:01,203 [INFO] main: 
+############################################################
+  FINANCIAL PIPELINE v2 — RELIANCE
+  2026-03-12T07:33:01.203706+00:00
+############################################################
+2026-03-12 13:03:01,203 [INFO] main: Existing PDFs: 1 quarterly | 1 annual
+2026-03-12 13:03:01,204 [INFO] main: 
+############################################################
+STEP 3: PARSE & EXTRACT — RELIANCE
+############################################################
+2026-03-12 13:03:01,204 [INFO] main: Falling back to PDF extraction for quarterly data
+2026-03-12 13:03:01,204 [INFO] main:   Quarterly PDF: [Mar 2025] data/RELIANCE/raw/quarterly_pdf/Mar_2025.pdf
+2026-03-12 13:03:01,204 [INFO] pipeline.pdf_parser: Parsing: data/RELIANCE/raw/quarterly_pdf/Mar_2025.pdf
+2026-03-12 13:03:01,420 [INFO] pipeline.pdf_parser:   pdfplumber-optimized: 37 pages (Identified 9 relevant)
+2026-03-12 13:03:02,499 [INFO] pipeline.financial_extractor:   [TABLE MATCH] interest row: 'finance costs' -> [6179.0, 23118.0]
+2026-03-12 13:03:02,500 [INFO] pipeline.financial_extractor:   [TABLE MATCH] depreciation row: 'depreciation / a' -> [13181.0, 50832.0]
+2026-03-12 13:03:02,501 [INFO] pipeline.financial_extractor:   [TABLE MATCH] sales row: 'revenue from operations' -> [243.0, 5.0]
+2026-03-12 13:03:02,501 [INFO] pipeline.financial_extractor:   [TABLE MATCH] profit_before_tax row: 'profit before tax' -> [2864.0, 3.0]
+2026-03-12 13:03:02,517 [INFO] main:   PDF extracted 3 quarterly period(s)
+2026-03-12 13:03:02,517 [INFO] main: 
+  Annual PDF [FY2025]: data/RELIANCE/raw/annual_pdf/FY2025_Annual_Report.pdf
+2026-03-12 13:03:02,517 [INFO] pipeline.pdf_parser: Parsing: data/RELIANCE/raw/annual_pdf/FY2025_Annual_Report.pdf
+2026-03-12 13:03:04,229 [INFO] pipeline.pdf_parser:   pdfplumber-optimized: 146 pages (Identified 53 relevant)
+2026-03-12 13:03:17,665 [INFO] main:   Parsed 146 pages
+2026-03-12 13:03:17,668 [INFO] pipeline.financial_extractor:   Targeted BALANCE SHEET to 6 pages
+2026-03-12 13:03:17,674 [INFO] pipeline.financial_extractor:   [TEXT MATCH] ppe on page 99: [1.0] (from line: 'Property, Plant and Equipment')
+2026-03-12 13:03:17,674 [INFO] pipeline.financial_extractor:   [TEXT MATCH] intangibles on page 99: [1.0] (from line: 'Other Intangible Assets')
+2026-03-12 13:03:17,674 [INFO] pipeline.financial_extractor:   [TEXT MATCH] goodwill on page 99: [1.0] (from line: 'Goodwill')
+2026-03-12 13:03:17,674 [INFO] pipeline.financial_extractor:   [TEXT MATCH] capital_work_in_progress on page 99: [1.0] (from line: 'Capital Work-in-Progress')
+2026-03-12 13:03:17,675 [INFO] pipeline.financial_extractor:   [TEXT MATCH] total_non_current_assets on page 99: [1450851.0] (from line: 'Total Non-Current Assets')
+2026-03-12 13:03:17,675 [INFO] pipeline.financial_extractor:   [TEXT MATCH] inventory on page 99: [7.0] (from line: 'Inventories')
+2026-03-12 13:03:17,675 [INFO] pipeline.financial_extractor:   [TEXT MATCH] receivables on page 99: [9.0] (from line: 'Trade Receivables')
+2026-03-12 13:03:17,675 [INFO] pipeline.financial_extractor:   [TEXT MATCH] other_current_assets on page 99: [12.0] (from line: 'Other Current Assets')
+2026-03-12 13:03:17,675 [INFO] pipeline.financial_extractor:   [TEXT MATCH] total_current_assets on page 99: [499270.0] (from line: 'Total Current Assets')
+2026-03-12 13:03:17,676 [INFO] pipeline.financial_extractor:   [TEXT MATCH] equity_share_capital on page 99: [14.0] (from line: 'Equity Share Capital')
+2026-03-12 13:03:17,676 [INFO] pipeline.financial_extractor:   [TEXT MATCH] reserves on page 99: [15.0] (from line: 'Other Equity')
+2026-03-12 13:03:17,676 [INFO] pipeline.financial_extractor:   [TEXT MATCH] minority_interest on page 99: [166426.0] (from line: 'Non-Controlling Interest')
+2026-03-12 13:03:17,676 [INFO] pipeline.financial_extractor:   [TEXT MATCH] lease_liabilities on page 99: [17142.0] (from line: 'Lease Liabilities')
+2026-03-12 13:03:17,676 [INFO] pipeline.financial_extractor:   [TEXT MATCH] total_liabilities on page 99: [486758.0] (from line: 'Total Non-Current Liabilities')
+2026-03-12 13:03:17,676 [INFO] pipeline.financial_extractor:   [TEXT MATCH] trade_payables on page 99: [21.0] (from line: 'Trade Payables')
+2026-03-12 13:03:17,676 [INFO] pipeline.financial_extractor:   [TEXT MATCH] other_liabilities on page 99: [23.0] (from line: 'Other Current Liabilities')
+2026-03-12 13:03:17,684 [INFO] main:   BS extracted: ['FY2025', 'FY2024', 'FY2023', 'FY2022', 'FY2021']
+2026-03-12 13:03:17,688 [INFO] pipeline.financial_extractor:   Targeted CASH FLOW to 5 pages
+2026-03-12 13:03:17,694 [INFO] pipeline.financial_extractor:   [TEXT MATCH] depreciation on page 102: [53136.0] (from line: 'Depreciation / Amortisation and Depletion Expense')
+2026-03-12 13:03:17,694 [INFO] pipeline.financial_extractor:   [TEXT MATCH] working_capital_change on page 102: [166904.0] (from line: 'Operating Profit before Working Capital Changes')
+2026-03-12 13:03:17,695 [INFO] pipeline.financial_extractor:   [TEXT MATCH] cash_from_operations on page 102: [178703.0] (from line: 'Net Cash Flow from Operating Activities *')
+2026-03-12 13:03:17,695 [INFO] pipeline.financial_extractor:   [TEXT MATCH] investments on page 102: [-684340.0] (from line: 'Purchase of Investments')
+2026-03-12 13:03:17,695 [INFO] pipeline.financial_extractor:   [TEXT MATCH] cash_from_investing on page 102: [-137535.0] (from line: 'Net Cash Flow used in Investing Activities')
+2026-03-12 13:03:17,695 [INFO] pipeline.financial_extractor:   [TEXT MATCH] debt_issued on page 102: [26378.0] (from line: 'Proceeds from Borrowings – Non-current (including Current Maturities)')
+2026-03-12 13:03:17,696 [INFO] pipeline.financial_extractor:   [TEXT MATCH] debt_repaid on page 102: [-31755.0] (from line: 'Repayment of Borrowings – Non-current (including Current Maturities)')
+2026-03-12 13:03:17,696 [INFO] pipeline.financial_extractor:   [TEXT MATCH] dividend_paid on page 102: [-6766.0] (from line: 'Payment of Dividend to Equity Holders of the Company')
+2026-03-12 13:03:17,696 [INFO] pipeline.financial_extractor:   [TEXT MATCH] cash_from_financing on page 102: [-31891.0] (from line: 'Net Cash Flow Used in Financing Activities')
+2026-03-12 13:03:17,696 [INFO] pipeline.financial_extractor:   [TEXT MATCH] net_cash_flow on page 102: [9277.0] (from line: 'Net Increase in Cash and Cash Equivalents')
+2026-03-12 13:03:17,696 [INFO] pipeline.financial_extractor:   [TEXT MATCH] closing_cash on page 102: [10.0] (from line: 'Closing Balance of Cash and Cash Equivalents (Refer Note 10)')
+2026-03-12 13:03:17,702 [INFO] main:   CF extracted: ['FY2025', 'FY2024', 'FY2023', 'FY2022', 'FY2021']
+2026-03-12 13:03:17,705 [INFO] pipeline.financial_extractor:   Targeted PROFIT AND LOSS to 3 pages
+2026-03-12 13:03:17,708 [INFO] pipeline.financial_extractor:   [TEXT MATCH] depreciation on page 102: [53136.0] (from line: 'Depreciation / Amortisation and Depletion Expense')
+2026-03-12 13:03:17,708 [INFO] pipeline.financial_extractor:   [TEXT MATCH] interest on page 102: [24269.0] (from line: 'Finance Costs')
+2026-03-12 13:03:17,712 [WARNING] main: FY2025 missing from annual_pnl after extraction
+2026-03-12 13:03:17,712 [INFO] main: 
+Extraction complete (FY2025 Filtered): Q P&L=0 | A P&L=0 | BS=1 | CF=1
+2026-03-12 13:03:17,713 [INFO] main: 
+############################################################
+STEP 4: VALIDATE — RELIANCE
+############################################################
+2026-03-12 13:03:17,713 [WARNING] pipeline.validator:   ✗ VALIDATION: [FY2025] Current Assets Sum mismatch: reported=499270.0, components_sum=28.0, diff=1783007.1%
+2026-03-12 13:03:17,713 [INFO] pipeline.validator:   ✓ CF [FY2025]: OK
+2026-03-12 13:03:17,713 [INFO] pipeline.validator: 
+VALIDATION SUMMARY: ✗ ISSUES FOUND | 1 issue categories
+2026-03-12 13:03:17,713 [INFO] main: 
+############################################################
+STEP 5: EXPORT — RELIANCE
+############################################################
+2026-03-12 13:03:17,714 [INFO] pipeline.export_json: JSON saved → data/RELIANCE/extracted/profit_loss_quarterly.json (0 KB)
+2026-03-12 13:03:17,714 [INFO] pipeline.export_json: JSON saved → data/RELIANCE/extracted/profit_loss_yearly.json (0 KB)
+2026-03-12 13:03:17,714 [INFO] pipeline.export_json: JSON saved → data/RELIANCE/extracted/balance_sheet.json (0 KB)
+2026-03-12 13:03:17,714 [INFO] pipeline.export_json: JSON saved → data/RELIANCE/extracted/cash_flow.json (0 KB)
+2026-03-12 13:03:17,715 [INFO] pipeline.export_json: JSON saved → data/RELIANCE/final/company_financials.json (2 KB)
+2026-03-12 13:03:17,715 [INFO] main: 
+✓ Done! Output → data/RELIANCE/final/company_financials.json
+2026-03-12 13:03:17,715 [INFO] main:   Log → logs/pipeline_20260312_130300.log

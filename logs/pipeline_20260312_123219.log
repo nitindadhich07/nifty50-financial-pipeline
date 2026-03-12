@@ -1,0 +1,77 @@
+2026-03-12 12:32:19,709 [INFO] main: 
+############################################################
+  FINANCIAL PIPELINE v2 — RELIANCE
+  2026-03-12T07:02:19.709630+00:00
+############################################################
+2026-03-12 12:32:19,709 [INFO] main: 
+############################################################
+STEP 1: NSE XBRL — RELIANCE
+############################################################
+2026-03-12 12:32:21,967 [INFO] pipeline.xbrl_parser: NSE XBRL session ready
+2026-03-12 12:32:21,967 [INFO] pipeline.xbrl_parser: Fetching NSE XBRL Quarterly (Consolidated) for RELIANCE...
+2026-03-12 12:32:22,213 [INFO] pipeline.xbrl_parser:   Got 5 Quarterly periods
+2026-03-12 12:32:22,217 [INFO] pipeline.xbrl_parser:   [Dec 2024] Rev=128260.0 | NP=8721.0
+2026-03-12 12:32:22,217 [INFO] pipeline.xbrl_parser:   [Sep 2024] Rev=134054.0 | NP=7713.0
+2026-03-12 12:32:22,217 [INFO] pipeline.xbrl_parser:   [Jun 2024] Rev=134331.0 | NP=7611.0
+2026-03-12 12:32:22,218 [INFO] pipeline.xbrl_parser:   [Mar 2024] Rev=151014.0 | NP=11283.0
+2026-03-12 12:32:22,218 [INFO] pipeline.xbrl_parser:   [Dec 2023] Rev=130579.0 | NP=9924.0
+2026-03-12 12:32:22,218 [INFO] pipeline.xbrl_parser: Fetching NSE XBRL Annual (Consolidated) for RELIANCE...
+2026-03-12 12:32:22,990 [INFO] pipeline.xbrl_parser:   Got 5 Annual periods
+2026-03-12 12:32:22,991 [INFO] pipeline.xbrl_parser:   [Dec 2024] Rev=128260.0 | NP=8721.0
+2026-03-12 12:32:22,991 [INFO] pipeline.xbrl_parser:   [Sep 2024] Rev=134054.0 | NP=7713.0
+2026-03-12 12:32:22,991 [INFO] pipeline.xbrl_parser:   [Jun 2024] Rev=134331.0 | NP=7611.0
+2026-03-12 12:32:22,991 [INFO] pipeline.xbrl_parser:   [FY2024] Rev=151014.0 | NP=11283.0
+2026-03-12 12:32:22,991 [INFO] pipeline.xbrl_parser:   [Dec 2023] Rev=130579.0 | NP=9924.0
+2026-03-12 12:32:22,991 [INFO] main: XBRL (FY2025 format): 3 quarterly periods | 0 annual periods with sales data
+2026-03-12 12:32:22,994 [INFO] main: Existing PDFs: 1 quarterly | 1 annual
+2026-03-12 12:32:22,996 [INFO] main: 
+############################################################
+STEP 3: PARSE & EXTRACT — RELIANCE
+############################################################
+2026-03-12 12:32:22,996 [WARNING] main:   RELIANCE XBRL revenue (128260.0) looks like standalone. Falling back to PDF.
+2026-03-12 12:32:22,996 [INFO] main: Falling back to PDF extraction for quarterly data
+2026-03-12 12:32:22,996 [INFO] main:   Quarterly PDF: [Mar 2025] data/RELIANCE/raw/quarterly_pdf/Mar_2025.pdf
+2026-03-12 12:32:22,996 [INFO] pipeline.pdf_parser: Parsing: data/RELIANCE/raw/quarterly_pdf/Mar_2025.pdf
+2026-03-12 12:32:23,038 [INFO] pipeline.pdf_parser:   pdfplumber: 37 pages
+2026-03-12 12:32:26,499 [INFO] main:   PDF extracted 1 quarterly period(s)
+2026-03-12 12:32:26,499 [INFO] main: 
+  Annual PDF [FY2025]: data/RELIANCE/raw/annual_pdf/FY2025_Annual_Report.pdf
+2026-03-12 12:32:26,499 [INFO] pipeline.pdf_parser: Parsing: data/RELIANCE/raw/annual_pdf/FY2025_Annual_Report.pdf
+2026-03-12 12:32:27,071 [INFO] pipeline.pdf_parser:   pdfplumber: 146 pages
+2026-03-12 12:33:03,211 [INFO] main:   Parsed 146 pages
+2026-03-12 12:33:03,273 [INFO] main:   BS extracted: ['FY2025', 'FY2024', 'FY2023', 'FY2022', 'FY2021']
+2026-03-12 12:33:03,382 [INFO] main:   CF extracted: ['FY2025', 'FY2024', 'FY2023', 'FY2022', 'FY2021']
+2026-03-12 12:33:03,399 [INFO] main:   P&L extracted for FY2025 from PDF
+2026-03-12 12:33:03,399 [INFO] main:   P&L extracted for FY2024 from PDF
+2026-03-12 12:33:03,399 [INFO] main:   P&L extracted for FY2023 from PDF
+2026-03-12 12:33:03,399 [INFO] main:   P&L extracted for FY2022 from PDF
+2026-03-12 12:33:03,399 [INFO] main: 
+Extraction complete (FY2025 Filtered): Q P&L=4 | A P&L=1 | BS=1 | CF=1
+2026-03-12 12:33:03,402 [INFO] main: 
+############################################################
+STEP 4: VALIDATE — RELIANCE
+############################################################
+2026-03-12 12:33:03,402 [INFO] pipeline.validator:   ✓ P&L [Dec 2024]: OK
+2026-03-12 12:33:03,402 [INFO] pipeline.validator:   ✓ P&L [Sep 2024]: OK
+2026-03-12 12:33:03,402 [INFO] pipeline.validator:   ✓ P&L [Jun 2024]: OK
+2026-03-12 12:33:03,402 [INFO] pipeline.validator:   ✓ P&L [Mar 2025]: OK
+2026-03-12 12:33:03,402 [INFO] pipeline.validator:   ✓ P&L [FY2025]: OK
+2026-03-12 12:33:03,402 [WARNING] pipeline.validator:   ✗ VALIDATION: [FY2025] Current Assets Sum mismatch: reported=486758.0, components_sum=351835.0, diff=38.3%
+2026-03-12 12:33:03,402 [WARNING] pipeline.validator:   ✗ VALIDATION: [FY2025] Total Assets mismatch: reported=228151.0, ca+nca=1169860.0, diff=80.5%
+2026-03-12 12:33:03,402 [WARNING] pipeline.validator:   ✗ VALIDATION: [FY2025] BS Equation: Assets=228151.0, Eq+Liab=1951984.00, diff=88.3%
+2026-03-12 12:33:03,402 [WARNING] pipeline.validator:   ✗ VALIDATION: [FY2025] Abnormal Capital Expenditure detected: 1000122.0
+2026-03-12 12:33:03,402 [WARNING] pipeline.validator:   ✗ VALIDATION: [FY2025] CF Balance: reported_net=9277.0, cfo+cfi+cff=-30848.00, diff=130.1%
+2026-03-12 12:33:03,402 [INFO] pipeline.validator: 
+VALIDATION SUMMARY: ✗ ISSUES FOUND | 2 issue categories
+2026-03-12 12:33:03,402 [INFO] main: 
+############################################################
+STEP 5: EXPORT — RELIANCE
+############################################################
+2026-03-12 12:33:03,404 [INFO] pipeline.export_json: JSON saved → data/RELIANCE/extracted/profit_loss_quarterly.json (2 KB)
+2026-03-12 12:33:03,404 [INFO] pipeline.export_json: JSON saved → data/RELIANCE/extracted/profit_loss_yearly.json (0 KB)
+2026-03-12 12:33:03,405 [INFO] pipeline.export_json: JSON saved → data/RELIANCE/extracted/balance_sheet.json (0 KB)
+2026-03-12 12:33:03,405 [INFO] pipeline.export_json: JSON saved → data/RELIANCE/extracted/cash_flow.json (0 KB)
+2026-03-12 12:33:03,405 [INFO] pipeline.export_json: JSON saved → data/RELIANCE/final/company_financials.json (7 KB)
+2026-03-12 12:33:03,405 [INFO] main: 
+✓ Done! Output → data/RELIANCE/final/company_financials.json
+2026-03-12 12:33:03,405 [INFO] main:   Log → logs/pipeline_20260312_123219.log

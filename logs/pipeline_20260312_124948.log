@@ -1,0 +1,19 @@
+2026-03-12 12:49:48,928 [INFO] main: 
+############################################################
+  FINANCIAL PIPELINE v2 — RELIANCE
+  2026-03-12T07:19:48.928448+00:00
+############################################################
+2026-03-12 12:49:48,928 [INFO] main: Existing PDFs: 1 quarterly | 1 annual
+2026-03-12 12:49:48,929 [INFO] main: 
+############################################################
+STEP 3: PARSE & EXTRACT — RELIANCE
+############################################################
+2026-03-12 12:49:48,929 [INFO] main: Falling back to PDF extraction for quarterly data
+2026-03-12 12:49:48,929 [INFO] main:   Quarterly PDF: [Mar 2025] data/RELIANCE/raw/quarterly_pdf/Mar_2025.pdf
+2026-03-12 12:49:48,929 [INFO] pipeline.pdf_parser: Parsing: data/RELIANCE/raw/quarterly_pdf/Mar_2025.pdf
+2026-03-12 12:49:49,143 [INFO] pipeline.pdf_parser:   pdfplumber: 37 pages (Identified 2 relevant)
+2026-03-12 12:49:51,723 [INFO] main:   PDF extracted 1 quarterly period(s)
+2026-03-12 12:49:51,723 [INFO] main: 
+  Annual PDF [FY2025]: data/RELIANCE/raw/annual_pdf/FY2025_Annual_Report.pdf
+2026-03-12 12:49:51,723 [INFO] pipeline.pdf_parser: Parsing: data/RELIANCE/raw/annual_pdf/FY2025_Annual_Report.pdf
+2026-03-12 12:49:53,958 [INFO] pipeline.pdf_parser:   pdfplumber: 146 pages (Identified 28 relevant)

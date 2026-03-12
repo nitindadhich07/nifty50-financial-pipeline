@@ -1,0 +1,17 @@
+{
+  "FY2026": {
+    "cash_equivalents": 10.0,
+    "short_term_borrowings": 20.0,
+    "ppe": 1.2,
+    "capital_work_in_progress": 1.2,
+    "intangibles": 1.2,
+    "spectrum": 32536.0,
+    "total_equity": null,
+    "total_debt": 20.0
+  },
+  "FY2025": {
+    "spectrum": 202.0,
+    "total_equity": null,
+    "total_debt": null
+  }
+}

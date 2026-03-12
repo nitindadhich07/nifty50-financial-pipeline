@@ -1,0 +1,103 @@
+2026-03-12 10:52:56,722 [INFO] main: 
+############################################################
+2026-03-12 10:52:56,722 [INFO] main:   FINANCIAL PIPELINE — RELIANCE
+2026-03-12 10:52:56,722 [INFO] main:   Started: 2026-03-12T05:22:56.722320+00:00
+2026-03-12 10:52:56,722 [INFO] main: ############################################################
+2026-03-12 10:52:56,722 [INFO] main: 
+############################################################
+2026-03-12 10:52:56,722 [INFO] main: STEP 1: DOWNLOAD — RELIANCE
+2026-03-12 10:52:56,722 [INFO] main: ############################################################
+2026-03-12 10:52:56,722 [INFO] pipeline.downloader: Performing BSE cookie handshake...
+2026-03-12 10:52:58,436 [INFO] pipeline.downloader: BSE handshake OK
+2026-03-12 10:52:58,437 [INFO] pipeline.downloader: 
+============================================================
+2026-03-12 10:52:58,437 [INFO] pipeline.downloader: Fetching quarterly reports for RELIANCE (500325)
+2026-03-12 10:52:58,438 [INFO] pipeline.downloader: Date range: 01/01/2024 → 31/03/2026
+2026-03-12 10:52:58,741 [ERROR] pipeline.downloader: BSE announcement fetch failed: Expecting value: line 3 column 1 (char 4)
+2026-03-12 10:52:58,741 [INFO] pipeline.downloader: Found 0 BSE result announcements
+2026-03-12 10:52:58,741 [INFO] pipeline.downloader: Quarterly: 0/0 downloaded successfully
+2026-03-12 10:52:58,742 [INFO] pipeline.downloader: 
+============================================================
+2026-03-12 10:52:58,742 [INFO] pipeline.downloader: Fetching annual reports for RELIANCE
+2026-03-12 10:52:58,742 [INFO] pipeline.downloader: Date range: 01/04/2019 → 31/03/2026
+2026-03-12 10:52:58,920 [ERROR] pipeline.downloader: BSE announcement fetch failed: Expecting value: line 3 column 1 (char 4)
+2026-03-12 10:52:59,924 [ERROR] pipeline.downloader: BSE announcement fetch failed: Expecting value: line 3 column 1 (char 4)
+2026-03-12 10:53:00,912 [ERROR] pipeline.downloader: BSE announcement fetch failed: Expecting value: line 3 column 1 (char 4)
+2026-03-12 10:53:01,713 [INFO] pipeline.downloader: Found 0 total BSE announcements across categories
+2026-03-12 10:53:01,713 [INFO] pipeline.downloader: Annual: 0/0 downloaded successfully
+2026-03-12 10:53:01,713 [WARNING] main: BSE quarterly download yielded nothing. Trying NSE fallback...
+2026-03-12 10:53:01,714 [INFO] pipeline.downloader: Performing NSE cookie handshake...
+2026-03-12 10:53:03,880 [INFO] pipeline.downloader: NSE handshake OK
+2026-03-12 10:53:06,459 [INFO] pipeline.downloader:   [SAVED] 4663 KB → data/reliance/quarterly/kavinavora_16012026190810_FR_1.pdf
+2026-03-12 10:53:08,204 [INFO] pipeline.downloader:   [SAVED] 7313 KB → data/reliance/quarterly/kavinavora_17102025190048_SE_F.pdf
+2026-03-12 10:53:10,079 [INFO] pipeline.downloader:   [SAVED] 9116 KB → data/reliance/quarterly/kavinavora_18072025193102_SE_FR.pdf
+2026-03-12 10:53:12,183 [INFO] pipeline.downloader:   [SAVED] 11115 KB → data/reliance/quarterly/kavinavora_25042025200131_SE_FR.pdf
+2026-03-12 10:53:14,524 [INFO] pipeline.downloader:   [SAVED] 11115 KB → data/reliance/quarterly/kavinavora_25042025200337_SE_FR.pdf
+2026-03-12 10:53:18,150 [INFO] pipeline.downloader:   [SAVED] 1377 KB → data/reliance/quarterly/RELIANCE_19012024182113_RILLR19012024.pdf
+2026-03-12 10:53:19,153 [INFO] main: Download complete: 6 quarterly | 0 annual PDFs
+2026-03-12 10:53:19,162 [INFO] main: Manifest saved → output/reliance/download_manifest.json
+2026-03-12 10:53:19,162 [INFO] main: 
+############################################################
+2026-03-12 10:53:19,162 [INFO] main: STEP 2+3: PARSE & EXTRACT — RELIANCE
+2026-03-12 10:53:19,163 [INFO] main: ############################################################
+2026-03-12 10:53:19,163 [INFO] main: 
+── Quarterly: Unknown (data/reliance/quarterly/kavinavora_16012026190810_FR_1.pdf)
+2026-03-12 10:53:19,163 [INFO] pipeline.pdf_parser: Parsing: data/reliance/quarterly/kavinavora_16012026190810_FR_1.pdf
+2026-03-12 10:53:19,189 [INFO] pipeline.pdf_parser:   pdfplumber: 27 pages
+2026-03-12 10:53:21,790 [INFO] main:   Extracted 3 period(s) from Unknown
+2026-03-12 10:53:21,790 [INFO] main: 
+── Quarterly: Unknown (data/reliance/quarterly/kavinavora_17102025190048_SE_F.pdf)
+2026-03-12 10:53:21,791 [INFO] pipeline.pdf_parser: Parsing: data/reliance/quarterly/kavinavora_17102025190048_SE_F.pdf
+2026-03-12 10:53:21,812 [INFO] pipeline.pdf_parser:   pdfplumber: 31 pages
+2026-03-12 10:53:24,793 [INFO] main:   Extracted 3 period(s) from Unknown
+2026-03-12 10:53:24,793 [INFO] main: 
+── Quarterly: Unknown (data/reliance/quarterly/kavinavora_18072025193102_SE_FR.pdf)
+2026-03-12 10:53:24,793 [INFO] pipeline.pdf_parser: Parsing: data/reliance/quarterly/kavinavora_18072025193102_SE_FR.pdf
+2026-03-12 10:53:24,809 [INFO] pipeline.pdf_parser:   pdfplumber: 25 pages
+2026-03-12 10:53:25,887 [INFO] main:   Extracted 3 period(s) from Unknown
+2026-03-12 10:53:25,887 [INFO] main: 
+── Quarterly: Unknown (data/reliance/quarterly/kavinavora_25042025200131_SE_FR.pdf)
+2026-03-12 10:53:25,887 [INFO] pipeline.pdf_parser: Parsing: data/reliance/quarterly/kavinavora_25042025200131_SE_FR.pdf
+2026-03-12 10:53:25,910 [INFO] pipeline.pdf_parser:   pdfplumber: 37 pages
+2026-03-12 10:53:29,425 [INFO] main:   Extracted 3 period(s) from Unknown
+2026-03-12 10:53:29,426 [INFO] main: 
+── Quarterly: Unknown (data/reliance/quarterly/kavinavora_25042025200337_SE_FR.pdf)
+2026-03-12 10:53:29,426 [INFO] pipeline.pdf_parser: Parsing: data/reliance/quarterly/kavinavora_25042025200337_SE_FR.pdf
+2026-03-12 10:53:29,443 [INFO] pipeline.pdf_parser:   pdfplumber: 37 pages
+2026-03-12 10:53:33,262 [INFO] main:   Extracted 3 period(s) from Unknown
+2026-03-12 10:53:33,262 [INFO] main: 
+── Quarterly: Unknown (data/reliance/quarterly/RELIANCE_19012024182113_RILLR19012024.pdf)
+2026-03-12 10:53:33,262 [INFO] pipeline.pdf_parser: Parsing: data/reliance/quarterly/RELIANCE_19012024182113_RILLR19012024.pdf
+2026-03-12 10:53:33,302 [INFO] pipeline.pdf_parser:   pdfplumber: 27 pages
+2026-03-12 10:53:36,194 [INFO] main:   Extracted 3 period(s) from Unknown
+2026-03-12 10:53:36,194 [INFO] main: 
+Extraction complete: 3 quarterly periods | 0 annual P&L | 0 balance sheets | 0 cash flows
+2026-03-12 10:53:36,194 [INFO] main: 
+############################################################
+2026-03-12 10:53:36,194 [INFO] main: STEP 4: VALIDATE — RELIANCE
+2026-03-12 10:53:36,194 [INFO] main: ############################################################
+2026-03-12 10:53:36,194 [INFO] pipeline.validator: Validating quarterly P&L for Period 1...
+2026-03-12 10:53:36,195 [WARNING] pipeline.validator:   [VALIDATION] PBT mismatch: reported=25986.0, computed=111269.0, diff=76.6%
+2026-03-12 10:53:36,195 [WARNING] pipeline.validator:   [VALIDATION] Net Profit mismatch: reported=17265.0, PBT-Tax=22907.0, diff=24.6%
+2026-03-12 10:53:36,195 [WARNING] pipeline.validator:   ✗ Period 1: 2 issue(s)
+2026-03-12 10:53:36,195 [INFO] pipeline.validator: Validating quarterly P&L for Period 2...
+2026-03-12 10:53:36,195 [WARNING] pipeline.validator:   [VALIDATION] PBT mismatch: reported=26551.0, computed=109915.0, diff=75.8%
+2026-03-12 10:53:36,409 [WARNING] pipeline.validator:   [VALIDATION] Net Profit mismatch: reported=17394.0, PBT-Tax=23052.0, diff=24.5%
+2026-03-12 10:53:36,409 [WARNING] pipeline.validator:   ✗ Period 2: 2 issue(s)
+2026-03-12 10:53:36,409 [INFO] pipeline.validator: Validating quarterly P&L for Period 3...
+2026-03-12 10:53:36,409 [WARNING] pipeline.validator:   [VALIDATION] PBT mismatch: reported=22902.0, computed=103055.0, diff=77.8%
+2026-03-12 10:53:36,409 [WARNING] pipeline.validator:   [VALIDATION] Net Profit mismatch: reported=15792.0, PBT-Tax=20247.0, diff=22.0%
+2026-03-12 10:53:36,409 [WARNING] pipeline.validator:   ✗ Period 3: 2 issue(s)
+2026-03-12 10:53:36,409 [INFO] pipeline.validator: 
+==================================================
+2026-03-12 10:53:36,409 [INFO] pipeline.validator: VALIDATION SUMMARY: ✗ ISSUES FOUND
+2026-03-12 10:53:36,409 [INFO] pipeline.validator: Total issue categories: 3
+2026-03-12 10:53:36,744 [INFO] main: 
+############################################################
+2026-03-12 10:53:36,744 [INFO] main: STEP 5: EXPORT — RELIANCE
+2026-03-12 10:53:36,744 [INFO] main: ############################################################
+2026-03-12 10:53:36,746 [INFO] pipeline.export_json: JSON saved → output/reliance/financial_data.json (3 KB)
+2026-03-12 10:53:36,747 [INFO] pipeline.export_json: JSON saved → output/reliance/financial_data_20260312_105336.json (3 KB)
+2026-03-12 10:53:37,007 [INFO] main: 
+✓ Pipeline complete! Output → output/reliance/financial_data.json
+2026-03-12 10:53:37,008 [INFO] main:   Log → logs/pipeline_20260312_105256.log

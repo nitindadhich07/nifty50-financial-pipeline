@@ -1,0 +1,253 @@
+2026-03-12 13:20:02,503 [INFO] main: 
+############################################################
+  FINANCIAL PIPELINE v3 (Fixed) — RELIANCE
+  2026-03-12T07:50:02.503390+00:00
+############################################################
+2026-03-12 13:20:02,503 [INFO] main: 
+############################################################
+STEP 1: NSE XBRL — RELIANCE
+############################################################
+2026-03-12 13:20:02,503 [INFO] pipeline.xbrl_parser: NSE handshake step 1/3: homepage...
+2026-03-12 13:20:04,823 [INFO] pipeline.xbrl_parser: NSE handshake step 2/3: quote page...
+2026-03-12 13:20:07,274 [INFO] pipeline.xbrl_parser: NSE handshake step 3/3: warming results path...
+2026-03-12 13:20:09,521 [INFO] pipeline.xbrl_parser: NSE session ready. Cookies: AKA_A2, _abck, bm_sz, nsit, browse-url
+2026-03-12 13:20:09,522 [INFO] pipeline.xbrl_parser: Fetching NSE XBRL Quarterly for RELIANCE (attempt 1)...
+2026-03-12 13:20:10,286 [INFO] pipeline.xbrl_parser:   HTTP 200 | 2188 bytes
+2026-03-12 13:20:10,286 [INFO] pipeline.xbrl_parser:   Raw response saved → data/debug/nse_xbrl_RELIANCE_quarterly_raw.json
+2026-03-12 13:20:10,287 [ERROR] pipeline.xbrl_parser:   NSE XBRL error: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.11/site-packages/requests/models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/geekologix/Desktop/nifty50-financial-pipeline/pipeline/xbrl_parser.py", line 240, in _fetch_pnl
+    data  = r.json()
+            ^^^^^^^^
+  File "/opt/homebrew/lib/python3.11/site-packages/requests/models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-03-12 13:20:13,290 [INFO] pipeline.xbrl_parser: Fetching NSE XBRL Quarterly for RELIANCE (attempt 2)...
+2026-03-12 13:20:13,340 [INFO] pipeline.xbrl_parser:   HTTP 200 | 2188 bytes
+2026-03-12 13:20:13,341 [INFO] pipeline.xbrl_parser:   Raw response saved → data/debug/nse_xbrl_RELIANCE_quarterly_raw.json
+2026-03-12 13:20:13,341 [ERROR] pipeline.xbrl_parser:   NSE XBRL error: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.11/site-packages/requests/models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/geekologix/Desktop/nifty50-financial-pipeline/pipeline/xbrl_parser.py", line 240, in _fetch_pnl
+    data  = r.json()
+            ^^^^^^^^
+  File "/opt/homebrew/lib/python3.11/site-packages/requests/models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-03-12 13:20:19,346 [INFO] pipeline.xbrl_parser: Fetching NSE XBRL Quarterly for RELIANCE (attempt 3)...
+2026-03-12 13:20:19,396 [INFO] pipeline.xbrl_parser:   HTTP 200 | 2188 bytes
+2026-03-12 13:20:19,397 [INFO] pipeline.xbrl_parser:   Raw response saved → data/debug/nse_xbrl_RELIANCE_quarterly_raw.json
+2026-03-12 13:20:19,397 [ERROR] pipeline.xbrl_parser:   NSE XBRL error: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.11/site-packages/requests/models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/geekologix/Desktop/nifty50-financial-pipeline/pipeline/xbrl_parser.py", line 240, in _fetch_pnl
+    data  = r.json()
+            ^^^^^^^^
+  File "/opt/homebrew/lib/python3.11/site-packages/requests/models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-03-12 13:20:28,402 [ERROR] pipeline.xbrl_parser: NSE XBRL: all attempts failed for RELIANCE/Quarterly
+2026-03-12 13:20:28,403 [INFO] pipeline.xbrl_parser: Fetching NSE XBRL Annual for RELIANCE (attempt 1)...
+2026-03-12 13:20:29,126 [INFO] pipeline.xbrl_parser:   HTTP 200 | 2188 bytes
+2026-03-12 13:20:29,126 [INFO] pipeline.xbrl_parser:   Raw response saved → data/debug/nse_xbrl_RELIANCE_annual_raw.json
+2026-03-12 13:20:29,127 [ERROR] pipeline.xbrl_parser:   NSE XBRL error: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.11/site-packages/requests/models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/geekologix/Desktop/nifty50-financial-pipeline/pipeline/xbrl_parser.py", line 240, in _fetch_pnl
+    data  = r.json()
+            ^^^^^^^^
+  File "/opt/homebrew/lib/python3.11/site-packages/requests/models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-03-12 13:20:32,127 [INFO] pipeline.xbrl_parser: Fetching NSE XBRL Annual for RELIANCE (attempt 2)...
+2026-03-12 13:20:32,274 [INFO] pipeline.xbrl_parser:   HTTP 200 | 2188 bytes
+2026-03-12 13:20:32,274 [INFO] pipeline.xbrl_parser:   Raw response saved → data/debug/nse_xbrl_RELIANCE_annual_raw.json
+2026-03-12 13:20:32,274 [ERROR] pipeline.xbrl_parser:   NSE XBRL error: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.11/site-packages/requests/models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/geekologix/Desktop/nifty50-financial-pipeline/pipeline/xbrl_parser.py", line 240, in _fetch_pnl
+    data  = r.json()
+            ^^^^^^^^
+  File "/opt/homebrew/lib/python3.11/site-packages/requests/models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-03-12 13:20:38,275 [INFO] pipeline.xbrl_parser: Fetching NSE XBRL Annual for RELIANCE (attempt 3)...
+2026-03-12 13:20:38,334 [INFO] pipeline.xbrl_parser:   HTTP 200 | 2188 bytes
+2026-03-12 13:20:38,334 [INFO] pipeline.xbrl_parser:   Raw response saved → data/debug/nse_xbrl_RELIANCE_annual_raw.json
+2026-03-12 13:20:38,335 [ERROR] pipeline.xbrl_parser:   NSE XBRL error: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.11/site-packages/requests/models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/geekologix/Desktop/nifty50-financial-pipeline/pipeline/xbrl_parser.py", line 240, in _fetch_pnl
+    data  = r.json()
+            ^^^^^^^^
+  File "/opt/homebrew/lib/python3.11/site-packages/requests/models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-03-12 13:20:47,341 [ERROR] pipeline.xbrl_parser: NSE XBRL: all attempts failed for RELIANCE/Annual
+2026-03-12 13:20:47,341 [INFO] main: XBRL result: 0 quarterly | 0 annual periods with revenue data
+2026-03-12 13:20:47,346 [INFO] main: 
+############################################################
+STEP 2: PDF DOWNLOAD — RELIANCE
+############################################################
+2026-03-12 13:20:47,346 [INFO] pipeline.downloader: NSE cookie handshake step 1/3: homepage...
+2026-03-12 13:20:49,476 [INFO] pipeline.downloader: NSE cookie handshake step 2/3: quote page...
+2026-03-12 13:20:51,960 [INFO] pipeline.downloader: NSE cookie handshake step 3/3: filings page...
+2026-03-12 13:20:54,519 [INFO] pipeline.downloader: NSE session ready. Cookies: AKA_A2, _abck, bm_sz, nsit, browse-url
+2026-03-12 13:20:54,520 [INFO] pipeline.downloader: BSE cookie handshake...
+2026-03-12 13:20:56,165 [INFO] pipeline.downloader: 
+============================================================
+2026-03-12 13:20:56,165 [INFO] pipeline.downloader: NSE Quarterly Download: RELIANCE (01-07-2024 → 31-05-2025)
+2026-03-12 13:20:56,802 [INFO] pipeline.downloader:   NSE announcements HTTP 200 | 238261 bytes
+2026-03-12 13:20:56,804 [INFO] pipeline.downloader: Found 272 total NSE announcements
+2026-03-12 13:20:56,808 [INFO] pipeline.downloader:   → [Mar 2025] Outcome of Board Meeting
+2026-03-12 13:20:57,548 [INFO] pipeline.downloader:   NSE PDF HTTP 200 | 11115 KB | nsearchives.nseindia.com/corporate/kavinavora_25042025200131_SE_FR.pdf
+2026-03-12 13:20:57,607 [INFO] pipeline.downloader:   [SKIP] Identical file exists: data/RELIANCE/raw/quarterly_pdf/Mar_2025.pdf
+2026-03-12 13:20:58,609 [INFO] pipeline.downloader:   [DUP] Mar 2025 already queued
+2026-03-12 13:20:58,609 [INFO] pipeline.downloader: NSE Quarterly: 1/1 downloaded
+2026-03-12 13:20:58,610 [INFO] pipeline.downloader: 
+============================================================
+2026-03-12 13:20:58,610 [INFO] pipeline.downloader: NSE Annual Download: RELIANCE (01-04-2025 → 31-12-2025)
+2026-03-12 13:20:59,152 [INFO] pipeline.downloader:   NSE announcements HTTP 200 | 97018 bytes
+2026-03-12 13:20:59,153 [INFO] pipeline.downloader:   → [FY2025] Credit Rating
+2026-03-12 13:20:59,244 [INFO] pipeline.downloader:   NSE PDF HTTP 200 | 173 KB | rchives.nseindia.com/corporate/NIYER_23122025200055_SE_IndiaRating.pdf
+2026-03-12 13:20:59,274 [INFO] pipeline.downloader:   [SAVED] 173 KB → data/RELIANCE/raw/annual_pdf/FY2025_Annual_Report.pdf
+2026-03-12 13:21:00,477 [INFO] pipeline.downloader: NSE Annual: 1/1 downloaded
+2026-03-12 13:21:00,481 [INFO] main: 
+############################################################
+STEP 3: PARSE & EXTRACT — RELIANCE
+############################################################
+2026-03-12 13:21:00,481 [INFO] main: XBRL quarterly empty — falling back to PDF extraction
+2026-03-12 13:21:00,481 [INFO] main:   Quarterly PDF: [Mar 2025] data/RELIANCE/raw/quarterly_pdf/Mar_2025.pdf
+2026-03-12 13:21:00,481 [INFO] pipeline.pdf_parser: Parsing: data/RELIANCE/raw/quarterly_pdf/Mar_2025.pdf
+2026-03-12 13:21:00,656 [INFO] pipeline.pdf_parser:   pdfplumber-optimized: 37 pages (Identified 9 relevant)
+2026-03-12 13:21:01,690 [INFO] pipeline.financial_extractor:   Fields not found in PDF: ['other_income', 'total_income', 'total_expenses', 'depreciation', 'profit_before_tax', 'tax', 'net_profit_owners', 'eps_basic']
+2026-03-12 13:21:01,695 [INFO] main:   PDF extracted 4 quarterly period(s)
+2026-03-12 13:21:01,695 [INFO] main: 
+  Annual PDF [FY2025]: data/RELIANCE/raw/annual_pdf/FY2025_Annual_Report.pdf
+2026-03-12 13:21:01,695 [INFO] pipeline.pdf_parser: Parsing: data/RELIANCE/raw/annual_pdf/FY2025_Annual_Report.pdf
+2026-03-12 13:21:01,702 [INFO] pipeline.pdf_parser:   pdfplumber-optimized: 1 pages (Identified 0 relevant)
+2026-03-12 13:21:01,761 [INFO] main:   Parsed 1 pages
+2026-03-12 13:21:01,762 [INFO] pipeline.financial_extractor:   Fields not found in PDF: ['equity_share_capital', 'reserves', 'minority_interest', 'long_term_borrowings', 'short_term_borrowings', 'lease_liabilities', 'trade_payables', 'other_liabilities', 'total_liabilities', 'cash_equivalents', 'short_term_investments', 'inventory', 'receivables', 'other_current_assets', 'total_current_assets', 'ppe', 'capital_work_in_progress', 'goodwill', 'intangibles', 'long_term_investments', 'total_non_current_assets', 'total_assets']
+2026-03-12 13:21:01,762 [WARNING] pipeline.financial_extractor: No FY headers detected in PDF — defaulting to FY2025, FY2024
+2026-03-12 13:21:01,762 [INFO] pipeline.financial_extractor:   FY headers found: ['FY2025', 'FY2024']
+2026-03-12 13:21:01,762 [INFO] main:   BS extracted: ['FY2025', 'FY2024']
+2026-03-12 13:21:01,764 [INFO] pipeline.financial_extractor:   Fields not found in PDF: ['net_profit', 'depreciation', 'working_capital_change', 'other_operating_adjustments', 'cash_from_operations', 'capital_expenditure', 'acquisitions', 'investments', 'cash_from_investing', 'debt_issued', 'debt_repaid', 'dividend_paid', 'buyback', 'cash_from_financing', 'net_cash_flow', 'opening_cash', 'closing_cash']
+2026-03-12 13:21:01,764 [WARNING] pipeline.financial_extractor: No FY headers detected in PDF — defaulting to FY2025, FY2024
+2026-03-12 13:21:01,764 [INFO] pipeline.financial_extractor:   FY headers found: ['FY2025', 'FY2024']
+2026-03-12 13:21:01,764 [INFO] main:   CF extracted: ['FY2025', 'FY2024']
+2026-03-12 13:21:01,764 [INFO] pipeline.financial_extractor:   Fields not found in PDF: ['sales', 'other_income', 'total_income', 'total_expenses', 'interest', 'depreciation', 'profit_before_tax', 'tax', 'net_profit_owners', 'eps_basic']
+2026-03-12 13:21:01,765 [WARNING] pipeline.financial_extractor: No FY headers detected in PDF — defaulting to FY2025, FY2024
+2026-03-12 13:21:01,765 [INFO] pipeline.financial_extractor:   FY headers found: ['FY2025', 'FY2024']
+2026-03-12 13:21:01,765 [INFO] main: 
+Extraction complete: Q P&L=4 | A P&L=2 | BS=2 | CF=2
+2026-03-12 13:21:01,765 [INFO] main: 
+############################################################
+STEP 4: VALIDATE — RELIANCE
+############################################################
+2026-03-12 13:21:01,765 [INFO] pipeline.validator:   ✓ P&L [Mar 2025]: OK
+2026-03-12 13:21:01,765 [INFO] pipeline.validator:   ✓ P&L [Mar 2024]: OK
+2026-03-12 13:21:01,765 [WARNING] pipeline.validator:   ✗ VALIDATION: [Mar 2019] Missing or Zero Revenue from Operations
+2026-03-12 13:21:01,765 [WARNING] pipeline.validator:   ✗ VALIDATION: [Dec 2024] Missing or Zero Revenue from Operations
+2026-03-12 13:21:01,765 [WARNING] pipeline.validator:   ✗ VALIDATION: [FY2025] Missing or Zero Revenue from Operations
+2026-03-12 13:21:01,765 [WARNING] pipeline.validator:   ✗ VALIDATION: [FY2024] Missing or Zero Revenue from Operations
+2026-03-12 13:21:01,765 [INFO] pipeline.validator:   ✓ BS [FY2025]: OK
+2026-03-12 13:21:01,765 [INFO] pipeline.validator:   ✓ BS [FY2024]: OK
+2026-03-12 13:21:01,765 [INFO] pipeline.validator:   ✓ CF [FY2025]: OK
+2026-03-12 13:21:01,765 [INFO] pipeline.validator:   ✓ CF [FY2024]: OK
+2026-03-12 13:21:01,765 [INFO] pipeline.validator: 
+VALIDATION SUMMARY: ✗ ISSUES FOUND | 4 issue categories
+2026-03-12 13:21:01,765 [INFO] main: 
+############################################################
+STEP 5: EXPORT — RELIANCE
+############################################################

@@ -1,0 +1,68 @@
+2026-03-12 14:21:50,011 [INFO] main: 
+############################################################
+  FINANCIAL PIPELINE v3 (Fixed) — RELIANCE
+  2026-03-12T08:51:50.011466+00:00
+############################################################
+2026-03-12 14:21:50,012 [INFO] main: Existing PDFs: 1 quarterly | 1 annual
+2026-03-12 14:21:50,012 [INFO] main: 
+############################################################
+STEP 3: PARSE & EXTRACT — RELIANCE
+############################################################
+2026-03-12 14:21:50,013 [INFO] main: XBRL quarterly empty — falling back to PDF extraction
+2026-03-12 14:21:50,013 [INFO] main:   Quarterly PDF: [Mar 2025] data/RELIANCE/raw/quarterly_pdf/Mar_2025.pdf
+2026-03-12 14:21:50,013 [INFO] pipeline.pdf_parser: Parsing: data/RELIANCE/raw/quarterly_pdf/Mar_2025.pdf
+2026-03-12 14:21:50,197 [INFO] pipeline.pdf_parser:   pdfplumber-optimized: 37 pages (Identified 9 relevant)
+2026-03-12 14:21:51,337 [INFO] pipeline.financial_extractor:   Fields not found in PDF: ['other_income', 'total_income', 'total_expenses', 'depreciation', 'profit_before_tax', 'tax', 'net_profit_owners', 'eps_basic']
+2026-03-12 14:21:51,343 [INFO] main:   PDF extracted 4 quarterly period(s)
+2026-03-12 14:21:51,343 [INFO] main: 
+  Annual PDF [FY2025]: data/RELIANCE/raw/annual_pdf/FY2025_Annual_Report.pdf
+2026-03-12 14:21:51,343 [INFO] pipeline.pdf_parser: Parsing: data/RELIANCE/raw/annual_pdf/FY2025_Annual_Report.pdf
+2026-03-12 14:21:52,827 [INFO] pipeline.pdf_parser:   pdfplumber-optimized: 174 pages (Identified 54 relevant)
+2026-03-12 14:22:07,193 [INFO] main:   Parsed 174 pages
+2026-03-12 14:22:07,738 [INFO] pipeline.financial_extractor:   Fields not found in PDF: ['minority_interest', 'long_term_borrowings', 'lease_liabilities', 'total_liabilities', 'cash_equivalents', 'receivables', 'total_current_assets', 'ppe', 'total_non_current_assets', 'total_assets']
+2026-03-12 14:22:07,751 [INFO] pipeline.financial_extractor:   FY headers found: ['FY2030', 'FY2029', 'FY2027', 'FY2026', 'FY2025']
+2026-03-12 14:22:07,752 [INFO] main:   BS extracted: ['FY2030', 'FY2029', 'FY2027', 'FY2026', 'FY2025']
+2026-03-12 14:22:08,413 [INFO] pipeline.financial_extractor:   Fields not found in PDF: ['net_profit', 'working_capital_change', 'other_operating_adjustments', 'cash_from_operations', 'capital_expenditure', 'acquisitions', 'investments', 'cash_from_investing', 'debt_issued', 'debt_repaid', 'dividend_paid', 'buyback', 'cash_from_financing', 'net_cash_flow', 'opening_cash']
+2026-03-12 14:22:08,427 [INFO] pipeline.financial_extractor:   FY headers found: ['FY2030', 'FY2029', 'FY2027', 'FY2026', 'FY2025']
+2026-03-12 14:22:08,427 [INFO] main:   CF extracted: ['FY2030', 'FY2029', 'FY2027', 'FY2026', 'FY2025']
+2026-03-12 14:22:08,875 [INFO] pipeline.financial_extractor:   Fields not found in PDF: ['sales', 'other_income', 'total_income', 'total_expenses', 'interest', 'depreciation', 'profit_before_tax', 'tax', 'net_profit_owners']
+2026-03-12 14:22:08,889 [INFO] pipeline.financial_extractor:   FY headers found: ['FY2030', 'FY2029', 'FY2027', 'FY2026', 'FY2025']
+2026-03-12 14:22:08,889 [INFO] main: 
+Extraction complete: Q P&L=4 | A P&L=5 | BS=5 | CF=5
+2026-03-12 14:22:08,891 [INFO] main: 
+############################################################
+STEP 4: VALIDATE — RELIANCE
+############################################################
+2026-03-12 14:22:08,891 [INFO] pipeline.validator:   ✓ P&L [Mar 2025]: OK
+2026-03-12 14:22:08,891 [INFO] pipeline.validator:   ✓ P&L [Mar 2024]: OK
+2026-03-12 14:22:08,892 [WARNING] pipeline.validator:   ✗ VALIDATION: [Mar 2019] Missing or Zero Revenue from Operations
+2026-03-12 14:22:08,892 [WARNING] pipeline.validator:   ✗ VALIDATION: [Dec 2024] Missing or Zero Revenue from Operations
+2026-03-12 14:22:08,892 [WARNING] pipeline.validator:   ✗ VALIDATION: [FY2030] Missing or Zero Revenue from Operations
+2026-03-12 14:22:08,892 [WARNING] pipeline.validator:   ✗ VALIDATION: [FY2029] Missing or Zero Revenue from Operations
+2026-03-12 14:22:08,893 [WARNING] pipeline.validator:   ✗ VALIDATION: [FY2027] Missing or Zero Revenue from Operations
+2026-03-12 14:22:08,893 [WARNING] pipeline.validator:   ✗ VALIDATION: [FY2026] Missing or Zero Revenue from Operations
+2026-03-12 14:22:08,893 [WARNING] pipeline.validator:   ✗ VALIDATION: [FY2025] Missing or Zero Revenue from Operations
+2026-03-12 14:22:08,893 [INFO] pipeline.validator:   ✓ BS [FY2030]: OK
+2026-03-12 14:22:08,894 [INFO] pipeline.validator:   ✓ BS [FY2029]: OK
+2026-03-12 14:22:08,894 [INFO] pipeline.validator:   ✓ BS [FY2027]: OK
+2026-03-12 14:22:08,894 [INFO] pipeline.validator:   ✓ BS [FY2026]: OK
+2026-03-12 14:22:08,894 [INFO] pipeline.validator:   ✓ BS [FY2025]: OK
+2026-03-12 14:22:08,894 [INFO] pipeline.validator:   ✓ CF [FY2030]: OK
+2026-03-12 14:22:08,895 [INFO] pipeline.validator:   ✓ CF [FY2029]: OK
+2026-03-12 14:22:08,895 [INFO] pipeline.validator:   ✓ CF [FY2027]: OK
+2026-03-12 14:22:08,895 [INFO] pipeline.validator:   ✓ CF [FY2026]: OK
+2026-03-12 14:22:08,895 [INFO] pipeline.validator:   ✓ CF [FY2025]: OK
+2026-03-12 14:22:08,895 [INFO] pipeline.validator: 
+VALIDATION SUMMARY: ✗ ISSUES FOUND | 7 issue categories
+2026-03-12 14:22:08,896 [INFO] main: 
+############################################################
+STEP 5: EXPORT — RELIANCE
+############################################################
+2026-03-12 14:22:08,897 [INFO] pipeline.export_json: JSON saved → data/RELIANCE/extracted/profit_loss_quarterly.json (2 KB)
+2026-03-12 14:22:08,897 [INFO] pipeline.export_json: JSON saved → data/RELIANCE/extracted/profit_loss_yearly.json (2 KB)
+2026-03-12 14:22:08,898 [INFO] pipeline.export_json: JSON saved → data/RELIANCE/extracted/balance_sheet.json (3 KB)
+2026-03-12 14:22:08,898 [INFO] pipeline.export_json: JSON saved → data/RELIANCE/extracted/cash_flow.json (2 KB)
+2026-03-12 14:22:08,899 [INFO] pipeline.export_json: JSON saved → data/RELIANCE/final/company_financials.json (16 KB)
+2026-03-12 14:22:08,900 [INFO] main: 
+✓ Done! Output → data/RELIANCE/final/company_financials.json
+2026-03-12 14:22:08,900 [INFO] main:   Log → logs/pipeline_20260312_142149.log

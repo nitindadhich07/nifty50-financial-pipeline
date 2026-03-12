@@ -1,0 +1,142 @@
+{
+  "company_info": {
+    "ticker": "RELIANCE",
+    "company_name": "Reliance Industries Limited",
+    "exchange": "NSE/BSE",
+    "sector": "Energy",
+    "industry": "Oil & Gas",
+    "currency": "INR",
+    "unit": "₹ Crores"
+  },
+  "profit_loss": {
+    "quarterly": {
+      "Sep 2024": {
+        "revenue_from_operations": 235481.0,
+        "other_income": 3801.0,
+        "total_income": 239282.0,
+        "ebitda": 43975.0,
+        "ebitda_margin_pct": 18.67,
+        "depreciation": 13450.0,
+        "interest": 6620.0,
+        "profit_before_tax": 23905.0,
+        "tax": 4501.0,
+        "net_profit": 19404.0,
+        "minority_interest": 2843.0,
+        "net_profit_after_minority": 16561.0,
+        "eps": 11.4
+      },
+      "Dec 2024": {
+        "revenue_from_operations": 228260.0,
+        "other_income": 3214.0,
+        "total_income": 231474.0,
+        "ebitda": 45213.0,
+        "ebitda_margin_pct": 19.81,
+        "depreciation": 14459.0,
+        "interest": 5371.0,
+        "profit_before_tax": 25383.0,
+        "tax": 6120.0,
+        "net_profit": 19263.0,
+        "minority_interest": 2721.0,
+        "net_profit_after_minority": 16542.0,
+        "eps": 11.38
+      }
+    },
+    "yearly": {
+      "FY2025": {
+        "revenue_from_operations": 980136.0,
+        "other_income": 17978.0,
+        "total_income": 998114.0,
+        "total_operating_expenses": 892097.0,
+        "ebitda": 183422.0,
+        "ebitda_margin_pct": 18.71,
+        "depreciation": 53136.0,
+        "interest": 24269.0,
+        "profit_before_tax": 106017.0,
+        "tax": 25230.0,
+        "net_profit": 81309.0,
+        "minority_interest": 11661.0,
+        "net_profit_after_minority": 69648.0,
+        "eps": 51.47
+      },
+      "FY2024": {
+        "revenue_from_operations": 914472.0,
+        "other_income": 16057.0,
+        "total_income": 930529.0,
+        "net_profit": 79020.0,
+        "minority_interest": 9399.0,
+        "net_profit_after_minority": 69621.0,
+        "eps": 51.45
+      }
+    }
+  },
+  "balance_sheet": {
+    "yearly": {
+      "FY2025": {
+        "cash_equivalents": 106502.0,
+        "short_term_borrowings": 110631.0,
+        "long_term_borrowings": 236899.0,
+        "ppe": 683102.0,
+        "capital_work_in_progress": 147122.0,
+        "goodwill": 144639.0,
+        "intangibles": 24530.0,
+        "spectrum": 169710.0,
+        "total_equity": 1009626.0,
+        "total_debt": 347530.0,
+        "total_assets": 1950121.0
+      },
+      "FY2024": {
+        "cash_equivalents": 97225.0,
+        "short_term_borrowings": 56642.0,
+        "long_term_borrowings": 267980.0,
+        "total_equity": 925788.0,
+        "total_debt": 324622.0,
+        "total_assets": 1755986.0
+      }
+    }
+  },
+  "cash_flow": {
+    "yearly": {
+      "FY2025": {
+        "cash_from_operations": 178703.0,
+        "capital_expenditure": 139967.0,
+        "free_cash_flow": 38736.0,
+        "closing_cash": 106502.0
+      },
+      "FY2024": {
+        "cash_from_operations": 158788.0,
+        "capital_expenditure": 152883.0,
+        "free_cash_flow": 5905.0,
+        "closing_cash": 97225.0
+      }
+    }
+  },
+  "ratios": {
+    "FY2025": {
+      "operating_margin_pct": 18.71,
+      "net_profit_margin_pct": 8.3,
+      "roe_pct": 8.26,
+      "roce_pct": 9.4,
+      "debt_to_equity": 0.34,
+      "interest_coverage": 5.37
+    },
+    "FY2024": {
+      "operating_margin_pct": 17.5,
+      "net_profit_margin_pct": 7.6,
+      "roe_pct": 8.8,
+      "debt_to_equity": 0.35
+    }
+  },
+  "metadata": {
+    "data_sources": [
+      {
+        "type": "Annual Report PDF",
+        "label": "FY2025",
+        "path": "data/RELIANCE/raw/annual_pdf/FY2025_Annual_Report.pdf",
+        "source": "manual_review_audit"
+      }
+    ],
+    "last_updated": "2026-03-12T17:15:00.000000+00:00",
+    "parser_version": "v1.1",
+    "validation_passed": true
+  }
+}
