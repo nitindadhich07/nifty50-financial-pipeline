@@ -20,27 +20,6 @@
     "net_profit_after_minority": 7713.0,
     "eps": 11.4
   },
-  "Mar 2024": {
-    "revenue_from_operations": 151014.0,
-    "other_income": 3497.0,
-    "total_income": 154511.0,
-    "raw_material_cost": null,
-    "power_fuel_cost": null,
-    "employee_cost": null,
-    "selling_general_admin": null,
-    "other_expenses": null,
-    "total_operating_expenses": 130991.0,
-    "ebitda": 20023.0,
-    "ebitda_margin_pct": 13.26,
-    "depreciation": 4856.0,
-    "interest": 3613.0,
-    "profit_before_tax": 15051.0,
-    "tax": 3768.0,
-    "net_profit": 11283.0,
-    "minority_interest": null,
-    "net_profit_after_minority": 11283.0,
-    "eps": 16.68
-  },
   "Jun 2024": {
     "revenue_from_operations": 134331.0,
     "other_income": 3502.0,
@@ -82,26 +61,5 @@
     "minority_interest": null,
     "net_profit_after_minority": 8721.0,
     "eps": 6.44
-  },
-  "Dec 2023": {
-    "revenue_from_operations": 130579.0,
-    "other_income": 2969.0,
-    "total_income": 133548.0,
-    "raw_material_cost": null,
-    "power_fuel_cost": null,
-    "employee_cost": null,
-    "selling_general_admin": null,
-    "other_expenses": null,
-    "total_operating_expenses": 113021.0,
-    "ebitda": 17558.0,
-    "ebitda_margin_pct": 13.45,
-    "depreciation": 4567.0,
-    "interest": 2982.0,
-    "profit_before_tax": 12978.0,
-    "tax": 3054.0,
-    "net_profit": 9924.0,
-    "minority_interest": null,
-    "net_profit_after_minority": 9924.0,
-    "eps": 14.67
   }
 }

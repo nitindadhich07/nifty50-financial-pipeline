@@ -1,5 +1,20 @@
 {
   "FY2025": {
-    "closing_cash": 10.0
+    "cash_from_operations": 190628.0,
+    "capital_expenditure": 26573.0,
+    "acquisitions": null,
+    "investments": -684340.0,
+    "cash_from_investing": null,
+    "debt_issued": 26378.0,
+    "debt_repaid": -31755.0,
+    "dividend_paid": -6766.0,
+    "buyback": null,
+    "cash_from_financing": null,
+    "free_cash_flow": 164055.0,
+    "net_cash_flow": 9277.0,
+    "opening_cash": 97225.0,
+    "closing_cash": null,
+    "working_capital_change": 166904.0,
+    "depreciation": 53136.0
   }
 }

@@ -16,7 +16,8 @@
       "status": "success",
       "url": "",
       "date": "",
-      "source": "disk"
+      "source": "disk",
+      "size_mb": 8.4
     }
   ]
 }

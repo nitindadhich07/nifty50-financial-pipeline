@@ -1,17 +1,30 @@
 {
-  "FY2026": {
-    "cash_equivalents": 10.0,
-    "short_term_borrowings": 20.0,
-    "ppe": 1.2,
-    "capital_work_in_progress": 1.2,
-    "intangibles": 1.2,
-    "spectrum": 32536.0,
-    "total_equity": null,
-    "total_debt": 20.0
-  },
   "FY2025": {
-    "spectrum": 202.0,
-    "total_equity": null,
-    "total_debt": null
+    "equity_share_capital": 1583.0,
+    "reserves": 829668.0,
+    "minority_interest": 166426.0,
+    "total_equity": 1009626.0,
+    "long_term_borrowings": 236899.0,
+    "short_term_borrowings": 110631.0,
+    "lease_liabilities": 17142.0,
+    "total_debt": 364672.0,
+    "trade_payables": 186789.0,
+    "other_liabilities": 10909.0,
+    "total_current_liabilities": 453737.0,
+    "total_non_current_liabilities": 486758.0,
+    "total_liabilities": 940495.0,
+    "cash_equivalents": 106502.0,
+    "short_term_investments": 230447.0,
+    "inventory": 146062.0,
+    "receivables": 42121.0,
+    "other_current_assets": 57148.0,
+    "total_current_assets": 499270.0,
+    "ppe": 188831.0,
+    "capital_work_in_progress": 169710.0,
+    "goodwill": 24530.0,
+    "intangibles": 147122.0,
+    "long_term_investments": 123672.0,
+    "total_non_current_assets": 1450851.0,
+    "total_assets": 228151.0
   }
 }
