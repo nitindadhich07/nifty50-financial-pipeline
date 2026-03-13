@@ -1,0 +1,149 @@
+2026-03-13 11:44:27,636 - FinancialPipelineV3 - INFO - Processing RELIANCE...
+2026-03-13 11:44:29,091 - FinancialPipelineV3 - INFO - Tier 2 (NSE) data fetched for RELIANCE
+2026-03-13 11:44:29,091 - FinancialPipelineV3 - INFO - Completed processing for RELIANCE. Result saved to data/final_v3/reliance_financials.json
+2026-03-13 11:46:32,906 - FinancialPipelineV3 - INFO - Processing RELIANCE with Priority Hierarchy...
+2026-03-13 11:46:33,714 - FinancialPipelineV3 - INFO - Tier 2: NSE API P&L fetched for 2 years
+2026-03-13 11:47:04,477 - FinancialPipelineV3 - INFO - Tier 4: PDF Fallback data merged (FY2025, FY2024)
+2026-03-13 11:47:04,480 - FinancialPipelineV3 - INFO - Final results updated in data/reliance/final/company_financials.json
+2026-03-13 11:47:27,891 - FinancialPipelineV3 - INFO - Processing RELIANCE with Priority Hierarchy...
+2026-03-13 11:47:28,033 - FinancialPipelineV3 - INFO - Tier 2: NSE API P&L fetched for 2 years
+2026-03-13 11:47:59,118 - FinancialPipelineV3 - INFO - Tier 4: PDF Fallback data merged (FY2025, FY2024)
+2026-03-13 11:47:59,120 - FinancialPipelineV3 - INFO - Final results updated in data/reliance/final/company_financials.json
+2026-03-13 11:48:27,463 - FinancialPipelineV3 - INFO - Processing RELIANCE with Priority Hierarchy...
+2026-03-13 11:48:27,570 - FinancialPipelineV3 - INFO - Tier 2: NSE API P&L fetched for 2 years
+2026-03-13 11:48:57,698 - FinancialPipelineV3 - INFO - Tier 4: PDF Fallback data merged (FY2025, FY2024)
+2026-03-13 11:48:57,702 - FinancialPipelineV3 - INFO - Final results updated in data/reliance/final/company_financials.json
+2026-03-13 11:49:22,508 - FinancialPipelineV3 - INFO - Processing RELIANCE with Priority Hierarchy...
+2026-03-13 11:49:22,601 - FinancialPipelineV3 - INFO - Tier 2: NSE API P&L fetched for 2 years
+2026-03-13 11:49:52,776 - FinancialPipelineV3 - INFO - Saved PDF text sample to data/debug_pdf_text.txt
+2026-03-13 11:49:53,647 - FinancialPipelineV3 - INFO - PDF raw extraction results: []
+2026-03-13 11:49:53,647 - FinancialPipelineV3 - INFO - Tier 4: PDF Fallback data merged (FY2025, FY2024)
+2026-03-13 11:49:53,648 - FinancialPipelineV3 - INFO - Final results updated in data/reliance/final/company_financials.json
+2026-03-13 11:50:34,289 - FinancialPipelineV3 - INFO - Processing RELIANCE with Priority Hierarchy...
+2026-03-13 11:50:35,114 - FinancialPipelineV3 - INFO - Tier 2: NSE API P&L fetched for 2 years
+2026-03-13 11:51:05,908 - FinancialPipelineV3 - INFO - Saved PDF text sample to data/debug_pdf_text.txt
+2026-03-13 11:51:06,753 - FinancialPipelineV3 - INFO - PDF raw extraction results: ['total_equity', 'total_income', 'depreciation', 'interest', 'profit_after_tax', 'equity_share_capital', 'ppe', 'total_assets', 'capital_expenditure', 'long_term_investments', 'revenue_from_operations', 'raw_material_cost', 'inventory', 'profit_before_tax', 'current_tax', 'deferred_tax', 'minority_interest', 'reserves', 'lease_liabilities', 'other_current_liabilities', 'total_non_current_assets', 'total_non_current_liabilities', 'receivables', 'cash_equivalents', 'trade_payables', 'total_current_assets', 'total_current_liabilities', 'total_liabilities', 'eps_basic', 'eps_diluted', 'other_income', 'employee_cost', 'total_expenses', 'working_capital_change', 'cash_from_operations', 'cash_from_investing', 'debt_issued', 'debt_repaid', 'dividend_paid', 'cash_from_financing', 'capital_work_in_progress', 'short_term_investments', 'intangibles', 'other_current_assets', 'long_term_borrowings', 'short_term_borrowings', 'net_profit', 'tax']
+2026-03-13 11:51:06,753 - FinancialPipelineV3 - INFO - Tier 4: PDF Fallback data merged (FY2025, FY2024)
+2026-03-13 11:51:06,754 - FinancialPipelineV3 - INFO - Final results updated in data/reliance/final/company_financials.json
+2026-03-13 11:56:23,310 - FinancialPipelineV3 - INFO - --- High-Accuracy Processing: RELIANCE ---
+2026-03-13 11:56:24,071 - FinancialPipelineV3 - INFO - Tier 1: NSE API data integrated for ['2024', '2023']
+2026-03-13 11:56:24,072 - FinancialPipelineV3 - INFO - Tier 2: Table-driven extraction from PDF...
+2026-03-13 11:56:53,097 - FinancialPipelineV3 - INFO -   Analysing bs on page 96
+2026-03-13 11:57:26,170 - FinancialPipelineV3 - INFO -   Analysing pl on page 100
+2026-03-13 11:57:27,063 - FinancialPipelineV3 - INFO -   Detected years: ['2024', '2023']
+2026-03-13 11:57:58,814 - FinancialPipelineV3 - INFO - Results saved to data/reliance/final/company_financials.json.
+2026-03-13 11:59:34,927 - FinancialPipelineV3 - INFO - 🚀 Starting High-Accuracy Extraction: RELIANCE
+2026-03-13 11:59:35,631 - FinancialPipelineV3 - INFO - ✅ Tier 1 (NSE) Integrated: ['2024', '2023']
+2026-03-13 11:59:35,632 - FinancialPipelineV3 - INFO - 🔍 Searching for CONSOLIDATED statements in PDF...
+2026-03-13 12:00:06,343 - FinancialPipelineV3 - INFO -   Analysing bs on Page 99
+2026-03-13 12:00:07,327 - FinancialPipelineV3 - INFO -     Detected columns for: ['2025', '2024']
+2026-03-13 12:00:40,159 - FinancialPipelineV3 - INFO -   Analysing pl on Page 100
+2026-03-13 12:00:41,538 - FinancialPipelineV3 - INFO -     Detected columns for: ['2025']
+2026-03-13 12:01:52,677 - FinancialPipelineV3 - INFO - ✨ Final Accuracy Enhanced. Results: data/reliance/final/company_financials.json
+2026-03-13 12:10:02,663 - FinancialPipelineV3 - INFO - 🚀 Starting High-Accuracy Extraction for RELIANCE...
+2026-03-13 12:10:03,526 - FinancialPipelineV3 - INFO - ✅ NSE API data integrated for ['2024', '2023']
+2026-03-13 12:10:03,526 - FinancialPipelineV3 - INFO -   Scanning PDF for Consolidated Statement pages...
+2026-03-13 12:10:33,081 - FinancialPipelineV3 - INFO -     Found bs on page 99
+2026-03-13 12:11:06,636 - FinancialPipelineV3 - INFO -     Found pl on page 100
+2026-03-13 12:11:40,448 - FinancialPipelineV3 - INFO - ✨ DONE. Accuracy improved. Results: data/reliance/final/company_financials.json
+2026-03-13 12:12:59,972 - FinancialPipelineV3 - INFO - 🚀 Starting High-Accuracy Extraction for RELIANCE...
+2026-03-13 12:13:00,728 - FinancialPipelineV3 - INFO - ✅ NSE API data integrated for ['2024', '2023']
+2026-03-13 12:13:00,729 - FinancialPipelineV3 - INFO -   Scanning PDF for Consolidated Statement pages...
+2026-03-13 12:13:30,885 - FinancialPipelineV3 - INFO -     Found bs on page 99
+2026-03-13 12:14:02,774 - FinancialPipelineV3 - INFO -     Found pl on page 100
+2026-03-13 12:14:37,184 - FinancialPipelineV3 - INFO - ✨ DONE. Accuracy improved. Results: data/reliance/final/company_financials.json
+2026-03-13 12:17:14,058 - FinancialPipelineV3 - INFO - 🚀 RELIANCE HIGH-ACCURACY EXTRACTION ENGINE 🚀
+2026-03-13 12:17:14,773 - FinancialPipelineV3 - INFO -   Identifying Consolidated Financial Statement pages...
+2026-03-13 12:17:44,673 - FinancialPipelineV3 - INFO -     Processing BS from Page 99
+2026-03-13 12:18:16,995 - FinancialPipelineV3 - INFO -     Processing PL from Page 100
+2026-03-13 12:19:22,750 - FinancialPipelineV3 - INFO - ✨ EXTRACTION COMPLETE. Results saved to data/reliance/final/company_financials.json
+2026-03-13 12:20:05,584 - FinancialPipelineV3 - INFO - 🚀 RELIANCE HIGH-ACCURACY EXTRACTION ENGINE 🚀
+2026-03-13 12:20:06,404 - FinancialPipelineV3 - INFO -   Identifying Consolidated Financial Statement pages...
+2026-03-13 12:20:35,732 - FinancialPipelineV3 - INFO -     Processing BS from Page 99
+2026-03-13 12:21:07,981 - FinancialPipelineV3 - INFO -     Processing PL from Page 100
+2026-03-13 12:22:11,601 - FinancialPipelineV3 - INFO - ✨ EXTRACTION COMPLETE. Results saved to data/reliance/final/company_financials.json
+2026-03-13 12:26:35,817 - FinancialPipelineV3 - INFO - 🚀 INSTITUTIONAL EXTRACTION ENGINE: RELIANCE 🚀
+2026-03-13 12:26:36,522 - FinancialPipelineV3 - INFO - ✅ Tier 1 (NSE Quarterly) integrated
+2026-03-13 12:26:36,522 - FinancialPipelineV3 - INFO -   Scanning PDF for Consolidated Statement tables...
+2026-03-13 12:27:04,861 - FinancialPipelineV3 - INFO - ✨ EXTRACTION COMPLETE. Results: data/reliance/final/company_financials.json
+2026-03-13 12:31:30,980 - FinancialPipelineV3 - INFO - 🚀 INSTITUTIONAL EXTRACTION ENGINE: RELIANCE 🚀
+2026-03-13 12:31:31,734 - FinancialPipelineV3 - INFO - ✅ Tier 1 (NSE Quarterly) integrated
+2026-03-13 12:31:31,734 - FinancialPipelineV3 - INFO -   Scanning Consolidated section (pages 95-115)…
+2026-03-13 12:31:40,011 - FinancialPipelineV3 - INFO -     Page 102: CF table detected
+2026-03-13 12:31:42,219 - FinancialPipelineV3 - INFO -     Page 104: BS table detected
+2026-03-13 12:31:48,841 - FinancialPipelineV3 - INFO -     Page 110: PL table detected
+2026-03-13 12:31:49,859 - FinancialPipelineV3 - INFO -     Page 111: PL table detected
+2026-03-13 12:31:53,887 - FinancialPipelineV3 - WARNING -     No data collected for PL via tables – trying text fallback
+2026-03-13 12:32:26,732 - FinancialPipelineV3 - INFO -     ✅ PL merged for FY2025
+2026-03-13 12:32:26,734 - FinancialPipelineV3 - INFO -     ✅ PL merged for FY2024
+2026-03-13 12:32:26,734 - FinancialPipelineV3 - INFO -     ✅ BS merged for FY2025
+2026-03-13 12:32:26,734 - FinancialPipelineV3 - INFO -     ✅ BS merged for FY2024
+2026-03-13 12:32:26,734 - FinancialPipelineV3 - WARNING -     No data collected for CF via tables – trying text fallback
+2026-03-13 12:33:35,338 - FinancialPipelineV3 - INFO - ✨ EXTRACTION COMPLETE → data/reliance/final/company_financials.json
+2026-03-13 12:42:31,096 - FinancialPipelineV3 - INFO - 🚀 INSTITUTIONAL EXTRACTION ENGINE: RELIANCE 🚀
+2026-03-13 12:42:31,806 - FinancialPipelineV3 - INFO - ✅ Tier 1 (NSE Quarterly) integrated
+2026-03-13 12:42:31,806 - FinancialPipelineV3 - INFO -   Scanning Consolidated section (pages 95-115)…
+2026-03-13 12:42:39,359 - FinancialPipelineV3 - INFO -     Page 102: CF table detected
+2026-03-13 12:42:41,350 - FinancialPipelineV3 - INFO -     Page 104: BS table detected
+2026-03-13 12:42:47,553 - FinancialPipelineV3 - INFO -     Page 110: PL table detected
+2026-03-13 12:42:48,498 - FinancialPipelineV3 - INFO -     Page 111: PL table detected
+2026-03-13 12:42:52,295 - FinancialPipelineV3 - WARNING -     No data collected for PL via tables – trying text fallback
+2026-03-13 12:43:24,152 - FinancialPipelineV3 - INFO -     ✅ PL merged for FY2025
+2026-03-13 12:43:24,152 - FinancialPipelineV3 - INFO -     ✅ PL merged for FY2024
+2026-03-13 12:43:24,152 - FinancialPipelineV3 - WARNING -     No data collected for BS via tables – trying text fallback
+2026-03-13 12:43:57,603 - FinancialPipelineV3 - INFO -     ✅ BS merged for FY2025
+2026-03-13 12:43:57,603 - FinancialPipelineV3 - WARNING -     No data collected for CF via tables – trying text fallback
+2026-03-13 12:45:03,181 - FinancialPipelineV3 - INFO - ✨ EXTRACTION COMPLETE → data/reliance/final/company_financials.json
+2026-03-13 12:48:01,693 - FinancialPipelineV3 - INFO - 🚀 INSTITUTIONAL EXTRACTION ENGINE: RELIANCE 🚀
+2026-03-13 12:48:02,528 - FinancialPipelineV3 - INFO - ✅ Tier 1 (NSE Quarterly) integrated
+2026-03-13 12:48:02,528 - FinancialPipelineV3 - INFO -   Scanning Consolidated section (pages 95-115)…
+2026-03-13 12:48:10,033 - FinancialPipelineV3 - INFO -     Page 102: CF table detected
+2026-03-13 12:48:12,067 - FinancialPipelineV3 - INFO -     Page 104: BS table detected
+2026-03-13 12:48:18,001 - FinancialPipelineV3 - INFO -     Page 110: PL table detected
+2026-03-13 12:48:18,947 - FinancialPipelineV3 - INFO -     Page 111: PL table detected
+2026-03-13 12:48:22,726 - FinancialPipelineV3 - WARNING -     No data collected for PL via tables – trying text fallback
+2026-03-13 12:48:55,120 - FinancialPipelineV3 - INFO -     ✅ PL merged for FY2025
+2026-03-13 12:48:55,121 - FinancialPipelineV3 - INFO -     ✅ PL merged for FY2024
+2026-03-13 12:48:55,121 - FinancialPipelineV3 - WARNING -     No data collected for BS via tables – trying text fallback
+2026-03-13 12:49:28,762 - FinancialPipelineV3 - INFO -     ✅ BS merged for FY2025
+2026-03-13 12:49:28,763 - FinancialPipelineV3 - WARNING -     No data collected for CF via tables – trying text fallback
+2026-03-13 12:50:34,417 - FinancialPipelineV3 - INFO - ✨ EXTRACTION COMPLETE → data/reliance/final/company_financials.json
+2026-03-13 12:55:22,504 - FinancialPipelineV3 - INFO - 🚀 INSTITUTIONAL EXTRACTION ENGINE: RELIANCE 🚀
+2026-03-13 12:55:23,259 - FinancialPipelineV3 - INFO - ✅ Tier 1 (NSE Quarterly) integrated
+2026-03-13 12:55:23,260 - FinancialPipelineV3 - INFO -   Scanning Consolidated section (pages 95-115)…
+2026-03-13 12:55:28,109 - FinancialPipelineV3 - INFO -     Page 99: BS table detected
+2026-03-13 12:55:28,968 - FinancialPipelineV3 - INFO -     Page 100: PL table detected
+2026-03-13 12:55:29,893 - FinancialPipelineV3 - INFO -     Page 101: BS table detected
+2026-03-13 12:55:30,801 - FinancialPipelineV3 - INFO -     Page 102: CF table detected
+2026-03-13 12:55:32,817 - FinancialPipelineV3 - INFO -     Page 104: BS table detected
+2026-03-13 12:55:38,917 - FinancialPipelineV3 - INFO -     Page 110: PL table detected
+2026-03-13 12:55:39,849 - FinancialPipelineV3 - INFO -     Page 111: PL table detected
+2026-03-13 12:55:43,714 - FinancialPipelineV3 - INFO -     ✅ PL merged for FY2025
+2026-03-13 12:55:43,715 - FinancialPipelineV3 - INFO -     ✅ PL merged for FY2024
+2026-03-13 12:55:43,715 - FinancialPipelineV3 - INFO -     ✅ BS merged for FY2025
+2026-03-13 12:55:43,715 - FinancialPipelineV3 - WARNING -     No data collected for CF via tables – trying text fallback
+2026-03-13 12:56:47,311 - FinancialPipelineV3 - INFO - ✨ EXTRACTION COMPLETE → data/reliance/final/company_financials.json
+2026-03-13 12:58:11,848 - FinancialPipelineV3 - INFO - 🚀 INSTITUTIONAL EXTRACTION ENGINE: RELIANCE 🚀
+2026-03-13 12:58:12,717 - FinancialPipelineV3 - INFO - ✅ Tier 1 (NSE Quarterly) integrated
+2026-03-13 12:58:12,717 - FinancialPipelineV3 - INFO -   Scanning Consolidated section (pages 95-115)…
+2026-03-13 12:58:17,477 - FinancialPipelineV3 - INFO -     Page 99: BS table detected
+2026-03-13 12:58:18,316 - FinancialPipelineV3 - INFO -     Page 100: PL table detected
+2026-03-13 12:58:19,218 - FinancialPipelineV3 - INFO -     Page 101: BS table detected
+2026-03-13 12:58:22,076 - FinancialPipelineV3 - INFO -     Page 104: BS table detected
+2026-03-13 12:58:32,834 - FinancialPipelineV3 - INFO -     ✅ PL merged for FY2025
+2026-03-13 12:58:32,834 - FinancialPipelineV3 - INFO -     ✅ PL merged for FY2024
+2026-03-13 12:58:32,834 - FinancialPipelineV3 - INFO -     ✅ BS merged for FY2025
+2026-03-13 12:58:32,834 - FinancialPipelineV3 - WARNING -     No data collected for CF via tables – trying text fallback
+2026-03-13 12:59:39,603 - FinancialPipelineV3 - INFO - ✨ EXTRACTION COMPLETE → data/reliance/final/company_financials.json
+2026-03-13 13:02:09,253 - FinancialPipelineV3 - INFO - 🚀 INSTITUTIONAL EXTRACTION ENGINE: RELIANCE 🚀
+2026-03-13 13:02:09,996 - FinancialPipelineV3 - INFO - ✅ Tier 1 (NSE Quarterly) integrated
+2026-03-13 13:02:09,997 - FinancialPipelineV3 - INFO -   Scanning Consolidated section (pages 95-115)…
+2026-03-13 13:02:14,825 - FinancialPipelineV3 - INFO -     Page 99: BS table detected
+2026-03-13 13:02:15,679 - FinancialPipelineV3 - INFO -     Page 100: PL table detected
+2026-03-13 13:02:16,606 - FinancialPipelineV3 - INFO -     Page 101: BS table detected
+2026-03-13 13:02:19,950 - FinancialPipelineV3 - INFO -     Page 104: BS table detected
+2026-03-13 13:02:31,142 - FinancialPipelineV3 - INFO -     ✅ PL merged for FY2025
+2026-03-13 13:02:31,143 - FinancialPipelineV3 - INFO -     ✅ PL merged for FY2024
+2026-03-13 13:02:31,143 - FinancialPipelineV3 - INFO -     ✅ BS merged for FY2025
+2026-03-13 13:02:31,143 - FinancialPipelineV3 - WARNING -     No data collected for CF via tables – trying text fallback
+2026-03-13 13:03:37,065 - FinancialPipelineV3 - INFO - ✨ EXTRACTION COMPLETE → data/reliance/final/company_financials.json

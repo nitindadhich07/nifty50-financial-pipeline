@@ -2,6 +2,26 @@
 
 A scalable system to automate the recovery and analysis of financial PDFs from the Indian stock market (NSE/BSE). Built for accuracy, performance, and "Screener-style" data extraction.
 
+## Institutional-Grade Multi-Source Extraction (pipeline_v3)
+
+This repo now includes a hierarchical, multi-source extraction engine targeting ~95-97% accuracy by prioritizing structured sources:
+
+1. MCA AOC-4 XBRL (annual PL/BS/CF) via local artifacts
+2. Exchange APIs (NSE/BSE) for quarterly/annual result series
+3. Company IR HTML tables
+4. PDF parsing (fallback)
+
+Run (hierarchical pipeline):
+
+```bash
+python3 -m pipeline_v3.hierarchical_pipeline --symbol RELIANCE
+```
+
+Optional inputs:
+- MCA XBRL local store: `storage/raw/mca_xbrl/<CIN>/*.zip|*.xml|*.xbrl`
+- Universe config: `pipeline_v3/config/nifty50_universe.json` (fill `cin` and `ir_urls` to unlock Tier-1/Tier-3)
+- PDF fallback: `--pdf /path/to/annual_report.pdf` (repeatable)
+
 ## 🚀 Features
 
 - **Layer 1: Intelligent Ingestion**

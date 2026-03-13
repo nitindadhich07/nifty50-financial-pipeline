@@ -1,0 +1,66 @@
+{
+  "as_of": "2026-03-13",
+  "notes": "Fill CIN (MCA) and IR URLs per company to enable Tier-1 and Tier-3 coverage. This file is a starting point; Nifty 50 constituents can change over time.",
+  "companies": [
+    {"symbol": "RELIANCE", "name": "Reliance Industries Limited", "scrip_code": "500325", "cin": null, "isin": "INE002A01018", "ir_urls": []},
+    {"symbol": "HDFCBANK", "name": "HDFC Bank Limited", "scrip_code": "500180", "cin": null, "isin": "INE040A01034", "ir_urls": []},
+    {"symbol": "TCS", "name": "Tata Consultancy Services Limited", "scrip_code": "532540", "cin": null, "isin": "INE467B01029", "ir_urls": []},
+    {"symbol": "INFY", "name": "Infosys Limited", "scrip_code": "500209", "cin": null, "isin": "INE009A01021", "ir_urls": []},
+    {"symbol": "HINDUNILVR", "name": "Hindustan Unilever Limited", "scrip_code": "500696", "cin": null, "isin": "INE030A01027", "ir_urls": []},
+
+    {"symbol": "ICICIBANK", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "SBIN", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "ITC", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "LT", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "AXISBANK", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+
+    {"symbol": "KOTAKBANK", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "BAJFINANCE", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "BAJAJFINSV", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "ASIANPAINT", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "BHARTIARTL", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+
+    {"symbol": "HCLTECH", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "WIPRO", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "TECHM", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "SUNPHARMA", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "DRREDDY", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+
+    {"symbol": "CIPLA", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "DIVISLAB", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "APOLLOHOSP", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "TITAN", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "MARUTI", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+
+    {"symbol": "M&M", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "TATAMOTORS", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "EICHERMOT", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "BAJAJ-AUTO", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "HEROMOTOCO", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+
+    {"symbol": "NTPC", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "POWERGRID", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "ONGC", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "COALINDIA", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "BPCL", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+
+    {"symbol": "ULTRACEMCO", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "SHREECEM", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "GRASIM", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "HINDALCO", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "JSWSTEEL", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+
+    {"symbol": "TATASTEEL", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "ADANIPORTS", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "ADANIENT", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "NESTLEIND", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "BRITANNIA", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+
+    {"symbol": "HDFCLIFE", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "SBILIFE", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "INDUSINDBK", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "UPL", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
+    {"symbol": "TATACONSUM", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []}
+  ]
+}
+
