@@ -40,7 +40,8 @@ class NSEAPIClient:
         params = {
             "index": "equities",
             "symbol": symbol.upper(),
-            "period": period
+            "period": period,
+            "consolidated": "true"
         }
         data, err = self.http.get_json(NSE_XBRL_URL, params=params)
         if err:

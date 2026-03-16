@@ -1,66 +1,606 @@
 {
   "as_of": "2026-03-13",
-  "notes": "Fill CIN (MCA) and IR URLs per company to enable Tier-1 and Tier-3 coverage. This file is a starting point; Nifty 50 constituents can change over time.",
+  "notes": "Filled CIN (MCA), ISIN, BSE scrip codes and official IR URLs for Nifty companies.",
   "companies": [
-    {"symbol": "RELIANCE", "name": "Reliance Industries Limited", "scrip_code": "500325", "cin": null, "isin": "INE002A01018", "ir_urls": []},
-    {"symbol": "HDFCBANK", "name": "HDFC Bank Limited", "scrip_code": "500180", "cin": null, "isin": "INE040A01034", "ir_urls": []},
-    {"symbol": "TCS", "name": "Tata Consultancy Services Limited", "scrip_code": "532540", "cin": null, "isin": "INE467B01029", "ir_urls": []},
-    {"symbol": "INFY", "name": "Infosys Limited", "scrip_code": "500209", "cin": null, "isin": "INE009A01021", "ir_urls": []},
-    {"symbol": "HINDUNILVR", "name": "Hindustan Unilever Limited", "scrip_code": "500696", "cin": null, "isin": "INE030A01027", "ir_urls": []},
-
-    {"symbol": "ICICIBANK", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "SBIN", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "ITC", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "LT", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "AXISBANK", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-
-    {"symbol": "KOTAKBANK", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "BAJFINANCE", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "BAJAJFINSV", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "ASIANPAINT", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "BHARTIARTL", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-
-    {"symbol": "HCLTECH", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "WIPRO", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "TECHM", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "SUNPHARMA", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "DRREDDY", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-
-    {"symbol": "CIPLA", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "DIVISLAB", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "APOLLOHOSP", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "TITAN", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "MARUTI", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-
-    {"symbol": "M&M", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "TATAMOTORS", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "EICHERMOT", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "BAJAJ-AUTO", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "HEROMOTOCO", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-
-    {"symbol": "NTPC", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "POWERGRID", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "ONGC", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "COALINDIA", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "BPCL", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-
-    {"symbol": "ULTRACEMCO", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "SHREECEM", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "GRASIM", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "HINDALCO", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "JSWSTEEL", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-
-    {"symbol": "TATASTEEL", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "ADANIPORTS", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "ADANIENT", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "NESTLEIND", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "BRITANNIA", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-
-    {"symbol": "HDFCLIFE", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "SBILIFE", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "INDUSINDBK", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "UPL", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []},
-    {"symbol": "TATACONSUM", "name": null, "scrip_code": null, "cin": null, "isin": null, "ir_urls": []}
+    {
+      "symbol": "RELIANCE",
+      "name": "Reliance Industries Limited",
+      "scrip_code": "500325",
+      "cin": "L17110MH1973PLC019786",
+      "isin": "INE002A01018",
+      "ir_urls": [
+        "https://www.ril.com/InvestorRelations.aspx"
+      ],
+      "sector": "Energy",
+      "industry": "Oil & Gas"
+    },
+    {
+      "symbol": "HDFCBANK",
+      "name": "HDFC Bank Limited",
+      "scrip_code": "500180",
+      "cin": "L65920MH1994PLC080618",
+      "isin": "INE040A01034",
+      "ir_urls": [
+        "https://www.hdfcbank.com/personal/about-us/investor-relations"
+      ],
+      "sector": "Financial Services",
+      "industry": "Banks"
+    },
+    {
+      "symbol": "TCS",
+      "name": "Tata Consultancy Services Limited",
+      "scrip_code": "532540",
+      "cin": "L22210MH1995PLC084781",
+      "isin": "INE467B01029",
+      "ir_urls": [
+        "https://www.tcs.com/investor-relations"
+      ],
+      "sector": "IT",
+      "industry": "IT - Software"
+    },
+    {
+      "symbol": "INFY",
+      "name": "Infosys Limited",
+      "scrip_code": "500209",
+      "cin": "L85110KA1981PLC013115",
+      "isin": "INE009A01021",
+      "ir_urls": [
+        "https://www.infosys.com/investors.html"
+      ],
+      "sector": "IT",
+      "industry": "IT - Software"
+    },
+    {
+      "symbol": "HINDUNILVR",
+      "name": "Hindustan Unilever Limited",
+      "scrip_code": "500696",
+      "cin": "L15140MH1933PLC002030",
+      "isin": "INE030A01027",
+      "ir_urls": [
+        "https://www.hul.co.in/investors/"
+      ],
+      "sector": "Fast Moving Consumer Goods",
+      "industry": "Diversified FMCG"
+    },
+    {
+      "symbol": "ICICIBANK",
+      "name": "ICICI Bank Limited",
+      "scrip_code": "532174",
+      "cin": "L65190GJ1994PLC021012",
+      "isin": "INE090A01021",
+      "ir_urls": [
+        "https://www.icicibank.com/about-us/investor-relations"
+      ],
+      "sector": "Financial Services",
+      "industry": "Banks"
+    },
+    {
+      "symbol": "SBIN",
+      "name": "State Bank of India",
+      "scrip_code": "500112",
+      "cin": "L99999MH1955GOI007394",
+      "isin": "INE062A01020",
+      "ir_urls": [
+        "https://sbi.co.in/web/investor-relations"
+      ],
+      "sector": "Financial Services",
+      "industry": "Banks"
+    },
+    {
+      "symbol": "ITC",
+      "name": "ITC Limited",
+      "scrip_code": "500875",
+      "cin": "L16005WB1910PLC001985",
+      "isin": "INE154A01025",
+      "ir_urls": [
+        "https://www.itcportal.com/investor-relations/index.aspx"
+      ],
+      "sector": "Fast Moving Consumer Goods",
+      "industry": "Diversified FMCG"
+    },
+    {
+      "symbol": "LT",
+      "name": "Larsen & Toubro Limited",
+      "scrip_code": "500510",
+      "cin": "L99999MH1946PLC004768",
+      "isin": "INE018A01030",
+      "ir_urls": [
+        "https://www.larsentoubro.com/investors/"
+      ],
+      "sector": "Construction",
+      "industry": "Civil Construction"
+    },
+    {
+      "symbol": "AXISBANK",
+      "name": "Axis Bank Limited",
+      "scrip_code": "532215",
+      "cin": "L65110GJ1993PLC020769",
+      "isin": "INE238A01034",
+      "ir_urls": [
+        "https://www.axisbank.com/investors"
+      ],
+      "sector": "Financial Services",
+      "industry": "Banks"
+    },
+    {
+      "symbol": "KOTAKBANK",
+      "name": "Kotak Mahindra Bank Limited",
+      "scrip_code": "500247",
+      "cin": "L65110MH1985PLC038137",
+      "isin": "INE237A01028",
+      "ir_urls": [
+        "https://www.kotak.com/en/investor-relations.html"
+      ],
+      "sector": "Financial Services",
+      "industry": "Banks"
+    },
+    {
+      "symbol": "BAJFINANCE",
+      "name": "Bajaj Finance Limited",
+      "scrip_code": "500034",
+      "cin": "L65910MH1987PLC042961",
+      "isin": "INE296A01024",
+      "ir_urls": [
+        "https://www.bajajfinserv.in/investor-relations-bajaj-finance"
+      ],
+      "sector": "Financial Services",
+      "industry": "Finance"
+    },
+    {
+      "symbol": "BAJAJFINSV",
+      "name": "Bajaj Finserv Limited",
+      "scrip_code": "532978",
+      "cin": "L65923PN2007PLC130075",
+      "isin": "INE918I01026",
+      "ir_urls": [
+        "https://www.bajajfinserv.in/investor-relations"
+      ],
+      "sector": "Financial Services",
+      "industry": "Finance"
+    },
+    {
+      "symbol": "ASIANPAINT",
+      "name": "Asian Paints Limited",
+      "scrip_code": "500820",
+      "cin": "L24220MH1942PLC003554",
+      "isin": "INE021A01026",
+      "ir_urls": [
+        "https://www.asianpaints.com/investors.html"
+      ],
+      "sector": "Consumer Durables",
+      "industry": "Consumer Durables"
+    },
+    {
+      "symbol": "BHARTIARTL",
+      "name": "Bharti Airtel Limited",
+      "scrip_code": "532454",
+      "cin": "L74899DL1995PLC070609",
+      "isin": "INE397D01024",
+      "ir_urls": [
+        "https://www.airtel.com/investors"
+      ],
+      "sector": "Telecommunication",
+      "industry": "Telecom - Services"
+    },
+    {
+      "symbol": "HCLTECH",
+      "name": "HCL Technologies Limited",
+      "scrip_code": "532281",
+      "cin": "L74140DL1991PLC046369",
+      "isin": "INE860A01027",
+      "ir_urls": [
+        "https://www.hcltech.com/investors"
+      ],
+      "sector": "IT",
+      "industry": "IT - Software"
+    },
+    {
+      "symbol": "WIPRO",
+      "name": "Wipro Limited",
+      "scrip_code": "507685",
+      "cin": "L32102KA1945PLC020800",
+      "isin": "INE075A01022",
+      "ir_urls": [
+        "https://www.wipro.com/investors/"
+      ],
+      "sector": "IT",
+      "industry": "IT - Software"
+    },
+    {
+      "symbol": "TECHM",
+      "name": "Tech Mahindra Limited",
+      "scrip_code": "532755",
+      "cin": "L64200MH1986PLC041370",
+      "isin": "INE669C01036",
+      "ir_urls": [
+        "https://www.techmahindra.com/investors/"
+      ],
+      "sector": "IT",
+      "industry": "IT - Software"
+    },
+    {
+      "symbol": "SUNPHARMA",
+      "name": "Sun Pharmaceutical Industries Limited",
+      "scrip_code": "524715",
+      "cin": "L24230GJ1993PLC019050",
+      "isin": "INE044A01036",
+      "ir_urls": [
+        "https://sunpharma.com/investor-relations"
+      ],
+      "sector": "Healthcare",
+      "industry": "Pharmaceuticals"
+    },
+    {
+      "symbol": "DRREDDY",
+      "name": "Dr. Reddy's Laboratories Limited",
+      "scrip_code": "500124",
+      "cin": "L85195TG1984PLC004507",
+      "isin": "INE089A01031",
+      "ir_urls": [
+        "https://www.drreddys.com/investors/"
+      ],
+      "sector": "Healthcare",
+      "industry": "Pharmaceuticals"
+    },
+    {
+      "symbol": "CIPLA",
+      "name": "Cipla Limited",
+      "scrip_code": "500087",
+      "cin": "L24239MH1935PLC002380",
+      "isin": "INE059A01026",
+      "ir_urls": [
+        "https://www.cipla.com/investors"
+      ],
+      "sector": "Healthcare",
+      "industry": "Pharmaceuticals"
+    },
+    {
+      "symbol": "DIVISLAB",
+      "name": "Divi's Laboratories Limited",
+      "scrip_code": "532488",
+      "cin": "L24110TG1990PLC011512",
+      "isin": "INE361B01024",
+      "ir_urls": [
+        "https://www.divislabs.com/investors.php"
+      ],
+      "sector": "Healthcare",
+      "industry": "Pharmaceuticals"
+    },
+    {
+      "symbol": "APOLLOHOSP",
+      "name": "Apollo Hospitals Enterprise Limited",
+      "scrip_code": "508869",
+      "cin": "L85110TN1979PLC008035",
+      "isin": "INE437A01024",
+      "ir_urls": [
+        "https://www.apollohospitals.com/investors/"
+      ],
+      "sector": "Healthcare",
+      "industry": "Healthcare Services"
+    },
+    {
+      "symbol": "TITAN",
+      "name": "Titan Company Limited",
+      "scrip_code": "500114",
+      "cin": "L74999TZ1984PLC001456",
+      "isin": "INE280A01028",
+      "ir_urls": [
+        "https://www.titancompany.in/investors"
+      ],
+      "sector": "Consumer Durables",
+      "industry": "Consumer Durables"
+    },
+    {
+      "symbol": "MARUTI",
+      "name": "Maruti Suzuki India Limited",
+      "scrip_code": "532500",
+      "cin": "L34103DL1981PLC011375",
+      "isin": "INE585B01010",
+      "ir_urls": [
+        "https://www.marutisuzuki.com/corporate/investors"
+      ],
+      "sector": "Automobile and Auto Components",
+      "industry": "Automobiles"
+    },
+    {
+      "symbol": "M&M",
+      "name": "Mahindra & Mahindra Limited",
+      "scrip_code": "500520",
+      "cin": "L65990MH1945PLC004558",
+      "isin": "INE101A01026",
+      "ir_urls": [
+        "https://www.mahindra.com/investors"
+      ],
+      "sector": "Automobile and Auto Components",
+      "industry": "Automobiles"
+    },
+    {
+      "symbol": "TATAMOTORS",
+      "name": "Tata Motors Limited",
+      "scrip_code": "500570",
+      "cin": "L28920MH1945PLC004520",
+      "isin": "INE155A01022",
+      "ir_urls": [
+        "https://www.tatamotors.com/investors/"
+      ],
+      "sector": "Automobile and Auto Components",
+      "industry": "Automobiles"
+    },
+    {
+      "symbol": "EICHERMOT",
+      "name": "Eicher Motors Limited",
+      "scrip_code": "505200",
+      "cin": "L34102DL1982PLC129877",
+      "isin": "INE066A01021",
+      "ir_urls": [
+        "https://www.eichermotors.com/investor-relations"
+      ],
+      "sector": "Automobile and Auto Components",
+      "industry": "Automobiles"
+    },
+    {
+      "symbol": "BAJAJ-AUTO",
+      "name": "Bajaj Auto Limited",
+      "scrip_code": "532977",
+      "cin": "L65910MH2007PLC168128",
+      "isin": "INE917I01010",
+      "ir_urls": [
+        "https://www.bajajauto.com/investors"
+      ],
+      "sector": "Automobile and Auto Components",
+      "industry": "Automobiles"
+    },
+    {
+      "symbol": "HEROMOTOCO",
+      "name": "Hero MotoCorp Limited",
+      "scrip_code": "500182",
+      "cin": "L35911DL1984PLC017354",
+      "isin": "INE158A01026",
+      "ir_urls": [
+        "https://www.heromotocorp.com/en-in/investors.html"
+      ],
+      "sector": "Automobile and Auto Components",
+      "industry": "Automobiles"
+    },
+    {
+      "symbol": "NTPC",
+      "name": "NTPC Limited",
+      "scrip_code": "532555",
+      "cin": "L40101DL1975GOI007966",
+      "isin": "INE733E01010",
+      "ir_urls": [
+        "https://www.ntpc.co.in/en/investors"
+      ],
+      "sector": "Power",
+      "industry": "Power"
+    },
+    {
+      "symbol": "POWERGRID",
+      "name": "Power Grid Corporation of India Limited",
+      "scrip_code": "532898",
+      "cin": "L40101DL1989GOI038121",
+      "isin": "INE752E01010",
+      "ir_urls": [
+        "https://www.powergrid.in/investor-relations"
+      ],
+      "sector": "Power",
+      "industry": "Power"
+    },
+    {
+      "symbol": "ONGC",
+      "name": "Oil and Natural Gas Corporation Limited",
+      "scrip_code": "500312",
+      "cin": "L74899DL1993GOI054155",
+      "isin": "INE213A01029",
+      "ir_urls": [
+        "https://ongcindia.com/web/eng/investors"
+      ],
+      "sector": "Energy",
+      "industry": "Oil & Gas"
+    },
+    {
+      "symbol": "COALINDIA",
+      "name": "Coal India Limited",
+      "scrip_code": "533278",
+      "cin": "L23109WB1973GOI028844",
+      "isin": "INE522F01014",
+      "ir_urls": [
+        "https://www.coalindia.in/en-us/investor.aspx"
+      ],
+      "sector": "Metals & Mining",
+      "industry": "Consumable Fuels"
+    },
+    {
+      "symbol": "BPCL",
+      "name": "Bharat Petroleum Corporation Limited",
+      "scrip_code": "500547",
+      "cin": "L23220MH1952GOI008931",
+      "isin": "INE029A01011",
+      "ir_urls": [
+        "https://www.bharatpetroleum.in/InvestorRelations"
+      ],
+      "sector": "Energy",
+      "industry": "Oil & Gas"
+    },
+    {
+      "symbol": "ULTRACEMCO",
+      "name": "UltraTech Cement Limited",
+      "scrip_code": "532538",
+      "cin": "L26940MH2000PLC128420",
+      "isin": "INE481G01011",
+      "ir_urls": [
+        "https://www.ultratechcement.com/investors"
+      ],
+      "sector": "Construction Materials",
+      "industry": "Cement & Cement Products"
+    },
+    {
+      "symbol": "SHREECEM",
+      "name": "Shree Cement Limited",
+      "scrip_code": "500387",
+      "cin": "L26943RJ1979PLC001935",
+      "isin": "INE070A01015",
+      "ir_urls": [
+        "https://www.shreecement.com/investors"
+      ],
+      "sector": "Construction Materials",
+      "industry": "Cement & Cement Products"
+    },
+    {
+      "symbol": "GRASIM",
+      "name": "Grasim Industries Limited",
+      "scrip_code": "500300",
+      "cin": "L17124MP1947PLC000410",
+      "isin": "INE047A01021",
+      "ir_urls": [
+        "https://www.grasim.com/investors"
+      ],
+      "sector": "Construction Materials",
+      "industry": "Cement & Cement Products"
+    },
+    {
+      "symbol": "HINDALCO",
+      "name": "Hindalco Industries Limited",
+      "scrip_code": "500440",
+      "cin": "L27020MH1958PLC011238",
+      "isin": "INE038A01020",
+      "ir_urls": [
+        "https://www.hindalco.com/investors"
+      ],
+      "sector": "Metals & Mining",
+      "industry": "Metals"
+    },
+    {
+      "symbol": "JSWSTEEL",
+      "name": "JSW Steel Limited",
+      "scrip_code": "500228",
+      "cin": "L27102MH1994PLC152925",
+      "isin": "INE019A01038",
+      "ir_urls": [
+        "https://www.jsw.in/investors"
+      ],
+      "sector": "Metals & Mining",
+      "industry": "Metals"
+    },
+    {
+      "symbol": "TATASTEEL",
+      "name": "Tata Steel Limited",
+      "scrip_code": "500470",
+      "cin": "L27100MH1907PLC000260",
+      "isin": "INE081A01020",
+      "ir_urls": [
+        "https://www.tatasteel.com/investors/"
+      ],
+      "sector": "Metals & Mining",
+      "industry": "Metals"
+    },
+    {
+      "symbol": "ADANIPORTS",
+      "name": "Adani Ports and Special Economic Zone Limited",
+      "scrip_code": "532921",
+      "cin": "L63090GJ1998PLC034182",
+      "isin": "INE742F01042",
+      "ir_urls": [
+        "https://www.adaniports.com/investors"
+      ],
+      "sector": "Services",
+      "industry": "Transport Services"
+    },
+    {
+      "symbol": "ADANIENT",
+      "name": "Adani Enterprises Limited",
+      "scrip_code": "512599",
+      "cin": "L51100GJ1993PLC019067",
+      "isin": "INE423A01024",
+      "ir_urls": [
+        "https://www.adanienterprises.com/investors"
+      ],
+      "sector": "Services",
+      "industry": "Commercial Services"
+    },
+    {
+      "symbol": "NESTLEIND",
+      "name": "Nestle India Limited",
+      "scrip_code": "500790",
+      "cin": "L15202DL1959PLC003786",
+      "isin": "INE239A01016",
+      "ir_urls": [
+        "https://www.nestle.in/investors"
+      ],
+      "sector": "Fast Moving Consumer Goods",
+      "industry": "Food Products"
+    },
+    {
+      "symbol": "BRITANNIA",
+      "name": "Britannia Industries Limited",
+      "scrip_code": "500825",
+      "cin": "L15412WB1918PLC002946",
+      "isin": "INE216A01030",
+      "ir_urls": [
+        "https://www.britannia.co.in/investors"
+      ],
+      "sector": "Fast Moving Consumer Goods",
+      "industry": "Food Products"
+    },
+    {
+      "symbol": "HDFCLIFE",
+      "name": "HDFC Life Insurance Company Limited",
+      "scrip_code": "540777",
+      "cin": "L65100MH2000PLC128245",
+      "isin": "INE795G01014",
+      "ir_urls": [
+        "https://www.hdfclife.com/investor-relations"
+      ],
+      "sector": "Financial Services",
+      "industry": "Insurance"
+    },
+    {
+      "symbol": "SBILIFE",
+      "name": "SBI Life Insurance Company Limited",
+      "scrip_code": "540719",
+      "cin": "L99999MH2000PLC129113",
+      "isin": "INE123W01016",
+      "ir_urls": [
+        "https://www.sbilife.co.in/en/investor-relations"
+      ],
+      "sector": "Financial Services",
+      "industry": "Insurance"
+    },
+    {
+      "symbol": "INDUSINDBK",
+      "name": "IndusInd Bank Limited",
+      "scrip_code": "532187",
+      "cin": "L65191PN1994PLC076333",
+      "isin": "INE095A01012",
+      "ir_urls": [
+        "https://www.indusind.com/investor-relations.html"
+      ],
+      "sector": "Financial Services",
+      "industry": "Banks"
+    },
+    {
+      "symbol": "UPL",
+      "name": "UPL Limited",
+      "scrip_code": "512070",
+      "cin": "L24219GJ1985PLC025132",
+      "isin": "INE628A01036",
+      "ir_urls": [
+        "https://www.upl-ltd.com/investors"
+      ],
+      "sector": "Chemicals",
+      "industry": "Chemicals"
+    },
+    {
+      "symbol": "TATACONSUM",
+      "name": "Tata Consumer Products Limited",
+      "scrip_code": "500800",
+      "cin": "L15491WB1962PLC031425",
+      "isin": "INE192A01025",
+      "ir_urls": [
+        "https://www.tataconsumer.com/investors"
+      ],
+      "sector": "Fast Moving Consumer Goods",
+      "industry": "Food Products"
+    }
   ]
 }
-

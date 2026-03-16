@@ -12,6 +12,8 @@ class Company:
     cin: Optional[str] = None  # MCA
     isin: Optional[str] = None
     ir_urls: Optional[List[str]] = None
+    sector: Optional[str] = None
+    industry: Optional[str] = None
 
 
 def load_universe(path: str = "pipeline_v3/config/nifty50_universe.json") -> List[Company]:
@@ -28,6 +30,8 @@ def load_universe(path: str = "pipeline_v3/config/nifty50_universe.json") -> Lis
                     cin=c.get("cin"),
                     isin=c.get("isin"),
                     ir_urls=c.get("ir_urls") or [],
+                    sector=c.get("sector"),
+                    industry=c.get("industry"),
                 )
             )
         return [c for c in companies if c.symbol]

@@ -1,0 +1,192 @@
+2026-03-16 13:49:24,044 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: RELIANCE
+2026-03-16 13:49:24,894 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 quarter(s)
+2026-03-16 13:49:25,666 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 annual item(s)
+Error scraping IR page https://www.ril.com/InvestorRelations.aspx: 404 Client Error: Not Found for url: https://www.ril.com/InvestorRelations.aspx
+2026-03-16 13:49:28,735 - FinancialPipelineV3.Hierarchical - INFO - Tier 3.5 (YFinance): Merging high-accuracy institutional statements...
+2026-03-16 13:49:28,744 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/reliance/final/company_financials.json
+2026-03-16 13:49:28,744 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: HDFCBANK
+2026-03-16 13:49:29,514 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 quarter(s)
+2026-03-16 13:49:30,276 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 annual item(s)
+/Users/geekologix/Desktop/nifty50-financial-pipeline/pipeline_v3/data_sources/ir_scraper.py:25: FutureWarning: Passing literal html to 'read_html' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+  tables = pd.read_html(r.text)
+2026-03-16 13:49:32,270 - FinancialPipelineV3.Hierarchical - INFO - Tier 3.5 (YFinance): Merging high-accuracy institutional statements...
+2026-03-16 13:49:32,279 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/bank/hdfcbank/final/company_financials.json
+2026-03-16 13:49:32,279 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: TCS
+2026-03-16 13:49:32,373 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 quarter(s)
+2026-03-16 13:49:32,583 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 annual item(s)
+/Users/geekologix/Desktop/nifty50-financial-pipeline/pipeline_v3/data_sources/ir_scraper.py:25: FutureWarning: Passing literal html to 'read_html' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+  tables = pd.read_html(r.text)
+Error scraping IR page https://www.tcs.com/investor-relations: Missing optional dependency 'html5lib'.  Use pip or conda to install html5lib.
+2026-03-16 13:49:34,714 - FinancialPipelineV3.Hierarchical - INFO - Tier 3.5 (YFinance): Merging high-accuracy institutional statements...
+2026-03-16 13:49:34,719 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/tcs/final/company_financials.json
+2026-03-16 13:49:34,719 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: INFY
+2026-03-16 13:49:35,522 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 quarter(s)
+2026-03-16 13:49:36,289 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 annual item(s)
+Error scraping IR page https://www.infosys.com/investors.html: 403 Client Error: Forbidden for url: https://www.infosys.com/investors.html
+2026-03-16 13:49:38,126 - FinancialPipelineV3.Hierarchical - INFO - Tier 3.5 (YFinance): Merging high-accuracy institutional statements...
+2026-03-16 13:49:38,130 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/infy/final/company_financials.json
+2026-03-16 13:49:38,130 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: HINDUNILVR
+2026-03-16 13:49:38,840 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 quarter(s)
+2026-03-16 13:49:38,936 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 annual item(s)
+Error scraping IR page https://www.hul.co.in/investors/: 403 Client Error: Forbidden for url: https://www.hul.co.in/investors/
+2026-03-16 13:49:40,807 - FinancialPipelineV3.Hierarchical - INFO - Tier 3.5 (YFinance): Merging high-accuracy institutional statements...
+2026-03-16 13:49:40,817 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/hindunilvr/final/company_financials.json
+2026-03-16 13:49:40,817 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: ICICIBANK
+2026-03-16 13:49:41,650 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 quarter(s)
+2026-03-16 13:49:42,353 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 annual item(s)
+/Users/geekologix/Desktop/nifty50-financial-pipeline/pipeline_v3/data_sources/ir_scraper.py:25: FutureWarning: Passing literal html to 'read_html' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+  tables = pd.read_html(r.text)
+Error scraping IR page https://www.icicibank.com/about-us/investor-relations: Missing optional dependency 'html5lib'.  Use pip or conda to install html5lib.
+2026-03-16 13:49:44,655 - FinancialPipelineV3.Hierarchical - INFO - Tier 3.5 (YFinance): Merging high-accuracy institutional statements...
+2026-03-16 13:49:44,664 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/bank/icicibank/final/company_financials.json
+2026-03-16 13:49:44,664 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: SBIN
+2026-03-16 13:49:45,429 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 quarter(s)
+2026-03-16 13:49:45,647 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 annual item(s)
+/Users/geekologix/Desktop/nifty50-financial-pipeline/pipeline_v3/data_sources/ir_scraper.py:25: FutureWarning: Passing literal html to 'read_html' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+  tables = pd.read_html(r.text)
+Error scraping IR page https://sbi.co.in/web/investor-relations: Missing optional dependency 'html5lib'.  Use pip or conda to install html5lib.
+2026-03-16 13:49:48,334 - FinancialPipelineV3.Hierarchical - INFO - Tier 3.5 (YFinance): Merging high-accuracy institutional statements...
+2026-03-16 13:49:48,341 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/bank/sbin/final/company_financials.json
+2026-03-16 13:49:48,341 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: ITC
+2026-03-16 13:49:49,167 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 quarter(s)
+2026-03-16 13:49:49,659 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 annual item(s)
+Error scraping IR page https://www.itcportal.com/investor-relations/index.aspx: 404 Client Error: Not Found for url: https://itcportal.com/investor-relations/index.aspx
+2026-03-16 13:49:52,000 - FinancialPipelineV3.Hierarchical - INFO - Tier 3.5 (YFinance): Merging high-accuracy institutional statements...
+2026-03-16 13:49:52,011 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/itc/final/company_financials.json
+2026-03-16 13:49:52,011 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: LT
+2026-03-16 13:49:52,791 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 quarter(s)
+2026-03-16 13:49:52,931 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 annual item(s)
+Error scraping IR page https://www.larsentoubro.com/investors/: 404 Client Error: Not Found for url: https://www.larsentoubro.com/investors
+2026-03-16 13:49:55,907 - FinancialPipelineV3.Hierarchical - INFO - Tier 3.5 (YFinance): Merging high-accuracy institutional statements...
+2026-03-16 13:49:55,919 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/lt/final/company_financials.json
+2026-03-16 13:49:55,919 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: AXISBANK
+2026-03-16 13:49:56,696 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 quarter(s)
+2026-03-16 13:49:57,388 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 annual item(s)
+Error scraping IR page https://www.axisbank.com/investors: 404 Client Error: Not Found for url: https://www.axisbank.com/investors
+2026-03-16 13:49:59,803 - FinancialPipelineV3.Hierarchical - INFO - Tier 3.5 (YFinance): Merging high-accuracy institutional statements...
+2026-03-16 13:49:59,812 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/bank/axisbank/final/company_financials.json
+2026-03-16 13:49:59,812 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: KOTAKBANK
+2026-03-16 13:50:01,208 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 quarter(s)
+2026-03-16 13:50:01,361 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 annual item(s)
+/Users/geekologix/Desktop/nifty50-financial-pipeline/pipeline_v3/data_sources/ir_scraper.py:25: FutureWarning: Passing literal html to 'read_html' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+  tables = pd.read_html(r.text)
+Error scraping IR page https://www.kotak.com/en/investor-relations.html: Missing optional dependency 'html5lib'.  Use pip or conda to install html5lib.
+2026-03-16 13:50:03,978 - FinancialPipelineV3.Hierarchical - INFO - Tier 3.5 (YFinance): Merging high-accuracy institutional statements...
+2026-03-16 13:50:03,988 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/bank/kotakbank/final/company_financials.json
+2026-03-16 13:50:03,988 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: BAJFINANCE
+2026-03-16 13:50:04,709 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 quarter(s)
+2026-03-16 13:50:04,829 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 annual item(s)
+Error scraping IR page https://www.bajajfinserv.in/investor-relations-bajaj-finance: 404 Client Error: Not Found for url: https://www.bajajfinserv.in/investor-relations-bajaj-finance
+2026-03-16 13:50:07,672 - FinancialPipelineV3.Hierarchical - INFO - Tier 3.5 (YFinance): Merging high-accuracy institutional statements...
+2026-03-16 13:50:07,682 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/nbfc/bajfinance/final/company_financials.json
+2026-03-16 13:50:07,682 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: BAJAJFINSV
+2026-03-16 13:50:08,454 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 quarter(s)
+2026-03-16 13:50:09,217 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 annual item(s)
+Error scraping IR page https://www.bajajfinserv.in/investor-relations: 404 Client Error: Not Found for url: https://www.bajajfinserv.in/investor-relations
+2026-03-16 13:50:12,226 - FinancialPipelineV3.Hierarchical - INFO - Tier 3.5 (YFinance): Merging high-accuracy institutional statements...
+2026-03-16 13:50:12,233 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/nbfc/bajajfinsv/final/company_financials.json
+2026-03-16 13:50:12,234 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: ASIANPAINT
+2026-03-16 13:50:12,994 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 quarter(s)
+2026-03-16 13:50:13,170 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 annual item(s)
+Error scraping IR page https://www.asianpaints.com/investors.html: 404 Client Error: Not Found for url: https://www.asianpaints.com/investors.html
+2026-03-16 13:50:15,358 - FinancialPipelineV3.Hierarchical - INFO - Tier 3.5 (YFinance): Merging high-accuracy institutional statements...
+2026-03-16 13:50:15,367 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/asianpaint/final/company_financials.json
+2026-03-16 13:50:15,368 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: BHARTIARTL
+2026-03-16 13:50:16,297 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 quarter(s)
+2026-03-16 13:50:16,452 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 annual item(s)
+/Users/geekologix/Desktop/nifty50-financial-pipeline/pipeline_v3/data_sources/ir_scraper.py:25: FutureWarning: Passing literal html to 'read_html' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+  tables = pd.read_html(r.text)
+Error scraping IR page https://www.airtel.com/investors: Missing optional dependency 'html5lib'.  Use pip or conda to install html5lib.
+2026-03-16 13:50:19,073 - FinancialPipelineV3.Hierarchical - INFO - Tier 3.5 (YFinance): Merging high-accuracy institutional statements...
+2026-03-16 13:50:19,082 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/bhartiartl/final/company_financials.json
+2026-03-16 13:50:19,082 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: HCLTECH
+2026-03-16 13:50:20,179 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 quarter(s)
+2026-03-16 13:50:20,320 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 annual item(s)
+/Users/geekologix/Desktop/nifty50-financial-pipeline/pipeline_v3/data_sources/ir_scraper.py:25: FutureWarning: Passing literal html to 'read_html' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+  tables = pd.read_html(r.text)
+Error scraping IR page https://www.hcltech.com/investors: Missing optional dependency 'html5lib'.  Use pip or conda to install html5lib.
+2026-03-16 13:50:23,455 - FinancialPipelineV3.Hierarchical - INFO - Tier 3.5 (YFinance): Merging high-accuracy institutional statements...
+2026-03-16 13:50:23,462 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/hcltech/final/company_financials.json
+2026-03-16 13:50:23,462 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: WIPRO
+2026-03-16 13:50:24,288 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 quarter(s)
+2026-03-16 13:50:24,440 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 annual item(s)
+/Users/geekologix/Desktop/nifty50-financial-pipeline/pipeline_v3/data_sources/ir_scraper.py:25: FutureWarning: Passing literal html to 'read_html' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+  tables = pd.read_html(r.text)
+2026-03-16 13:50:27,329 - FinancialPipelineV3.Hierarchical - INFO - Tier 3.5 (YFinance): Merging high-accuracy institutional statements...
+2026-03-16 13:50:27,339 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/wipro/final/company_financials.json
+2026-03-16 13:50:27,339 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: TECHM
+2026-03-16 13:50:28,076 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 quarter(s)
+2026-03-16 13:50:28,901 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 annual item(s)
+/Users/geekologix/Desktop/nifty50-financial-pipeline/pipeline_v3/data_sources/ir_scraper.py:25: FutureWarning: Passing literal html to 'read_html' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+  tables = pd.read_html(r.text)
+2026-03-16 13:50:30,936 - FinancialPipelineV3.Hierarchical - INFO - Tier 3.5 (YFinance): Merging high-accuracy institutional statements...
+2026-03-16 13:50:30,944 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/techm/final/company_financials.json
+2026-03-16 13:50:30,944 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: SUNPHARMA
+2026-03-16 13:50:31,690 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 quarter(s)
+2026-03-16 13:50:31,795 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 annual item(s)
+Error scraping IR page https://sunpharma.com/investor-relations: 404 Client Error: Not Found for url: https://sunpharma.com/investor-relations
+2026-03-16 13:50:34,188 - FinancialPipelineV3.Hierarchical - INFO - Tier 3.5 (YFinance): Merging high-accuracy institutional statements...
+2026-03-16 13:50:34,198 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/sunpharma/final/company_financials.json
+2026-03-16 13:50:34,198 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: DRREDDY
+2026-03-16 13:50:34,936 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 quarter(s)
+2026-03-16 13:50:35,084 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 annual item(s)
+Error scraping IR page https://www.drreddys.com/investors/: 404 Client Error: Not Found for url: https://www.drreddys.com/investors
+2026-03-16 13:50:38,465 - FinancialPipelineV3.Hierarchical - INFO - Tier 3.5 (YFinance): Merging high-accuracy institutional statements...
+2026-03-16 13:50:38,469 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/drreddy/final/company_financials.json
+2026-03-16 13:50:38,470 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: CIPLA
+2026-03-16 13:50:39,237 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 quarter(s)
+2026-03-16 13:50:39,342 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 annual item(s)
+/Users/geekologix/Desktop/nifty50-financial-pipeline/pipeline_v3/data_sources/ir_scraper.py:25: FutureWarning: Passing literal html to 'read_html' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+  tables = pd.read_html(r.text)
+Error scraping IR page https://www.cipla.com/investors: Missing optional dependency 'html5lib'.  Use pip or conda to install html5lib.
+2026-03-16 13:50:41,755 - FinancialPipelineV3.Hierarchical - INFO - Tier 3.5 (YFinance): Merging high-accuracy institutional statements...
+2026-03-16 13:50:41,766 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/cipla/final/company_financials.json
+2026-03-16 13:50:41,767 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: DIVISLAB
+2026-03-16 13:50:42,470 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 quarter(s)
+2026-03-16 13:50:42,581 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 annual item(s)
+Error scraping IR page https://www.divislabs.com/investors.php: 404 Client Error: Not Found for url: https://www.divislabs.com/investors.php
+2026-03-16 13:50:45,215 - FinancialPipelineV3.Hierarchical - INFO - Tier 3.5 (YFinance): Merging high-accuracy institutional statements...
+2026-03-16 13:50:45,224 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/divislab/final/company_financials.json
+2026-03-16 13:50:45,224 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: APOLLOHOSP
+2026-03-16 13:50:45,932 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 quarter(s)
+2026-03-16 13:50:46,698 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 annual item(s)
+Error scraping IR page https://www.apollohospitals.com/investors/: 404 Client Error: Not Found for url: https://www.apollohospitals.com/investors/
+2026-03-16 13:50:50,083 - FinancialPipelineV3.Hierarchical - INFO - Tier 3.5 (YFinance): Merging high-accuracy institutional statements...
+2026-03-16 13:50:50,091 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/apollohosp/final/company_financials.json
+2026-03-16 13:50:50,091 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: TITAN
+2026-03-16 13:50:51,018 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 quarter(s)
+2026-03-16 13:50:51,209 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 annual item(s)
+Error scraping IR page https://www.titancompany.in/investors: 404 Client Error: Not Found for url: https://www.titancompany.in/investors
+2026-03-16 13:50:53,973 - FinancialPipelineV3.Hierarchical - INFO - Tier 3.5 (YFinance): Merging high-accuracy institutional statements...
+2026-03-16 13:50:53,980 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/titan/final/company_financials.json
+2026-03-16 13:50:53,980 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: MARUTI
+2026-03-16 13:50:54,803 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 quarter(s)
+2026-03-16 13:50:54,914 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 annual item(s)
+/Users/geekologix/Desktop/nifty50-financial-pipeline/pipeline_v3/data_sources/ir_scraper.py:25: FutureWarning: Passing literal html to 'read_html' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+  tables = pd.read_html(r.text)
+Error scraping IR page https://www.marutisuzuki.com/corporate/investors: Missing optional dependency 'html5lib'.  Use pip or conda to install html5lib.
+2026-03-16 13:50:57,281 - FinancialPipelineV3.Hierarchical - INFO - Tier 3.5 (YFinance): Merging high-accuracy institutional statements...
+2026-03-16 13:50:57,292 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/maruti/final/company_financials.json
+2026-03-16 13:50:57,293 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: M&M
+2026-03-16 13:50:58,082 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 quarter(s)
+2026-03-16 13:50:58,191 - FinancialPipelineV3.Hierarchical - INFO - Tier 2 (NSE API): merged 2 annual item(s)
+/Users/geekologix/Desktop/nifty50-financial-pipeline/pipeline_v3/data_sources/ir_scraper.py:25: FutureWarning: Passing literal html to 'read_html' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+  tables = pd.read_html(r.text)
+Error scraping IR page https://www.mahindra.com/investors: Missing optional dependency 'html5lib'.  Use pip or conda to install html5lib.
+2026-03-16 13:51:00,999 - FinancialPipelineV3.Hierarchical - INFO - Tier 3.5 (YFinance): Merging high-accuracy institutional statements...
+2026-03-16 13:51:01,012 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/m&m/final/company_financials.json
+2026-03-16 13:51:01,013 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: TATAMOTORS
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/geekologix/Desktop/nifty50-financial-pipeline/pipeline_v3/hierarchical_pipeline.py", line 283, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/Users/geekologix/Desktop/nifty50-financial-pipeline/pipeline_v3/hierarchical_pipeline.py", line 266, in main
+    pipe.process_company(c, pdf_files=args.pdf or None)
+  File "/Users/geekologix/Desktop/nifty50-financial-pipeline/pipeline_v3/hierarchical_pipeline.py", line 86, in process_company
+    pnl = self.normalizer.normalize_nse_pnl(nse_q)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/geekologix/Desktop/nifty50-financial-pipeline/pipeline_v3/transformers/schema_normalizer.py", line 25, in normalize_nse_pnl
+    for item in items:
+TypeError: 'NoneType' object is not iterable

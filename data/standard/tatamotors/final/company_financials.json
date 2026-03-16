@@ -1,0 +1,28 @@
+{
+  "company_info": {
+    "ticker": "TATAMOTORS",
+    "company_name": "Tata Motors Limited",
+    "exchange": "NSE/BSE",
+    "sector": "Automobile and Auto Components",
+    "industry": "Automobiles",
+    "currency": "INR",
+    "unit": "\u20b9 Crores"
+  },
+  "profit_loss": {
+    "quarterly": {},
+    "yearly": {}
+  },
+  "balance_sheet": {
+    "yearly": {}
+  },
+  "cash_flow": {
+    "yearly": {}
+  },
+  "ratios": {},
+  "metadata": {
+    "data_sources": [],
+    "last_updated": "2026-03-16T11:34:49.349258+00:00",
+    "parser_version": "v2.0",
+    "validation_passed": true
+  }
+}

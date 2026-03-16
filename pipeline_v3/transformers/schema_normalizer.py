@@ -1,5 +1,6 @@
 import logging
 import re
+from datetime import datetime
 from dataclasses import asdict, is_dataclass
 from typing import Dict, Any, Optional, Literal, Tuple
 from .financial_mapper import ProfitLoss, BalanceSheet, CashFlow, CompanyFinancials
@@ -10,84 +11,178 @@ class SchemaNormalizer:
     """Normalizes raw data into the unified schema with institutional guardrails."""
 
     DEFAULT_SOURCE_PRIORITY = {
-        "MCA_XBRL": 400,
-        "BSE_XBRL": 350,
-        "NSE_API": 300,
+        "MCA_XBRL": 500,
+        "NSE_API": 450,
+        "BSE_XBRL": 440,
+        "PDF": 350,
+        "YFINANCE": 300,
         "BSE_API": 280,
         "IR_TABLE": 200,
-        "PDF": 100,
         "UNKNOWN": 0,
     }
+
+    # Sanity check thresholds
+    INT_TO_REV_LIMIT = 0.5  # Interest > 50% of Revenue is highly unlikely for non-banks
+    MAX_CRORE_VALUE = 2000000.0 # 20 Lakh Crores (approx RIL/TCS size)
     
-    def normalize_nse_pnl(self, raw_nse_data: Dict[str, Any]) -> Dict[str, ProfitLoss]:
+    def normalize_nse_pnl(self, raw_nse_data: Dict[str, Any], requested_period: str = "quarterly") -> Dict[str, ProfitLoss]:
         normalized = {}
-        items = raw_nse_data.get("resCmpData", [])
+        if not raw_nse_data or not isinstance(raw_nse_data, dict):
+            return normalized
+        items = raw_nse_data.get("resCmpData") or []
         for item in items:
             to_dt = item.get("re_to_dt", "")
-            label = self._label_from_nse_period(to_dt)
+            from_dt = item.get("re_from_dt", "")
+            if not to_dt:
+                continue
             
+            # Duration Check: NSE often returns Q4 results even in "Annual" endpoint.
+            # We check if (to_dt - from_dt) is approx 1 year.
+            is_full_year = False
+            try:
+                from datetime import datetime
+                # Handle DD-MMM-YYYY (31-MAR-2024)
+                fmt = "%d-%b-%Y"
+                d_to = datetime.strptime(to_dt.upper(), fmt)
+                d_from = datetime.strptime(from_dt.upper(), fmt)
+                days = (d_to - d_from).days
+                if 350 <= days <= 370:
+                    is_full_year = True
+            except:
+                is_full_year = False
+
+            # Filter logic: if we want annual results, skip quarterly rows from this endpoint
+            if requested_period == "annual" and not is_full_year:
+                continue
+            if requested_period == "quarterly" and is_full_year:
+                continue
+
+            label = self._label_from_nse_period(to_dt, period_type=requested_period)
+            
+            # Map NSE structured results to ProfitLoss dataclass
             pl = ProfitLoss(
-                revenue_from_operations=self._safe_float(item.get("re_net_sale"), divisor=100.0),
-                other_income=self._safe_float(item.get("re_oth_inc_new"), divisor=100.0),
-                interest=self._safe_float(item.get("re_int_new"), divisor=100.0),
-                depreciation=self._safe_float(item.get("re_depr_und_exp"), divisor=100.0),
-                profit_before_tax=self._safe_float(item.get("re_pro_loss_bef_tax"), divisor=100.0),
-                tax=self._safe_float(item.get("re_tax"), divisor=100.0),
-                net_profit=self._safe_float(item.get("re_net_profit"), divisor=100.0),
-                eps=self._safe_float(item.get("re_basic_eps"), divisor=1.0)
+                revenue_from_operations=self._safe_float(item.get("re_net_sale") or item.get("re_int_earned")),
+                other_income=self._safe_float(item.get("re_oth_inc_new") or item.get("re_oth_inc")),
+                total_income=self._safe_float(item.get("re_total_inc") or item.get("re_tot_inc")),
+                interest=self._safe_float(item.get("re_int_new") or item.get("re_int_expd")),
+                depreciation=self._safe_float(item.get("re_depr_und_exp") or item.get("re_depr")),
+                profit_before_tax=self._safe_float(item.get("re_pro_loss_bef_tax")),
+                tax=self._safe_float(item.get("re_tax")),
+                net_profit=self._safe_float(item.get("re_net_profit") or item.get("re_con_pro_loss")),
+                eps=self._safe_float(item.get("re_basic_eps_for_cont_dic_opr") or item.get("re_basic_eps") or item.get("re_bsc_eps_for_cont_dic_opr")),
+                exceptional_items=self._safe_float(item.get("re_excepn_items_new") or item.get("re_excepn_items"))
             )
+            
+            # Unit Alignment: NSE structured data (resCmpData) is consistently in Lakhs (0.01 Crores).
+            # We scale the entire statement together to maintain mathematical integrity.
+            for field in [f for f in pl.__dataclass_fields__ if f != "eps"]:
+                val = getattr(pl, field)
+                if val is not None:
+                    # Divide by 100 to convert Lakhs -> Crores
+                    setattr(pl, field, round(float(val) / 100.0, 2))
+
             self._apply_pnl_math(pl)
             normalized[label] = pl
         return normalized
 
-    def _label_from_nse_period(self, to_dt: str) -> str:
+    def _label_from_nse_period(self, to_dt: str, period_type: str = "quarterly") -> str:
         """
-        NSE results-comparision commonly returns a period end like '31-12-2024'.
-        Convert to a stable quarter label like 'Q3-FY2025'.
+        Convert date strings to stable labels.
+        Annual: FY2024 (for year ending Mar 2024)
+        Quarterly: Mar 2024
         """
-        m = re.search(r"(\d{2})[-/](\d{2})[-/](\d{4})", to_dt)
-        if not m:
-            y = re.search(r"(\d{4})", to_dt)
-            return f"FY{y.group(1)}" if y else "Unknown"
-        dd, mm, yyyy = int(m.group(1)), int(m.group(2)), int(m.group(3))
-        # FY ends March: Apr-Jun Q1, Jul-Sep Q2, Oct-Dec Q3, Jan-Mar Q4
-        if mm in (4, 5, 6):
-            q = 1
-            fy = yyyy + 1
-        elif mm in (7, 8, 9):
-            q = 2
-            fy = yyyy + 1
-        elif mm in (10, 11, 12):
-            q = 3
-            fy = yyyy + 1
+        s_dt = str(to_dt).strip()
+        if not s_dt or s_dt.lower() == "none":
+            return "Unknown"
+
+        # Idempotency
+        if period_type == "annual" and re.match(r"^FY\d{4}$", s_dt):
+            return s_dt
+        if period_type == "quarterly" and re.match(r"^[A-Z][a-z]{2} \d{4}$", s_dt):
+            return s_dt
+
+        MONTH_MAP = {
+            1: "Jan", 2: "Feb", 3: "Mar", 4: "Apr", 5: "May", 6: "Jun",
+            7: "Jul", 8: "Aug", 9: "Sep", 10: "Oct", 11: "Nov", 12: "Dec"
+        }
+        
+        ds = s_dt.split("T")[0].strip()
+        if " " in ds and ":" in ds:
+            ds = ds.split(" ")[0].strip()
+        
+        yyyy, mm = None, None
+        # Pattern 1: YYYY-MM-DD
+        m1 = re.search(r"(\d{4})-(\d{2})-(\d{2})", ds)
+        if m1:
+            yyyy, mm = int(m1.group(1)), int(m1.group(2))
         else:
-            q = 4
-            fy = yyyy
-        return f"Q{q}-FY{fy}"
+            # Pattern 2: DD-MM-YYYY or DD/MM/YYYY
+            m2 = re.search(r"(\d{1,2})[-/](\d{1,2})[-/](\d{4})", ds)
+            if m2:
+                yyyy, mm = int(m2.group(3)), int(m2.group(2))
+            else:
+                # Pattern 3: DD-MMM-YYYY (31-MAR-2024 or 31-Mar-2024)
+                m3 = re.search(r"(\d{1,2})[-/]([A-Za-z]{3})[-/](\d{4})", ds)
+                if m3:
+                    yyyy = int(m3.group(3))
+                    mon_name = m3.group(2).capitalize()
+                    for idx, name in MONTH_MAP.items():
+                        if name == mon_name:
+                            mm = idx
+                            break
+                else:
+                    # Pattern 4: MMM YYYY (Mar 2024)
+                    m4 = re.search(r"([A-Za-z]{3})\s+(\d{4})", ds)
+                    if m4:
+                        yyyy = int(m4.group(2))
+                        mon_name = m4.group(1).capitalize()
+                        for idx, name in MONTH_MAP.items():
+                            if name == mon_name:
+                                mm = idx
+                                break
+        
+        if not yyyy:
+            y = re.search(r"(\d{4})", ds)
+            return f"FY{y.group(1)}" if y else "Unknown"
+
+        if period_type == "annual":
+            # Indian FY Convention: Year ending March 2024 is FY2024.
+            # If ending Dec 2024, it's typically considered FY2025 or transition.
+            # We follow the end-year for FY mapping.
+            return f"FY{yyyy}"
+        else:
+            mon_str = MONTH_MAP.get(mm, "Unknown")
+            return f"{mon_str} {yyyy}"
 
     def normalize_pdf_data(self, raw_pdf_layer: Dict[str, Any]) -> Dict[str, Any]:
         """Maps raw extracted PDF dict (field -> value) to dataclasses."""
         current_raw = raw_pdf_layer.get("current", {})
         prev_raw = raw_pdf_layer.get("prev", {})
         
-        def map_to_classes(raw: Dict[str, float]):
-            # Rule 4: Inventory Validation
-            if "inventory" in raw and raw["inventory"] < 0:
-                logger.warning(f"Discarding negative inventory: {raw['inventory']}")
-                raw["inventory"] = None
-
-            pl_data = {k: raw[k] for k in ProfitLoss.__dataclass_fields__ if k in raw}
-            bs_data = {k: raw[k] for k in BalanceSheet.__dataclass_fields__ if k in raw}
-            cf_data = {k: raw[k] for k in CashFlow.__dataclass_fields__ if k in raw}
+        def map_to_classes(raw_dict: Dict[str, Any]):
+            # Use local dicts to collect values
+            pl_vals = {}
+            bs_vals = {}
+            cf_vals = {}
             
-            pl = ProfitLoss(**pl_data)
-            bs = BalanceSheet(**bs_data)
-            cf = CashFlow(**cf_data)
+            for k, v in raw_dict.items():
+                if v is None:
+                    continue
+                fval = float(v)
+                if k in ProfitLoss.__dataclass_fields__:
+                    pl_vals[k] = fval
+                if k in BalanceSheet.__dataclass_fields__:
+                    bs_vals[k] = fval
+                if k in CashFlow.__dataclass_fields__:
+                    cf_vals[k] = fval
+
+            pl = ProfitLoss(**pl_vals)
+            bs = BalanceSheet(**bs_vals)
+            cf = CashFlow(**cf_vals)
             
             self._apply_pnl_math(pl)
             self._apply_bs_math(bs)
             self._apply_cf_math(cf)
-                 
             return pl, bs, cf
 
         curr_pl, curr_bs, curr_cf = map_to_classes(current_raw)
@@ -122,21 +217,26 @@ class SchemaNormalizer:
         return out
 
     def _apply_pnl_math(self, pl: ProfitLoss):
-        """Computes EBITDA, EBIT, Total Income."""
+        """Computes EBITDA, EBIT, Total Income with sanity guards."""
         if pl.revenue_from_operations is not None:
              pl.total_income = round((pl.revenue_from_operations or 0) + (pl.other_income or 0), 2)
 
-        # Operating expenses may be available; compute quick operating profit if possible.
-        if pl.total_income is not None and pl.operating_expenses is not None:
-            # Not stored as a field; used indirectly for validation/insights.
-            pass
-        
-        # EBITDA estimation if Profit Before Tax is known
+        # EBITDA logic: PBT + Finance Costs + Depreciation
+        # BUT only if PBT isn't already suspiciously high.
         if pl.profit_before_tax is not None:
             # PBT + Interest + Depreciation = EBITDA
-            pl.ebitda = round((pl.profit_before_tax or 0) + (pl.interest or 0) + (pl.depreciation or 0), 2)
-            # EBITDA - Depreciation = EBIT
+            # Guard: Interest shouldn't be larger than Total Income (unit check)
+            safe_interest = pl.interest if (pl.interest or 0) < (pl.total_income or 1e15) else 0
+            pl.ebitda = round((pl.profit_before_tax or 0) + (safe_interest or 0) + (pl.depreciation or 0), 2)
+            
+            # EBIT = EBITDA - Depreciation
             pl.ebit = round((pl.ebitda or 0) - (pl.depreciation or 0), 2)
+        
+        # Absolute Cap Sanity Check
+        for field in ["revenue_from_operations", "total_income", "ebitda", "net_profit"]:
+            val = getattr(pl, field)
+            if val is not None and val > self.MAX_CRORE_VALUE:
+                 logger.warning(f"Absurd value detected in {field}: {val}. Possible unit error.")
 
     def _apply_bs_math(self, bs: BalanceSheet):
         """Computes Total Equity, Debt, Working Capital."""
@@ -153,13 +253,39 @@ class SchemaNormalizer:
     def _apply_cf_math(self, cf: CashFlow):
         """Computes Free Cash Flow."""
         if cf.cash_from_operations is not None and cf.capital_expenditure is not None:
-            cf.free_cash_flow = round(cf.cash_from_operations - abs(cf.capital_expenditure), 2)
+            cf.free_cash_flow = round(float(cf.cash_from_operations) - abs(float(cf.capital_expenditure)), 2)
+
+    def normalize_statement_dict(self, data: Dict[str, Any], divisor: float = 1.0) -> Dict[str, Any]:
+        """Entry point for statement-level normalization from unstructured dicts."""
+        out = {}
+        if "pl" in data:
+            pl = ProfitLoss(**{k: self._safe_float(v, divisor) for k, v in data["pl"].items() if k in ProfitLoss.__dataclass_fields__})
+            self._apply_pnl_math(pl)
+            out["pl"] = pl
+        if "bs" in data:
+            bs = BalanceSheet(**{k: self._safe_float(v, divisor) for k, v in data["bs"].items() if k in BalanceSheet.__dataclass_fields__})
+            self._apply_bs_math(bs)
+            out["bs"] = bs
+        if "cf" in data:
+            cf = CashFlow(**{k: self._safe_float(v, divisor) for k, v in data["cf"].items() if k in CashFlow.__dataclass_fields__})
+            self._apply_cf_math(cf)
+            out["cf"] = cf
+        return out
 
     def _safe_float(self, val: Any, divisor: float = 1.0) -> Optional[float]:
+        """
+        Converts to float and applies divisor.
+        User wants global unit as ₹ Crores.
+        If input is absolute Rupees, divisor should be 10,000,000.
+        """
         if val is None or val == "" or str(val).lower() == "null":
             return None
         try:
-            return round(float(str(val)) / divisor, 2) 
+            # Clean string if necessary (strip commas, etc.)
+            clean_val = str(val).replace(",", "").strip()
+            num = float(clean_val)
+            # Apply divisor and round to 2 decimals
+            return round(num / divisor, 2)
         except:
             return None
 
@@ -178,6 +304,13 @@ class SchemaNormalizer:
         Merge statement dataclasses using hierarchical precedence at field level.
         Provenance is recorded under target.metadata["provenance"].
         """
+        # Ensure year label follows requested format: FY2025 or Mar 2021
+        year = self._label_from_nse_period(year, period_type=period_type)
+
+        # User request: remove all data of FY21 (standardized as FY2021)
+        if year == "FY2021":
+            return
+
         prio = source_priority if source_priority is not None else self.DEFAULT_SOURCE_PRIORITY.get(source_name, 0)
         if "pl" in source_data and source_data["pl"] is not None:
             self._merge_dataclass(target, stmt="pl", period_type=period_type, year=year, source_obj=source_data["pl"], source_name=source_name, prio=prio, meta=source_meta)
@@ -210,7 +343,23 @@ class SchemaNormalizer:
             self._record_provenance(target, stmt=stmt, period_type=period_type, year=year, fields=self._fields_with_values(source_obj), source_name=source_name, prio=prio, meta=meta)
             return
 
+        # Statement-Level Integrity: If the existing object for this period was 
+        # populated by a higher-priority source, do NOT mix lower-priority fields into it
+        # unless it is nearly empty (< 2 fields).
         existing = bucket[year]
+        existing_prov = (((target.metadata.get("provenance") or {}).get(period_type) or {}).get(year) or {}).get(stmt) or {}
+        
+        # Find highest priority already present in this specific statement
+        highest_prev_prio = -1
+        if existing_prov:
+             highest_prev_prio = max([int(f.get("priority", 0)) for f in existing_prov.values()], default=-1)
+
+        if prio < highest_prev_prio and len(existing_prov) > 3:
+            # If current source is lower priority than what's already there,
+            # and what's there is reasonably substantial, skip merging.
+            # This prevents mixing Standalone fields from source B into Consolidated base from source A.
+            return
+
         for field, val in self._iter_fields(source_obj):
             if val is None:
                 continue

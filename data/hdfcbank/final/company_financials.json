@@ -1,0 +1,104 @@
+{
+  "company_info": {
+    "ticker": "HDFCBANK",
+    "company_name": "HDFC Bank Limited",
+    "exchange": "NSE/BSE",
+    "sector": "Financial Services",
+    "industry": "Banks",
+    "currency": "INR",
+    "unit": "₹ Crores"
+  },
+  "profit_loss": {
+    "quarterly": {
+      "FY2024": {
+        "ebitda": 15762.6,
+        "ebit": 15762.6,
+        "profit_before_tax": 15762.6,
+        "tax": -749.25,
+        "net_profit": 16511.85,
+        "eps": 21.74
+      },
+      "FY2023": {
+        "ebitda": 19430.66,
+        "ebit": 19430.66,
+        "profit_before_tax": 19430.66,
+        "tax": 3058.12,
+        "net_profit": 16372.54,
+        "eps": 21.58
+      }
+    },
+    "yearly": {
+      "FY2024": {
+        "ebitda": 15762.6,
+        "ebit": 15762.6,
+        "profit_before_tax": 15762.6,
+        "tax": -749.25,
+        "net_profit": 16511.85,
+        "eps": 21.74
+      },
+      "FY2023": {
+        "ebitda": 19430.66,
+        "ebit": 19430.66,
+        "profit_before_tax": 19430.66,
+        "tax": 3058.12,
+        "net_profit": 16372.54,
+        "eps": 21.58
+      }
+    }
+  },
+  "balance_sheet": {
+    "yearly": {}
+  },
+  "cash_flow": {
+    "yearly": {}
+  },
+  "ratios": {
+    "FY2025": {
+      "net_profit_margin": 28.4,
+      "operating_margin": 36.33,
+      "roe": 8.77,
+      "roa": 1.4,
+      "free_cash_flow_margin": 47.62,
+      "cfo_to_net_profit": 1.78
+    },
+    "FY2024": {
+      "net_profit_margin": 8.31,
+      "operating_margin": 7.93,
+      "roe": 2.38,
+      "roa": 0.37,
+      "free_cash_flow_margin": 48.74,
+      "cfo_to_net_profit": 6.19
+    },
+    "FY2023": {
+      "net_profit_margin": 13.58,
+      "operating_margin": 16.12,
+      "roe": 5.62,
+      "roa": 0.64,
+      "free_cash_flow_margin": 35.97,
+      "cfo_to_net_profit": 2.91
+    },
+    "FY2022": {
+      "net_profit_margin": 37.86,
+      "operating_margin": 50.93,
+      "roe": 15.41,
+      "roa": 1.83,
+      "free_cash_flow_margin": 54.41,
+      "cfo_to_net_profit": 1.51
+    }
+  },
+  "metadata": {
+    "data_sources": [
+      {
+        "type": "NSE_API",
+        "label": "FY2024"
+      },
+      {
+        "type": "NSE_API",
+        "label": "FY2023"
+      }
+    ],
+    "last_updated": "2026-03-16T09:53:34.663070+00:00",
+    "parser_version": "v2.0",
+    "validation_passed": true
+  }
+}

@@ -1,4 +1,5 @@
 import argparse
+import concurrent.futures
 from dataclasses import asdict
 from datetime import datetime, timezone
 import logging
@@ -56,10 +57,11 @@ class HierarchicalFinancialPipeline:
         fin.company_info = {
             "ticker": symbol,
             "company_name": company.name or symbol,
-            "isin": company.isin,
-            "cin": company.cin,
-            "unit": "INR Crores",
-            "generated_at_utc": datetime.now(timezone.utc).isoformat(),
+            "exchange": "NSE/BSE",
+            "sector": company.sector or "",
+            "industry": company.industry or "",
+            "currency": "INR",
+            "unit": "\u20b9 Crores",
         }
 
         # Tier 1: MCA XBRL (local artifacts)
@@ -80,20 +82,21 @@ class HierarchicalFinancialPipeline:
         else:
             logger.info("Tier 1 (MCA XBRL): skipped (missing CIN)")
 
-        # Tier 2: Exchange APIs
+        # Tier 2: Exchange APIs (NSE fallback for structure)
         nse_q = self.nse_client.fetch_results(symbol, period="Quarterly")
         if nse_q:
-            pnl = self.normalizer.normalize_nse_pnl(nse_q)
+            pnl = self.normalizer.normalize_nse_pnl(nse_q, requested_period="quarterly")
             for qlabel, pl in pnl.items():
                 self.normalizer.merge_financials(fin, {"pl": pl}, qlabel, period_type="quarterly", source_name="NSE_API")
-            logger.info(f"Tier 2 (NSE API): merged {len(pnl)} quarter(s)")
+            logger.info(f"Tier 1.5 (NSE API): merged {len(pnl)} quarter(s)")
 
         nse_a = self.nse_client.fetch_results(symbol, period="Annual")
         if nse_a:
-            apnl = self.normalizer.normalize_nse_pnl(nse_a)
+            apnl = self.normalizer.normalize_nse_pnl(nse_a, requested_period="annual")
             for alabel, pl in apnl.items():
                 self.normalizer.merge_financials(fin, {"pl": pl}, alabel, period_type="annual", source_name="NSE_API")
-            logger.info(f"Tier 2 (NSE API): merged {len(apnl)} annual item(s)")
+            if apnl:
+                logger.info(f"Tier 1.5 (NSE API): merged {len(apnl)} annual item(s)")
 
         # Tier 3: IR tables
         if company.ir_urls:
@@ -104,13 +107,32 @@ class HierarchicalFinancialPipeline:
                 for fy, stmts in parsed.items():
                     norm = self.normalizer.normalize_statement_dict(stmts)
                     self.normalizer.merge_financials(fin, norm, fy, period_type="annual", source_name="IR_TABLE", source_meta={"url": url})
-
-        # Tier 4: PDF fallback
+        
+        # Tier 3: PDF fallback (Always run to fill gaps in XBRL/APIs)
         if pdf_files:
+            logger.info(f"Tier 3 (PDF): Attempting to fill missing fields from {len(pdf_files)} PDF(s)...")
             for pdf_path in pdf_files:
                 if not Path(pdf_path).exists():
                     continue
                 self._extract_from_pdf(pdf_path, fin)
+
+        # Tier 4: Yahoo Finance API (Final fallback for remaining missing institutional data)
+        try:
+            import yfinance as yf
+            ticker = yf.Ticker(f"{symbol}.NS")
+            # Fetch statements
+            yf_data = {
+                "annual_income": ticker.financials,
+                "quarterly_income": ticker.quarterly_financials,
+                "annual_balance": ticker.balance_sheet,
+                "annual_cashflow": ticker.cashflow,
+                "info": ticker.info
+            }
+            if yf_data.get("annual_income") is not None and not yf_data["annual_income"].empty:
+                logger.info(f"Tier 4 (YFinance): Final fallback for remaining gaps...")
+                self._merge_yfinance_data(fin, yf_data)
+        except Exception as e:
+            logger.warning(f"Tier 4 (YFinance) failed: {e}")
 
         # Analytics
         annual_years = sorted(
@@ -132,9 +154,56 @@ class HierarchicalFinancialPipeline:
             fin.metadata.setdefault("anomalies", []).extend(anomalies)
             fin.insights.append(f"Validation flagged {len(anomalies)} anomaly(ies) for review.")
 
+        # ── Build clean output document ────────────────────────────────────────
+        # Collect data_sources from provenance metadata
+        data_sources: List[Dict[str, Any]] = []
+        prov = fin.metadata.get("provenance", {})
+        seen_sources: set = set()
+        for period_type, years in prov.items():
+            for year, stmts in years.items():
+                for stmt, fields in stmts.items():
+                    for field_name, field_meta in fields.items():
+                        src = field_meta.get("source", "UNKNOWN")
+                        if src not in seen_sources:
+                            seen_sources.add(src)
+                            data_sources.append({"type": src, "label": year})
+                        break  # one representative per statement per year is enough
+                    break
+
+        clean_metadata = {
+            "data_sources": data_sources,
+            "last_updated": datetime.now(timezone.utc).isoformat(),
+            "parser_version": "v2.0",
+            "validation_passed": len(anomalies) == 0,
+        }
+
+        # Flatten ratios: {"annual": {"FY2025": {...}}} → {"FY2025": {...}}
+        flat_ratios: Dict[str, Any] = {}
+        for fy, ratio_dict in fin.ratios.get("annual", {}).items():
+            flat_ratios[fy] = ratio_dict
+
+        # Build final export document (target schema)
+        export_doc = {
+            "company_info": fin.company_info,
+            "profit_loss": {
+                "quarterly": fin.profit_loss.get("quarterly", {}),
+                "yearly": fin.profit_loss.get("annual", {}),
+            },
+            "balance_sheet": {
+                "yearly": fin.balance_sheet.get("annual", {}),
+            },
+            "cash_flow": {
+                "yearly": fin.cash_flow.get("annual", {}),
+            },
+            "ratios": flat_ratios,
+            "metadata": clean_metadata,
+        }
+
         # Output
-        out_path = f"data/{symbol.lower()}/final/company_financials.json"
-        write_json(out_path, fin)
+        from .utils.sector_mapper import get_sector
+        sector_slug = get_sector(symbol)
+        out_path = f"data/{sector_slug}/{symbol.lower()}/final/company_financials.json"
+        write_json(out_path, export_doc)
         logger.info(f"Saved: {out_path}")
         return fin
 
@@ -193,6 +262,80 @@ class HierarchicalFinancialPipeline:
             norm = self.normalizer.normalize_pdf_data(parsed)
             self.normalizer.merge_financials(fin, norm["current"], "Unknown", period_type="annual", source_name="PDF", source_meta={"pdf": pdf_path, "pages": pages[:20]})
 
+    def _merge_yfinance_data(self, fin: CompanyFinancials, yf_data: Dict[str, Any]) -> None:
+        """Processes Yahoo Finance data frames into CompanyFinancials."""
+        mappings = [
+            ("annual_income", "pl", "annual"),
+            ("quarterly_income", "pl", "quarterly"),
+            ("annual_balance", "bs", "annual"),
+            ("annual_cashflow", "cf", "annual"),
+        ]
+        
+        # Determine divisor: Nifty 50 tickers on Yahoo are in absolute INR
+        # but sometimes millions if currency is USD (ADRs). 
+        # Standard .NS tickers are in absolute INR.
+        # We target ₹ Crores (10^7 INR).
+        raw_currency = (yf_data.get("info") or {}).get("currency", "INR")
+        global_divisor = 10000000.0 if raw_currency == "INR" else 1.0
+        
+        for key, bucket_key, ptype in mappings:
+            df = yf_data.get(key)
+            if df is not None and not df.empty:
+                for ts in df.columns:
+                    label = self.normalizer._label_from_nse_period(ts.isoformat(), ptype)
+                    col_data = df[ts].dropna().to_dict()
+                    payload = {bucket_key: self._map_yfinance_fields(bucket_key, col_data)}
+                    
+                    # Pass the global_divisor to normalize_statement_dict
+                    # This ensures P&L math (EBITDA etc) is done on correctly scaled units.
+                    norm_layer = self.normalizer.normalize_statement_dict(payload, divisor=global_divisor)
+                    
+                    # Prove the merge
+                    self.normalizer.merge_financials(fin, norm_layer, label, period_type=ptype, source_name="YFINANCE")
+
+    def _map_yfinance_fields(self, stmt_type: str, raw_data: Dict[str, Any]) -> Dict[str, Any]:
+        """Maps Yahoo Finance DataFrame index names to canonical dataclass fields."""
+        maps = {
+            "pl": {
+                "revenue_from_operations": ["Total Revenue", "Operating Revenue", "Revenue"],
+                "other_income": ["Other Income Expense", "Other Income", "Non Operating Income Net"],
+                "interest": ["Interest Expense", "Interest Expense Non Operating", "Finance Costs"],
+                "depreciation": ["Depreciation And Amortization", "Depreciation", "Amortization"],
+                "profit_before_tax": ["Pretax Income", "Profit Before Tax", "Income Before Tax"],
+                "tax": ["Tax Provision", "Income Tax Expense", "Tax Expense"],
+                "net_profit": ["Net Income", "Net Income Common Stockholders", "Net Income From Continuing Operations"],
+                "eps": ["Basic EPS", "Earnings Per Share Basic", "Basic Earnings Per Share"],
+                "diluted_eps": ["Diluted EPS", "Earnings Per Share Diluted"],
+            },
+            "bs": {
+                "total_assets": ["Total Assets"],
+                "total_equity": ["Stockholders Equity", "Total Equity Gross Minority Interest"],
+                "total_liabilities": ["Total Liabilities Net Minority Interest", "Total Liabilities"],
+                "total_debt": ["Total Debt"],
+                "long_term_borrowings": ["Long Term Debt"],
+                "short_term_borrowings": ["Current Debt"],
+                "cash_and_equivalents": ["Cash And Cash Equivalents", "Cash Cash Equivalents And Short Term Investments"],
+                "inventory": ["Inventory", "Inventories"],
+                "receivables": ["Receivables", "Accounts Receivable"],
+            },
+            "cf": {
+                "cash_from_operations": ["Operating Cash Flow", "Cash Flow From Continuing Operating Activities"],
+                "cash_from_investing": ["Investing Cash Flow", "Cash Flow From Continuing Investing Activities"],
+                "cash_from_financing": ["Financing Cash Flow", "Cash Flow From Continuing Financing Activities"],
+                "free_cash_flow": ["Free Cash Flow"],
+                "capital_expenditure": ["Capital Expenditure"],
+            }
+        }
+        
+        sm = maps.get(stmt_type, {})
+        mapped = {}
+        for field, suspects in sm.items():
+            for s in suspects:
+                if s in raw_data:
+                    mapped[field] = raw_data[s]
+                    break
+        return mapped
+
     def _safe_slug(self, s: str) -> str:
         return "".join(ch if ch.isalnum() else "_" for ch in s)[:120]
 
@@ -222,8 +365,9 @@ def main() -> int:
     pipe = HierarchicalFinancialPipeline(mca_base_dir=args.mca_base_dir)
 
     if args.all:
-        for c in universe:
-            pipe.process_company(c, pdf_files=args.pdf or None)
+        with concurrent.futures.ThreadPoolExecutor(max_workers=15) as executor:
+            futures = [executor.submit(pipe.process_company, c, pdf_files=args.pdf or None) for c in universe]
+            concurrent.futures.wait(futures)
         return 0
 
     if not args.symbol:
