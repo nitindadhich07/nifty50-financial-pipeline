@@ -1,0 +1,302 @@
+[
+  {
+    "symbol": "ADANIENT",
+    "name": "ADANIENT",
+    "sector": "Services",
+    "path": "data/standard/adanient/final/company_financials.json"
+  },
+  {
+    "symbol": "ADANIPORTS",
+    "name": "ADANIPORTS",
+    "sector": "Services",
+    "path": "data/standard/adaniports/final/company_financials.json"
+  },
+  {
+    "symbol": "APOLLOHOSP",
+    "name": "APOLLOHOSP",
+    "sector": "Healthcare",
+    "path": "data/standard/apollohosp/final/company_financials.json"
+  },
+  {
+    "symbol": "ASIANPAINT",
+    "name": "ASIANPAINT",
+    "sector": "Consumer Durables",
+    "path": "data/standard/asianpaint/final/company_financials.json"
+  },
+  {
+    "symbol": "AXISBANK",
+    "name": "AXISBANK",
+    "sector": "Financial Services",
+    "path": "data/bank/axisbank/final/company_financials.json"
+  },
+  {
+    "symbol": "BAJAJ-AUTO",
+    "name": "BAJAJ-AUTO",
+    "sector": "Automobile and Auto Components",
+    "path": "data/standard/bajaj-auto/final/company_financials.json"
+  },
+  {
+    "symbol": "BAJAJFINSV",
+    "name": "BAJAJFINSV",
+    "sector": "Financial Services",
+    "path": "data/nbfc/bajajfinsv/final/company_financials.json"
+  },
+  {
+    "symbol": "BAJFINANCE",
+    "name": "BAJFINANCE",
+    "sector": "Financial Services",
+    "path": "data/nbfc/bajfinance/final/company_financials.json"
+  },
+  {
+    "symbol": "BHARTIARTL",
+    "name": "BHARTIARTL",
+    "sector": "Telecommunication",
+    "path": "data/standard/bhartiartl/final/company_financials.json"
+  },
+  {
+    "symbol": "BPCL",
+    "name": "BPCL",
+    "sector": "Energy",
+    "path": "data/standard/bpcl/final/company_financials.json"
+  },
+  {
+    "symbol": "BRITANNIA",
+    "name": "BRITANNIA",
+    "sector": "Fast Moving Consumer Goods",
+    "path": "data/standard/britannia/final/company_financials.json"
+  },
+  {
+    "symbol": "CIPLA",
+    "name": "CIPLA",
+    "sector": "Healthcare",
+    "path": "data/standard/cipla/final/company_financials.json"
+  },
+  {
+    "symbol": "COALINDIA",
+    "name": "COALINDIA",
+    "sector": "Metals & Mining",
+    "path": "data/standard/coalindia/final/company_financials.json"
+  },
+  {
+    "symbol": "DIVISLAB",
+    "name": "DIVISLAB",
+    "sector": "Healthcare",
+    "path": "data/standard/divislab/final/company_financials.json"
+  },
+  {
+    "symbol": "DRREDDY",
+    "name": "DRREDDY",
+    "sector": "Healthcare",
+    "path": "data/standard/drreddy/final/company_financials.json"
+  },
+  {
+    "symbol": "EICHERMOT",
+    "name": "EICHERMOT",
+    "sector": "Automobile and Auto Components",
+    "path": "data/standard/eichermot/final/company_financials.json"
+  },
+  {
+    "symbol": "GRASIM",
+    "name": "GRASIM",
+    "sector": "Construction Materials",
+    "path": "data/standard/grasim/final/company_financials.json"
+  },
+  {
+    "symbol": "HCLTECH",
+    "name": "HCLTECH",
+    "sector": "IT",
+    "path": "data/standard/hcltech/final/company_financials.json"
+  },
+  {
+    "symbol": "HDFCBANK",
+    "name": "HDFCBANK",
+    "sector": "Financial Services",
+    "path": "data/bank/hdfcbank/final/company_financials.json"
+  },
+  {
+    "symbol": "HDFCLIFE",
+    "name": "HDFCLIFE",
+    "sector": "Financial Services",
+    "path": "data/insurance/hdfclife/final/company_financials.json"
+  },
+  {
+    "symbol": "HEROMOTOCO",
+    "name": "HEROMOTOCO",
+    "sector": "Automobile and Auto Components",
+    "path": "data/standard/heromotoco/final/company_financials.json"
+  },
+  {
+    "symbol": "HINDALCO",
+    "name": "HINDALCO",
+    "sector": "Metals & Mining",
+    "path": "data/standard/hindalco/final/company_financials.json"
+  },
+  {
+    "symbol": "HINDUNILVR",
+    "name": "HINDUNILVR",
+    "sector": "Fast Moving Consumer Goods",
+    "path": "data/standard/hindunilvr/final/company_financials.json"
+  },
+  {
+    "symbol": "ICICIBANK",
+    "name": "ICICIBANK",
+    "sector": "Financial Services",
+    "path": "data/bank/icicibank/final/company_financials.json"
+  },
+  {
+    "symbol": "INDUSINDBK",
+    "name": "INDUSINDBK",
+    "sector": "Financial Services",
+    "path": "data/bank/indusindbk/final/company_financials.json"
+  },
+  {
+    "symbol": "INFY",
+    "name": "INFY",
+    "sector": "IT",
+    "path": "data/standard/infy/final/company_financials.json"
+  },
+  {
+    "symbol": "ITC",
+    "name": "ITC",
+    "sector": "Fast Moving Consumer Goods",
+    "path": "data/standard/itc/final/company_financials.json"
+  },
+  {
+    "symbol": "JSWSTEEL",
+    "name": "JSWSTEEL",
+    "sector": "Metals & Mining",
+    "path": "data/standard/jswsteel/final/company_financials.json"
+  },
+  {
+    "symbol": "KOTAKBANK",
+    "name": "KOTAKBANK",
+    "sector": "Financial Services",
+    "path": "data/bank/kotakbank/final/company_financials.json"
+  },
+  {
+    "symbol": "LT",
+    "name": "LT",
+    "sector": "Construction",
+    "path": "data/standard/lt/final/company_financials.json"
+  },
+  {
+    "symbol": "M&M",
+    "name": "M&M",
+    "sector": "Automobile and Auto Components",
+    "path": "data/standard/m&m/final/company_financials.json"
+  },
+  {
+    "symbol": "MARUTI",
+    "name": "MARUTI",
+    "sector": "Automobile and Auto Components",
+    "path": "data/standard/maruti/final/company_financials.json"
+  },
+  {
+    "symbol": "NESTLEIND",
+    "name": "NESTLEIND",
+    "sector": "Fast Moving Consumer Goods",
+    "path": "data/standard/nestleind/final/company_financials.json"
+  },
+  {
+    "symbol": "NTPC",
+    "name": "NTPC",
+    "sector": "Power",
+    "path": "data/utility/ntpc/final/company_financials.json"
+  },
+  {
+    "symbol": "ONGC",
+    "name": "ONGC",
+    "sector": "Energy",
+    "path": "data/standard/ongc/final/company_financials.json"
+  },
+  {
+    "symbol": "POWERGRID",
+    "name": "POWERGRID",
+    "sector": "Power",
+    "path": "data/utility/powergrid/final/company_financials.json"
+  },
+  {
+    "symbol": "RELIANCE",
+    "name": "RELIANCE",
+    "sector": "Energy",
+    "path": "data/standard/reliance/final/company_financials.json"
+  },
+  {
+    "symbol": "SBILIFE",
+    "name": "SBILIFE",
+    "sector": "Financial Services",
+    "path": "data/insurance/sbilife/final/company_financials.json"
+  },
+  {
+    "symbol": "SBIN",
+    "name": "SBIN",
+    "sector": "Financial Services",
+    "path": "data/bank/sbin/final/company_financials.json"
+  },
+  {
+    "symbol": "SHREECEM",
+    "name": "SHREECEM",
+    "sector": "Construction Materials",
+    "path": "data/standard/shreecem/final/company_financials.json"
+  },
+  {
+    "symbol": "SUNPHARMA",
+    "name": "SUNPHARMA",
+    "sector": "Healthcare",
+    "path": "data/standard/sunpharma/final/company_financials.json"
+  },
+  {
+    "symbol": "TATACONSUM",
+    "name": "TATACONSUM",
+    "sector": "Fast Moving Consumer Goods",
+    "path": "data/standard/tataconsum/final/company_financials.json"
+  },
+  {
+    "symbol": "TATAMOTORS",
+    "name": "TATAMOTORS",
+    "sector": "Automobile and Auto Components",
+    "path": "data/standard/tatamotors/final/company_financials.json"
+  },
+  {
+    "symbol": "TATASTEEL",
+    "name": "TATASTEEL",
+    "sector": "Metals & Mining",
+    "path": "data/standard/tatasteel/final/company_financials.json"
+  },
+  {
+    "symbol": "TCS",
+    "name": "TCS",
+    "sector": "IT",
+    "path": "data/standard/tcs/final/company_financials.json"
+  },
+  {
+    "symbol": "TECHM",
+    "name": "TECHM",
+    "sector": "IT",
+    "path": "data/standard/techm/final/company_financials.json"
+  },
+  {
+    "symbol": "TITAN",
+    "name": "TITAN",
+    "sector": "Consumer Durables",
+    "path": "data/standard/titan/final/company_financials.json"
+  },
+  {
+    "symbol": "ULTRACEMCO",
+    "name": "ULTRACEMCO",
+    "sector": "Construction Materials",
+    "path": "data/standard/ultracemco/final/company_financials.json"
+  },
+  {
+    "symbol": "UPL",
+    "name": "UPL",
+    "sector": "Chemicals",
+    "path": "data/standard/upl/final/company_financials.json"
+  },
+  {
+    "symbol": "WIPRO",
+    "name": "WIPRO",
+    "sector": "IT",
+    "path": "data/standard/wipro/final/company_financials.json"
+  }
+]
