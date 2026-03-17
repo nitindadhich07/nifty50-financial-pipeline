@@ -6,7 +6,11 @@
     "sector": "IT",
     "industry": "IT - Software",
     "currency": "INR",
-    "unit": "\u20b9 Crores"
+    "unit": "\u20b9 Crores",
+    "price": 1339.7,
+    "shares_outstanding": 979779691,
+    "market_cap": 131261.09,
+    "has_standalone": true
   },
   "profit_loss": {
     "quarterly": {
@@ -90,7 +94,7 @@
         "other_income": null,
         "total_income": 14393.2,
         "operating_expenses": null,
-        "ebitda": 1598.7,
+        "ebitda": null,
         "ebit": 1598.7,
         "interest": 93.6,
         "depreciation": null,
@@ -105,7 +109,7 @@
         "other_income": null,
         "total_income": 13351.2,
         "operating_expenses": null,
-        "ebitda": 1695.9,
+        "ebitda": null,
         "ebit": 1695.9,
         "interest": 77.8,
         "depreciation": null,
@@ -120,7 +124,7 @@
         "other_income": null,
         "total_income": 13384.0,
         "operating_expenses": null,
-        "ebitda": 1549.5,
+        "ebitda": null,
         "ebit": 1549.5,
         "interest": 85.3,
         "depreciation": null,
@@ -182,7 +186,7 @@
         "other_income": null,
         "total_income": 44646.0,
         "operating_expenses": null,
-        "ebitda": 7614.7,
+        "ebitda": null,
         "ebit": 7614.7,
         "interest": 162.6,
         "depreciation": null,
@@ -193,6 +197,86 @@
         "exceptional_items": null
       }
     }
+  },
+  "standalone_profit_loss": {
+    "quarterly": {
+      "Dec 2024": {
+        "revenue_from_operations": 11176.2,
+        "other_income": 174.7,
+        "total_income": 11350.9,
+        "operating_expenses": null,
+        "ebitda": 1352.0,
+        "ebit": 1135.0,
+        "interest": 59.8,
+        "depreciation": 217.0,
+        "profit_before_tax": 1075.2,
+        "tax": 216.9,
+        "net_profit": 858.3,
+        "eps": 8.76,
+        "exceptional_items": 0.0
+      },
+      "Sep 2024": {
+        "revenue_from_operations": 10938.6,
+        "other_income": 921.4,
+        "total_income": 11860.0,
+        "operating_expenses": null,
+        "ebitda": 1908.5,
+        "ebit": 1705.4,
+        "interest": 65.1,
+        "depreciation": 203.1,
+        "profit_before_tax": 1640.3,
+        "tax": 346.5,
+        "net_profit": 1293.8,
+        "eps": 13.21,
+        "exceptional_items": 0.0
+      },
+      "Jun 2024": {
+        "revenue_from_operations": 10629.6,
+        "other_income": 123.4,
+        "total_income": 10753.0,
+        "operating_expenses": null,
+        "ebitda": 1075.2,
+        "ebit": 872.9,
+        "interest": 50.6,
+        "depreciation": 202.3,
+        "profit_before_tax": 822.3,
+        "tax": 197.5,
+        "net_profit": 624.8,
+        "eps": 6.38,
+        "exceptional_items": 0.0
+      },
+      "Mar 2024": {
+        "revenue_from_operations": 10411.0,
+        "other_income": 272.5,
+        "total_income": 10683.5,
+        "operating_expenses": null,
+        "ebitda": 970.7,
+        "ebit": 766.4,
+        "interest": 58.9,
+        "depreciation": 204.3,
+        "profit_before_tax": 707.5,
+        "tax": 180.0,
+        "net_profit": 527.5,
+        "eps": 5.39,
+        "exceptional_items": 0.0
+      },
+      "Dec 2023": {
+        "revenue_from_operations": 10551.4,
+        "other_income": 265.2,
+        "total_income": 10816.6,
+        "operating_expenses": null,
+        "ebitda": 816.7,
+        "ebit": 617.1,
+        "interest": 75.3,
+        "depreciation": 199.6,
+        "profit_before_tax": 541.8,
+        "tax": 55.9,
+        "net_profit": 485.9,
+        "eps": 4.97,
+        "exceptional_items": 0.0
+      }
+    },
+    "yearly": {}
   },
   "balance_sheet": {
     "yearly": {
@@ -367,7 +451,6 @@
     },
     "FY2022": {
       "net_profit_margin": 12.47,
-      "operating_margin": 17.06,
       "roe": 20.7,
       "roa": 12.4,
       "debt_to_equity": 0.06,
@@ -387,7 +470,7 @@
         "label": "Dec 2025"
       }
     ],
-    "last_updated": "2026-03-16T11:34:48.006129+00:00",
+    "last_updated": "2026-03-17T10:45:47.801939+00:00",
     "parser_version": "v2.0",
     "validation_passed": false
   }

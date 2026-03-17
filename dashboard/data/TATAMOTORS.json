@@ -32,7 +32,7 @@
   "insights": [],
   "llm_interpretation": null,
   "confidence": {
-    "financials": {
+    "consolidated": {
       "profit_loss": {
         "annual": {},
         "quarterly": {}
@@ -44,6 +44,14 @@
         "annual": {}
       }
     },
+    "standalone": {
+      "profit_loss": {
+        "annual": {},
+        "quarterly": {}
+      },
+      "balance_sheet": {},
+      "cash_flow": {}
+    },
     "derived_metrics": {},
     "market_data": {
       "price": "NOT_AVAILABLE",
@@ -51,10 +59,32 @@
       "market_cap": "NOT_AVAILABLE"
     }
   },
+  "peers": [
+    {
+      "symbol": "BAJAJ-AUTO",
+      "name": "Bajaj Auto Limited"
+    },
+    {
+      "symbol": "EICHERMOT",
+      "name": "Eicher Motors Limited"
+    },
+    {
+      "symbol": "HEROMOTOCO",
+      "name": "Hero MotoCorp Limited"
+    },
+    {
+      "symbol": "M&M",
+      "name": "Mahindra & Mahindra Limited"
+    },
+    {
+      "symbol": "MARUTI",
+      "name": "Maruti Suzuki India Limited"
+    }
+  ],
   "metadata": {
     "data_sources": [],
-    "last_updated": "2026-03-17T09:20:17.045220+00:00",
-    "unit": "₹ Crores",
+    "last_updated": "2026-03-17T11:51:20.581448+00:00",
+    "unit": "\u20b9 Crores",
     "parser_version": "v4.0-PhaseB",
     "validation_passed": true,
     "rag_context": false

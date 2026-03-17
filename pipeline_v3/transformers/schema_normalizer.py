@@ -224,13 +224,19 @@ class SchemaNormalizer:
         # EBITDA logic: PBT + Finance Costs + Depreciation
         # BUT only if PBT isn't already suspiciously high.
         if pl.profit_before_tax is not None:
-            # PBT + Interest + Depreciation = EBITDA
+            # EBIT = PBT + Interest
             # Guard: Interest shouldn't be larger than Total Income (unit check)
             safe_interest = pl.interest if (pl.interest or 0) < (pl.total_income or 1e15) else 0
-            pl.ebitda = round((pl.profit_before_tax or 0) + (safe_interest or 0) + (pl.depreciation or 0), 2)
+            pl.ebit = round(float(pl.profit_before_tax) + (safe_interest or 0), 2)
             
-            # EBIT = EBITDA - Depreciation
-            pl.ebit = round((pl.ebitda or 0) - (pl.depreciation or 0), 2)
+            # EBITDA = EBIT + Depreciation
+            if pl.depreciation is not None and pl.depreciation != 0:
+                pl.ebitda = round(float(pl.ebit) + float(pl.depreciation), 2)
+            else:
+                # If depreciation is missing, we don't assume EBITDA = EBIT.
+                # However, many financial systems use Operating Profit as EBITDA or EBIT.
+                # To be accurate and avoid the "they are the same" error:
+                pl.ebitda = None
         
         # Absolute Cap Sanity Check
         for field in ["revenue_from_operations", "total_income", "ebitda", "net_profit"]:
@@ -342,13 +348,14 @@ class SchemaNormalizer:
         if stmt == "pl":
             bucket = target.standalone_profit_loss[period_type] if is_standalone else target.profit_loss[period_type]
         elif stmt == "bs":
-            bucket = target.balance_sheet[period_type]
+            bucket = target.standalone_balance_sheet[period_type] if is_standalone else target.balance_sheet[period_type]
         else:
-            bucket = target.cash_flow[period_type]
+            bucket = target.standalone_cash_flow[period_type] if is_standalone else target.cash_flow[period_type]
 
         if year not in bucket:
             bucket[year] = source_obj
-            self._record_provenance(target, stmt=stmt, period_type=period_type, year=year, fields=self._fields_with_values(source_obj), source_name=source_name, prio=prio, meta=meta)
+            prov_stmt = ("st_" + stmt) if is_standalone else stmt
+            self._record_provenance(target, stmt=prov_stmt, period_type=period_type, year=year, fields=self._fields_with_values(source_obj), source_name=source_name, prio=prio, meta=meta)
             return
 
         # Statement-Level Integrity: If the existing object for this period was 

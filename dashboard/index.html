@@ -315,6 +315,16 @@ tbody tr:hover td { background:rgba(99,120,255,0.05); }
       </div>
     </div>
 
+    <!-- Peer Comparison Section -->
+    <div class="section-card" id="card-peers">
+      <div class="section-head" onclick="toggleSec('sec-peers')">
+        <h2>🤝 Peer Comparison (Same Sector)</h2>
+      </div>
+      <div class="section-body" id="sec-peers">
+        <div class="table-wrap"><table id="peers-table"></table></div>
+      </div>
+    </div>
+
     <!-- Insights Section -->
     <div class="section-card">
       <div class="section-head" onclick="toggleSec('sec-ins')">
@@ -405,8 +415,19 @@ function toggleSec(id) {
 
 // ─── UI CONTROLS ─────────────────────────────────────────────────────────────
 function setType(type) {
-  if (type === 'standalone' && !currentData.company?.has_standalone) return; // Prevent click
+  if (type === 'standalone' && !currentData.company?.has_standalone) return;
   currentType = type;
+  
+  // UX fix: If switching to Standalone and Annual is empty but Quarterly has data, auto-toggle to Quarterly
+  if (type === 'standalone' && currentPeriod === 'annual') {
+    const hasAnnual = Object.keys(currentData.financials?.standalone?.annual?.profit_loss || {}).length > 0;
+    const hasQtr = Object.keys(currentData.financials?.standalone?.quarterly?.profit_loss || {}).length > 0;
+    if (!hasAnnual && hasQtr) {
+      setPeriod('quarterly');
+      return; 
+    }
+  }
+
   document.getElementById('tg-cons').classList.toggle('active', type === 'consolidated');
   document.getElementById('tg-std').classList.toggle('active', type === 'standalone');
   renderPageContent();
@@ -457,6 +478,7 @@ function renderPageContent() {
   renderMetricsBar();
   renderCharts();
   renderTables(finBucket);
+  renderPeers();
   renderInsights();
 }
 
@@ -465,6 +487,10 @@ function fmt(val) { return val === null || val === undefined ? null : parseFloat
 function fmtCol(v) { return v > 0 ? 'positive' : v < 0 ? 'negative' : ''; }
 function getConf(path) {
   let c = currentData?.confidence;
+  // If first element is 'financials', route to consolidated/standalone
+  if (path[0] === 'financials') {
+    path[0] = currentType; // 'consolidated' or 'standalone'
+  }
   path.forEach(k => { if(c) c = c[k] });
   return c || 'NOT_AVAILABLE';
 }
@@ -603,7 +629,11 @@ function renderTables(finBucket) {
 function _renderTbl(id, dataRaw, fields, stmtKey) {
   const tbl = document.getElementById(id);
   if (!dataRaw || Object.keys(dataRaw).length === 0) {
-    tbl.innerHTML = `<tr><td style="text-align:center;padding:1rem;color:var(--text3);">No data available from official filings for this view.</td></tr>`;
+    const alt = currentPeriod === 'annual' ? 'Quarterly' : 'Annual';
+    tbl.innerHTML = `<tr><td style="text-align:center;padding:1.5rem;color:var(--text3);">
+      <div>No data available in <strong>${currentPeriod}</strong> ${currentType} filings.</div>
+      <div style="font-size:0.8rem;margin-top:5px;color:var(--primary);cursor:pointer;" onclick="setPeriod('${alt.toLowerCase()}')">Try switching to ${alt} View</div>
+    </td></tr>`;
     return;
   }
   
@@ -627,6 +657,27 @@ function _renderTbl(id, dataRaw, fields, stmtKey) {
       }
     });
     h += `</tr>`;
+  });
+  h += '</tbody>';
+  tbl.innerHTML = h;
+}
+
+// ─── PEERS ───────────────────────────────────────────────────────────────────
+function renderPeers() {
+  const peers = currentData.peers || [];
+  const tbl = document.getElementById('peers-table');
+  if (!peers.length) {
+    tbl.innerHTML = `<tr><td style="text-align:center;padding:1rem;color:var(--text3);">No industry peers indexed in this sector yet.</td></tr>`;
+    return;
+  }
+  
+  let h = `<thead><tr><th>Symbol</th><th>Company Name</th><th>Action</th></tr></thead><tbody>`;
+  peers.forEach(p => {
+    h += `<tr>
+      <td style="text-align:left;font-weight:600;color:var(--primary);">${p.symbol}</td>
+      <td style="text-align:left;color:var(--text2);">${p.name}</td>
+      <td><button class="tg-btn" style="padding:0.2rem 0.6rem;font-size:0.7rem;" onclick="loadCompany('${p.symbol}')">View Analysis</button></td>
+    </tr>`;
   });
   h += '</tbody>';
   tbl.innerHTML = h;

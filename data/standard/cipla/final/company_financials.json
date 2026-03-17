@@ -6,7 +6,11 @@
     "sector": "Healthcare",
     "industry": "Pharmaceuticals",
     "currency": "INR",
-    "unit": "\u20b9 Crores"
+    "unit": "\u20b9 Crores",
+    "price": 1280.4,
+    "shares_outstanding": 807780677,
+    "market_cap": 103428.24,
+    "has_standalone": true
   },
   "profit_loss": {
     "quarterly": {
@@ -90,7 +94,7 @@
         "other_income": null,
         "total_income": 6962.97,
         "operating_expenses": null,
-        "ebitda": 907.14,
+        "ebitda": null,
         "ebit": 907.14,
         "interest": 14.03,
         "depreciation": null,
@@ -105,7 +109,7 @@
         "other_income": null,
         "total_income": 6837.04,
         "operating_expenses": null,
-        "ebitda": 1783.98,
+        "ebitda": null,
         "ebit": 1783.98,
         "interest": 14.05,
         "depreciation": null,
@@ -120,7 +124,7 @@
         "other_income": null,
         "total_income": 6597.72,
         "operating_expenses": null,
-        "ebitda": 1500.33,
+        "ebitda": null,
         "ebit": 1500.33,
         "interest": -3.97,
         "depreciation": null,
@@ -193,6 +197,86 @@
         "exceptional_items": null
       }
     }
+  },
+  "standalone_profit_loss": {
+    "quarterly": {
+      "Dec 2024": {
+        "revenue_from_operations": 4970.88,
+        "other_income": 188.69,
+        "total_income": 5159.57,
+        "operating_expenses": null,
+        "ebitda": 1850.52,
+        "ebit": 1707.9,
+        "interest": 3.55,
+        "depreciation": 142.62,
+        "profit_before_tax": 1704.35,
+        "tax": 266.2,
+        "net_profit": 1438.15,
+        "eps": 17.81,
+        "exceptional_items": 0.0
+      },
+      "Sep 2024": {
+        "revenue_from_operations": 4775.03,
+        "other_income": 289.14,
+        "total_income": 5064.17,
+        "operating_expenses": null,
+        "ebitda": 1727.18,
+        "ebit": 1581.47,
+        "interest": 3.0,
+        "depreciation": 145.71,
+        "profit_before_tax": 1578.47,
+        "tax": 400.31,
+        "net_profit": 1178.16,
+        "eps": 14.59,
+        "exceptional_items": 0.0
+      },
+      "Jun 2024": {
+        "revenue_from_operations": 4501.05,
+        "other_income": 213.52,
+        "total_income": 4714.57,
+        "operating_expenses": null,
+        "ebitda": 1573.38,
+        "ebit": 1435.52,
+        "interest": 5.07,
+        "depreciation": 137.86,
+        "profit_before_tax": 1430.45,
+        "tax": 374.51,
+        "net_profit": 1055.94,
+        "eps": 13.08,
+        "exceptional_items": 0.0
+      },
+      "Mar 2024": {
+        "revenue_from_operations": 4036.66,
+        "other_income": 538.61,
+        "total_income": 4575.27,
+        "operating_expenses": null,
+        "ebitda": 1366.5,
+        "ebit": 1229.69,
+        "interest": 5.45,
+        "depreciation": 136.81,
+        "profit_before_tax": 1224.24,
+        "tax": 242.21,
+        "net_profit": 1038.4,
+        "eps": 12.86,
+        "exceptional_items": 0.0
+      },
+      "Dec 2023": {
+        "revenue_from_operations": 4381.33,
+        "other_income": 168.98,
+        "total_income": 4550.31,
+        "operating_expenses": null,
+        "ebitda": 1524.84,
+        "ebit": 1389.82,
+        "interest": 9.06,
+        "depreciation": 135.02,
+        "profit_before_tax": 1380.76,
+        "tax": 363.0,
+        "net_profit": 1114.14,
+        "eps": 13.8,
+        "exceptional_items": 0.0
+      }
+    },
+    "yearly": {}
   },
   "balance_sheet": {
     "yearly": {
@@ -387,7 +471,7 @@
         "label": "Dec 2025"
       }
     ],
-    "last_updated": "2026-03-16T11:34:48.311340+00:00",
+    "last_updated": "2026-03-17T10:45:49.373233+00:00",
     "parser_version": "v2.0",
     "validation_passed": false
   }

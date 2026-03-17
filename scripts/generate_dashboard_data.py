@@ -163,8 +163,14 @@ def _map_period(raw: Dict, field_map: Dict) -> Dict:
 def _map_bucket(bucket: Dict, field_map: Dict, normalizer: UnitNormalizer) -> Dict:
     out = {}
     for period_label, period_data in bucket.items():
-        if isinstance(period_data, dict):
-            normalized = normalizer.normalize_statement({period_label: period_data})[period_label]
+        # Handle dataclasses if present (Phase B/C)
+        data_dict = period_data
+        if hasattr(period_data, "__dict__") and not isinstance(period_data, dict):
+            from dataclasses import asdict
+            data_dict = asdict(period_data)
+        
+        if isinstance(data_dict, dict):
+            normalized = normalizer.normalize_statement({period_label: data_dict})[period_label]
             out[period_label] = _map_period(normalized, field_map)
     return out
 
@@ -268,6 +274,8 @@ def transform_company(raw_data: Dict, pdf_path: Optional[str] = None) -> Dict:
     raw_bs      = raw_data.get("balance_sheet", {})
     raw_cf      = raw_data.get("cash_flow", {})
     raw_st_pl   = raw_data.get("standalone_profit_loss", {})
+    raw_st_bs   = raw_data.get("standalone_balance_sheet", {})
+    raw_st_cf   = raw_data.get("standalone_cash_flow", {})
     raw_meta    = raw_data.get("metadata", {})
     provenance  = raw_meta.get("provenance", {})
 
@@ -312,7 +320,13 @@ def transform_company(raw_data: Dict, pdf_path: Optional[str] = None) -> Dict:
     st_pl_ann = st_pl.get("annual", {})
     st_pl_q   = st_pl.get("quarterly", {})
     
-    has_standalone = bool(st_pl_q or st_pl_ann)
+    st_bs = process_bucket(raw_st_bs, BS_MAP)
+    st_bs_ann = st_bs.get("annual", {})
+    
+    st_cf = process_bucket(raw_st_cf, CF_MAP)
+    st_cf_ann = st_cf.get("annual", {})
+    
+    has_standalone = bool(st_pl_q or st_pl_ann or st_bs_ann or st_cf_ann)
     standalone = None
     if has_standalone:
         standalone = {
@@ -321,8 +335,8 @@ def transform_company(raw_data: Dict, pdf_path: Optional[str] = None) -> Dict:
             },
             "annual": {
                 "profit_loss":   st_pl_ann,
-                "balance_sheet": {}, # Only PL fetched for now
-                "cash_flow":     {},
+                "balance_sheet": st_bs_ann,
+                "cash_flow":     st_cf_ann,
             },
         }
 
@@ -342,23 +356,35 @@ def transform_company(raw_data: Dict, pdf_path: Optional[str] = None) -> Dict:
     graph_data = graph_engine.compute(pl_q, pl_ann, bs_ann, cf_ann)
 
     # ── Confidence Tags ───────────────────────────────────────────────────────
-    flat_financials = {
+    flat_con = {
         "profit_loss":   con_pl,
         "balance_sheet": con_bs,
         "cash_flow":     con_cf,
     }
+    flat_std = {
+        "profit_loss":   st_pl,
+        "balance_sheet": st_bs,
+        "cash_flow":     st_cf,
+    }
+    
     confidence = {
-        "financials":      conf_tagger.tag_financials(flat_financials, provenance),
+        "consolidated":    conf_tagger.tag_financials(flat_con, provenance, is_standalone=False),
+        "standalone":      conf_tagger.tag_financials(flat_std, provenance, is_standalone=True),
         "derived_metrics": conf_tagger.tag_derived_metrics(derived_metrics),
         "market_data":     {},
     }
 
     # ── Market Data ───────────────────────────────────────────────────────────
-    shares = None
-    if bs_ann:
+    # Use real-time data if provided during extraction
+    price = ci.get("price")
+    mcap = ci.get("market_cap")
+    shares = ci.get("shares_outstanding")
+
+    if shares is None and bs_ann:
         ly = sorted(bs_ann.keys(), reverse=True)[0]
         shares = bs_ann[ly].get("shares_outstanding")
-    market_data = {"price": None, "shares_outstanding": shares, "market_cap": None}
+    
+    market_data = {"price": price, "shares_outstanding": shares, "market_cap": mcap}
     confidence["market_data"] = conf_tagger.tag_market_data(market_data)
 
     # ── Clean Metadata ────────────────────────────────────────────────────────
@@ -416,6 +442,7 @@ def transform_company(raw_data: Dict, pdf_path: Optional[str] = None) -> Dict:
         "insights":        insights,
         "llm_interpretation": llm_insights,
         "confidence":      confidence,
+        "peers":           [], # Populated in main loop
         "metadata": {
             "data_sources":      sources,
             "last_updated":      datetime.now(timezone.utc).isoformat(),
@@ -482,9 +509,29 @@ def generate_dashboard():
         except Exception as e:
             logger.error(f"Failed {symbol}: {e}", exc_info=True)
 
-    final_companies.sort(key=lambda x: x["symbol"])
-    with open(DASHBOARD_DIR / "companies.json", "w", encoding="utf-8") as f:
-        json.dump(final_companies, f, indent=2)
+    # ── Peer Comparison Logic ───────────────────────────────────────────────
+    for company in final_companies:
+        symbol = company["symbol"]
+        sector = company["sector"]
+        
+        # Find peers in same sector
+        peers = [
+            {"symbol": c["symbol"], "name": c["name"]}
+            for c in final_companies
+            if c["sector"] == sector and c["symbol"] != symbol
+        ]
+        
+        # In a real scenario, we'd load their JSONs and get key metrics (Mkt Cap, ROE)
+        # For Phase A, we'll just provide the symbols for the UI to link
+        json_path = DATA_OUT_DIR / f"{symbol}.json"
+        if json_path.exists():
+            with open(json_path, "r+") as f:
+                data = json.load(f)
+                data["peers"] = peers[:5] # Top 5 peers
+                f.seek(0)
+                json.dump(data, f, indent=2)
+                f.truncate()
+
     logger.info(f"✅ Generated {len(final_companies)} companies → {DATA_OUT_DIR.resolve()}")
 
 

@@ -6,12 +6,12 @@
     "industry": "Banks",
     "description": null,
     "history": null,
-    "has_standalone": false
+    "has_standalone": true
   },
   "market_data": {
-    "price": null,
-    "shares_outstanding": null,
-    "market_cap": null
+    "price": 1228,
+    "shares_outstanding": 3107393185,
+    "market_cap": 381587.88
   },
   "financials": {
     "consolidated": {
@@ -21,7 +21,6 @@
             "revenue": 30953.94,
             "total_income": 36926.14,
             "other_income": 5972.2,
-            "ebitda": 25726.31,
             "ebit": 25726.31,
             "interest": 17348.09,
             "profit_before_tax": 8378.22,
@@ -34,7 +33,6 @@
             "revenue": 30419.86,
             "total_income": 37141.71,
             "other_income": 6721.85,
-            "ebitda": 25445.04,
             "ebit": 25445.04,
             "interest": 16936.66,
             "profit_before_tax": 8508.38,
@@ -47,7 +45,6 @@
             "revenue": 30060.73,
             "total_income": 35844.22,
             "other_income": 5783.49,
-            "ebitda": 24679.46,
             "ebit": 24679.46,
             "interest": 16612.5,
             "profit_before_tax": 8066.96,
@@ -60,7 +57,6 @@
             "revenue": 29224.54,
             "total_income": 35990.33,
             "other_income": 6765.79,
-            "ebitda": 25485.93,
             "ebit": 25485.93,
             "interest": 16135.54,
             "profit_before_tax": 9350.39,
@@ -73,7 +69,6 @@
             "revenue": 27961.14,
             "total_income": 33515.96,
             "other_income": 5554.82,
-            "ebitda": 23541.89,
             "ebit": 23541.89,
             "interest": 15428.99,
             "profit_before_tax": 8112.9,
@@ -85,7 +80,6 @@
           "Dec 2025": {
             "revenue": 22113.29,
             "total_income": 22113.29,
-            "ebitda": 28155.76,
             "ebit": 28155.76,
             "interest": 18785.12,
             "profit_before_tax": 9370.64,
@@ -96,7 +90,6 @@
           "Jun 2025": {
             "revenue": 22162.31,
             "total_income": 22162.31,
-            "ebitda": 26418.39,
             "ebit": 26418.39,
             "interest": 18238.69,
             "profit_before_tax": 8179.7,
@@ -107,7 +100,6 @@
           "Mar 2025": {
             "revenue": 21847.62,
             "total_income": 21847.62,
-            "ebitda": 28015.48,
             "ebit": 28015.48,
             "interest": 18120.71,
             "profit_before_tax": 9894.77,
@@ -121,7 +113,6 @@
           "FY2025": {
             "revenue": 84890.84,
             "total_income": 84890.84,
-            "ebitda": 107758.47,
             "ebit": 107758.47,
             "interest": 71036.31,
             "profit_before_tax": 36722.16,
@@ -132,7 +123,6 @@
           "FY2024": {
             "revenue": 76603.04,
             "total_income": 76603.04,
-            "ebitda": 96568.74,
             "ebit": 96568.74,
             "interest": 61390.74,
             "depreciation": 0.0,
@@ -144,7 +134,6 @@
           "FY2023": {
             "revenue": 62415.84,
             "total_income": 62415.84,
-            "ebitda": 62010.33,
             "ebit": 62010.33,
             "interest": 43389.15,
             "depreciation": 0.0,
@@ -156,7 +145,6 @@
           "FY2022": {
             "revenue": 51197.64,
             "total_income": 51197.64,
-            "ebitda": 53852.12,
             "ebit": 53852.12,
             "interest": 34922.66,
             "depreciation": 0.0,
@@ -232,12 +220,82 @@
         }
       }
     },
-    "standalone": null
+    "standalone": {
+      "quarterly": {
+        "profit_loss": {
+          "Dec 2024": {
+            "revenue": 30953.94,
+            "total_income": 36926.14,
+            "other_income": 5972.2,
+            "ebit": 25726.31,
+            "interest": 17348.09,
+            "profit_before_tax": 8378.22,
+            "tax": 2074.45,
+            "net_profit": 6303.77,
+            "eps": 20.37,
+            "exceptional_items": 0.0
+          },
+          "Sep 2024": {
+            "revenue": 30419.86,
+            "total_income": 37141.71,
+            "other_income": 6721.85,
+            "ebit": 25445.04,
+            "interest": 16936.66,
+            "profit_before_tax": 8508.38,
+            "tax": 1590.81,
+            "net_profit": 6917.57,
+            "eps": 22.37,
+            "exceptional_items": 0.0
+          },
+          "Jun 2024": {
+            "revenue": 30060.73,
+            "total_income": 35844.22,
+            "other_income": 5783.49,
+            "ebit": 24679.46,
+            "interest": 16612.5,
+            "profit_before_tax": 8066.96,
+            "tax": 2032.32,
+            "net_profit": 6034.64,
+            "eps": 19.54,
+            "exceptional_items": 0.0
+          },
+          "Mar 2024": {
+            "revenue": 29224.54,
+            "total_income": 35990.33,
+            "other_income": 6765.79,
+            "ebit": 25485.93,
+            "interest": 16135.54,
+            "profit_before_tax": 9350.39,
+            "tax": 2220.72,
+            "net_profit": 7129.67,
+            "eps": 23.11,
+            "exceptional_items": 0.0
+          },
+          "Dec 2023": {
+            "revenue": 27961.14,
+            "total_income": 33515.96,
+            "other_income": 5554.82,
+            "ebit": 23541.89,
+            "interest": 15428.99,
+            "profit_before_tax": 8112.9,
+            "tax": 2041.8,
+            "net_profit": 6071.1,
+            "eps": 19.69,
+            "exceptional_items": 0.0
+          }
+        }
+      },
+      "annual": {
+        "profit_loss": {},
+        "balance_sheet": {},
+        "cash_flow": {}
+      }
+    }
   },
   "graph_data": {
     "revenue": {
       "label": "Revenue",
-      "unit": "₹ Crores",
+      "unit": "\u20b9 Crores",
       "quarterly": [
         {
           "period": "Dec 2023",
@@ -293,7 +351,7 @@
     },
     "net_profit": {
       "label": "Net Profit",
-      "unit": "₹ Crores",
+      "unit": "\u20b9 Crores",
       "quarterly": [
         {
           "period": "Dec 2023",
@@ -347,65 +405,9 @@
         }
       ]
     },
-    "ebitda": {
-      "label": "EBITDA",
-      "unit": "₹ Crores",
-      "quarterly": [
-        {
-          "period": "Dec 2023",
-          "value": 23541.89
-        },
-        {
-          "period": "Mar 2024",
-          "value": 25485.93
-        },
-        {
-          "period": "Jun 2024",
-          "value": 24679.46
-        },
-        {
-          "period": "Sep 2024",
-          "value": 25445.04
-        },
-        {
-          "period": "Dec 2024",
-          "value": 25726.31
-        },
-        {
-          "period": "Mar 2025",
-          "value": 28015.48
-        },
-        {
-          "period": "Jun 2025",
-          "value": 26418.39
-        },
-        {
-          "period": "Dec 2025",
-          "value": 28155.76
-        }
-      ],
-      "annual": [
-        {
-          "period": "FY2022",
-          "value": 53852.12
-        },
-        {
-          "period": "FY2023",
-          "value": 62010.33
-        },
-        {
-          "period": "FY2024",
-          "value": 96568.74
-        },
-        {
-          "period": "FY2025",
-          "value": 107758.47
-        }
-      ]
-    },
     "eps": {
-      "label": "EPS (₹)",
-      "unit": "EPS (₹)",
+      "label": "EPS (\u20b9)",
+      "unit": "EPS (\u20b9)",
       "quarterly": [
         {
           "period": "Dec 2023",
@@ -457,7 +459,7 @@
     },
     "profit_before_tax": {
       "label": "Profit Before Tax",
-      "unit": "₹ Crores",
+      "unit": "\u20b9 Crores",
       "quarterly": [
         {
           "period": "Dec 2023",
@@ -513,7 +515,7 @@
     },
     "interest": {
       "label": "Finance Costs",
-      "unit": "₹ Crores",
+      "unit": "\u20b9 Crores",
       "quarterly": [
         {
           "period": "Dec 2023",
@@ -569,7 +571,7 @@
     },
     "total_debt": {
       "label": "Total Debt",
-      "unit": "₹ Crores",
+      "unit": "\u20b9 Crores",
       "quarterly": [],
       "annual": [
         {
@@ -592,7 +594,7 @@
     },
     "total_equity": {
       "label": "Total Equity",
-      "unit": "₹ Crores",
+      "unit": "\u20b9 Crores",
       "quarterly": [],
       "annual": [
         {
@@ -615,7 +617,7 @@
     },
     "total_assets": {
       "label": "Total Assets",
-      "unit": "₹ Crores",
+      "unit": "\u20b9 Crores",
       "quarterly": [],
       "annual": [
         {
@@ -638,7 +640,7 @@
     },
     "operating_cf": {
       "label": "Cash from Operations",
-      "unit": "₹ Crores",
+      "unit": "\u20b9 Crores",
       "quarterly": [],
       "annual": [
         {
@@ -661,7 +663,7 @@
     },
     "free_cash_flow": {
       "label": "Free Cash Flow",
-      "unit": "₹ Crores",
+      "unit": "\u20b9 Crores",
       "quarterly": [],
       "annual": [
         {
@@ -684,7 +686,7 @@
     },
     "capex": {
       "label": "Capex",
-      "unit": "₹ Crores",
+      "unit": "\u20b9 Crores",
       "quarterly": [],
       "annual": [
         {
@@ -709,7 +711,6 @@
   "derived_metrics": {
     "FY2025": {
       "net_profit_margin": 33.05,
-      "operating_margin": 126.94,
       "roe": 14.98,
       "roa": 1.69,
       "debt_to_equity": 1.18,
@@ -721,7 +722,6 @@
     },
     "FY2024": {
       "net_profit_margin": 34.45,
-      "operating_margin": 126.06,
       "roe": 16.8,
       "roa": 1.74,
       "debt_to_equity": 1.45,
@@ -733,7 +733,6 @@
     },
     "FY2023": {
       "net_profit_margin": 17.33,
-      "operating_margin": 99.35,
       "roe": 8.34,
       "roa": 0.8,
       "debt_to_equity": 1.53,
@@ -745,7 +744,6 @@
     },
     "FY2022": {
       "net_profit_margin": 27.58,
-      "operating_margin": 105.18,
       "roe": 11.94,
       "roa": 1.18,
       "debt_to_equity": 1.54,
@@ -758,44 +756,43 @@
   "insights": [
     {
       "rule_id": "roe_moderate",
-      "message": "Moderate capital efficiency — ROE 15.0% in FY2025",
+      "message": "Moderate capital efficiency \u2014 ROE 15.0% in FY2025",
       "severity": "neutral",
       "basis": "ROE=15.0%"
     },
     {
       "rule_id": "npm_excellent",
-      "message": "High-margin business — Net Profit Margin 33.0% in FY2025",
+      "message": "High-margin business \u2014 Net Profit Margin 33.0% in FY2025",
       "severity": "positive",
       "basis": "NPM=33.0%"
     },
     {
       "rule_id": "moderate_leverage",
-      "message": "Moderate leverage — Debt/Equity 1.18x in FY2025",
+      "message": "Moderate leverage \u2014 Debt/Equity 1.18x in FY2025",
       "severity": "warning",
       "basis": "D/E=1.18x"
     },
     {
       "rule_id": "cash_backed_profits",
-      "message": "Profits are cash-backed — CFO/Net Profit ratio 1.58x in FY2025",
+      "message": "Profits are cash-backed \u2014 CFO/Net Profit ratio 1.58x in FY2025",
       "severity": "positive",
       "basis": "CFO/NP=1.58x"
     },
     {
       "rule_id": "strong_fcf",
-      "message": "Strong Free Cash Flow generation — 49.4% margin in FY2025",
+      "message": "Strong Free Cash Flow generation \u2014 49.4% margin in FY2025",
       "severity": "positive",
       "basis": "FCFMargin=49.4%"
     }
   ],
   "llm_interpretation": null,
   "confidence": {
-    "financials": {
+    "consolidated": {
       "profit_loss": {
         "annual": {
           "FY2025": {
             "revenue": "VERIFIED",
             "total_income": "VERIFIED",
-            "ebitda": "VERIFIED",
             "ebit": "VERIFIED",
             "interest": "VERIFIED",
             "profit_before_tax": "VERIFIED",
@@ -806,7 +803,6 @@
           "FY2024": {
             "revenue": "VERIFIED",
             "total_income": "VERIFIED",
-            "ebitda": "VERIFIED",
             "ebit": "VERIFIED",
             "interest": "VERIFIED",
             "depreciation": "VERIFIED",
@@ -818,7 +814,6 @@
           "FY2023": {
             "revenue": "VERIFIED",
             "total_income": "VERIFIED",
-            "ebitda": "VERIFIED",
             "ebit": "VERIFIED",
             "interest": "VERIFIED",
             "depreciation": "VERIFIED",
@@ -830,7 +825,6 @@
           "FY2022": {
             "revenue": "VERIFIED",
             "total_income": "VERIFIED",
-            "ebitda": "VERIFIED",
             "ebit": "VERIFIED",
             "interest": "VERIFIED",
             "depreciation": "VERIFIED",
@@ -845,7 +839,6 @@
             "revenue": "VERIFIED",
             "total_income": "VERIFIED",
             "other_income": "VERIFIED",
-            "ebitda": "VERIFIED",
             "ebit": "VERIFIED",
             "interest": "VERIFIED",
             "profit_before_tax": "VERIFIED",
@@ -858,7 +851,6 @@
             "revenue": "VERIFIED",
             "total_income": "VERIFIED",
             "other_income": "VERIFIED",
-            "ebitda": "VERIFIED",
             "ebit": "VERIFIED",
             "interest": "VERIFIED",
             "profit_before_tax": "VERIFIED",
@@ -871,7 +863,6 @@
             "revenue": "VERIFIED",
             "total_income": "VERIFIED",
             "other_income": "VERIFIED",
-            "ebitda": "VERIFIED",
             "ebit": "VERIFIED",
             "interest": "VERIFIED",
             "profit_before_tax": "VERIFIED",
@@ -884,7 +875,6 @@
             "revenue": "VERIFIED",
             "total_income": "VERIFIED",
             "other_income": "VERIFIED",
-            "ebitda": "VERIFIED",
             "ebit": "VERIFIED",
             "interest": "VERIFIED",
             "profit_before_tax": "VERIFIED",
@@ -897,7 +887,6 @@
             "revenue": "VERIFIED",
             "total_income": "VERIFIED",
             "other_income": "VERIFIED",
-            "ebitda": "VERIFIED",
             "ebit": "VERIFIED",
             "interest": "VERIFIED",
             "profit_before_tax": "VERIFIED",
@@ -909,7 +898,6 @@
           "Dec 2025": {
             "revenue": "VERIFIED",
             "total_income": "VERIFIED",
-            "ebitda": "VERIFIED",
             "ebit": "VERIFIED",
             "interest": "VERIFIED",
             "profit_before_tax": "VERIFIED",
@@ -920,7 +908,6 @@
           "Jun 2025": {
             "revenue": "VERIFIED",
             "total_income": "VERIFIED",
-            "ebitda": "VERIFIED",
             "ebit": "VERIFIED",
             "interest": "VERIFIED",
             "profit_before_tax": "VERIFIED",
@@ -931,7 +918,6 @@
           "Mar 2025": {
             "revenue": "VERIFIED",
             "total_income": "VERIFIED",
-            "ebitda": "VERIFIED",
             "ebit": "VERIFIED",
             "interest": "VERIFIED",
             "profit_before_tax": "VERIFIED",
@@ -1009,10 +995,78 @@
         }
       }
     },
+    "standalone": {
+      "profit_loss": {
+        "annual": {},
+        "quarterly": {
+          "Dec 2024": {
+            "revenue": "VERIFIED",
+            "total_income": "VERIFIED",
+            "other_income": "VERIFIED",
+            "ebit": "VERIFIED",
+            "interest": "VERIFIED",
+            "profit_before_tax": "VERIFIED",
+            "tax": "VERIFIED",
+            "net_profit": "VERIFIED",
+            "eps": "VERIFIED",
+            "exceptional_items": "VERIFIED"
+          },
+          "Sep 2024": {
+            "revenue": "VERIFIED",
+            "total_income": "VERIFIED",
+            "other_income": "VERIFIED",
+            "ebit": "VERIFIED",
+            "interest": "VERIFIED",
+            "profit_before_tax": "VERIFIED",
+            "tax": "VERIFIED",
+            "net_profit": "VERIFIED",
+            "eps": "VERIFIED",
+            "exceptional_items": "VERIFIED"
+          },
+          "Jun 2024": {
+            "revenue": "VERIFIED",
+            "total_income": "VERIFIED",
+            "other_income": "VERIFIED",
+            "ebit": "VERIFIED",
+            "interest": "VERIFIED",
+            "profit_before_tax": "VERIFIED",
+            "tax": "VERIFIED",
+            "net_profit": "VERIFIED",
+            "eps": "VERIFIED",
+            "exceptional_items": "VERIFIED"
+          },
+          "Mar 2024": {
+            "revenue": "VERIFIED",
+            "total_income": "VERIFIED",
+            "other_income": "VERIFIED",
+            "ebit": "VERIFIED",
+            "interest": "VERIFIED",
+            "profit_before_tax": "VERIFIED",
+            "tax": "VERIFIED",
+            "net_profit": "VERIFIED",
+            "eps": "VERIFIED",
+            "exceptional_items": "VERIFIED"
+          },
+          "Dec 2023": {
+            "revenue": "VERIFIED",
+            "total_income": "VERIFIED",
+            "other_income": "VERIFIED",
+            "ebit": "VERIFIED",
+            "interest": "VERIFIED",
+            "profit_before_tax": "VERIFIED",
+            "tax": "VERIFIED",
+            "net_profit": "VERIFIED",
+            "eps": "VERIFIED",
+            "exceptional_items": "VERIFIED"
+          }
+        }
+      },
+      "balance_sheet": {},
+      "cash_flow": {}
+    },
     "derived_metrics": {
       "FY2025": {
         "net_profit_margin": "DERIVED",
-        "operating_margin": "DERIVED",
         "roe": "DERIVED",
         "roa": "DERIVED",
         "debt_to_equity": "DERIVED",
@@ -1024,7 +1078,6 @@
       },
       "FY2024": {
         "net_profit_margin": "DERIVED",
-        "operating_margin": "DERIVED",
         "roe": "DERIVED",
         "roa": "DERIVED",
         "debt_to_equity": "DERIVED",
@@ -1036,7 +1089,6 @@
       },
       "FY2023": {
         "net_profit_margin": "DERIVED",
-        "operating_margin": "DERIVED",
         "roe": "DERIVED",
         "roa": "DERIVED",
         "debt_to_equity": "DERIVED",
@@ -1048,7 +1100,6 @@
       },
       "FY2022": {
         "net_profit_margin": "DERIVED",
-        "operating_margin": "DERIVED",
         "roe": "DERIVED",
         "roa": "DERIVED",
         "debt_to_equity": "DERIVED",
@@ -1058,11 +1109,33 @@
       }
     },
     "market_data": {
-      "price": "NOT_AVAILABLE",
-      "shares_outstanding": "NOT_AVAILABLE",
-      "market_cap": "NOT_AVAILABLE"
+      "price": "VERIFIED",
+      "shares_outstanding": "VERIFIED",
+      "market_cap": "DERIVED"
     }
   },
+  "peers": [
+    {
+      "symbol": "BAJAJFINSV",
+      "name": "Bajaj Finserv Limited"
+    },
+    {
+      "symbol": "BAJFINANCE",
+      "name": "Bajaj Finance Limited"
+    },
+    {
+      "symbol": "HDFCBANK",
+      "name": "HDFC Bank Limited"
+    },
+    {
+      "symbol": "HDFCLIFE",
+      "name": "HDFC Life Insurance Company Limited"
+    },
+    {
+      "symbol": "ICICIBANK",
+      "name": "ICICI Bank Limited"
+    }
+  ],
   "metadata": {
     "data_sources": [
       {
@@ -1070,8 +1143,8 @@
         "label": "Dec 2024"
       }
     ],
-    "last_updated": "2026-03-17T09:19:57.530529+00:00",
-    "unit": "₹ Crores",
+    "last_updated": "2026-03-17T11:51:20.510974+00:00",
+    "unit": "\u20b9 Crores",
     "parser_version": "v4.0-PhaseB",
     "validation_passed": false,
     "rag_context": false

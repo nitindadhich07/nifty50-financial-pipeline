@@ -64,6 +64,19 @@ class HierarchicalFinancialPipeline:
             "unit": "\u20b9 Crores",
         }
 
+        # Market Data (Institutional Source: NSE)
+        quote = self.nse_client.fetch_equity_quote(symbol)
+        if quote:
+            price_info = quote.get("priceInfo", {})
+            security_info = quote.get("securityInfo", {})
+            last_price = price_info.get("lastPrice")
+            issued_shares = security_info.get("issuedSize")
+            fin.company_info["price"] = last_price
+            fin.company_info["shares_outstanding"] = issued_shares
+            if last_price and issued_shares:
+                fin.company_info["market_cap"] = round((float(last_price) * float(issued_shares)) / 10_000_000, 2)
+            logger.info(f"✅ Market data fetched: ₹{last_price}")
+
         # Tier 1: MCA XBRL (local artifacts)
         if company.cin:
             artifacts = self.mca_client.list_artifacts(cin=company.cin)
@@ -97,6 +110,22 @@ class HierarchicalFinancialPipeline:
                 self.normalizer.merge_financials(fin, {"pl": pl}, alabel, period_type="annual", source_name="NSE_API")
             if apnl:
                 logger.info(f"Tier 1.5 (NSE API): merged {len(apnl)} annual item(s)")
+
+        # Tier 1.6: NSE Standalone (Consolidated = False)
+        nse_std_q = self.nse_client.fetch_results(symbol, period="Quarterly", consolidated=False)
+        if nse_std_q:
+            spnl = self.normalizer.normalize_nse_pnl(nse_std_q, requested_period="quarterly")
+            for qlabel, pl in spnl.items():
+                self.normalizer.merge_financials(fin, {"pl": pl}, qlabel, period_type="quarterly", source_name="NSE_API", is_standalone=True)
+            logger.info(f"Tier 1.6 (NSE Standalone): merged {len(spnl)} quarter(s)")
+            fin.company_info["has_standalone"] = True
+
+        nse_std_a = self.nse_client.fetch_results(symbol, period="Annual", consolidated=False)
+        if nse_std_a:
+            sapnl = self.normalizer.normalize_nse_pnl(nse_std_a, requested_period="annual")
+            for alabel, pl in sapnl.items():
+                self.normalizer.merge_financials(fin, {"pl": pl}, alabel, period_type="annual", source_name="NSE_API", is_standalone=True)
+            fin.company_info["has_standalone"] = True
 
         # Tier 3: IR tables
         if company.ir_urls:
@@ -188,6 +217,16 @@ class HierarchicalFinancialPipeline:
             "profit_loss": {
                 "quarterly": fin.profit_loss.get("quarterly", {}),
                 "yearly": fin.profit_loss.get("annual", {}),
+            },
+            "standalone_profit_loss": {
+                "quarterly": fin.standalone_profit_loss.get("quarterly", {}),
+                "yearly": fin.standalone_profit_loss.get("annual", {}),
+            },
+            "standalone_balance_sheet": {
+                "yearly": fin.standalone_balance_sheet.get("annual", {}),
+            },
+            "standalone_cash_flow": {
+                "yearly": fin.standalone_cash_flow.get("annual", {}),
             },
             "balance_sheet": {
                 "yearly": fin.balance_sheet.get("annual", {}),

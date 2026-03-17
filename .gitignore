@@ -1,9 +1,9 @@
 # Data
-data/financial_results/
-data/*.pdf
-data/*.json
-data/*.txt
-db/*.db
+# data/financial_results/
+# data/*.pdf
+# data/*.json
+# data/*.txt
+# db/*.db
 
 # Python
 __pycache__/

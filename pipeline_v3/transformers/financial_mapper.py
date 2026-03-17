@@ -65,6 +65,8 @@ class CompanyFinancials:
     balance_sheet: Dict[str, Dict[str, BalanceSheet]] = field(default_factory=lambda: {"annual": {}, "quarterly": {}})
     cash_flow: Dict[str, Dict[str, CashFlow]] = field(default_factory=lambda: {"annual": {}, "quarterly": {}})
     standalone_profit_loss: Dict[str, Dict[str, ProfitLoss]] = field(default_factory=lambda: {"annual": {}, "quarterly": {}})
+    standalone_balance_sheet: Dict[str, Dict[str, BalanceSheet]] = field(default_factory=lambda: {"annual": {}, "quarterly": {}})
+    standalone_cash_flow: Dict[str, Dict[str, CashFlow]] = field(default_factory=lambda: {"annual": {}, "quarterly": {}})
     ratios: Dict[str, Dict[str, Dict[str, float]]] = field(default_factory=lambda: {"annual": {}, "quarterly": {}})
     growth: Dict[str, Dict[str, Dict[str, float]]] = field(default_factory=lambda: {"annual": {}, "quarterly": {}})
     metadata: Dict[str, Any] = field(default_factory=dict)

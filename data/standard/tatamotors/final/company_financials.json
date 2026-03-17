@@ -6,9 +6,16 @@
     "sector": "Automobile and Auto Components",
     "industry": "Automobiles",
     "currency": "INR",
-    "unit": "\u20b9 Crores"
+    "unit": "\u20b9 Crores",
+    "price": null,
+    "shares_outstanding": null,
+    "has_standalone": true
   },
   "profit_loss": {
+    "quarterly": {},
+    "yearly": {}
+  },
+  "standalone_profit_loss": {
     "quarterly": {},
     "yearly": {}
   },
@@ -21,7 +28,7 @@
   "ratios": {},
   "metadata": {
     "data_sources": [],
-    "last_updated": "2026-03-16T11:34:49.349258+00:00",
+    "last_updated": "2026-03-17T10:45:49.633708+00:00",
     "parser_version": "v2.0",
     "validation_passed": true
   }

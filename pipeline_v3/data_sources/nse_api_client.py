@@ -49,6 +49,17 @@ class NSEAPIClient:
             return {}
         return data or {}
 
+    def fetch_equity_quote(self, symbol: str) -> Dict[str, Any]:
+        """Fetches real-time quote for an equity symbol."""
+        params = {"symbol": symbol.upper()}
+        # NSE sometimes requires a referer for this API
+        headers = {"Referer": f"{NSE_HOME}/get-quotes/equity?symbol={symbol.upper()}"}
+        data, err = self.http.get_json("https://www.nseindia.com/api/quote-equity", params=params, headers=headers)
+        if err:
+            logger.warning(f"NSE quote-equity failed ({symbol}): {err}")
+            return {}
+        return data or {}
+
     def fetch_corporate_filings(
         self,
         *,

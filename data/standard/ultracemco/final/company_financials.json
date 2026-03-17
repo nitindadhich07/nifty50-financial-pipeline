@@ -6,7 +6,11 @@
     "sector": "Construction Materials",
     "industry": "Cement & Cement Products",
     "currency": "INR",
-    "unit": "\u20b9 Crores"
+    "unit": "\u20b9 Crores",
+    "price": 11119,
+    "shares_outstanding": 294679171,
+    "market_cap": 327653.77,
+    "has_standalone": true
   },
   "profit_loss": {
     "quarterly": {
@@ -75,7 +79,7 @@
         "other_income": null,
         "total_income": 21829.68,
         "operating_expenses": null,
-        "ebitda": 2775.22,
+        "ebitda": null,
         "ebit": 2775.22,
         "interest": 492.2,
         "depreciation": null,
@@ -90,7 +94,7 @@
         "other_income": null,
         "total_income": 21275.45,
         "operating_expenses": null,
-        "ebitda": 3441.1,
+        "ebitda": null,
         "ebit": 3441.1,
         "interest": 433.3,
         "depreciation": null,
@@ -105,7 +109,7 @@
         "other_income": null,
         "total_income": 24038.83,
         "operating_expenses": null,
-        "ebitda": 3209.1,
+        "ebitda": null,
         "ebit": 3209.1,
         "interest": 671.39,
         "depreciation": null,
@@ -178,6 +182,71 @@
         "exceptional_items": null
       }
     }
+  },
+  "standalone_profit_loss": {
+    "quarterly": {
+      "Dec 2024": {
+        "revenue_from_operations": 16328.43,
+        "other_income": 206.08,
+        "total_income": 16534.51,
+        "operating_expenses": null,
+        "ebitda": 2984.39,
+        "ebit": 2127.88,
+        "interest": 341.96,
+        "depreciation": 856.51,
+        "profit_before_tax": 1785.92,
+        "tax": 351.55,
+        "net_profit": 1434.37,
+        "eps": 49.77,
+        "exceptional_items": 0.0
+      },
+      "Sep 2024": {
+        "revenue_from_operations": 14905.23,
+        "other_income": 181.72,
+        "total_income": 15086.95,
+        "operating_expenses": null,
+        "ebitda": 2114.44,
+        "ebit": 1264.35,
+        "interest": 282.44,
+        "depreciation": 850.09,
+        "profit_before_tax": 981.91,
+        "tax": 185.02,
+        "net_profit": 796.89,
+        "eps": 27.65,
+        "exceptional_items": 0.0
+      },
+      "Jun 2024": {
+        "revenue_from_operations": 17532.44,
+        "other_income": 178.89,
+        "total_income": 17711.33,
+        "operating_expenses": null,
+        "ebitda": 3192.43,
+        "ebit": 2378.19,
+        "interest": 220.42,
+        "depreciation": 814.24,
+        "profit_before_tax": 2157.77,
+        "tax": 449.47,
+        "net_profit": 1708.3,
+        "eps": 59.27,
+        "exceptional_items": 32.5
+      },
+      "Mar 2024": {
+        "revenue_from_operations": 19805.91,
+        "other_income": 154.23,
+        "total_income": 19960.14,
+        "operating_expenses": null,
+        "ebitda": 4102.43,
+        "ebit": 3316.72,
+        "interest": 226.8,
+        "depreciation": 785.71,
+        "profit_before_tax": 3089.92,
+        "tax": 837.97,
+        "net_profit": 2251.95,
+        "eps": 78.14,
+        "exceptional_items": -72.0
+      }
+    },
+    "yearly": {}
   },
   "balance_sheet": {
     "yearly": {
@@ -372,7 +441,7 @@
         "label": "Dec 2025"
       }
     ],
-    "last_updated": "2026-03-16T11:34:51.694598+00:00",
+    "last_updated": "2026-03-17T10:45:52.344087+00:00",
     "parser_version": "v2.0",
     "validation_passed": false
   }

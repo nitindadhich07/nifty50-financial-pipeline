@@ -6,7 +6,11 @@
     "sector": "Fast Moving Consumer Goods",
     "industry": "Diversified FMCG",
     "currency": "INR",
-    "unit": "\u20b9 Crores"
+    "unit": "\u20b9 Crores",
+    "price": 304.45,
+    "shares_outstanding": 12529229382,
+    "market_cap": 381452.39,
+    "has_standalone": true
   },
   "profit_loss": {
     "quarterly": {
@@ -90,7 +94,7 @@
         "other_income": null,
         "total_income": 19918.24,
         "operating_expenses": null,
-        "ebitda": 6773.55,
+        "ebitda": null,
         "ebit": 6773.55,
         "interest": 19.47,
         "depreciation": null,
@@ -105,7 +109,7 @@
         "other_income": null,
         "total_income": 21372.93,
         "operating_expenses": null,
-        "ebitda": 7144.48,
+        "ebitda": null,
         "ebit": 7144.48,
         "interest": 16.47,
         "depreciation": null,
@@ -120,7 +124,7 @@
         "other_income": null,
         "total_income": 18565.05,
         "operating_expenses": null,
-        "ebitda": 6847.03,
+        "ebitda": null,
         "ebit": 6847.03,
         "interest": 10.91,
         "depreciation": null,
@@ -137,7 +141,7 @@
         "other_income": null,
         "total_income": 74653.32,
         "operating_expenses": null,
-        "ebitda": 26972.0,
+        "ebitda": null,
         "ebit": 26972.0,
         "interest": 45.06,
         "depreciation": null,
@@ -152,7 +156,7 @@
         "other_income": null,
         "total_income": 67391.04,
         "operating_expenses": null,
-        "ebitda": 26439.39,
+        "ebitda": null,
         "ebit": 26439.39,
         "interest": 39.11,
         "depreciation": null,
@@ -167,7 +171,7 @@
         "other_income": null,
         "total_income": 70245.22,
         "operating_expenses": null,
-        "ebitda": 25958.32,
+        "ebitda": null,
         "ebit": 25958.32,
         "interest": 43.2,
         "depreciation": null,
@@ -182,7 +186,7 @@
         "other_income": null,
         "total_income": 60081.36,
         "operating_expenses": null,
-        "ebitda": 20779.83,
+        "ebitda": null,
         "ebit": 20779.83,
         "interest": 39.36,
         "depreciation": null,
@@ -193,6 +197,86 @@
         "exceptional_items": null
       }
     }
+  },
+  "standalone_profit_loss": {
+    "quarterly": {
+      "Dec 2024": {
+        "revenue_from_operations": 18290.24,
+        "other_income": 1086.62,
+        "total_income": 19376.86,
+        "operating_expenses": null,
+        "ebitda": 7442.96,
+        "ebit": 7081.14,
+        "interest": 7.57,
+        "depreciation": 361.82,
+        "profit_before_tax": 7073.57,
+        "tax": 1652.21,
+        "net_profit": 5638.25,
+        "eps": 4.51,
+        "exceptional_items": 527.96
+      },
+      "Sep 2024": {
+        "revenue_from_operations": 20537.35,
+        "other_income": 878.62,
+        "total_income": 21415.97,
+        "operating_expenses": null,
+        "ebitda": 7212.64,
+        "ebit": 6768.31,
+        "interest": 14.78,
+        "depreciation": 444.33,
+        "profit_before_tax": 6753.53,
+        "tax": 1675.19,
+        "net_profit": 5078.34,
+        "eps": 4.06,
+        "exceptional_items": -1.15
+      },
+      "Jun 2024": {
+        "revenue_from_operations": 18219.74,
+        "other_income": 701.27,
+        "total_income": 18921.01,
+        "operating_expenses": null,
+        "ebitda": 6993.7,
+        "ebit": 6562.84,
+        "interest": 11.14,
+        "depreciation": 430.86,
+        "profit_before_tax": 6551.7,
+        "tax": 1634.25,
+        "net_profit": 4917.45,
+        "eps": 3.94,
+        "exceptional_items": -3.04
+      },
+      "Mar 2024": {
+        "revenue_from_operations": 17752.87,
+        "other_income": 798.59,
+        "total_income": 18551.46,
+        "operating_expenses": null,
+        "ebitda": 6959.18,
+        "ebit": 6543.82,
+        "interest": 12.12,
+        "depreciation": 415.36,
+        "profit_before_tax": 6531.7,
+        "tax": 1511.5,
+        "net_profit": 5020.2,
+        "eps": 4.02,
+        "exceptional_items": -2.05
+      },
+      "Dec 2023": {
+        "revenue_from_operations": 17651.85,
+        "other_income": 1135.34,
+        "total_income": 18787.19,
+        "operating_expenses": null,
+        "ebitda": 7154.11,
+        "ebit": 6737.36,
+        "interest": 12.38,
+        "depreciation": 416.75,
+        "profit_before_tax": 6724.98,
+        "tax": 1152.91,
+        "net_profit": 5572.07,
+        "eps": 4.47,
+        "exceptional_items": -5.52
+      }
+    },
+    "yearly": {}
   },
   "balance_sheet": {
     "yearly": {
@@ -337,7 +421,6 @@
   "ratios": {
     "FY2025": {
       "net_profit_margin": 46.54,
-      "operating_margin": 36.13,
       "roe": 49.62,
       "roa": 39.44,
       "debt_to_equity": 0.0,
@@ -347,7 +430,6 @@
     },
     "FY2024": {
       "net_profit_margin": 30.36,
-      "operating_margin": 39.23,
       "roe": 27.46,
       "roa": 22.28,
       "debt_to_equity": 0.0,
@@ -357,7 +439,6 @@
     },
     "FY2023": {
       "net_profit_margin": 27.32,
-      "operating_margin": 36.95,
       "roe": 27.75,
       "roa": 22.35,
       "debt_to_equity": 0.0,
@@ -367,7 +448,6 @@
     },
     "FY2022": {
       "net_profit_margin": 25.37,
-      "operating_margin": 34.59,
       "roe": 24.41,
       "roa": 19.73,
       "debt_to_equity": 0.0,
@@ -387,7 +467,7 @@
         "label": "Dec 2025"
       }
     ],
-    "last_updated": "2026-03-16T11:34:45.161090+00:00",
+    "last_updated": "2026-03-17T10:45:44.130600+00:00",
     "parser_version": "v2.0",
     "validation_passed": false
   }

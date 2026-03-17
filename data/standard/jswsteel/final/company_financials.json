@@ -6,7 +6,11 @@
     "sector": "Metals & Mining",
     "industry": "Metals",
     "currency": "INR",
-    "unit": "\u20b9 Crores"
+    "unit": "\u20b9 Crores",
+    "price": 1164.8,
+    "shares_outstanding": 2445453966,
+    "market_cap": 284846.48,
+    "has_standalone": true
   },
   "profit_loss": {
     "quarterly": {
@@ -90,7 +94,7 @@
         "other_income": null,
         "total_income": 45219.0,
         "operating_expenses": null,
-        "ebitda": 3761.0,
+        "ebitda": null,
         "ebit": 3761.0,
         "interest": 2304.0,
         "depreciation": null,
@@ -105,7 +109,7 @@
         "other_income": null,
         "total_income": 42460.0,
         "operating_expenses": null,
-        "ebitda": 5289.0,
+        "ebitda": null,
         "ebit": 5289.0,
         "interest": 2217.0,
         "depreciation": null,
@@ -120,7 +124,7 @@
         "other_income": null,
         "total_income": 44341.0,
         "operating_expenses": null,
-        "ebitda": 3275.0,
+        "ebitda": null,
         "ebit": 3275.0,
         "interest": 1545.0,
         "depreciation": null,
@@ -193,6 +197,86 @@
         "exceptional_items": null
       }
     }
+  },
+  "standalone_profit_loss": {
+    "quarterly": {
+      "Dec 2024": {
+        "revenue_from_operations": 31799.0,
+        "other_income": 452.0,
+        "total_income": 32251.0,
+        "operating_expenses": null,
+        "ebitda": 4746.0,
+        "ebit": 3271.0,
+        "interest": 1633.0,
+        "depreciation": 1475.0,
+        "profit_before_tax": 1638.0,
+        "tax": 352.0,
+        "net_profit": 1286.0,
+        "eps": 5.27,
+        "exceptional_items": -103.0
+      },
+      "Sep 2024": {
+        "revenue_from_operations": 30778.0,
+        "other_income": 439.0,
+        "total_income": 31217.0,
+        "operating_expenses": null,
+        "ebitda": 4738.0,
+        "ebit": 3250.0,
+        "interest": 1668.0,
+        "depreciation": 1488.0,
+        "profit_before_tax": 1582.0,
+        "tax": 283.0,
+        "net_profit": 1299.0,
+        "eps": 5.33,
+        "exceptional_items": -342.0
+      },
+      "Jun 2024": {
+        "revenue_from_operations": 32654.0,
+        "other_income": 396.0,
+        "total_income": 33050.0,
+        "operating_expenses": null,
+        "ebitda": 4671.0,
+        "ebit": 3211.0,
+        "interest": 1590.0,
+        "depreciation": 1460.0,
+        "profit_before_tax": 1621.0,
+        "tax": 416.0,
+        "net_profit": 1205.0,
+        "eps": 4.95,
+        "exceptional_items": 0.0
+      },
+      "Mar 2024": {
+        "revenue_from_operations": 35341.0,
+        "other_income": 451.0,
+        "total_income": 35792.0,
+        "operating_expenses": null,
+        "ebitda": 4653.0,
+        "ebit": 3193.0,
+        "interest": 1569.0,
+        "depreciation": 1460.0,
+        "profit_before_tax": 1624.0,
+        "tax": 617.0,
+        "net_profit": 1007.0,
+        "eps": 4.13,
+        "exceptional_items": -240.0
+      },
+      "Dec 2023": {
+        "revenue_from_operations": 33310.0,
+        "other_income": 386.0,
+        "total_income": 33696.0,
+        "operating_expenses": null,
+        "ebitda": 6165.0,
+        "ebit": 4814.0,
+        "interest": 1551.0,
+        "depreciation": 1351.0,
+        "profit_before_tax": 3263.0,
+        "tax": 847.0,
+        "net_profit": 2416.0,
+        "eps": 9.92,
+        "exceptional_items": 0.0
+      }
+    },
+    "yearly": {}
   },
   "balance_sheet": {
     "yearly": {
@@ -387,7 +471,7 @@
         "label": "Dec 2025"
       }
     ],
-    "last_updated": "2026-03-16T11:34:52.819728+00:00",
+    "last_updated": "2026-03-17T10:45:55.683572+00:00",
     "parser_version": "v2.0",
     "validation_passed": false
   }

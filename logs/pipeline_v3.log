@@ -2846,3 +2846,613 @@
 2026-03-16 17:04:59,317 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/insurance/sbilife/final/company_financials.json
 2026-03-16 17:05:45,859 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
 2026-03-16 17:05:45,869 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/eichermot/final/company_financials.json
+2026-03-17 16:11:57,723 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: RELIANCE
+2026-03-17 16:11:57,723 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: HDFCBANK
+2026-03-17 16:11:57,724 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: TCS
+2026-03-17 16:11:57,724 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: INFY
+2026-03-17 16:11:57,724 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: HINDUNILVR
+2026-03-17 16:11:57,724 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: ICICIBANK
+2026-03-17 16:11:57,724 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: SBIN
+2026-03-17 16:11:57,725 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: ITC
+2026-03-17 16:11:57,725 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: LT
+2026-03-17 16:11:57,725 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: AXISBANK
+2026-03-17 16:11:57,725 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: KOTAKBANK
+2026-03-17 16:11:57,725 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: BAJFINANCE
+2026-03-17 16:11:57,725 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: BAJAJFINSV
+2026-03-17 16:11:57,725 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: ASIANPAINT
+2026-03-17 16:11:57,725 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: BHARTIARTL
+2026-03-17 16:11:57,850 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1394.8
+2026-03-17 16:11:58,132 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹842.8
+2026-03-17 16:11:58,132 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹374
+2026-03-17 16:11:58,133 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1287
+2026-03-17 16:11:58,133 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1823.4
+2026-03-17 16:11:58,134 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹2166.6
+2026-03-17 16:11:58,135 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹2394
+2026-03-17 16:11:58,136 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹3536.5
+2026-03-17 16:11:58,136 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹869
+2026-03-17 16:11:58,203 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1063.2
+2026-03-17 16:11:58,207 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹304.45
+2026-03-17 16:11:58,228 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1772.9
+2026-03-17 16:11:58,311 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹2240.5
+2026-03-17 16:11:58,397 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1234
+2026-03-17 16:11:58,474 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1228
+2026-03-17 16:11:58,698 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:11:58,831 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:11:58,831 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:11:58,868 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:11:58,913 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:11:58,914 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:11:58,982 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:11:58,990 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:11:58,992 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:11:58,997 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:11:59,038 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:11:59,039 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:11:59,081 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:11:59,195 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:11:59,208 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:11:59,211 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:11:59,279 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:11:59,442 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:11:59,448 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:11:59,459 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:11:59,463 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:11:59,708 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:11:59,856 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:11:59,858 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:11:59,891 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:11:59,995 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:00,130 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:00,132 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:00,298 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:00,338 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:02,222 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:02,227 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/hindunilvr/final/company_financials.json
+2026-03-17 16:12:02,228 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: HCLTECH
+2026-03-17 16:12:02,398 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1320.8
+2026-03-17 16:12:02,497 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:02,497 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:02,505 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/reliance/final/company_financials.json
+2026-03-17 16:12:02,505 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/bank/axisbank/final/company_financials.json
+2026-03-17 16:12:02,505 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: WIPRO
+2026-03-17 16:12:02,506 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: TECHM
+2026-03-17 16:12:02,600 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:02,617 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/tcs/final/company_financials.json
+2026-03-17 16:12:02,617 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: SUNPHARMA
+2026-03-17 16:12:02,713 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1794.5
+2026-03-17 16:12:02,713 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹191.1
+2026-03-17 16:12:02,751 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1339.7
+2026-03-17 16:12:02,982 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:02,986 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/infy/final/company_financials.json
+2026-03-17 16:12:02,986 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: DRREDDY
+2026-03-17 16:12:03,120 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1281.9
+2026-03-17 16:12:03,148 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:12:03,196 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:03,202 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/bank/kotakbank/final/company_financials.json
+2026-03-17 16:12:03,202 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: CIPLA
+2026-03-17 16:12:03,229 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:03,238 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/asianpaint/final/company_financials.json
+2026-03-17 16:12:03,238 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: DIVISLAB
+2026-03-17 16:12:03,271 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:03,281 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/nbfc/bajfinance/final/company_financials.json
+2026-03-17 16:12:03,282 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: APOLLOHOSP
+2026-03-17 16:12:03,390 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1280.4
+2026-03-17 16:12:03,402 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:03,403 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:03,410 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/itc/final/company_financials.json
+2026-03-17 16:12:03,411 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: TITAN
+2026-03-17 16:12:03,411 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/bank/hdfcbank/final/company_financials.json
+2026-03-17 16:12:03,411 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: MARUTI
+2026-03-17 16:12:03,498 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:03,498 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:03,505 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:03,509 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/nbfc/bajajfinsv/final/company_financials.json
+2026-03-17 16:12:03,510 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/bank/sbin/final/company_financials.json
+2026-03-17 16:12:03,510 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: M&M
+2026-03-17 16:12:03,511 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/bank/icicibank/final/company_financials.json
+2026-03-17 16:12:03,511 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: TATAMOTORS
+2026-03-17 16:12:03,511 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: EICHERMOT
+2026-03-17 16:12:03,513 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:12:03,555 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹6090
+2026-03-17 16:12:03,555 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹7490.5
+2026-03-17 16:12:03,556 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹4100
+2026-03-17 16:12:03,557 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:03,557 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹13010
+2026-03-17 16:12:03,557 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:12:03,605 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:12:03,626 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:03,633 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/lt/final/company_financials.json
+2026-03-17 16:12:03,633 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: BAJAJ-AUTO
+2026-03-17 16:12:03,763 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:03,768 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/bhartiartl/final/company_financials.json
+2026-03-17 16:12:03,768 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: HEROMOTOCO
+2026-03-17 16:12:03,783 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹6935
+2026-03-17 16:12:03,919 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹3122.5
+2026-03-17 16:12:03,957 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹9111
+2026-03-17 16:12:03,993 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:12:03,994 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:03,994 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹5353
+2026-03-17 16:12:04,013 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:04,215 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:12:04,438 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:12:04,438 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹None
+2026-03-17 16:12:04,439 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:12:04,439 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:12:04,514 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:12:04,612 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:04,624 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:12:04,751 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:12:04,814 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:12:04,956 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:04,962 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:04,966 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:12:05,082 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:05,239 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 0 quarter(s)
+2026-03-17 16:12:05,263 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:05,281 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:05,281 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:05,653 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:05,760 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:05,880 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 0 quarter(s)
+2026-03-17 16:12:05,903 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:06,108 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:07,143 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:07,264 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/sunpharma/final/company_financials.json
+2026-03-17 16:12:07,270 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: NTPC
+2026-03-17 16:12:07,497 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:07,507 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹383.25
+2026-03-17 16:12:07,543 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/wipro/final/company_financials.json
+2026-03-17 16:12:07,561 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: POWERGRID
+2026-03-17 16:12:07,735 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:07,791 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/techm/final/company_financials.json
+2026-03-17 16:12:07,791 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: ONGC
+2026-03-17 16:12:07,863 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹297.1
+2026-03-17 16:12:08,099 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:08,099 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹265.15
+2026-03-17 16:12:08,114 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/hcltech/final/company_financials.json
+2026-03-17 16:12:08,114 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: COALINDIA
+2026-03-17 16:12:08,248 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹460.6
+2026-03-17 16:12:08,339 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:12:08,501 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:08,505 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/cipla/final/company_financials.json
+2026-03-17 16:12:08,506 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: BPCL
+2026-03-17 16:12:08,618 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:08,623 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/m&m/final/company_financials.json
+2026-03-17 16:12:08,623 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: ULTRACEMCO
+2026-03-17 16:12:08,702 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:12:08,703 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹300
+2026-03-17 16:12:08,753 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:08,757 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/bajaj-auto/final/company_financials.json
+2026-03-17 16:12:08,758 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: SHREECEM
+2026-03-17 16:12:08,850 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:08,854 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/divislab/final/company_financials.json
+2026-03-17 16:12:08,855 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: GRASIM
+2026-03-17 16:12:08,897 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:12:08,924 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹11119
+2026-03-17 16:12:08,986 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:09,000 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/titan/final/company_financials.json
+2026-03-17 16:12:09,001 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: HINDALCO
+2026-03-17 16:12:09,018 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:09,023 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/drreddy/final/company_financials.json
+2026-03-17 16:12:09,023 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: JSWSTEEL
+2026-03-17 16:12:09,143 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹2677
+2026-03-17 16:12:09,143 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹23695
+2026-03-17 16:12:09,145 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:12:09,240 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:09,244 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/apollohosp/final/company_financials.json
+2026-03-17 16:12:09,245 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: TATASTEEL
+2026-03-17 16:12:09,266 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹935
+2026-03-17 16:12:09,286 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:09,359 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1164.8
+2026-03-17 16:12:09,462 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹195.2
+2026-03-17 16:12:09,462 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:12:09,685 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:09,685 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:09,725 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 4 quarter(s)
+2026-03-17 16:12:10,064 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:12:10,206 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:12:10,207 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:12:10,207 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:10,332 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:12:10,379 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:12:10,434 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:10,439 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/maruti/final/company_financials.json
+2026-03-17 16:12:10,439 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: ADANIPORTS
+2026-03-17 16:12:10,455 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/tatamotors/final/company_financials.json
+2026-03-17 16:12:10,455 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: ADANIENT
+2026-03-17 16:12:10,510 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:10,602 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1369
+2026-03-17 16:12:10,814 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1975
+2026-03-17 16:12:10,814 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 4 quarter(s)
+2026-03-17 16:12:10,849 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:11,010 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:11,248 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:11,249 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:11,380 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:11,401 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:12:11,530 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:11,543 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/heromotoco/final/company_financials.json
+2026-03-17 16:12:11,544 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: NESTLEIND
+2026-03-17 16:12:11,583 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:12:11,876 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1207.1
+2026-03-17 16:12:12,080 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:12,439 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:12,444 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/coalindia/final/company_financials.json
+2026-03-17 16:12:12,444 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: BRITANNIA
+2026-03-17 16:12:12,599 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹5856
+2026-03-17 16:12:12,629 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:12,845 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:12:12,845 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:12,866 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/utility/powergrid/final/company_financials.json
+2026-03-17 16:12:12,867 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: HDFCLIFE
+2026-03-17 16:12:13,089 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:13,094 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/ongc/final/company_financials.json
+2026-03-17 16:12:13,094 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: SBILIFE
+2026-03-17 16:12:13,116 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:13,120 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:13,124 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/utility/ntpc/final/company_financials.json
+2026-03-17 16:12:13,125 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: INDUSINDBK
+2026-03-17 16:12:13,126 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/bpcl/final/company_financials.json
+2026-03-17 16:12:13,139 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: UPL
+2026-03-17 16:12:13,189 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹642.9
+2026-03-17 16:12:13,356 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:13,360 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:13,374 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/hindalco/final/company_financials.json
+2026-03-17 16:12:13,375 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/ultracemco/final/company_financials.json
+2026-03-17 16:12:13,375 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: TATACONSUM
+2026-03-17 16:12:13,393 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:12:13,438 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1928
+2026-03-17 16:12:13,460 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹821
+2026-03-17 16:12:13,482 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹614.35
+2026-03-17 16:12:13,603 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1077.5
+2026-03-17 16:12:13,741 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:13,864 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:13,867 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:13,872 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/shreecem/final/company_financials.json
+2026-03-17 16:12:13,981 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 0 quarter(s)
+2026-03-17 16:12:14,155 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 0 quarter(s)
+2026-03-17 16:12:14,227 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:12:14,242 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:14,242 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:14,253 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/jswsteel/final/company_financials.json
+2026-03-17 16:12:14,253 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/tatasteel/final/company_financials.json
+2026-03-17 16:12:14,423 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:12:14,423 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:12:14,651 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:14,673 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/grasim/final/company_financials.json
+2026-03-17 16:12:14,919 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:14,920 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 0 quarter(s)
+2026-03-17 16:12:15,092 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 0 quarter(s)
+2026-03-17 16:12:15,178 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:15,183 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/adaniports/final/company_financials.json
+2026-03-17 16:12:15,227 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:15,344 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:12:15,449 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:15,454 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/adanient/final/company_financials.json
+2026-03-17 16:12:17,827 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:17,833 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/nestleind/final/company_financials.json
+2026-03-17 16:12:18,072 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:18,076 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:18,103 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/britannia/final/company_financials.json
+2026-03-17 16:12:18,104 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/insurance/hdfclife/final/company_financials.json
+2026-03-17 16:12:18,981 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:18,986 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/upl/final/company_financials.json
+2026-03-17 16:12:19,144 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:19,149 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/tataconsum/final/company_financials.json
+2026-03-17 16:12:19,181 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:19,185 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/bank/indusindbk/final/company_financials.json
+2026-03-17 16:12:22,139 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:22,143 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/insurance/sbilife/final/company_financials.json
+2026-03-17 16:12:23,838 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:12:23,844 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/eichermot/final/company_financials.json
+2026-03-17 16:15:38,871 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: RELIANCE
+2026-03-17 16:15:38,872 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: HDFCBANK
+2026-03-17 16:15:38,872 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: TCS
+2026-03-17 16:15:38,872 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: INFY
+2026-03-17 16:15:38,872 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: HINDUNILVR
+2026-03-17 16:15:38,872 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: ICICIBANK
+2026-03-17 16:15:38,872 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: SBIN
+2026-03-17 16:15:38,873 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: ITC
+2026-03-17 16:15:38,873 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: LT
+2026-03-17 16:15:38,873 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: AXISBANK
+2026-03-17 16:15:38,873 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: KOTAKBANK
+2026-03-17 16:15:38,873 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: BAJFINANCE
+2026-03-17 16:15:38,873 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: BAJAJFINSV
+2026-03-17 16:15:38,873 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: ASIANPAINT
+2026-03-17 16:15:38,873 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: BHARTIARTL
+2026-03-17 16:15:38,963 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1394.8
+2026-03-17 16:15:39,178 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1228
+2026-03-17 16:15:39,224 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1287
+2026-03-17 16:15:39,224 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹374
+2026-03-17 16:15:39,225 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹869
+2026-03-17 16:15:39,225 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1063.2
+2026-03-17 16:15:39,227 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹2240.5
+2026-03-17 16:15:39,229 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹2166.6
+2026-03-17 16:15:39,231 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹2394
+2026-03-17 16:15:39,234 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹304.45
+2026-03-17 16:15:39,235 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹3536.5
+2026-03-17 16:15:39,242 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹842.8
+2026-03-17 16:15:39,254 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1823.4
+2026-03-17 16:15:39,260 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1234
+2026-03-17 16:15:39,271 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1772.9
+2026-03-17 16:15:39,933 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:39,998 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:39,998 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:39,998 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:40,026 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:40,027 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:40,028 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:40,048 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:40,049 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:40,049 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:40,070 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:40,113 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:40,114 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:40,157 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:40,184 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:40,439 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:40,464 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:40,527 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:40,528 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:40,528 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:40,533 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:40,542 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:40,547 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:40,549 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:40,557 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:40,597 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:40,599 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:40,648 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:40,701 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:40,963 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:43,766 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:43,772 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/nbfc/bajajfinsv/final/company_financials.json
+2026-03-17 16:15:43,773 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: HCLTECH
+2026-03-17 16:15:43,803 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:43,807 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/infy/final/company_financials.json
+2026-03-17 16:15:43,808 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: WIPRO
+2026-03-17 16:15:43,871 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:43,875 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/bank/icicibank/final/company_financials.json
+2026-03-17 16:15:43,876 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: TECHM
+2026-03-17 16:15:43,880 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1320.8
+2026-03-17 16:15:44,018 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:44,022 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/bank/hdfcbank/final/company_financials.json
+2026-03-17 16:15:44,022 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: SUNPHARMA
+2026-03-17 16:15:44,126 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1339.7
+2026-03-17 16:15:44,127 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:44,130 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹191.1
+2026-03-17 16:15:44,132 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:44,137 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/itc/final/company_financials.json
+2026-03-17 16:15:44,138 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: DRREDDY
+2026-03-17 16:15:44,138 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/hindunilvr/final/company_financials.json
+2026-03-17 16:15:44,138 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: CIPLA
+2026-03-17 16:15:44,244 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:44,248 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/bank/kotakbank/final/company_financials.json
+2026-03-17 16:15:44,248 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: DIVISLAB
+2026-03-17 16:15:44,265 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1281.9
+2026-03-17 16:15:44,295 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1794.5
+2026-03-17 16:15:44,319 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1280.4
+2026-03-17 16:15:44,320 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:44,324 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/bhartiartl/final/company_financials.json
+2026-03-17 16:15:44,324 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: APOLLOHOSP
+2026-03-17 16:15:44,340 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:44,344 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/nbfc/bajfinance/final/company_financials.json
+2026-03-17 16:15:44,344 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: TITAN
+2026-03-17 16:15:44,355 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:44,355 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:44,362 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/bank/sbin/final/company_financials.json
+2026-03-17 16:15:44,363 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: MARUTI
+2026-03-17 16:15:44,363 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/lt/final/company_financials.json
+2026-03-17 16:15:44,363 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: M&M
+2026-03-17 16:15:44,389 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:44,393 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/tcs/final/company_financials.json
+2026-03-17 16:15:44,393 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: TATAMOTORS
+2026-03-17 16:15:44,477 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹4100
+2026-03-17 16:15:44,478 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹13010
+2026-03-17 16:15:44,478 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹7490.5
+2026-03-17 16:15:44,478 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:44,483 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/reliance/final/company_financials.json
+2026-03-17 16:15:44,483 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: EICHERMOT
+2026-03-17 16:15:44,650 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹3122.5
+2026-03-17 16:15:44,650 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹6090
+2026-03-17 16:15:44,651 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:44,655 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/asianpaint/final/company_financials.json
+2026-03-17 16:15:44,655 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: BAJAJ-AUTO
+2026-03-17 16:15:44,682 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:44,806 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹None
+2026-03-17 16:15:44,806 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹6935
+2026-03-17 16:15:44,869 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:44,870 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:45,031 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹9111
+2026-03-17 16:15:45,067 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:45,180 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:45,181 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:45,182 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:45,315 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:45,316 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:45,316 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:45,341 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:45,404 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:45,446 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:45,485 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:45,514 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:45,515 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:45,539 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:45,703 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:45,703 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 0 quarter(s)
+2026-03-17 16:15:45,783 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:45,783 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:45,801 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:45,915 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:45,960 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:45,991 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:46,206 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 0 quarter(s)
+2026-03-17 16:15:46,206 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:46,355 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:46,771 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:46,803 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/bank/axisbank/final/company_financials.json
+2026-03-17 16:15:46,804 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: HEROMOTOCO
+2026-03-17 16:15:46,932 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹5353
+2026-03-17 16:15:47,789 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:47,803 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:47,808 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:47,857 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/divislab/final/company_financials.json
+2026-03-17 16:15:47,857 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: NTPC
+2026-03-17 16:15:47,888 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/techm/final/company_financials.json
+2026-03-17 16:15:47,892 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: POWERGRID
+2026-03-17 16:15:48,114 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹383.25
+2026-03-17 16:15:48,177 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹297.1
+2026-03-17 16:15:48,314 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:48,319 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/maruti/final/company_financials.json
+2026-03-17 16:15:48,319 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: ONGC
+2026-03-17 16:15:48,371 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:48,375 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/drreddy/final/company_financials.json
+2026-03-17 16:15:48,375 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: COALINDIA
+2026-03-17 16:15:48,423 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:48,432 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:48,437 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/hcltech/final/company_financials.json
+2026-03-17 16:15:48,437 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: BPCL
+2026-03-17 16:15:48,440 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:48,444 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/titan/final/company_financials.json
+2026-03-17 16:15:48,444 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: ULTRACEMCO
+2026-03-17 16:15:48,475 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:48,480 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/m&m/final/company_financials.json
+2026-03-17 16:15:48,480 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: SHREECEM
+2026-03-17 16:15:48,502 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹460.6
+2026-03-17 16:15:48,527 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹265.15
+2026-03-17 16:15:48,713 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹23695
+2026-03-17 16:15:48,713 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹11119
+2026-03-17 16:15:48,829 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹300
+2026-03-17 16:15:48,830 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:48,835 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/bajaj-auto/final/company_financials.json
+2026-03-17 16:15:48,835 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: GRASIM
+2026-03-17 16:15:48,835 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:48,840 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/wipro/final/company_financials.json
+2026-03-17 16:15:48,840 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: HINDALCO
+2026-03-17 16:15:48,984 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:48,995 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:49,154 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹935
+2026-03-17 16:15:49,221 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹2677
+2026-03-17 16:15:49,367 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:49,367 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:49,368 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:49,369 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:49,369 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:49,374 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/cipla/final/company_financials.json
+2026-03-17 16:15:49,374 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: JSWSTEEL
+2026-03-17 16:15:49,502 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:49,512 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/apollohosp/final/company_financials.json
+2026-03-17 16:15:49,513 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: TATASTEEL
+2026-03-17 16:15:49,552 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1164.8
+2026-03-17 16:15:49,553 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 4 quarter(s)
+2026-03-17 16:15:49,583 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:49,634 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/tatamotors/final/company_financials.json
+2026-03-17 16:15:49,634 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: ADANIPORTS
+2026-03-17 16:15:49,750 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹195.2
+2026-03-17 16:15:49,750 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1369
+2026-03-17 16:15:49,751 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:49,773 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:49,774 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:49,937 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:49,982 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:50,026 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:50,069 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/sunpharma/final/company_financials.json
+2026-03-17 16:15:50,097 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: ADANIENT
+2026-03-17 16:15:50,128 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 4 quarter(s)
+2026-03-17 16:15:50,252 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:50,295 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:50,428 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:50,510 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1975
+2026-03-17 16:15:50,569 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:50,577 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:50,602 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:50,925 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:51,032 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:51,291 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:51,291 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:51,451 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:51,862 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:51,989 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:52,009 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/utility/powergrid/final/company_financials.json
+2026-03-17 16:15:52,010 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: NESTLEIND
+2026-03-17 16:15:52,110 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:52,116 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/ongc/final/company_financials.json
+2026-03-17 16:15:52,116 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: BRITANNIA
+2026-03-17 16:15:52,126 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:52,131 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/heromotoco/final/company_financials.json
+2026-03-17 16:15:52,131 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: HDFCLIFE
+2026-03-17 16:15:52,225 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹5856
+2026-03-17 16:15:52,236 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:52,240 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/utility/ntpc/final/company_financials.json
+2026-03-17 16:15:52,240 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: SBILIFE
+2026-03-17 16:15:52,301 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1207.1
+2026-03-17 16:15:52,337 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:52,347 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/ultracemco/final/company_financials.json
+2026-03-17 16:15:52,348 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: INDUSINDBK
+2026-03-17 16:15:52,380 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹642.9
+2026-03-17 16:15:52,521 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1928
+2026-03-17 16:15:52,672 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹821
+2026-03-17 16:15:52,905 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:52,910 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/bpcl/final/company_financials.json
+2026-03-17 16:15:52,910 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: UPL
+2026-03-17 16:15:53,026 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:53,026 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:53,033 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:53,037 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/shreecem/final/company_financials.json
+2026-03-17 16:15:53,038 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: TATACONSUM
+2026-03-17 16:15:53,051 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/coalindia/final/company_financials.json
+2026-03-17 16:15:53,127 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:53,202 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 0 quarter(s)
+2026-03-17 16:15:53,202 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 0 quarter(s)
+2026-03-17 16:15:53,229 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹614.35
+2026-03-17 16:15:53,255 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1077.5
+2026-03-17 16:15:53,558 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:53,558 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:53,559 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:53,565 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/grasim/final/company_financials.json
+2026-03-17 16:15:53,678 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:53,682 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/tatasteel/final/company_financials.json
+2026-03-17 16:15:53,700 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 0 quarter(s)
+2026-03-17 16:15:53,721 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 0 quarter(s)
+2026-03-17 16:15:53,885 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:53,906 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:53,910 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/hindalco/final/company_financials.json
+2026-03-17 16:15:54,095 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:54,097 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 16:15:54,097 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:54,615 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:54,748 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:54,752 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/adaniports/final/company_financials.json
+2026-03-17 16:15:55,145 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 16:15:55,426 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:55,429 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/nestleind/final/company_financials.json
+2026-03-17 16:15:55,680 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:55,684 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/jswsteel/final/company_financials.json
+2026-03-17 16:15:56,015 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:56,020 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/insurance/hdfclife/final/company_financials.json
+2026-03-17 16:15:56,366 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:56,371 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/adanient/final/company_financials.json
+2026-03-17 16:15:56,546 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:56,551 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/britannia/final/company_financials.json
+2026-03-17 16:15:56,713 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:56,717 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/bank/indusindbk/final/company_financials.json
+2026-03-17 16:15:58,018 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:58,023 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/upl/final/company_financials.json
+2026-03-17 16:15:59,314 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:59,318 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/tataconsum/final/company_financials.json
+2026-03-17 16:15:59,604 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:15:59,608 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/insurance/sbilife/final/company_financials.json
+2026-03-17 16:16:24,683 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 16:16:24,688 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/eichermot/final/company_financials.json
+2026-03-17 17:12:02,404 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: RELIANCE
+2026-03-17 17:12:02,478 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1394.8
+2026-03-17 17:12:03,305 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 17:12:03,678 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 17:12:06,444 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 17:12:06,453 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/reliance/final/company_financials.json
+2026-03-17 17:21:06,819 - FinancialPipelineV3.Hierarchical - INFO - Hierarchical extraction: RELIANCE
+2026-03-17 17:21:06,957 - FinancialPipelineV3.Hierarchical - INFO - ✅ Market data fetched: ₹1394.8
+2026-03-17 17:21:07,715 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.5 (NSE API): merged 5 quarter(s)
+2026-03-17 17:21:08,630 - FinancialPipelineV3.Hierarchical - INFO - Tier 1.6 (NSE Standalone): merged 5 quarter(s)
+2026-03-17 17:21:10,864 - FinancialPipelineV3.Hierarchical - INFO - Tier 4 (YFinance): Final fallback for remaining gaps...
+2026-03-17 17:21:10,870 - FinancialPipelineV3.Hierarchical - INFO - Saved: data/standard/reliance/final/company_financials.json

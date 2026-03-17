@@ -35,25 +35,61 @@ class FinancialExtractorPipeline:
         )
 
         # ── Tier 1: NSE API (Consolidated + Standalone) ─────────────────────────
-        # Consolidated
-        nse_con = self.nse_client.fetch_results(symbol, consolidated=True)
-        if nse_con:
-            nse_pnl = self.normalizer.normalize_nse_pnl(nse_con)
+        # Market Data (Price, Market Cap, Shares)
+        quote = self.nse_client.fetch_equity_quote(symbol)
+        if quote:
+            price_info = quote.get("priceInfo", {})
+            security_info = quote.get("securityInfo", {})
+            
+            last_price = price_info.get("lastPrice")
+            issued_shares = security_info.get("issuedSize")
+            
+            final_financials.company_info["price"] = last_price
+            final_financials.company_info["shares_outstanding"] = issued_shares
+            
+            if last_price and issued_shares:
+                # Market Cap in Crores
+                mcap_crores = round((float(last_price) * float(issued_shares)) / 10_000_000, 2)
+                final_financials.company_info["market_cap"] = mcap_crores
+                
+            logger.info(f"✅ Market data fetched: ₹{last_price} | Mkt Cap: ₹{final_financials.company_info.get('market_cap')} Cr")
+
+        # Quarterly Consolidated
+        nse_con_q = self.nse_client.fetch_results(symbol, period="Quarterly", consolidated=True)
+        if nse_con_q:
+            nse_pnl = self.normalizer.normalize_nse_pnl(nse_con_q, requested_period="quarterly")
             for year, pl in nse_pnl.items():
                 self.normalizer.merge_financials(
                     final_financials, {"pl": pl}, year, period_type="quarterly", is_standalone=False
                 )
-            logger.info("✅ Tier 1 (NSE Quarterly Consolidated) integrated")
 
-        # Standalone
-        nse_std = self.nse_client.fetch_results(symbol, consolidated=False)
-        if nse_std:
-            nse_pnl = self.normalizer.normalize_nse_pnl(nse_std)
+        # Quarterly Standalone
+        nse_std_q = self.nse_client.fetch_results(symbol, period="Quarterly", consolidated=False)
+        if nse_std_q:
+            nse_pnl = self.normalizer.normalize_nse_pnl(nse_std_q, requested_period="quarterly")
             for year, pl in nse_pnl.items():
                 self.normalizer.merge_financials(
                     final_financials, {"pl": pl}, year, period_type="quarterly", is_standalone=True
                 )
-            logger.info("✅ Tier 1 (NSE Quarterly Standalone) integrated")
+
+        # Annual Consolidated (NSE API fallback/supplement)
+        nse_con_a = self.nse_client.fetch_results(symbol, period="Annual", consolidated=True)
+        if nse_con_a:
+            nse_pnl = self.normalizer.normalize_nse_pnl(nse_con_a, requested_period="annual")
+            for year, pl in nse_pnl.items():
+                self.normalizer.merge_financials(
+                    final_financials, {"pl": pl}, year, period_type="annual", is_standalone=False, source_name="NSE_API"
+                )
+
+        # Annual Standalone (NSE API)
+        nse_std_a = self.nse_client.fetch_results(symbol, period="Annual", consolidated=False)
+        if nse_std_a:
+            nse_pnl = self.normalizer.normalize_nse_pnl(nse_std_a, requested_period="annual")
+            for year, pl in nse_pnl.items():
+                self.normalizer.merge_financials(
+                    final_financials, {"pl": pl}, year, period_type="annual", is_standalone=True, source_name="NSE_API"
+                )
+            logger.info("✅ Tier 1 (NSE Annual Standalone) integrated")
 
         # ── Tier 2: Consolidated PDF → annual ─────────────────────────────────
         if pdf_file and Path(pdf_file).exists():

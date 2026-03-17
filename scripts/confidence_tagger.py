@@ -41,21 +41,10 @@ class ConfidenceTagger:
         self,
         financials: Dict[str, Any],
         provenance: Dict[str, Any],
+        is_standalone: bool = False
     ) -> Dict[str, Any]:
         """
-        Returns a confidence map:
-        {
-          "profit_loss": {
-            "annual": {
-              "FY2025": {
-                "revenue_from_operations": "VERIFIED",
-                "net_profit": "VERIFIED",
-                ...
-              }
-            }
-          },
-          ...
-        }
+        Returns a confidence map for either consolidated or standalone data.
         """
         result: Dict[str, Any] = {}
         for stmt_key in ("profit_loss", "balance_sheet", "cash_flow"):
@@ -75,9 +64,10 @@ class ConfidenceTagger:
                             result[stmt_key][period_type][year_label][field] = NOT_AVAILABLE
                         else:
                             # Check provenance metadata
+                            stmt_prefix = stmt_key[:2] if stmt_key != "cash_flow" else "cf"
                             src = self._find_source(
                                 provenance, period_type, year_label,
-                                stmt_key[:2] if stmt_key != "cash_flow" else "cf",
+                                stmt_prefix,
                                 field,
                             )
                             result[stmt_key][period_type][year_label][field] = self._classify(src)

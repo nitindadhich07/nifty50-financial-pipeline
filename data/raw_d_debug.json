@@ -1,0 +1,519 @@
+{
+  "company_info": {
+    "ticker": "RELIANCE",
+    "company_name": "Reliance Industries Limited",
+    "isin": "INE002A01018",
+    "cin": "L17110MH1973PLC019786",
+    "unit": "INR Crores",
+    "sector": "standard",
+    "generated_at_utc": "2026-03-16T07:07:24.373002+00:00"
+  },
+  "profit_loss": {
+    "annual": {
+      "FY2025": {
+        "revenue_from_operations": 258898.0,
+        "raw_material_cost": null,
+        "employee_cost": null,
+        "other_expenses": null,
+        "revenue": null,
+        "operating_margin": null,
+        "operating_profit": 29124.0,
+        "ebitda": 2.0,
+        "ebit": 3.0,
+        "profit_before_tax": 29124.0,
+        "tax": -2762.0,
+        "net_profit": null
+      }
+    },
+    "quarterly": {
+      "Dec 2024": {
+        "revenue_from_operations": 128260.0,
+        "raw_material_cost": null,
+        "employee_cost": null,
+        "other_expenses": null,
+        "revenue": null,
+        "operating_margin": null,
+        "operating_profit": 11597.0,
+        "ebitda": null,
+        "ebit": null,
+        "profit_before_tax": 11597.0,
+        "tax": 2876.0,
+        "net_profit": 8721.0
+      },
+      "Sep 2024": {
+        "revenue_from_operations": 134054.0,
+        "raw_material_cost": null,
+        "employee_cost": null,
+        "other_expenses": null,
+        "revenue": null,
+        "operating_margin": null,
+        "operating_profit": 10214.0,
+        "ebitda": null,
+        "ebit": null,
+        "profit_before_tax": 10214.0,
+        "tax": 2501.0,
+        "net_profit": 7713.0
+      },
+      "Jun 2024": {
+        "revenue_from_operations": 134331.0,
+        "raw_material_cost": null,
+        "employee_cost": null,
+        "other_expenses": null,
+        "revenue": null,
+        "operating_margin": null,
+        "operating_profit": 10146.0,
+        "ebitda": null,
+        "ebit": null,
+        "profit_before_tax": 10146.0,
+        "tax": 2535.0,
+        "net_profit": 7611.0
+      }
+    }
+  },
+  "balance_sheet": {
+    "annual": {},
+    "quarterly": {
+      "Dec 2024": {
+        "assets": {
+          "total_assets": null,
+          "current_assets": null,
+          "cash_and_cash_equivalents": null,
+          "inventory": null,
+          "trade_receivables": null,
+          "other_current_assets": null,
+          "property_plant_equipment": null,
+          "intangible_assets": null,
+          "investments": null,
+          "other_non_current_assets": null,
+          "advances": null
+        },
+        "liabilities": {
+          "total_liabilities": null,
+          "current_liabilities": null,
+          "trade_payables": null,
+          "short_term_borrowings": null,
+          "other_current_liabilities": null,
+          "long_term_borrowings": null,
+          "provisions": null,
+          "deferred_tax_liabilities": null,
+          "deposits": null
+        },
+        "equity": {
+          "share_capital": 13532.0,
+          "reserves": null,
+          "minority_interest": null,
+          "total_equity": 13532.0
+        }
+      },
+      "Sep 2024": {
+        "assets": {
+          "total_assets": null,
+          "current_assets": null,
+          "cash_and_cash_equivalents": null,
+          "inventory": null,
+          "trade_receivables": null,
+          "other_current_assets": null,
+          "property_plant_equipment": null,
+          "intangible_assets": null,
+          "investments": null,
+          "other_non_current_assets": null,
+          "advances": null
+        },
+        "liabilities": {
+          "total_liabilities": null,
+          "current_liabilities": null,
+          "trade_payables": null,
+          "short_term_borrowings": null,
+          "other_current_liabilities": null,
+          "long_term_borrowings": null,
+          "provisions": null,
+          "deferred_tax_liabilities": null,
+          "deposits": null
+        },
+        "equity": {
+          "share_capital": 6766.0,
+          "reserves": null,
+          "minority_interest": null,
+          "total_equity": 6766.0
+        }
+      },
+      "Jun 2024": {
+        "assets": {
+          "total_assets": null,
+          "current_assets": null,
+          "cash_and_cash_equivalents": null,
+          "inventory": null,
+          "trade_receivables": null,
+          "other_current_assets": null,
+          "property_plant_equipment": null,
+          "intangible_assets": null,
+          "investments": null,
+          "other_non_current_assets": null,
+          "advances": null
+        },
+        "liabilities": {
+          "total_liabilities": null,
+          "current_liabilities": null,
+          "trade_payables": null,
+          "short_term_borrowings": null,
+          "other_current_liabilities": null,
+          "long_term_borrowings": null,
+          "provisions": null,
+          "deferred_tax_liabilities": null,
+          "deposits": null
+        },
+        "equity": {
+          "share_capital": 6766.0,
+          "reserves": null,
+          "minority_interest": null,
+          "total_equity": 6766.0
+        }
+      }
+    }
+  },
+  "cash_flow": {
+    "annual": {},
+    "quarterly": {}
+  },
+  "ratios": {
+    "annual": {
+      "FY2025": {
+        "operating_margin": 11.25
+      }
+    },
+    "quarterly": {
+      "Dec 2024": {
+        "current_ratio": {
+          "source": "NSE_API",
+          "priority": 300,
+          "meta": {}
+        },
+        "net_profit_margin": 6.8,
+        "operating_margin": 9.04,
+        "roe": 64.45
+      },
+      "Sep 2024": {
+        "net_profit_margin": 5.75,
+        "operating_margin": 7.62,
+        "roe_anomaly": 114.0
+      },
+      "Jun 2024": {
+        "net_profit_margin": 5.67,
+        "operating_margin": 7.55,
+        "roe_anomaly": 112.49
+      }
+    }
+  },
+  "growth": {
+    "annual": {
+      "revenue_yoy_pct": {},
+      "net_profit_yoy_pct": {}
+    },
+    "quarterly": {
+      "revenue_qoq_pct": {
+        "Dec 2024": -4.32,
+        "Sep 2024": -0.21,
+        "Jun 2024": -11.05
+      },
+      "net_profit_qoq_pct": {
+        "Dec 2024": 13.07,
+        "Sep 2024": 1.34,
+        "Jun 2024": -32.54
+      }
+    }
+  },
+  "sector": "standard",
+  "metadata": {
+    "provenance": {
+      "quarterly": {
+        "Dec 2024": {
+          "pl": {
+            "revenue_from_operations": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            },
+            "operating_profit": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            },
+            "profit_before_tax": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            },
+            "tax": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            },
+            "net_profit": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            }
+          },
+          "bs": {
+            "equity.share_capital": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            },
+            "equity.total_equity": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            }
+          },
+          "ratios": {
+            "current_ratio": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            },
+            "total_debt_to_total_assets": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            }
+          }
+        },
+        "Sep 2024": {
+          "pl": {
+            "revenue_from_operations": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            },
+            "operating_profit": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            },
+            "profit_before_tax": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            },
+            "tax": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            },
+            "net_profit": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            }
+          },
+          "bs": {
+            "equity.share_capital": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            },
+            "equity.total_equity": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            }
+          },
+          "ratios": {}
+        },
+        "Jun 2024": {
+          "pl": {
+            "revenue_from_operations": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            },
+            "operating_profit": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            },
+            "profit_before_tax": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            },
+            "tax": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            },
+            "net_profit": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            }
+          },
+          "bs": {
+            "equity.share_capital": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            },
+            "equity.total_equity": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            }
+          },
+          "ratios": {}
+        },
+        "Mar 2024": {
+          "pl": {
+            "revenue_from_operations": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            },
+            "operating_profit": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            },
+            "profit_before_tax": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            },
+            "tax": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            },
+            "net_profit": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            }
+          },
+          "bs": {
+            "equity.share_capital": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            },
+            "equity.total_equity": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            }
+          },
+          "ratios": {}
+        },
+        "Dec 2023": {
+          "pl": {
+            "revenue_from_operations": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            },
+            "operating_profit": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            },
+            "profit_before_tax": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            },
+            "tax": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            },
+            "net_profit": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            }
+          },
+          "bs": {
+            "equity.share_capital": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            },
+            "equity.total_equity": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            }
+          },
+          "ratios": {
+            "current_ratio": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            },
+            "total_debt_to_total_assets": {
+              "source": "NSE_API",
+              "priority": 300,
+              "meta": {}
+            }
+          }
+        }
+      },
+      "annual": {
+        "FY2025": {
+          "pl": {
+            "revenue_from_operations": {
+              "source": "PDF",
+              "priority": 100,
+              "meta": {
+                "pdf": "storage/raw/pdf/reliance/financial_results.pdf",
+                "page": 15
+              }
+            },
+            "operating_profit": {
+              "source": "PDF",
+              "priority": 100,
+              "meta": {
+                "pdf": "storage/raw/pdf/reliance/financial_results.pdf",
+                "page": 15
+              }
+            },
+            "ebitda": {
+              "source": "PDF",
+              "priority": 100,
+              "meta": {
+                "pdf": "storage/raw/pdf/reliance/financial_results.pdf",
+                "page": 15
+              }
+            },
+            "ebit": {
+              "source": "PDF",
+              "priority": 100,
+              "meta": {
+                "pdf": "storage/raw/pdf/reliance/financial_results.pdf",
+                "page": 15
+              }
+            },
+            "profit_before_tax": {
+              "source": "PDF",
+              "priority": 100,
+              "meta": {
+                "pdf": "storage/raw/pdf/reliance/financial_results.pdf",
+                "page": 15
+              }
+            },
+            "tax": {
+              "source": "PDF",
+              "priority": 100,
+              "meta": {
+                "pdf": "storage/raw/pdf/reliance/financial_results.pdf",
+                "page": 15
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "insights": []
+}
