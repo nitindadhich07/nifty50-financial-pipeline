@@ -5,7 +5,8 @@
     "sector": "Automobile and Auto Components",
     "industry": "Automobiles",
     "description": null,
-    "history": null
+    "history": null,
+    "has_standalone": false
   },
   "market_data": {
     "price": null,
@@ -13,250 +14,747 @@
     "market_cap": null
   },
   "financials": {
-    "profit_loss": {
+    "consolidated": {
       "quarterly": {
-        "Dec 2024": {
-          "revenue": 10210.78,
-          "total_income": 10528.29,
-          "other_income": 317.51,
-          "ebitda": 1793.99,
-          "ebit": 1597.09,
-          "interest": 5.45,
-          "depreciation": 196.9,
-          "profit_before_tax": 1591.64,
-          "tax": 388.8,
-          "net_profit": 1202.84,
-          "eps": 60.15,
-          "exceptional_items": 0.0
-        },
-        "Sep 2024": {
-          "revenue": 10463.21,
-          "total_income": 10746.21,
-          "other_income": 283.0,
-          "ebitda": 1798.89,
-          "ebit": 1605.2,
-          "interest": 4.93,
-          "depreciation": 193.69,
-          "profit_before_tax": 1600.27,
-          "tax": 396.73,
-          "net_profit": 1203.54,
-          "eps": 60.18,
-          "exceptional_items": 0.0
-        },
-        "Jun 2024": {
-          "revenue": 10143.73,
-          "total_income": 10375.44,
-          "other_income": 231.71,
-          "ebitda": 1691.46,
-          "ebit": 1498.26,
-          "interest": 4.81,
-          "depreciation": 193.2,
-          "profit_before_tax": 1493.45,
-          "tax": 370.82,
-          "net_profit": 1122.63,
-          "eps": 56.15,
-          "exceptional_items": 0.0
-        },
-        "Mar 2024": {
-          "revenue": 9519.3,
-          "total_income": 9699.34,
-          "other_income": 180.04,
-          "ebitda": 1539.19,
-          "ebit": 1354.14,
-          "interest": 4.56,
-          "depreciation": 185.05,
-          "profit_before_tax": 1349.58,
-          "tax": 333.53,
-          "net_profit": 1016.05,
-          "eps": 50.84,
-          "exceptional_items": 0.0
-        },
-        "Dec 2023": {
-          "revenue": 9723.73,
-          "total_income": 9965.77,
-          "other_income": 242.04,
-          "ebitda": 1604.06,
-          "ebit": 1421.55,
-          "interest": 4.52,
-          "depreciation": 182.51,
-          "profit_before_tax": 1417.03,
-          "tax": 343.65,
-          "net_profit": 1073.38,
-          "eps": 53.7,
-          "exceptional_items": 0.0
-        },
-        "Dec 2025": {
-          "revenue": 12486.82,
-          "total_income": 12486.82,
-          "ebitda": 1711.81,
-          "ebit": 1711.81,
-          "interest": 19.64,
-          "profit_before_tax": 1692.17,
-          "tax": 417.02,
-          "net_profit": 1267.55,
-          "eps": 0.0
-        },
-        "Sep 2025": {
-          "revenue": 12218.39,
-          "total_income": 12218.39,
-          "ebitda": 1796.13,
-          "ebit": 1796.13,
-          "interest": 19.25,
-          "profit_before_tax": 1776.88,
-          "tax": 455.9,
-          "net_profit": 1308.89,
-          "eps": 0.0
-        },
-        "Jun 2025": {
-          "revenue": 9727.75,
-          "total_income": 9727.75,
-          "ebitda": 2146.67,
-          "ebit": 2146.67,
-          "interest": 20.66,
-          "profit_before_tax": 2126.01,
-          "tax": 420.36,
-          "net_profit": 1705.29,
-          "eps": 0.0
-        },
-        "Mar 2025": {
-          "revenue": 9758.88,
-          "total_income": 9758.88,
-          "ebitda": 1581.84,
-          "ebit": 1581.84,
-          "interest": 16.93,
-          "profit_before_tax": 1564.91,
-          "tax": 396.16,
-          "net_profit": 1161.33
+        "profit_loss": {
+          "Dec 2024": {
+            "revenue": 10210.78,
+            "total_income": 10528.29,
+            "other_income": 317.51,
+            "ebitda": 1793.99,
+            "ebit": 1597.09,
+            "interest": 5.45,
+            "depreciation": 196.9,
+            "profit_before_tax": 1591.64,
+            "tax": 388.8,
+            "net_profit": 1202.84,
+            "eps": 60.15,
+            "exceptional_items": 0.0
+          },
+          "Sep 2024": {
+            "revenue": 10463.21,
+            "total_income": 10746.21,
+            "other_income": 283.0,
+            "ebitda": 1798.89,
+            "ebit": 1605.2,
+            "interest": 4.93,
+            "depreciation": 193.69,
+            "profit_before_tax": 1600.27,
+            "tax": 396.73,
+            "net_profit": 1203.54,
+            "eps": 60.18,
+            "exceptional_items": 0.0
+          },
+          "Jun 2024": {
+            "revenue": 10143.73,
+            "total_income": 10375.44,
+            "other_income": 231.71,
+            "ebitda": 1691.46,
+            "ebit": 1498.26,
+            "interest": 4.81,
+            "depreciation": 193.2,
+            "profit_before_tax": 1493.45,
+            "tax": 370.82,
+            "net_profit": 1122.63,
+            "eps": 56.15,
+            "exceptional_items": 0.0
+          },
+          "Mar 2024": {
+            "revenue": 9519.3,
+            "total_income": 9699.34,
+            "other_income": 180.04,
+            "ebitda": 1539.19,
+            "ebit": 1354.14,
+            "interest": 4.56,
+            "depreciation": 185.05,
+            "profit_before_tax": 1349.58,
+            "tax": 333.53,
+            "net_profit": 1016.05,
+            "eps": 50.84,
+            "exceptional_items": 0.0
+          },
+          "Dec 2023": {
+            "revenue": 9723.73,
+            "total_income": 9965.77,
+            "other_income": 242.04,
+            "ebitda": 1604.06,
+            "ebit": 1421.55,
+            "interest": 4.52,
+            "depreciation": 182.51,
+            "profit_before_tax": 1417.03,
+            "tax": 343.65,
+            "net_profit": 1073.38,
+            "eps": 53.7,
+            "exceptional_items": 0.0
+          },
+          "Dec 2025": {
+            "revenue": 12486.82,
+            "total_income": 12486.82,
+            "ebitda": 1711.81,
+            "ebit": 1711.81,
+            "interest": 19.64,
+            "profit_before_tax": 1692.17,
+            "tax": 417.02,
+            "net_profit": 1267.55,
+            "eps": 0.0
+          },
+          "Sep 2025": {
+            "revenue": 12218.39,
+            "total_income": 12218.39,
+            "ebitda": 1796.13,
+            "ebit": 1796.13,
+            "interest": 19.25,
+            "profit_before_tax": 1776.88,
+            "tax": 455.9,
+            "net_profit": 1308.89,
+            "eps": 0.0
+          },
+          "Jun 2025": {
+            "revenue": 9727.75,
+            "total_income": 9727.75,
+            "ebitda": 2146.67,
+            "ebit": 2146.67,
+            "interest": 20.66,
+            "profit_before_tax": 2126.01,
+            "tax": 420.36,
+            "net_profit": 1705.29,
+            "eps": 0.0
+          },
+          "Mar 2025": {
+            "revenue": 9758.88,
+            "total_income": 9758.88,
+            "ebitda": 1581.84,
+            "ebit": 1581.84,
+            "interest": 16.93,
+            "profit_before_tax": 1564.91,
+            "tax": 396.16,
+            "net_profit": 1161.33
+          }
         }
       },
       "annual": {
-        "FY2025": {
-          "revenue": 40712.49,
-          "total_income": 40712.49,
-          "ebitda": 6172.7,
-          "ebit": 6004.21,
-          "interest": 70.65,
-          "depreciation": 168.49,
-          "profit_before_tax": 5933.56,
-          "tax": 1557.75,
-          "net_profit": 4378.48,
-          "eps": 0.0
+        "profit_loss": {
+          "FY2025": {
+            "revenue": 40712.49,
+            "total_income": 40712.49,
+            "ebitda": 6172.7,
+            "ebit": 6004.21,
+            "interest": 70.65,
+            "depreciation": 168.49,
+            "profit_before_tax": 5933.56,
+            "tax": 1557.75,
+            "net_profit": 4378.48,
+            "eps": 0.0
+          },
+          "FY2024": {
+            "revenue": 37599.03,
+            "total_income": 37599.03,
+            "ebitda": 5297.91,
+            "ebit": 5166.57,
+            "interest": 76.37,
+            "depreciation": 131.34,
+            "profit_before_tax": 5090.2,
+            "tax": 1348.04,
+            "net_profit": 3744.83,
+            "eps": 0.0
+          },
+          "FY2023": {
+            "revenue": 33737.72,
+            "total_income": 33737.72,
+            "ebitda": 3968.49,
+            "ebit": 3968.49,
+            "interest": 104.87,
+            "profit_before_tax": 3863.62,
+            "tax": 1063.72,
+            "net_profit": 2809.96,
+            "eps": 0.0
+          },
+          "FY2022": {
+            "revenue": 28977.64,
+            "total_income": 28977.64,
+            "ebitda": 3162.64,
+            "ebit": 3111.21,
+            "interest": 53.1,
+            "depreciation": 51.43,
+            "profit_before_tax": 3058.11,
+            "tax": 729.06,
+            "net_profit": 2316.88,
+            "eps": 0.0
+          }
         },
-        "FY2024": {
-          "revenue": 37599.03,
-          "total_income": 37599.03,
-          "ebitda": 5297.91,
-          "ebit": 5166.57,
-          "interest": 76.37,
-          "depreciation": 131.34,
-          "profit_before_tax": 5090.2,
-          "tax": 1348.04,
-          "net_profit": 3744.83,
-          "eps": 0.0
+        "balance_sheet": {
+          "FY2025": {
+            "total_equity": 19272.04,
+            "short_term_debt": 456.76,
+            "total_debt": 456.76,
+            "total_assets": 28390.32,
+            "total_liabilities": 8986.23,
+            "cash": 383.55,
+            "receivables": 3381.29,
+            "inventory": 2013.34
+          },
+          "FY2024": {
+            "total_equity": 17698.92,
+            "long_term_debt": 0.0,
+            "short_term_debt": 363.43,
+            "total_debt": 363.43,
+            "total_assets": 26152.79,
+            "total_liabilities": 8318.22,
+            "cash": 604.91,
+            "receivables": 2630.22,
+            "inventory": 1755.9
+          },
+          "FY2023": {
+            "total_equity": 16655.57,
+            "long_term_debt": 20.09,
+            "short_term_debt": 293.15,
+            "total_debt": 313.24,
+            "total_assets": 23917.03,
+            "total_liabilities": 7136.4,
+            "cash": 226.3,
+            "receivables": 2719.47,
+            "inventory": 1756.39
+          },
+          "FY2022": {
+            "total_equity": 15846.65,
+            "long_term_debt": 36.17,
+            "short_term_debt": 317.31,
+            "total_debt": 353.48,
+            "total_assets": 22478.39,
+            "total_liabilities": 6483.69,
+            "cash": 181.02,
+            "receivables": 2158.49,
+            "inventory": 1472.41
+          }
         },
-        "FY2023": {
-          "revenue": 33737.72,
-          "total_income": 33737.72,
-          "ebitda": 3968.49,
-          "ebit": 3968.49,
-          "interest": 104.87,
-          "profit_before_tax": 3863.62,
-          "tax": 1063.72,
-          "net_profit": 2809.96,
-          "eps": 0.0
-        },
-        "FY2022": {
-          "revenue": 28977.64,
-          "total_income": 28977.64,
-          "ebitda": 3162.64,
-          "ebit": 3111.21,
-          "interest": 53.1,
-          "depreciation": 51.43,
-          "profit_before_tax": 3058.11,
-          "tax": 729.06,
-          "net_profit": 2316.88,
-          "eps": 0.0
+        "cash_flow": {
+          "FY2025": {
+            "operating_cf": 4297.39,
+            "investing_cf": -1703.36,
+            "financing_cf": -2815.39,
+            "capex": -856.63,
+            "free_cash_flow": 3440.76
+          },
+          "FY2024": {
+            "operating_cf": 4923.07,
+            "investing_cf": -1827.87,
+            "financing_cf": -2716.59,
+            "capex": -787.89,
+            "free_cash_flow": 4135.18
+          },
+          "FY2023": {
+            "operating_cf": 2613.84,
+            "investing_cf": -421.33,
+            "financing_cf": -2147.23,
+            "capex": -604.25,
+            "free_cash_flow": 2009.59
+          },
+          "FY2022": {
+            "operating_cf": 2103.7,
+            "investing_cf": -221.97,
+            "financing_cf": -1975.33,
+            "capex": -569.66,
+            "free_cash_flow": 1534.04
+          }
         }
       }
     },
-    "balance_sheet": {
-      "annual": {
-        "FY2025": {
-          "total_equity": 19272.04,
-          "total_debt": 456.76,
-          "short_term_debt": 456.76,
-          "total_assets": 28390.32,
-          "total_liabilities": 8986.23,
-          "cash": 383.55,
-          "receivables": 3381.29,
-          "inventory": 2013.34
+    "standalone": null
+  },
+  "graph_data": {
+    "revenue": {
+      "label": "Revenue",
+      "unit": "₹ Crores",
+      "quarterly": [
+        {
+          "period": "Dec 2023",
+          "value": 9723.73
         },
-        "FY2024": {
-          "total_equity": 17698.92,
-          "total_debt": 363.43,
-          "long_term_debt": 0.0,
-          "short_term_debt": 363.43,
-          "total_assets": 26152.79,
-          "total_liabilities": 8318.22,
-          "cash": 604.91,
-          "receivables": 2630.22,
-          "inventory": 1755.9
+        {
+          "period": "Mar 2024",
+          "value": 9519.3
         },
-        "FY2023": {
-          "total_equity": 16655.57,
-          "total_debt": 313.24,
-          "long_term_debt": 20.09,
-          "short_term_debt": 293.15,
-          "total_assets": 23917.03,
-          "total_liabilities": 7136.4,
-          "cash": 226.3,
-          "receivables": 2719.47,
-          "inventory": 1756.39
+        {
+          "period": "Jun 2024",
+          "value": 10143.73
         },
-        "FY2022": {
-          "total_equity": 15846.65,
-          "total_debt": 353.48,
-          "long_term_debt": 36.17,
-          "short_term_debt": 317.31,
-          "total_assets": 22478.39,
-          "total_liabilities": 6483.69,
-          "cash": 181.02,
-          "receivables": 2158.49,
-          "inventory": 1472.41
+        {
+          "period": "Sep 2024",
+          "value": 10463.21
+        },
+        {
+          "period": "Dec 2024",
+          "value": 10210.78
+        },
+        {
+          "period": "Mar 2025",
+          "value": 9758.88
+        },
+        {
+          "period": "Jun 2025",
+          "value": 9727.75
+        },
+        {
+          "period": "Sep 2025",
+          "value": 12218.39
+        },
+        {
+          "period": "Dec 2025",
+          "value": 12486.82
         }
-      }
+      ],
+      "annual": [
+        {
+          "period": "FY2022",
+          "value": 28977.64
+        },
+        {
+          "period": "FY2023",
+          "value": 33737.72
+        },
+        {
+          "period": "FY2024",
+          "value": 37599.03
+        },
+        {
+          "period": "FY2025",
+          "value": 40712.49
+        }
+      ]
     },
-    "cash_flow": {
-      "annual": {
-        "FY2025": {
-          "operating_cf": 4297.39,
-          "investing_cf": -1703.36,
-          "financing_cf": -2815.39,
-          "capex": -856.63,
-          "free_cash_flow": 3440.76
+    "net_profit": {
+      "label": "Net Profit",
+      "unit": "₹ Crores",
+      "quarterly": [
+        {
+          "period": "Dec 2023",
+          "value": 1073.38
         },
-        "FY2024": {
-          "operating_cf": 4923.07,
-          "investing_cf": -1827.87,
-          "financing_cf": -2716.59,
-          "capex": -787.89,
-          "free_cash_flow": 4135.18
+        {
+          "period": "Mar 2024",
+          "value": 1016.05
         },
-        "FY2023": {
-          "operating_cf": 2613.84,
-          "investing_cf": -421.33,
-          "financing_cf": -2147.23,
-          "capex": -604.25,
-          "free_cash_flow": 2009.59
+        {
+          "period": "Jun 2024",
+          "value": 1122.63
         },
-        "FY2022": {
-          "operating_cf": 2103.7,
-          "investing_cf": -221.97,
-          "financing_cf": -1975.33,
-          "capex": -569.66,
-          "free_cash_flow": 1534.04
+        {
+          "period": "Sep 2024",
+          "value": 1203.54
+        },
+        {
+          "period": "Dec 2024",
+          "value": 1202.84
+        },
+        {
+          "period": "Mar 2025",
+          "value": 1161.33
+        },
+        {
+          "period": "Jun 2025",
+          "value": 1705.29
+        },
+        {
+          "period": "Sep 2025",
+          "value": 1308.89
+        },
+        {
+          "period": "Dec 2025",
+          "value": 1267.55
         }
-      }
+      ],
+      "annual": [
+        {
+          "period": "FY2022",
+          "value": 2316.88
+        },
+        {
+          "period": "FY2023",
+          "value": 2809.96
+        },
+        {
+          "period": "FY2024",
+          "value": 3744.83
+        },
+        {
+          "period": "FY2025",
+          "value": 4378.48
+        }
+      ]
+    },
+    "ebitda": {
+      "label": "EBITDA",
+      "unit": "₹ Crores",
+      "quarterly": [
+        {
+          "period": "Dec 2023",
+          "value": 1604.06
+        },
+        {
+          "period": "Mar 2024",
+          "value": 1539.19
+        },
+        {
+          "period": "Jun 2024",
+          "value": 1691.46
+        },
+        {
+          "period": "Sep 2024",
+          "value": 1798.89
+        },
+        {
+          "period": "Dec 2024",
+          "value": 1793.99
+        },
+        {
+          "period": "Mar 2025",
+          "value": 1581.84
+        },
+        {
+          "period": "Jun 2025",
+          "value": 2146.67
+        },
+        {
+          "period": "Sep 2025",
+          "value": 1796.13
+        },
+        {
+          "period": "Dec 2025",
+          "value": 1711.81
+        }
+      ],
+      "annual": [
+        {
+          "period": "FY2022",
+          "value": 3162.64
+        },
+        {
+          "period": "FY2023",
+          "value": 3968.49
+        },
+        {
+          "period": "FY2024",
+          "value": 5297.91
+        },
+        {
+          "period": "FY2025",
+          "value": 6172.7
+        }
+      ]
+    },
+    "eps": {
+      "label": "EPS (₹)",
+      "unit": "EPS (₹)",
+      "quarterly": [
+        {
+          "period": "Dec 2023",
+          "value": 53.7
+        },
+        {
+          "period": "Mar 2024",
+          "value": 50.84
+        },
+        {
+          "period": "Jun 2024",
+          "value": 56.15
+        },
+        {
+          "period": "Sep 2024",
+          "value": 60.18
+        },
+        {
+          "period": "Dec 2024",
+          "value": 60.15
+        },
+        {
+          "period": "Jun 2025",
+          "value": 0.0
+        },
+        {
+          "period": "Sep 2025",
+          "value": 0.0
+        },
+        {
+          "period": "Dec 2025",
+          "value": 0.0
+        }
+      ],
+      "annual": [
+        {
+          "period": "FY2022",
+          "value": 0.0
+        },
+        {
+          "period": "FY2023",
+          "value": 0.0
+        },
+        {
+          "period": "FY2024",
+          "value": 0.0
+        },
+        {
+          "period": "FY2025",
+          "value": 0.0
+        }
+      ]
+    },
+    "profit_before_tax": {
+      "label": "Profit Before Tax",
+      "unit": "₹ Crores",
+      "quarterly": [
+        {
+          "period": "Dec 2023",
+          "value": 1417.03
+        },
+        {
+          "period": "Mar 2024",
+          "value": 1349.58
+        },
+        {
+          "period": "Jun 2024",
+          "value": 1493.45
+        },
+        {
+          "period": "Sep 2024",
+          "value": 1600.27
+        },
+        {
+          "period": "Dec 2024",
+          "value": 1591.64
+        },
+        {
+          "period": "Mar 2025",
+          "value": 1564.91
+        },
+        {
+          "period": "Jun 2025",
+          "value": 2126.01
+        },
+        {
+          "period": "Sep 2025",
+          "value": 1776.88
+        },
+        {
+          "period": "Dec 2025",
+          "value": 1692.17
+        }
+      ],
+      "annual": [
+        {
+          "period": "FY2022",
+          "value": 3058.11
+        },
+        {
+          "period": "FY2023",
+          "value": 3863.62
+        },
+        {
+          "period": "FY2024",
+          "value": 5090.2
+        },
+        {
+          "period": "FY2025",
+          "value": 5933.56
+        }
+      ]
+    },
+    "interest": {
+      "label": "Finance Costs",
+      "unit": "₹ Crores",
+      "quarterly": [
+        {
+          "period": "Dec 2023",
+          "value": 4.52
+        },
+        {
+          "period": "Mar 2024",
+          "value": 4.56
+        },
+        {
+          "period": "Jun 2024",
+          "value": 4.81
+        },
+        {
+          "period": "Sep 2024",
+          "value": 4.93
+        },
+        {
+          "period": "Dec 2024",
+          "value": 5.45
+        },
+        {
+          "period": "Mar 2025",
+          "value": 16.93
+        },
+        {
+          "period": "Jun 2025",
+          "value": 20.66
+        },
+        {
+          "period": "Sep 2025",
+          "value": 19.25
+        },
+        {
+          "period": "Dec 2025",
+          "value": 19.64
+        }
+      ],
+      "annual": [
+        {
+          "period": "FY2022",
+          "value": 53.1
+        },
+        {
+          "period": "FY2023",
+          "value": 104.87
+        },
+        {
+          "period": "FY2024",
+          "value": 76.37
+        },
+        {
+          "period": "FY2025",
+          "value": 70.65
+        }
+      ]
+    },
+    "total_debt": {
+      "label": "Total Debt",
+      "unit": "₹ Crores",
+      "quarterly": [],
+      "annual": [
+        {
+          "period": "FY2022",
+          "value": 353.48
+        },
+        {
+          "period": "FY2023",
+          "value": 313.24
+        },
+        {
+          "period": "FY2024",
+          "value": 363.43
+        },
+        {
+          "period": "FY2025",
+          "value": 456.76
+        }
+      ]
+    },
+    "total_equity": {
+      "label": "Total Equity",
+      "unit": "₹ Crores",
+      "quarterly": [],
+      "annual": [
+        {
+          "period": "FY2022",
+          "value": 15846.65
+        },
+        {
+          "period": "FY2023",
+          "value": 16655.57
+        },
+        {
+          "period": "FY2024",
+          "value": 17698.92
+        },
+        {
+          "period": "FY2025",
+          "value": 19272.04
+        }
+      ]
+    },
+    "total_assets": {
+      "label": "Total Assets",
+      "unit": "₹ Crores",
+      "quarterly": [],
+      "annual": [
+        {
+          "period": "FY2022",
+          "value": 22478.39
+        },
+        {
+          "period": "FY2023",
+          "value": 23917.03
+        },
+        {
+          "period": "FY2024",
+          "value": 26152.79
+        },
+        {
+          "period": "FY2025",
+          "value": 28390.32
+        }
+      ]
+    },
+    "operating_cf": {
+      "label": "Cash from Operations",
+      "unit": "₹ Crores",
+      "quarterly": [],
+      "annual": [
+        {
+          "period": "FY2022",
+          "value": 2103.7
+        },
+        {
+          "period": "FY2023",
+          "value": 2613.84
+        },
+        {
+          "period": "FY2024",
+          "value": 4923.07
+        },
+        {
+          "period": "FY2025",
+          "value": 4297.39
+        }
+      ]
+    },
+    "free_cash_flow": {
+      "label": "Free Cash Flow",
+      "unit": "₹ Crores",
+      "quarterly": [],
+      "annual": [
+        {
+          "period": "FY2022",
+          "value": 1534.04
+        },
+        {
+          "period": "FY2023",
+          "value": 2009.59
+        },
+        {
+          "period": "FY2024",
+          "value": 4135.18
+        },
+        {
+          "period": "FY2025",
+          "value": 3440.76
+        }
+      ]
+    },
+    "capex": {
+      "label": "Capex",
+      "unit": "₹ Crores",
+      "quarterly": [],
+      "annual": [
+        {
+          "period": "FY2022",
+          "value": -569.66
+        },
+        {
+          "period": "FY2023",
+          "value": -604.25
+        },
+        {
+          "period": "FY2024",
+          "value": -787.89
+        },
+        {
+          "period": "FY2025",
+          "value": -856.63
+        }
+      ]
     }
   },
   "derived_metrics": {
@@ -307,6 +805,7 @@
       "cfo_to_net_profit": 0.91
     }
   },
+  "anomalies": [],
   "insights": [
     {
       "rule_id": "roe_excellent",
@@ -493,8 +992,8 @@
         "annual": {
           "FY2025": {
             "total_equity": "VERIFIED",
-            "total_debt": "VERIFIED",
             "short_term_debt": "VERIFIED",
+            "total_debt": "VERIFIED",
             "total_assets": "VERIFIED",
             "total_liabilities": "VERIFIED",
             "cash": "VERIFIED",
@@ -503,9 +1002,9 @@
           },
           "FY2024": {
             "total_equity": "VERIFIED",
-            "total_debt": "VERIFIED",
             "long_term_debt": "VERIFIED",
             "short_term_debt": "VERIFIED",
+            "total_debt": "VERIFIED",
             "total_assets": "VERIFIED",
             "total_liabilities": "VERIFIED",
             "cash": "VERIFIED",
@@ -514,9 +1013,9 @@
           },
           "FY2023": {
             "total_equity": "VERIFIED",
-            "total_debt": "VERIFIED",
             "long_term_debt": "VERIFIED",
             "short_term_debt": "VERIFIED",
+            "total_debt": "VERIFIED",
             "total_assets": "VERIFIED",
             "total_liabilities": "VERIFIED",
             "cash": "VERIFIED",
@@ -525,9 +1024,9 @@
           },
           "FY2022": {
             "total_equity": "VERIFIED",
-            "total_debt": "VERIFIED",
             "long_term_debt": "VERIFIED",
             "short_term_debt": "VERIFIED",
+            "total_debt": "VERIFIED",
             "total_assets": "VERIFIED",
             "total_liabilities": "VERIFIED",
             "cash": "VERIFIED",
@@ -630,9 +1129,10 @@
         "label": "Dec 2024"
       }
     ],
-    "last_updated": "2026-03-17T05:16:39.800232+00:00",
+    "last_updated": "2026-03-17T07:40:10.989424+00:00",
     "unit": "₹ Crores",
-    "parser_version": "v3.0-Advancement",
-    "validation_passed": false
+    "parser_version": "v3.1-PhaseA",
+    "validation_passed": false,
+    "llm_insights": null
   }
 }

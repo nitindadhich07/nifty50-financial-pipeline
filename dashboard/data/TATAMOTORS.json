@@ -5,7 +5,8 @@
     "sector": "Automobile and Auto Components",
     "industry": "Automobiles",
     "description": null,
-    "history": null
+    "history": null,
+    "has_standalone": false
   },
   "market_data": {
     "price": null,
@@ -13,18 +14,21 @@
     "market_cap": null
   },
   "financials": {
-    "profit_loss": {
-      "quarterly": {},
-      "annual": {}
+    "consolidated": {
+      "quarterly": {
+        "profit_loss": {}
+      },
+      "annual": {
+        "profit_loss": {},
+        "balance_sheet": {},
+        "cash_flow": {}
+      }
     },
-    "balance_sheet": {
-      "annual": {}
-    },
-    "cash_flow": {
-      "annual": {}
-    }
+    "standalone": null
   },
+  "graph_data": {},
   "derived_metrics": {},
+  "anomalies": [],
   "insights": [],
   "confidence": {
     "financials": {
@@ -48,9 +52,10 @@
   },
   "metadata": {
     "data_sources": [],
-    "last_updated": "2026-03-17T05:16:39.819686+00:00",
+    "last_updated": "2026-03-17T07:40:11.021682+00:00",
     "unit": "₹ Crores",
-    "parser_version": "v3.0-Advancement",
-    "validation_passed": true
+    "parser_version": "v3.1-PhaseA",
+    "validation_passed": true,
+    "llm_insights": null
   }
 }
