@@ -812,6 +812,7 @@
       "basis": "D/E=0.00x"
     }
   ],
+  "llm_interpretation": null,
   "confidence": {
     "financials": {
       "profit_loss": {
@@ -1108,10 +1109,10 @@
         "label": "Dec 2024"
       }
     ],
-    "last_updated": "2026-03-17T07:40:10.979562+00:00",
+    "last_updated": "2026-03-17T09:20:01.884058+00:00",
     "unit": "₹ Crores",
-    "parser_version": "v3.1-PhaseA",
+    "parser_version": "v4.0-PhaseB",
     "validation_passed": true,
-    "llm_insights": null
+    "rag_context": false
   }
 }

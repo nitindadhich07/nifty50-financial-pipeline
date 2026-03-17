@@ -40,6 +40,8 @@ from insight_engine    import InsightEngine
 from confidence_tagger import ConfidenceTagger
 from anomaly_detector  import AnomalyDetector
 from graph_engine      import GraphEngine
+from llm_router        import llm_router
+from rag_engine        import rag_engine
 
 logger = logging.getLogger("DashboardGenerator")
 logging.basicConfig(
@@ -253,7 +255,7 @@ def _score(data: Dict) -> int:
 
 
 # ─── Core Transform ────────────────────────────────────────────────────────────
-def transform_company(raw_data: Dict) -> Dict:
+def transform_company(raw_data: Dict, pdf_path: Optional[str] = None) -> Dict:
     normalizer      = UnitNormalizer()
     insight_engine  = InsightEngine()
     conf_tagger     = ConfidenceTagger()
@@ -261,12 +263,13 @@ def transform_company(raw_data: Dict) -> Dict:
     graph_engine    = GraphEngine()
 
     # ── Extract raw buckets ───────────────────────────────────────────────────
-    ci        = raw_data.get("company_info", {})
-    raw_pl    = raw_data.get("profit_loss", {})
-    raw_bs    = raw_data.get("balance_sheet", {})
-    raw_cf    = raw_data.get("cash_flow", {})
-    raw_meta  = raw_data.get("metadata", {})
-    provenance= raw_meta.get("provenance", {})
+    ci          = raw_data.get("company_info", {})
+    raw_pl      = raw_data.get("profit_loss", {})
+    raw_bs      = raw_data.get("balance_sheet", {})
+    raw_cf      = raw_data.get("cash_flow", {})
+    raw_st_pl   = raw_data.get("standalone_profit_loss", {})
+    raw_meta    = raw_data.get("metadata", {})
+    provenance  = raw_meta.get("provenance", {})
 
     symbol = (ci.get("symbol") or ci.get("ticker") or "UNKNOWN").upper()
     name   = ci.get("name") or ci.get("company_name") or symbol
@@ -305,10 +308,23 @@ def transform_company(raw_data: Dict) -> Dict:
         },
     }
 
-    # Standalone: Not re-fetched in this build. Mark as unavailable.
-    # When NSE standalone API is wired (Phase A.2), this block will populate.
-    standalone = None   # null = "Standalone filing not separately fetched yet"
-    has_standalone = False
+    st_pl = process_bucket(raw_st_pl, PL_MAP)
+    st_pl_ann = st_pl.get("annual", {})
+    st_pl_q   = st_pl.get("quarterly", {})
+    
+    has_standalone = bool(st_pl_q or st_pl_ann)
+    standalone = None
+    if has_standalone:
+        standalone = {
+            "quarterly": {
+                "profit_loss": st_pl_q,
+            },
+            "annual": {
+                "profit_loss":   st_pl_ann,
+                "balance_sheet": {}, # Only PL fetched for now
+                "cash_flow":     {},
+            },
+        }
 
     # ── Derived Metrics ───────────────────────────────────────────────────────
     derived_metrics = compute_derived_metrics(pl_ann, bs_ann, cf_ann)
@@ -352,14 +368,41 @@ def transform_company(raw_data: Dict) -> Dict:
         or isinstance(s, str) and s not in {"YFINANCE"}
     ]
 
+    # ── RAG & LLM Insights (Phase B) ──────────────────────────────────────────
+    ir_context = None
+    llm_insights = None
+    
+    latest_year = None
+    if pl_ann:
+        latest_year = sorted(pl_ann.keys(), reverse=True)[0]
+    
+    if pdf_path and latest_year and rag_engine.enabled:
+        year_str = latest_year.replace("FY", "")
+        rag_engine.index_pdf(pdf_path, symbol, year_str)
+        ir_context = rag_engine.retrieve_context(symbol, year_str)
+    
+    # Generate LLM interpretation (returns None if LLM is disabled)
+    if derived_metrics:
+        # We only pass derived metrics to strictly prevent hallucination of raw numbers
+        clean_context = {
+            "company": {"symbol": symbol, "name": name, "sector": sector},
+            "derived_metrics": derived_metrics,
+            "anomalies": anomalies
+        }
+        llm_insights = llm_router.generate_insights(
+            structured_data=clean_context,
+            anomalies=anomalies,
+            ir_context=ir_context
+        )
+
     return {
         "company": {
             "name":          name,
             "symbol":        symbol,
             "sector":        sector,
             "industry":      industry,
-            "description":   None,   # Phase B: IR scraper
-            "history":       None,   # Phase B: IR scraper
+            "description":   None,
+            "history":       None,
             "has_standalone": has_standalone,
         },
         "market_data":     market_data,
@@ -371,14 +414,15 @@ def transform_company(raw_data: Dict) -> Dict:
         "derived_metrics": derived_metrics,
         "anomalies":       anomalies,
         "insights":        insights,
+        "llm_interpretation": llm_insights,
         "confidence":      confidence,
         "metadata": {
             "data_sources":      sources,
             "last_updated":      datetime.now(timezone.utc).isoformat(),
             "unit":              "₹ Crores",
-            "parser_version":    "v3.1-PhaseA",
+            "parser_version":    "v4.0-PhaseB",
             "validation_passed": raw_meta.get("validation_passed", False),
-            "llm_insights":      None,   # Phase B: populated by LLM router
+            "rag_context":       bool(ir_context),
         },
     }
 
@@ -413,8 +457,18 @@ def generate_dashboard():
         options.sort(key=lambda x: x[0], reverse=True)
         best_score, best_path, best_data = options[0]
         logger.info(f"Processing {symbol:20s}  score={best_score}  src={best_path}")
+        
+        # Try to find an annual report PDF near the JSON
+        pdf_path = None
+        annual_dir = best_path.parent.parent / "annual"
+        if annual_dir.exists():
+            pdfs = list(annual_dir.glob("*.pdf"))
+            if pdfs:
+                # Get most recent PDF by name
+                pdf_path = str(sorted(pdfs, reverse=True)[0])
+
         try:
-            payload = transform_company(best_data)
+            payload = transform_company(best_data, pdf_path)
             payload["company"]["symbol"] = symbol
             out_file = DATA_OUT_DIR / f"{symbol}.json"
             with open(out_file, "w", encoding="utf-8") as f:

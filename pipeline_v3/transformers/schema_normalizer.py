@@ -299,6 +299,7 @@ class SchemaNormalizer:
         source_name: str = "UNKNOWN",
         source_priority: Optional[int] = None,
         source_meta: Optional[Dict[str, Any]] = None,
+        is_standalone: bool = False,
     ):
         """
         Merge statement dataclasses using hierarchical precedence at field level.
@@ -312,11 +313,17 @@ class SchemaNormalizer:
             return
 
         prio = source_priority if source_priority is not None else self.DEFAULT_SOURCE_PRIORITY.get(source_name, 0)
+        
+        # Inject standard/standalone meta
+        if source_meta is None:
+            source_meta = {}
+        source_meta["is_standalone"] = is_standalone
+        
         if "pl" in source_data and source_data["pl"] is not None:
             self._merge_dataclass(target, stmt="pl", period_type=period_type, year=year, source_obj=source_data["pl"], source_name=source_name, prio=prio, meta=source_meta)
-        if "bs" in source_data and source_data["bs"] is not None:
+        if "bs" in source_data and source_data["bs"] is not None and not is_standalone:
             self._merge_dataclass(target, stmt="bs", period_type=period_type, year=year, source_obj=source_data["bs"], source_name=source_name, prio=prio, meta=source_meta)
-        if "cf" in source_data and source_data["cf"] is not None:
+        if "cf" in source_data and source_data["cf"] is not None and not is_standalone:
             self._merge_dataclass(target, stmt="cf", period_type=period_type, year=year, source_obj=source_data["cf"], source_name=source_name, prio=prio, meta=source_meta)
 
     def _merge_dataclass(
@@ -331,8 +338,9 @@ class SchemaNormalizer:
         prio: int,
         meta: Optional[Dict[str, Any]],
     ) -> None:
+        is_standalone = meta.get("is_standalone", False) if meta else False
         if stmt == "pl":
-            bucket = target.profit_loss[period_type]
+            bucket = target.standalone_profit_loss[period_type] if is_standalone else target.profit_loss[period_type]
         elif stmt == "bs":
             bucket = target.balance_sheet[period_type]
         else:

@@ -824,6 +824,7 @@
       "basis": "CFO/NP=1.53x"
     }
   ],
+  "llm_interpretation": null,
   "confidence": {
     "financials": {
       "profit_loss": {
@@ -1131,10 +1132,10 @@
         "label": "Dec 2024"
       }
     ],
-    "last_updated": "2026-03-17T07:40:10.990760+00:00",
+    "last_updated": "2026-03-17T09:20:11.789380+00:00",
     "unit": "₹ Crores",
-    "parser_version": "v3.1-PhaseA",
+    "parser_version": "v4.0-PhaseB",
     "validation_passed": false,
-    "llm_insights": null
+    "rag_context": false
   }
 }

@@ -433,6 +433,13 @@ function renderPage() {
   btnStd.disabled = !hasStd;
   noteStd.style.display = !hasStd ? 'inline' : 'none';
   
+  // Set default type on initial load if possible
+  if (hasStd && currentType === 'standalone') {
+    setType('standalone');
+  } else {
+    setType('consolidated');
+  }
+  
   renderPageContent();
 }
 
@@ -645,6 +652,19 @@ function renderInsights() {
       </div>
     </div>`;
   });
+
+  // LLM Insights (Phase B Hook)
+  if (currentData.llm_interpretation && Object.keys(currentData.llm_interpretation).length > 0) {
+    const llm = currentData.llm_interpretation;
+    html += `<div class="insight-item info" style="border-left: 4px solid #9c27b0; background: rgba(156, 39, 176, 0.05);">
+      <span class="insight-icon">🧠</span>
+      <div>
+        <div class="insight-text" style="color: #d896ff;"><strong>LLM SYNTHESIS & RAG CONTEXT:</strong></div>
+        <div class="insight-text" style="margin-top: 5px; white-space: pre-wrap;">${llm.executive_summary || 'No summary generated.'}</div>
+        ${llm.rag_context_used ? '<div class="insight-basis" style="color:#ba68c8;">basis: Evaluated with Verified Management Commentary (RAG)</div>' : '<div class="insight-basis" style="color:#d896ff;">basis: Evaluated purely on derived metrics.</div>'}
+      </div>
+    </div>`;
+  }
 
   // Then insights
   ins.forEach(i => {

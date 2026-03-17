@@ -35,17 +35,17 @@ class NSEAPIClient:
             logger.warning(f"NSE Handshake failed: {e}")
         return s
 
-    def fetch_results(self, symbol: str, period: str = "Quarterly") -> Dict[str, Any]:
+    def fetch_results(self, symbol: str, period: str = "Quarterly", consolidated: bool = True) -> Dict[str, Any]:
         """Fetches results comparison from NSE."""
         params = {
             "index": "equities",
             "symbol": symbol.upper(),
             "period": period,
-            "consolidated": "true"
+            "consolidated": "true" if consolidated else "false"
         }
         data, err = self.http.get_json(NSE_XBRL_URL, params=params)
         if err:
-            logger.warning(f"NSE results-comparision failed ({symbol}): {err}")
+            logger.warning(f"NSE results-comparision failed ({symbol}, consolidated={consolidated}): {err}")
             return {}
         return data or {}
 

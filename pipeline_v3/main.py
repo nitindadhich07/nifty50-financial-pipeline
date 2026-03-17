@@ -34,15 +34,26 @@ class FinancialExtractorPipeline:
             company_info={"ticker": symbol, "company_name": "Reliance Industries Limited", "unit": "₹ Crores"}
         )
 
-        # ── Tier 1: NSE API → quarterly ───────────────────────────────────────
-        nse_raw = self.nse_client.fetch_results(symbol)
-        if nse_raw:
-            nse_pnl = self.normalizer.normalize_nse_pnl(nse_raw)
+        # ── Tier 1: NSE API (Consolidated + Standalone) ─────────────────────────
+        # Consolidated
+        nse_con = self.nse_client.fetch_results(symbol, consolidated=True)
+        if nse_con:
+            nse_pnl = self.normalizer.normalize_nse_pnl(nse_con)
             for year, pl in nse_pnl.items():
                 self.normalizer.merge_financials(
-                    final_financials, {"pl": pl}, year, period_type="quarterly"
+                    final_financials, {"pl": pl}, year, period_type="quarterly", is_standalone=False
                 )
-            logger.info("✅ Tier 1 (NSE Quarterly) integrated")
+            logger.info("✅ Tier 1 (NSE Quarterly Consolidated) integrated")
+
+        # Standalone
+        nse_std = self.nse_client.fetch_results(symbol, consolidated=False)
+        if nse_std:
+            nse_pnl = self.normalizer.normalize_nse_pnl(nse_std)
+            for year, pl in nse_pnl.items():
+                self.normalizer.merge_financials(
+                    final_financials, {"pl": pl}, year, period_type="quarterly", is_standalone=True
+                )
+            logger.info("✅ Tier 1 (NSE Quarterly Standalone) integrated")
 
         # ── Tier 2: Consolidated PDF → annual ─────────────────────────────────
         if pdf_file and Path(pdf_file).exists():

@@ -30,6 +30,7 @@
   "derived_metrics": {},
   "anomalies": [],
   "insights": [],
+  "llm_interpretation": null,
   "confidence": {
     "financials": {
       "profit_loss": {
@@ -52,10 +53,10 @@
   },
   "metadata": {
     "data_sources": [],
-    "last_updated": "2026-03-17T07:40:11.021682+00:00",
+    "last_updated": "2026-03-17T09:20:17.045220+00:00",
     "unit": "₹ Crores",
-    "parser_version": "v3.1-PhaseA",
+    "parser_version": "v4.0-PhaseB",
     "validation_passed": true,
-    "llm_insights": null
+    "rag_context": false
   }
 }
