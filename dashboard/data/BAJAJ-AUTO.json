@@ -1,0 +1,638 @@
+{
+  "company": {
+    "name": "Bajaj Auto Limited",
+    "symbol": "BAJAJ-AUTO",
+    "sector": "Automobile and Auto Components",
+    "industry": "Automobiles",
+    "description": null,
+    "history": null
+  },
+  "market_data": {
+    "price": null,
+    "shares_outstanding": null,
+    "market_cap": null
+  },
+  "financials": {
+    "profit_loss": {
+      "quarterly": {
+        "Dec 2024": {
+          "revenue": 12806.85,
+          "total_income": 13141.55,
+          "other_income": 334.7,
+          "ebitda": 2915.43,
+          "ebit": 2815.76,
+          "interest": 14.31,
+          "depreciation": 99.67,
+          "profit_before_tax": 2801.45,
+          "tax": 692.72,
+          "net_profit": 2108.73,
+          "eps": 75.5,
+          "exceptional_items": 0.0
+        },
+        "Sep 2024": {
+          "revenue": 13127.47,
+          "total_income": 13512.01,
+          "other_income": 384.54,
+          "ebitda": 3036.72,
+          "ebit": 2941.12,
+          "interest": 15.92,
+          "depreciation": 95.6,
+          "profit_before_tax": 2925.2,
+          "tax": 920.16,
+          "net_profit": 2005.04,
+          "eps": 71.9,
+          "exceptional_items": 0.0
+        },
+        "Jun 2024": {
+          "revenue": 11928.02,
+          "total_income": 12248.96,
+          "other_income": 320.94,
+          "ebitda": 2736.2,
+          "ebit": 2642.51,
+          "interest": 20.67,
+          "depreciation": 93.69,
+          "profit_before_tax": 2621.84,
+          "tax": 633.5,
+          "net_profit": 1988.34,
+          "eps": 71.2,
+          "exceptional_items": 0.0
+        },
+        "Mar 2024": {
+          "revenue": 11484.68,
+          "total_income": 11833.34,
+          "other_income": 348.66,
+          "ebitda": 2654.91,
+          "ebit": 2564.35,
+          "interest": 22.78,
+          "depreciation": 90.56,
+          "profit_before_tax": 2541.57,
+          "tax": 605.57,
+          "net_profit": 1936.0,
+          "eps": 68.5,
+          "exceptional_items": 0.0
+        },
+        "Dec 2023": {
+          "revenue": 12113.51,
+          "total_income": 12459.62,
+          "other_income": 346.11,
+          "ebitda": 2775.98,
+          "ebit": 2687.86,
+          "interest": 12.1,
+          "depreciation": 88.12,
+          "profit_before_tax": 2675.76,
+          "tax": 633.88,
+          "net_profit": 2041.88,
+          "eps": 72.2,
+          "exceptional_items": 0.0
+        },
+        "Dec 2025": {
+          "revenue": 15378.24,
+          "total_income": 15378.24,
+          "ebitda": 3969.8,
+          "ebit": 3969.8,
+          "interest": 313.63,
+          "profit_before_tax": 3656.17,
+          "tax": 906.35,
+          "net_profit": 2749.82,
+          "eps": 0.0
+        },
+        "Sep 2025": {
+          "revenue": 15253.64,
+          "total_income": 15253.64,
+          "ebitda": 3285.5,
+          "ebit": 3285.5,
+          "interest": 286.84,
+          "profit_before_tax": 2998.66,
+          "tax": 876.63,
+          "net_profit": 2122.03,
+          "eps": 0.0
+        },
+        "Jun 2025": {
+          "revenue": 12646.59,
+          "total_income": 12646.59,
+          "ebitda": 3184.41,
+          "ebit": 3184.41,
+          "interest": 223.76,
+          "profit_before_tax": 2960.65,
+          "tax": 750.21,
+          "net_profit": 2210.44,
+          "eps": 0.0
+        },
+        "Mar 2025": {
+          "revenue": 12204.49,
+          "total_income": 12204.49,
+          "ebitda": 2630.75,
+          "ebit": 2630.75,
+          "interest": 146.52,
+          "profit_before_tax": 2484.23,
+          "tax": 682.38,
+          "net_profit": 1801.85
+        }
+      },
+      "annual": {
+        "FY2025": {
+          "revenue": 49266.95,
+          "total_income": 49266.95,
+          "ebitda": 10628.94,
+          "ebit": 10612.43,
+          "interest": 388.9,
+          "depreciation": 16.51,
+          "profit_before_tax": 10223.53,
+          "tax": 2898.8,
+          "net_profit": 7324.73,
+          "eps": 0.0
+        },
+        "FY2024": {
+          "revenue": 43782.08,
+          "total_income": 43782.08,
+          "ebitda": 10119.61,
+          "ebit": 10100.4,
+          "interest": 60.36,
+          "depreciation": 19.21,
+          "profit_before_tax": 10040.04,
+          "tax": 2331.8,
+          "net_profit": 7708.24,
+          "eps": 0.0
+        },
+        "FY2023": {
+          "revenue": 35391.52,
+          "total_income": 35391.52,
+          "ebitda": 7911.84,
+          "ebit": 7881.49,
+          "interest": 39.51,
+          "depreciation": 30.35,
+          "profit_before_tax": 7841.98,
+          "tax": 1781.77,
+          "net_profit": 6060.21,
+          "eps": 0.0
+        },
+        "FY2022": {
+          "revenue": 32135.98,
+          "total_income": 32135.98,
+          "ebitda": 7682.32,
+          "ebit": 7660.34,
+          "interest": 8.66,
+          "depreciation": 21.98,
+          "profit_before_tax": 7651.68,
+          "tax": 1485.81,
+          "net_profit": 6165.87,
+          "eps": 0.0
+        }
+      }
+    },
+    "balance_sheet": {
+      "annual": {
+        "FY2025": {
+          "total_equity": 35188.74,
+          "total_debt": 9236.52,
+          "long_term_debt": 6082.74,
+          "short_term_debt": 3153.78,
+          "total_assets": 54198.61,
+          "total_liabilities": 19009.86,
+          "cash": 2331.53,
+          "receivables": 2125.22,
+          "inventory": 2077.36
+        },
+        "FY2024": {
+          "total_equity": 28962.41,
+          "total_debt": 1785.9,
+          "long_term_debt": 633.33,
+          "short_term_debt": 1152.57,
+          "total_assets": 39365.68,
+          "total_liabilities": 10403.26,
+          "cash": 560.45,
+          "receivables": 2075.53,
+          "inventory": 1688.75
+        },
+        "FY2023": {
+          "total_equity": 29361.54,
+          "total_debt": 0,
+          "long_term_debt": 0.0,
+          "short_term_debt": 0.0,
+          "total_assets": 35136.45,
+          "total_liabilities": 5774.9,
+          "cash": 241.62,
+          "receivables": 1752.43,
+          "inventory": 1563.55
+        },
+        "FY2022": {
+          "total_equity": 29859.65,
+          "total_assets": 35111.21,
+          "total_liabilities": 5251.55,
+          "cash": 933.69,
+          "receivables": 1516.38,
+          "inventory": 1230.51
+        }
+      }
+    },
+    "cash_flow": {
+      "annual": {
+        "FY2025": {
+          "operating_cf": -1405.57,
+          "investing_cf": -1056.27,
+          "financing_cf": 4230.07,
+          "capex": -873.84,
+          "free_cash_flow": -2279.41
+        },
+        "FY2024": {
+          "operating_cf": 6551.53,
+          "investing_cf": -343.73,
+          "financing_cf": -6160.73,
+          "capex": -722.84,
+          "free_cash_flow": 5828.69
+        },
+        "FY2023": {
+          "operating_cf": 5277.42,
+          "investing_cf": 1199.52,
+          "financing_cf": -7180.7,
+          "capex": -1110.2,
+          "free_cash_flow": 4167.22
+        },
+        "FY2022": {
+          "operating_cf": 4197.21,
+          "investing_cf": -80.86,
+          "financing_cf": -4056.33,
+          "capex": -550.75,
+          "free_cash_flow": 3646.46
+        }
+      }
+    }
+  },
+  "derived_metrics": {
+    "FY2025": {
+      "net_profit_margin": 14.87,
+      "operating_margin": 21.57,
+      "roe": 20.82,
+      "roa": 13.51,
+      "debt_to_equity": 0.26,
+      "debt_to_assets": 0.17,
+      "free_cash_flow_margin": -4.63,
+      "cfo_to_net_profit": -0.19,
+      "revenue_growth_pct": 12.53,
+      "profit_growth_pct": -4.98
+    },
+    "FY2024": {
+      "net_profit_margin": 17.61,
+      "operating_margin": 23.11,
+      "roe": 26.61,
+      "roa": 19.58,
+      "debt_to_equity": 0.06,
+      "debt_to_assets": 0.05,
+      "free_cash_flow_margin": 13.31,
+      "cfo_to_net_profit": 0.85,
+      "revenue_growth_pct": 23.71,
+      "profit_growth_pct": 27.19
+    },
+    "FY2023": {
+      "net_profit_margin": 17.12,
+      "operating_margin": 22.36,
+      "roe": 20.64,
+      "roa": 17.25,
+      "debt_to_equity": 0.0,
+      "debt_to_assets": 0.0,
+      "free_cash_flow_margin": 11.77,
+      "cfo_to_net_profit": 0.87,
+      "revenue_growth_pct": 10.13,
+      "profit_growth_pct": -1.71
+    },
+    "FY2022": {
+      "net_profit_margin": 19.19,
+      "operating_margin": 23.91,
+      "roe": 20.65,
+      "roa": 17.56,
+      "free_cash_flow_margin": 11.35,
+      "cfo_to_net_profit": 0.68
+    }
+  },
+  "insights": [
+    {
+      "rule_id": "roe_excellent",
+      "message": "Excellent capital efficiency — ROE 20.8% (≥20%) in FY2025",
+      "severity": "positive",
+      "basis": "ROE=20.8%"
+    },
+    {
+      "rule_id": "low_leverage",
+      "message": "Virtually debt-free — Debt/Equity 0.26x in FY2025",
+      "severity": "positive",
+      "basis": "D/E=0.26x"
+    },
+    {
+      "rule_id": "poor_cash_conversion",
+      "message": "Poor cash conversion — negative CFO despite reported profit in FY2025",
+      "severity": "negative",
+      "basis": "CFO/NP=-0.19x"
+    }
+  ],
+  "confidence": {
+    "financials": {
+      "profit_loss": {
+        "annual": {
+          "FY2025": {
+            "revenue": "VERIFIED",
+            "total_income": "VERIFIED",
+            "ebitda": "VERIFIED",
+            "ebit": "VERIFIED",
+            "interest": "VERIFIED",
+            "depreciation": "VERIFIED",
+            "profit_before_tax": "VERIFIED",
+            "tax": "VERIFIED",
+            "net_profit": "VERIFIED",
+            "eps": "VERIFIED"
+          },
+          "FY2024": {
+            "revenue": "VERIFIED",
+            "total_income": "VERIFIED",
+            "ebitda": "VERIFIED",
+            "ebit": "VERIFIED",
+            "interest": "VERIFIED",
+            "depreciation": "VERIFIED",
+            "profit_before_tax": "VERIFIED",
+            "tax": "VERIFIED",
+            "net_profit": "VERIFIED",
+            "eps": "VERIFIED"
+          },
+          "FY2023": {
+            "revenue": "VERIFIED",
+            "total_income": "VERIFIED",
+            "ebitda": "VERIFIED",
+            "ebit": "VERIFIED",
+            "interest": "VERIFIED",
+            "depreciation": "VERIFIED",
+            "profit_before_tax": "VERIFIED",
+            "tax": "VERIFIED",
+            "net_profit": "VERIFIED",
+            "eps": "VERIFIED"
+          },
+          "FY2022": {
+            "revenue": "VERIFIED",
+            "total_income": "VERIFIED",
+            "ebitda": "VERIFIED",
+            "ebit": "VERIFIED",
+            "interest": "VERIFIED",
+            "depreciation": "VERIFIED",
+            "profit_before_tax": "VERIFIED",
+            "tax": "VERIFIED",
+            "net_profit": "VERIFIED",
+            "eps": "VERIFIED"
+          }
+        },
+        "quarterly": {
+          "Dec 2024": {
+            "revenue": "VERIFIED",
+            "total_income": "VERIFIED",
+            "other_income": "VERIFIED",
+            "ebitda": "VERIFIED",
+            "ebit": "VERIFIED",
+            "interest": "VERIFIED",
+            "depreciation": "VERIFIED",
+            "profit_before_tax": "VERIFIED",
+            "tax": "VERIFIED",
+            "net_profit": "VERIFIED",
+            "eps": "VERIFIED",
+            "exceptional_items": "VERIFIED"
+          },
+          "Sep 2024": {
+            "revenue": "VERIFIED",
+            "total_income": "VERIFIED",
+            "other_income": "VERIFIED",
+            "ebitda": "VERIFIED",
+            "ebit": "VERIFIED",
+            "interest": "VERIFIED",
+            "depreciation": "VERIFIED",
+            "profit_before_tax": "VERIFIED",
+            "tax": "VERIFIED",
+            "net_profit": "VERIFIED",
+            "eps": "VERIFIED",
+            "exceptional_items": "VERIFIED"
+          },
+          "Jun 2024": {
+            "revenue": "VERIFIED",
+            "total_income": "VERIFIED",
+            "other_income": "VERIFIED",
+            "ebitda": "VERIFIED",
+            "ebit": "VERIFIED",
+            "interest": "VERIFIED",
+            "depreciation": "VERIFIED",
+            "profit_before_tax": "VERIFIED",
+            "tax": "VERIFIED",
+            "net_profit": "VERIFIED",
+            "eps": "VERIFIED",
+            "exceptional_items": "VERIFIED"
+          },
+          "Mar 2024": {
+            "revenue": "VERIFIED",
+            "total_income": "VERIFIED",
+            "other_income": "VERIFIED",
+            "ebitda": "VERIFIED",
+            "ebit": "VERIFIED",
+            "interest": "VERIFIED",
+            "depreciation": "VERIFIED",
+            "profit_before_tax": "VERIFIED",
+            "tax": "VERIFIED",
+            "net_profit": "VERIFIED",
+            "eps": "VERIFIED",
+            "exceptional_items": "VERIFIED"
+          },
+          "Dec 2023": {
+            "revenue": "VERIFIED",
+            "total_income": "VERIFIED",
+            "other_income": "VERIFIED",
+            "ebitda": "VERIFIED",
+            "ebit": "VERIFIED",
+            "interest": "VERIFIED",
+            "depreciation": "VERIFIED",
+            "profit_before_tax": "VERIFIED",
+            "tax": "VERIFIED",
+            "net_profit": "VERIFIED",
+            "eps": "VERIFIED",
+            "exceptional_items": "VERIFIED"
+          },
+          "Dec 2025": {
+            "revenue": "VERIFIED",
+            "total_income": "VERIFIED",
+            "ebitda": "VERIFIED",
+            "ebit": "VERIFIED",
+            "interest": "VERIFIED",
+            "profit_before_tax": "VERIFIED",
+            "tax": "VERIFIED",
+            "net_profit": "VERIFIED",
+            "eps": "VERIFIED"
+          },
+          "Sep 2025": {
+            "revenue": "VERIFIED",
+            "total_income": "VERIFIED",
+            "ebitda": "VERIFIED",
+            "ebit": "VERIFIED",
+            "interest": "VERIFIED",
+            "profit_before_tax": "VERIFIED",
+            "tax": "VERIFIED",
+            "net_profit": "VERIFIED",
+            "eps": "VERIFIED"
+          },
+          "Jun 2025": {
+            "revenue": "VERIFIED",
+            "total_income": "VERIFIED",
+            "ebitda": "VERIFIED",
+            "ebit": "VERIFIED",
+            "interest": "VERIFIED",
+            "profit_before_tax": "VERIFIED",
+            "tax": "VERIFIED",
+            "net_profit": "VERIFIED",
+            "eps": "VERIFIED"
+          },
+          "Mar 2025": {
+            "revenue": "VERIFIED",
+            "total_income": "VERIFIED",
+            "ebitda": "VERIFIED",
+            "ebit": "VERIFIED",
+            "interest": "VERIFIED",
+            "profit_before_tax": "VERIFIED",
+            "tax": "VERIFIED",
+            "net_profit": "VERIFIED"
+          }
+        }
+      },
+      "balance_sheet": {
+        "annual": {
+          "FY2025": {
+            "total_equity": "VERIFIED",
+            "total_debt": "VERIFIED",
+            "long_term_debt": "VERIFIED",
+            "short_term_debt": "VERIFIED",
+            "total_assets": "VERIFIED",
+            "total_liabilities": "VERIFIED",
+            "cash": "VERIFIED",
+            "receivables": "VERIFIED",
+            "inventory": "VERIFIED"
+          },
+          "FY2024": {
+            "total_equity": "VERIFIED",
+            "total_debt": "VERIFIED",
+            "long_term_debt": "VERIFIED",
+            "short_term_debt": "VERIFIED",
+            "total_assets": "VERIFIED",
+            "total_liabilities": "VERIFIED",
+            "cash": "VERIFIED",
+            "receivables": "VERIFIED",
+            "inventory": "VERIFIED"
+          },
+          "FY2023": {
+            "total_equity": "VERIFIED",
+            "total_debt": "VERIFIED",
+            "long_term_debt": "VERIFIED",
+            "short_term_debt": "VERIFIED",
+            "total_assets": "VERIFIED",
+            "total_liabilities": "VERIFIED",
+            "cash": "VERIFIED",
+            "receivables": "VERIFIED",
+            "inventory": "VERIFIED"
+          },
+          "FY2022": {
+            "total_equity": "VERIFIED",
+            "total_assets": "VERIFIED",
+            "total_liabilities": "VERIFIED",
+            "cash": "VERIFIED",
+            "receivables": "VERIFIED",
+            "inventory": "VERIFIED"
+          }
+        }
+      },
+      "cash_flow": {
+        "annual": {
+          "FY2025": {
+            "operating_cf": "VERIFIED",
+            "investing_cf": "VERIFIED",
+            "financing_cf": "VERIFIED",
+            "capex": "VERIFIED",
+            "free_cash_flow": "VERIFIED"
+          },
+          "FY2024": {
+            "operating_cf": "VERIFIED",
+            "investing_cf": "VERIFIED",
+            "financing_cf": "VERIFIED",
+            "capex": "VERIFIED",
+            "free_cash_flow": "VERIFIED"
+          },
+          "FY2023": {
+            "operating_cf": "VERIFIED",
+            "investing_cf": "VERIFIED",
+            "financing_cf": "VERIFIED",
+            "capex": "VERIFIED",
+            "free_cash_flow": "VERIFIED"
+          },
+          "FY2022": {
+            "operating_cf": "VERIFIED",
+            "investing_cf": "VERIFIED",
+            "financing_cf": "VERIFIED",
+            "capex": "VERIFIED",
+            "free_cash_flow": "VERIFIED"
+          }
+        }
+      }
+    },
+    "derived_metrics": {
+      "FY2025": {
+        "net_profit_margin": "DERIVED",
+        "operating_margin": "DERIVED",
+        "roe": "DERIVED",
+        "roa": "DERIVED",
+        "debt_to_equity": "DERIVED",
+        "debt_to_assets": "DERIVED",
+        "free_cash_flow_margin": "DERIVED",
+        "cfo_to_net_profit": "DERIVED",
+        "revenue_growth_pct": "DERIVED",
+        "profit_growth_pct": "DERIVED"
+      },
+      "FY2024": {
+        "net_profit_margin": "DERIVED",
+        "operating_margin": "DERIVED",
+        "roe": "DERIVED",
+        "roa": "DERIVED",
+        "debt_to_equity": "DERIVED",
+        "debt_to_assets": "DERIVED",
+        "free_cash_flow_margin": "DERIVED",
+        "cfo_to_net_profit": "DERIVED",
+        "revenue_growth_pct": "DERIVED",
+        "profit_growth_pct": "DERIVED"
+      },
+      "FY2023": {
+        "net_profit_margin": "DERIVED",
+        "operating_margin": "DERIVED",
+        "roe": "DERIVED",
+        "roa": "DERIVED",
+        "debt_to_equity": "DERIVED",
+        "debt_to_assets": "DERIVED",
+        "free_cash_flow_margin": "DERIVED",
+        "cfo_to_net_profit": "DERIVED",
+        "revenue_growth_pct": "DERIVED",
+        "profit_growth_pct": "DERIVED"
+      },
+      "FY2022": {
+        "net_profit_margin": "DERIVED",
+        "operating_margin": "DERIVED",
+        "roe": "DERIVED",
+        "roa": "DERIVED",
+        "free_cash_flow_margin": "DERIVED",
+        "cfo_to_net_profit": "DERIVED"
+      }
+    },
+    "market_data": {
+      "price": "NOT_AVAILABLE",
+      "shares_outstanding": "NOT_AVAILABLE",
+      "market_cap": "NOT_AVAILABLE"
+    }
+  },
+  "metadata": {
+    "data_sources": [
+      {
+        "type": "NSE_API",
+        "label": "Dec 2024"
+      }
+    ],
+    "last_updated": "2026-03-17T05:16:39.784728+00:00",
+    "unit": "₹ Crores",
+    "parser_version": "v3.0-Advancement",
+    "validation_passed": true
+  }
+}

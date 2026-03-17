@@ -1,0 +1,56 @@
+{
+  "company": {
+    "name": "Tata Motors Limited",
+    "symbol": "TATAMOTORS",
+    "sector": "Automobile and Auto Components",
+    "industry": "Automobiles",
+    "description": null,
+    "history": null
+  },
+  "market_data": {
+    "price": null,
+    "shares_outstanding": null,
+    "market_cap": null
+  },
+  "financials": {
+    "profit_loss": {
+      "quarterly": {},
+      "annual": {}
+    },
+    "balance_sheet": {
+      "annual": {}
+    },
+    "cash_flow": {
+      "annual": {}
+    }
+  },
+  "derived_metrics": {},
+  "insights": [],
+  "confidence": {
+    "financials": {
+      "profit_loss": {
+        "annual": {},
+        "quarterly": {}
+      },
+      "balance_sheet": {
+        "annual": {}
+      },
+      "cash_flow": {
+        "annual": {}
+      }
+    },
+    "derived_metrics": {},
+    "market_data": {
+      "price": "NOT_AVAILABLE",
+      "shares_outstanding": "NOT_AVAILABLE",
+      "market_cap": "NOT_AVAILABLE"
+    }
+  },
+  "metadata": {
+    "data_sources": [],
+    "last_updated": "2026-03-17T05:16:39.819686+00:00",
+    "unit": "₹ Crores",
+    "parser_version": "v3.0-Advancement",
+    "validation_passed": true
+  }
+}

@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nifty 50 Financial Intelligence Dashboard</title>
+<meta name="description" content="Institutional-grade financial analysis of Nifty 50 companies. 100% data from official NSE/BSE filings with zero hallucination policy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ─── Design Tokens ─────────────────────────────────────────────────────── */
+:root {
+  --bg:          #0a0e1a;
+  --bg2:         #0f1629;
+  --bg3:         #141d35;
+  --card:        rgba(20, 29, 53, 0.85);
+  --card-border: rgba(99, 120, 255, 0.18);
+  --sidebar-bg:  #0c1122;
+  --sidebar-w:   300px;
+  --header-h:    58px;
+
+  --primary:     #6378ff;
+  --primary-dim: rgba(99, 120, 255, 0.15);
+  --accent:      #00d4aa;
+  --accent-dim:  rgba(0, 212, 170, 0.12);
+
+  --positive:    #00c48c;
+  --positive-bg: rgba(0, 196, 140, 0.12);
+  --warning:     #f0a500;
+  --warning-bg:  rgba(240, 165, 0, 0.12);
+  --negative:    #ff5c7a;
+  --negative-bg: rgba(255, 92, 122, 0.12);
+  --neutral:     #7e8fb3;
+  --neutral-bg:  rgba(126, 143, 179, 0.12);
+
+  --text:        #e2e8f8;
+  --text2:       #8fa3cc;
+  --text3:       #546285;
+
+  --verified-c:  #00c48c;
+  --derived-c:   #f0a500;
+  --na-c:        #546285;
+
+  --radius:      12px;
+  --radius-sm:   7px;
+  --shadow:      0 8px 32px rgba(0,0,0,0.45);
+  --transition:  0.2s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* ─── Reset & Base ──────────────────────────────────────────────────────── */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { font-size:15px; }
+body {
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  height:100vh;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+::-webkit-scrollbar { width:5px; height:5px; }
+::-webkit-scrollbar-track { background:transparent; }
+::-webkit-scrollbar-thumb { background:var(--bg3); border-radius:4px; }
+
+/* ─── Layout ────────────────────────────────────────────────────────────── */
+.shell {
+  display:grid;
+  grid-template-columns:var(--sidebar-w) 1fr;
+  grid-template-rows:var(--header-h) 1fr;
+  height:100vh;
+}
+
+/* ─── Header ────────────────────────────────────────────────────────────── */
+header {
+  grid-column:1/-1;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 1.5rem;
+  background:rgba(10,14,26,0.92);
+  border-bottom:1px solid var(--card-border);
+  backdrop-filter:blur(16px);
+  z-index:100;
+  gap:1rem;
+}
+.logo {
+  display:flex;
+  align-items:center;
+  gap:0.6rem;
+  font-weight:800;
+  font-size:1.1rem;
+  letter-spacing:-0.02em;
+  white-space:nowrap;
+}
+.logo-icon {
+  width:32px; height:32px;
+  background:linear-gradient(135deg,#6378ff,#00d4aa);
+  border-radius:8px;
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0;
+}
+.logo-icon svg { width:18px; height:18px; }
+.logo-text { color:var(--text); }
+.logo-text span { color:var(--primary); }
+.header-pill {
+  font-size:0.72rem;
+  background:var(--accent-dim);
+  color:var(--accent);
+  border:1px solid rgba(0,212,170,0.25);
+  padding:3px 10px;
+  border-radius:20px;
+  font-weight:500;
+  letter-spacing:0.03em;
+  white-space:nowrap;
+}
+.header-note {
+  font-size:0.72rem;
+  color:var(--text3);
+  text-align:right;
+  line-height:1.4;
+}
+
+/* ─── Sidebar ───────────────────────────────────────────────────────────── */
+.sidebar {
+  background:var(--sidebar-bg);
+  border-right:1px solid var(--card-border);
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+}
+.search-wrap {
+  padding:1rem;
+  border-bottom:1px solid rgba(99,120,255,0.1);
+}
+.search-box {
+  position:relative;
+}
+.search-box svg {
+  position:absolute;
+  left:0.75rem;
+  top:50%;
+  transform:translateY(-50%);
+  color:var(--text3);
+  pointer-events:none;
+}
+#company-search {
+  width:100%;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(99,120,255,0.2);
+  border-radius:var(--radius-sm);
+  padding:0.6rem 0.75rem 0.6rem 2.2rem;
+  color:var(--text);
+  font-family:inherit;
+  font-size:0.85rem;
+  outline:none;
+  transition:var(--transition);
+}
+#company-search::placeholder { color:var(--text3); }
+#company-search:focus {
+  border-color:var(--primary);
+  background:rgba(99,120,255,0.07);
+  box-shadow:0 0 0 3px rgba(99,120,255,0.12);
+}
+.sector-filter {
+  padding:0.6rem 1rem;
+  border-bottom:1px solid rgba(99,120,255,0.08);
+  display:flex;
+  gap:0.4rem;
+  flex-wrap:wrap;
+}
+.sector-pill {
+  font-size:0.68rem;
+  padding:2px 8px;
+  border-radius:12px;
+  border:1px solid rgba(99,120,255,0.2);
+  color:var(--text2);
+  cursor:pointer;
+  transition:var(--transition);
+  background:transparent;
+  font-family:inherit;
+}
+.sector-pill:hover, .sector-pill.active {
+  background:var(--primary-dim);
+  border-color:var(--primary);
+  color:var(--primary);
+}
+#company-list {
+  flex:1;
+  overflow-y:auto;
+  padding:0.5rem;
+}
+.co-item {
+  padding:0.7rem 0.85rem;
+  border-radius:var(--radius-sm);
+  cursor:pointer;
+  transition:var(--transition);
+  margin-bottom:2px;
+  display:flex;
+  align-items:center;
+  gap:0.7rem;
+}
+.co-item:hover { background:rgba(99,120,255,0.08); }
+.co-item.active {
+  background:var(--primary-dim);
+  border:1px solid rgba(99,120,255,0.3);
+}
+.co-badge {
+  width:32px; height:32px;
+  border-radius:7px;
+  background:linear-gradient(135deg,rgba(99,120,255,0.3),rgba(0,212,170,0.2));
+  display:flex; align-items:center; justify-content:center;
+  font-size:0.65rem;
+  font-weight:700;
+  color:var(--primary);
+  flex-shrink:0;
+  letter-spacing:-0.02em;
+}
+.co-info { min-width:0; }
+.co-symbol { font-size:0.85rem; font-weight:600; color:var(--text); }
+.co-name {
+  font-size:0.72rem;
+  color:var(--text2);
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  max-width:170px;
+}
+.co-sector {
+  font-size:0.65rem;
+  color:var(--text3);
+}
+.sidebar-count {
+  padding:0.5rem 1rem;
+  font-size:0.7rem;
+  color:var(--text3);
+  border-top:1px solid rgba(99,120,255,0.08);
+  text-align:center;
+}
+
+/* ─── Main Panel ────────────────────────────────────────────────────────── */
+main {
+  overflow-y:auto;
+  background:var(--bg);
+  scroll-behavior:smooth;
+}
+
+/* ─── Welcome ───────────────────────────────────────────────────────────── */
+#welcome {
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:1.5rem;
+  text-align:center;
+  padding:2rem;
+}
+.welcome-icon {
+  width:72px; height:72px;
+  border-radius:20px;
+  background:linear-gradient(135deg,rgba(99,120,255,0.2),rgba(0,212,170,0.15));
+  border:1px solid var(--card-border);
+  display:flex; align-items:center; justify-content:center;
+}
+#welcome h2 { font-size:1.5rem; font-weight:700; }
+#welcome p { color:var(--text2); font-size:0.9rem; max-width:380px; line-height:1.6; }
+.welcome-pills {
+  display:flex; gap:0.5rem; flex-wrap:wrap; justify-content:center;
+}
+.wp { font-size:0.72rem; padding:4px 12px; border-radius:20px; border:1px solid var(--card-border); color:var(--text2); }
+
+/* ─── Loader ────────────────────────────────────────────────────────────── */
+#loader {
+  display:none;
+  height:100%;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  gap:1rem;
+}
+.spinner {
+  width:40px; height:40px;
+  border:3px solid rgba(99,120,255,0.2);
+  border-top-color:var(--primary);
+  border-radius:50%;
+  animation:spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform:rotate(360deg); } }
+
+/* ─── Company Page ──────────────────────────────────────────────────────── */
+#company-page { display:none; padding:1.5rem; }
+
+/* ── Company Header ── */
+.co-header {
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  margin-bottom:1.25rem;
+  gap:1rem;
+  flex-wrap:wrap;
+}
+.co-title h1 {
+  font-size:1.6rem;
+  font-weight:800;
+  letter-spacing:-0.03em;
+  line-height:1.2;
+}
+.co-meta {
+  display:flex;
+  align-items:center;
+  gap:0.6rem;
+  margin-top:0.4rem;
+  flex-wrap:wrap;
+}
+.meta-tag {
+  font-size:0.72rem;
+  padding:2px 10px;
+  border-radius:20px;
+  background:rgba(99,120,255,0.12);
+  border:1px solid rgba(99,120,255,0.2);
+  color:var(--primary);
+  font-weight:500;
+}
+.meta-tag.sector {
+  background:var(--accent-dim);
+  border-color:rgba(0,212,170,0.2);
+  color:var(--accent);
+}
+.data-badge {
+  font-size:0.68rem;
+  padding:2px 8px;
+  border-radius:20px;
+  font-weight:600;
+  letter-spacing:0.04em;
+}
+.data-badge.verified  { background:var(--positive-bg); color:var(--positive); border:1px solid rgba(0,196,140,0.3); }
+.data-badge.derived   { background:var(--warning-bg);  color:var(--warning);  border:1px solid rgba(240,165,0,0.3); }
+.data-badge.na        { background:var(--neutral-bg);  color:var(--neutral);  border:1px solid rgba(126,143,179,0.2); }
+
+/* ── Top Metrics Bar ── */
+.metrics-bar {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+  gap:0.75rem;
+  margin-bottom:1.25rem;
+}
+.metric-card {
+  background:var(--card);
+  border:1px solid var(--card-border);
+  border-radius:var(--radius);
+  padding:1rem 1.1rem;
+  backdrop-filter:blur(12px);
+  position:relative;
+  overflow:hidden;
+  transition:var(--transition);
+}
+.metric-card::before {
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,rgba(99,120,255,0.04),transparent);
+  pointer-events:none;
+}
+.metric-card:hover { border-color:rgba(99,120,255,0.35); transform:translateY(-1px); }
+.metric-label {
+  font-size:0.68rem;
+  color:var(--text3);
+  text-transform:uppercase;
+  letter-spacing:0.07em;
+  font-weight:600;
+  margin-bottom:0.4rem;
+}
+.metric-value {
+  font-size:1.25rem;
+  font-weight:700;
+  font-family:'JetBrains Mono',monospace;
+  color:var(--text);
+  letter-spacing:-0.02em;
+  line-height:1.2;
+}
+.metric-value.na { font-size:0.78rem; color:var(--text3); font-family:'Inter',sans-serif; font-weight:400; }
+.metric-value.positive { color:var(--positive); }
+.metric-value.negative { color:var(--negative); }
+.metric-conf {
+  margin-top:0.35rem;
+  display:flex;
+  align-items:center;
+  gap:0.3rem;
+}
+.metric-sub { font-size:0.68rem; color:var(--text3); }
+
+/* ── Period Tabs ── */
+.period-tabs {
+  display:flex;
+  gap:0.4rem;
+  margin-bottom:1rem;
+  padding:4px;
+  background:rgba(255,255,255,0.03);
+  border:1px solid var(--card-border);
+  border-radius:var(--radius-sm);
+  width:fit-content;
+}
+.tab-btn {
+  padding:0.4rem 1rem;
+  border-radius:5px;
+  font-size:0.8rem;
+  font-weight:600;
+  cursor:pointer;
+  border:none;
+  background:transparent;
+  color:var(--text2);
+  font-family:inherit;
+  transition:var(--transition);
+}
+.tab-btn.active {
+  background:var(--primary);
+  color:#fff;
+  box-shadow:0 2px 10px rgba(99,120,255,0.4);
+}
+.tab-btn:not(.active):hover { background:rgba(99,120,255,0.1); color:var(--text); }
+
+/* ── Section Cards ── */
+.section-card {
+  background:var(--card);
+  border:1px solid var(--card-border);
+  border-radius:var(--radius);
+  margin-bottom:1rem;
+  overflow:hidden;
+  backdrop-filter:blur(12px);
+}
+.section-head {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0.9rem 1.25rem;
+  border-bottom:1px solid rgba(99,120,255,0.1);
+  cursor:pointer;
+  user-select:none;
+}
+.section-head h2 {
+  font-size:0.9rem;
+  font-weight:700;
+  letter-spacing:-0.01em;
+  display:flex;
+  align-items:center;
+  gap:0.5rem;
+}
+.section-icon {
+  width:20px; height:20px;
+  border-radius:5px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:0.7rem;
+}
+.icon-pl  { background:rgba(99,120,255,0.2); }
+.icon-bs  { background:rgba(0,212,170,0.15); }
+.icon-cf  { background:rgba(240,165,0,0.15); }
+.icon-ins { background:rgba(0,196,140,0.15); }
+.section-chevron { color:var(--text3); transition:var(--transition); }
+.section-body { padding:0 1px 1px; }
+
+/* ── Financial Tables ── */
+.table-wrap { overflow-x:auto; }
+table { width:100%; border-collapse:collapse; }
+thead th {
+  padding:0.65rem 1rem;
+  font-size:0.68rem;
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+  color:var(--text3);
+  font-weight:600;
+  white-space:nowrap;
+  background:rgba(255,255,255,0.02);
+  border-bottom:1px solid rgba(99,120,255,0.1);
+}
+thead th:first-child { text-align:left; width:210px; position:sticky; left:0; background:var(--bg3); z-index:2; }
+thead th:not(:first-child) { text-align:right; }
+tbody td {
+  padding:0.6rem 1rem;
+  font-size:0.85rem;
+  border-bottom:1px solid rgba(255,255,255,0.03);
+  white-space:nowrap;
+}
+tbody td:first-child {
+  color:var(--text2);
+  font-weight:500;
+  font-size:0.8rem;
+  position:sticky;
+  left:0;
+  background:var(--card);
+  z-index:1;
+}
+tbody tr:hover td { background:rgba(99,120,255,0.05); }
+tbody tr:hover td:first-child { background:rgba(99,120,255,0.08); }
+.num { text-align:right; font-family:'JetBrains Mono',monospace; font-size:0.82rem; }
+.num.neg { color:var(--negative); }
+.num.pos { color:var(--positive); }
+.na-val { color:var(--text3); font-size:0.75rem; text-align:right; }
+
+/* ── Growth Row ── */
+.growth-row {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(160px,1fr));
+  gap:0.75rem;
+  margin-bottom:1rem;
+}
+.growth-card {
+  background:var(--card);
+  border:1px solid var(--card-border);
+  border-radius:var(--radius);
+  padding:0.85rem 1rem;
+  backdrop-filter:blur(12px);
+}
+.growth-label { font-size:0.68rem; color:var(--text3); text-transform:uppercase; letter-spacing:0.06em; font-weight:600; }
+.growth-years { display:flex; flex-direction:column; gap:0.3rem; margin-top:0.5rem; }
+.growth-yr {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  font-size:0.78rem;
+}
+.growth-yr-label { color:var(--text2); }
+.growth-pct {
+  font-family:'JetBrains Mono',monospace;
+  font-weight:700;
+  font-size:0.82rem;
+}
+.growth-pct.pos { color:var(--positive); }
+.growth-pct.neg { color:var(--negative); }
+.growth-pct.na  { color:var(--text3); font-family:'Inter',sans-serif; font-weight:400; font-size:0.72rem; }
+
+/* ── Insights Panel ── */
+.insights-grid { padding:0.85rem 1.1rem; display:flex; flex-direction:column; gap:0.5rem; }
+.insight-item {
+  display:flex;
+  align-items:flex-start;
+  gap:0.7rem;
+  padding:0.7rem 0.85rem;
+  border-radius:var(--radius-sm);
+  border-left:3px solid;
+  font-size:0.82rem;
+  line-height:1.5;
+  animation:fadeIn 0.3s ease;
+}
+.insight-item.positive { background:var(--positive-bg); border-color:var(--positive); }
+.insight-item.warning  { background:var(--warning-bg);  border-color:var(--warning); }
+.insight-item.negative { background:var(--negative-bg); border-color:var(--negative); }
+.insight-item.neutral  { background:var(--neutral-bg);  border-color:var(--neutral); }
+.insight-icon { font-size:0.9rem; flex-shrink:0; margin-top:1px; }
+.insight-text { color:var(--text); }
+.insight-basis { font-size:0.68rem; color:var(--text3); margin-top:2px; font-family:'JetBrains Mono',monospace; }
+.no-insights { padding:1.5rem; text-align:center; color:var(--text3); font-size:0.82rem; }
+
+/* ── Confidence Legend ── */
+.conf-legend {
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  padding:0.5rem 1rem;
+  background:rgba(255,255,255,0.02);
+  border-top:1px solid rgba(99,120,255,0.08);
+  flex-wrap:wrap;
+}
+.conf-legend-item { display:flex; align-items:center; gap:0.35rem; font-size:0.67rem; color:var(--text3); }
+.conf-dot { width:8px; height:8px; border-radius:50%; }
+
+@keyframes fadeIn { from { opacity:0; transform:translateY(4px); } to { opacity:1; transform:none; } }
+</style>
+</head>
+<body>
+<div class="shell">
+
+<!-- ── Header ── -->
+<header>
+  <div class="logo">
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round">
+        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+      </svg>
+    </div>
+    <div class="logo-text">Nifty<span>50</span> Intelligence</div>
+  </div>
+  <div class="header-pill">⚡ ADVANCEMENT BUILD · Zero Hallucination Policy</div>
+  <div class="header-note">All figures ₹ Crores · Source: NSE/BSE official filings only</div>
+</header>
+
+<!-- ── Sidebar ── -->
+<aside class="sidebar">
+  <div class="search-wrap">
+    <div class="search-box">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input id="company-search" type="text" placeholder="Search symbol or company…" autocomplete="off">
+    </div>
+  </div>
+  <div class="sector-filter" id="sector-filter"></div>
+  <div id="company-list"></div>
+  <div class="sidebar-count" id="sidebar-count"></div>
+</aside>
+
+<!-- ── Main ── -->
+<main id="main">
+
+  <!-- Welcome -->
+  <div id="welcome">
+    <div class="welcome-icon">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="url(#wg)" stroke-width="1.5" stroke-linecap="round">
+        <defs><linearGradient id="wg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#6378ff"/><stop offset="100%" stop-color="#00d4aa"/></linearGradient></defs>
+        <path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/>
+      </svg>
+    </div>
+    <div>
+      <h2>Financial Intelligence Dashboard</h2>
+      <p>Select any Nifty 50 company to view institutional-grade financial analysis sourced exclusively from official NSE/BSE filings.</p>
+    </div>
+    <div class="welcome-pills">
+      <span class="wp">📋 Official Filings Only</span>
+      <span class="wp">🔒 Zero Hallucination</span>
+      <span class="wp">📊 Rule-Based Insights</span>
+      <span class="wp">✅ Confidence Tags</span>
+    </div>
+  </div>
+
+  <!-- Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+    <span style="color:var(--text3);font-size:0.82rem;">Loading filing data…</span>
+  </div>
+
+  <!-- Company Page -->
+  <div id="company-page">
+
+    <!-- Header -->
+    <div class="co-header">
+      <div class="co-title">
+        <h1 id="co-name">—</h1>
+        <div class="co-meta">
+          <span class="meta-tag" id="co-symbol"></span>
+          <span class="meta-tag sector" id="co-sector"></span>
+          <span class="meta-tag" id="co-industry" style="display:none"></span>
+        </div>
+      </div>
+      <div id="data-confidence-summary" style="text-align:right;font-size:0.72rem;color:var(--text3);line-height:1.8;"></div>
+    </div>
+
+    <!-- Metrics Bar -->
+    <div class="metrics-bar" id="metrics-bar"></div>
+
+    <!-- Growth Row -->
+    <div class="growth-row" id="growth-row"></div>
+
+    <!-- Period Tabs -->
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;">
+      <div class="period-tabs">
+        <button class="tab-btn active" id="tab-q" onclick="setPeriod('quarterly')">Quarterly</button>
+        <button class="tab-btn" id="tab-a" onclick="setPeriod('annual')">Annual</button>
+      </div>
+      <div class="conf-legend">
+        <div class="conf-legend-item"><div class="conf-dot" style="background:var(--verified-c)"></div>VERIFIED — from official filing</div>
+        <div class="conf-legend-item"><div class="conf-dot" style="background:var(--derived-c)"></div>DERIVED — computed</div>
+        <div class="conf-legend-item"><div class="conf-dot" style="background:var(--na-c)"></div>NOT AVAILABLE</div>
+      </div>
+    </div>
+
+    <!-- P&L Section -->
+    <div class="section-card">
+      <div class="section-head" onclick="toggleSection('pl-body','pl-chev')">
+        <h2><span class="section-icon icon-pl">📈</span>Profit &amp; Loss</h2>
+        <svg id="pl-chev" class="section-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="section-body" id="pl-body">
+        <div class="table-wrap"><table id="pl-table"></table></div>
+      </div>
+    </div>
+
+    <!-- Balance Sheet Section -->
+    <div class="section-card">
+      <div class="section-head" onclick="toggleSection('bs-body','bs-chev')">
+        <h2><span class="section-icon icon-bs">🏦</span>Balance Sheet</h2>
+        <svg id="bs-chev" class="section-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="section-body" id="bs-body">
+        <div class="table-wrap"><table id="bs-table"></table></div>
+      </div>
+    </div>
+
+    <!-- Cash Flow Section -->
+    <div class="section-card">
+      <div class="section-head" onclick="toggleSection('cf-body','cf-chev')">
+        <h2><span class="section-icon icon-cf">💰</span>Cash Flow</h2>
+        <svg id="cf-chev" class="section-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="section-body" id="cf-body">
+        <div class="table-wrap"><table id="cf-table"></table></div>
+      </div>
+    </div>
+
+    <!-- Insights Section -->
+    <div class="section-card">
+      <div class="section-head" onclick="toggleSection('ins-body','ins-chev')">
+        <h2><span class="section-icon icon-ins">💡</span>Rule-Based Insights</h2>
+        <svg id="ins-chev" class="section-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="section-body" id="ins-body">
+        <div class="insights-grid" id="insights-grid"></div>
+        <div style="padding:0.5rem 1.1rem 0.75rem;font-size:0.68rem;color:var(--text3);">
+          Insights computed deterministically from verified filing data. No AI estimates or guesses.
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /company-page -->
+</main>
+</div>
+
+<script>
+// ─────────────────────────────────────────────────────────────────────────────
+// State
+// ─────────────────────────────────────────────────────────────────────────────
+let allCompanies = [];
+let currentData  = null;
+let currentPeriod = 'quarterly';
+let activeSector = 'ALL';
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Boot
+// ─────────────────────────────────────────────────────────────────────────────
+(async function boot() {
+  try {
+    const r = await fetch('companies.json?t=' + Date.now());
+    allCompanies = await r.json();
+    buildSectorFilter();
+    renderSidebar(allCompanies);
+  } catch(e) { console.error('Failed to load companies index', e); }
+})();
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Sidebar
+// ─────────────────────────────────────────────────────────────────────────────
+function buildSectorFilter() {
+  const sectors = ['ALL', ...new Set(allCompanies.map(c => c.sector).filter(Boolean))].sort();
+  const wrap = document.getElementById('sector-filter');
+  wrap.innerHTML = sectors.map(s =>
+    `<button class="sector-pill${s==='ALL'?' active':''}" onclick="setSector('${s}',this)">${s}</button>`
+  ).join('');
+}
+
+function setSector(s, el) {
+  activeSector = s;
+  document.querySelectorAll('.sector-pill').forEach(p => p.classList.remove('active'));
+  el.classList.add('active');
+  filterAndRender();
+}
+
+document.getElementById('company-search').addEventListener('input', filterAndRender);
+
+function filterAndRender() {
+  const q = document.getElementById('company-search').value.toUpperCase();
+  let list = allCompanies;
+  if (activeSector !== 'ALL') list = list.filter(c => c.sector === activeSector);
+  if (q) list = list.filter(c => c.symbol.includes(q) || c.name.toUpperCase().includes(q));
+  renderSidebar(list);
+}
+
+function renderSidebar(list) {
+  const container = document.getElementById('company-list');
+  container.innerHTML = list.map(c => {
+    const initials = c.symbol.slice(0,3);
+    return `<div class="co-item" id="li-${c.symbol}" onclick="loadCompany('${c.symbol}',this)">
+      <div class="co-badge">${initials}</div>
+      <div class="co-info">
+        <div class="co-symbol">${c.symbol}</div>
+        <div class="co-name">${c.name}</div>
+        <div class="co-sector">${c.sector || ''}</div>
+      </div>
+    </div>`;
+  }).join('');
+  document.getElementById('sidebar-count').textContent = `${list.length} companies`;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Load Company
+// ─────────────────────────────────────────────────────────────────────────────
+async function loadCompany(symbol, el) {
+  document.querySelectorAll('.co-item').forEach(i => i.classList.remove('active'));
+  if (el) el.classList.add('active');
+
+  show('loader');
+  try {
+    const r = await fetch(`data/${symbol}.json?t=` + Date.now());
+    currentData = await r.json();
+
+    // Auto-pick period
+    const hasQ = Object.keys(currentData.financials?.profit_loss?.quarterly || {}).length > 0;
+    currentPeriod = hasQ ? 'quarterly' : 'annual';
+    updateTabUI();
+    renderPage();
+    show('company-page');
+  } catch(e) {
+    show('welcome');
+    console.error(e);
+    alert('Failed to load data for ' + symbol + '. Check console.');
+  }
+}
+
+function show(id) {
+  ['welcome','loader','company-page'].forEach(x => {
+    const el = document.getElementById(x);
+    el.style.display = x === id ? (x === 'loader' ? 'flex' : 'block') : 'none';
+  });
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Period
+// ─────────────────────────────────────────────────────────────────────────────
+function setPeriod(p) {
+  currentPeriod = p;
+  updateTabUI();
+  renderTables();
+}
+
+function updateTabUI() {
+  document.getElementById('tab-q').classList.toggle('active', currentPeriod === 'quarterly');
+  document.getElementById('tab-a').classList.toggle('active', currentPeriod === 'annual');
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Section toggle
+// ─────────────────────────────────────────────────────────────────────────────
+function toggleSection(bodyId, chevId) {
+  const body = document.getElementById(bodyId);
+  const chev = document.getElementById(chevId);
+  const hidden = body.style.display === 'none';
+  body.style.display = hidden ? '' : 'none';
+  chev.style.transform = hidden ? '' : 'rotate(-90deg)';
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Formatting helpers
+// ─────────────────────────────────────────────────────────────────────────────
+function fmt(val, decimals=2) {
+  if (val === null || val === undefined) return null;
+  const n = parseFloat(val);
+  if (isNaN(n)) return null;
+  return n.toLocaleString('en-IN', { maximumFractionDigits: decimals, minimumFractionDigits: 0 });
+}
+
+function fmtPct(val) {
+  if (val === null || val === undefined) return null;
+  const n = parseFloat(val);
+  if (isNaN(n)) return null;
+  const sign = n > 0 ? '+' : '';
+  return `${sign}${n.toFixed(1)}%`;
+}
+
+function confBadge(level) {
+  if (!level) return '';
+  const map = {
+    'VERIFIED':      ['verified','✓ VERIFIED'],
+    'DERIVED':       ['derived', '⚡ DERIVED'],
+    'NOT_AVAILABLE': ['na',      '— N/A'],
+  };
+  const [cls, label] = map[level] || ['na','—'];
+  return `<span class="data-badge ${cls}">${label}</span>`;
+}
+
+function getConf(path) {
+  // path: ['financials','profit_loss','annual','FY2025','revenue']
+  let c = currentData?.confidence;
+  for (const k of path) {
+    if (!c || typeof c !== 'object') return null;
+    c = c[k];
+  }
+  return c || null;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Render full page
+// ─────────────────────────────────────────────────────────────────────────────
+function renderPage() {
+  if (!currentData) return;
+  const co = currentData.company || {};
+
+  document.getElementById('co-name').textContent = co.name || co.symbol || '—';
+  document.getElementById('co-symbol').textContent = co.symbol || '';
+  document.getElementById('co-sector').textContent = co.sector || '';
+  const indEl = document.getElementById('co-industry');
+  if (co.industry) { indEl.textContent = co.industry; indEl.style.display=''; }
+  else indEl.style.display='none';
+
+  renderMetricsBar();
+  renderGrowthRow();
+  renderTables();
+  renderInsights();
+  renderConfidenceSummary();
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Metrics Bar
+// ─────────────────────────────────────────────────────────────────────────────
+function renderMetricsBar() {
+  const dm = currentData.derived_metrics || {};
+  const years = Object.keys(dm).sort().reverse();
+  const latest = years[0];
+  const m = dm[latest] || {};
+  const mkt = currentData.market_data || {};
+
+  const confDM = (k) => {
+    const c = currentData?.confidence?.derived_metrics?.[latest]?.[k];
+    return c || 'DERIVED';
+  };
+
+  const metrics = [
+    {
+      label: 'Stock Price',
+      value: mkt.price !== null && mkt.price !== undefined ? `₹ ${fmt(mkt.price)}` : null,
+      conf: currentData?.confidence?.market_data?.price || 'NOT_AVAILABLE',
+      naText: 'Not available from NSE filings',
+    },
+    {
+      label: 'Market Cap',
+      value: mkt.market_cap !== null && mkt.market_cap !== undefined ? `₹ ${fmt(mkt.market_cap)} Cr` : null,
+      conf: currentData?.confidence?.market_data?.market_cap || 'NOT_AVAILABLE',
+      naText: 'Not available from filings',
+    },
+    {
+      label: 'ROE',
+      value: m.roe !== undefined ? `${m.roe}%` : null,
+      conf: confDM('roe'),
+      colorFn: v => parseFloat(v) >= 15 ? 'positive' : parseFloat(v) < 0 ? 'negative' : '',
+      sub: latest,
+    },
+    {
+      label: 'Debt / Equity',
+      value: m.debt_to_equity !== undefined ? `${m.debt_to_equity}x` : null,
+      conf: confDM('debt_to_equity'),
+      colorFn: v => parseFloat(v) > 2 ? 'negative' : parseFloat(v) <= 0.3 ? 'positive' : '',
+      sub: latest,
+    },
+    {
+      label: 'Net Profit Margin',
+      value: m.net_profit_margin !== undefined ? `${m.net_profit_margin}%` : null,
+      conf: confDM('net_profit_margin'),
+      colorFn: v => parseFloat(v) >= 20 ? 'positive' : parseFloat(v) < 0 ? 'negative' : '',
+      sub: latest,
+    },
+    {
+      label: 'ROCE',
+      value: m.roce !== undefined ? `${m.roce}%` : null,
+      conf: confDM('roce'),
+      colorFn: v => parseFloat(v) >= 15 ? 'positive' : parseFloat(v) < 8 ? 'negative' : '',
+      sub: latest,
+    },
+    {
+      label: 'Current Ratio',
+      value: m.current_ratio !== undefined ? `${m.current_ratio}x` : null,
+      conf: confDM('current_ratio'),
+      colorFn: v => parseFloat(v) >= 2 ? 'positive' : parseFloat(v) < 1 ? 'negative' : '',
+      sub: latest,
+    },
+    {
+      label: 'Operating Margin',
+      value: m.operating_margin !== undefined ? `${m.operating_margin}%` : null,
+      conf: confDM('operating_margin'),
+      colorFn: v => parseFloat(v) >= 20 ? 'positive' : parseFloat(v) < 5 ? 'negative' : '',
+      sub: latest,
+    },
+  ];
+
+  document.getElementById('metrics-bar').innerHTML = metrics.map(m => {
+    const isNA = m.value === null || m.value === undefined;
+    const colorCls = (!isNA && m.colorFn) ? m.colorFn(m.value) : '';
+    const valHtml = isNA
+      ? `<div class="metric-value na">${m.naText || 'Not available from filings'}</div>`
+      : `<div class="metric-value ${colorCls}">${m.value}</div>`;
+    return `<div class="metric-card">
+      <div class="metric-label">${m.label}</div>
+      ${valHtml}
+      <div class="metric-conf">
+        ${confBadge(m.conf)}
+        ${m.sub ? `<span class="metric-sub">${m.sub}</span>` : ''}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Growth Row
+// ─────────────────────────────────────────────────────────────────────────────
+function renderGrowthRow() {
+  const dm = currentData.derived_metrics || {};
+  const years = Object.keys(dm).sort().reverse();
+
+  const growthSeries = (key, label) => {
+    const rows = years.map(yr => {
+      const v = dm[yr]?.[key];
+      if (v === undefined || v === null) return null;
+      return { yr, v };
+    }).filter(Boolean);
+
+    const yearsHtml = rows.slice(0,4).map(r => {
+      const cls = r.v > 0 ? 'pos' : r.v < 0 ? 'neg' : '';
+      const sign = r.v > 0 ? '+' : '';
+      return `<div class="growth-yr">
+        <span class="growth-yr-label">${r.yr}</span>
+        <span class="growth-pct ${cls}">${sign}${r.v.toFixed(1)}%</span>
+      </div>`;
+    }).join('') || `<div class="growth-yr"><span class="growth-pct na">Not available from filings</span></div>`;
+
+    return `<div class="growth-card">
+      <div class="growth-label">⚡ DERIVED · ${label} (YoY)</div>
+      <div class="growth-years">${yearsHtml}</div>
+    </div>`;
+  };
+
+  document.getElementById('growth-row').innerHTML =
+    growthSeries('revenue_growth_pct', 'Revenue Growth') +
+    growthSeries('profit_growth_pct', 'Profit Growth');
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Financial Tables
+// ─────────────────────────────────────────────────────────────────────────────
+const PL_FIELDS = [
+  { key:'revenue',          label:'Revenue from Operations' },
+  { key:'other_income',     label:'Other Income' },
+  { key:'total_income',     label:'Total Income' },
+  { key:'ebitda',           label:'EBITDA' },
+  { key:'ebit',             label:'EBIT' },
+  { key:'interest',         label:'Finance Costs' },
+  { key:'depreciation',     label:'Depreciation & Amortisation' },
+  { key:'gross_profit',     label:'Gross Profit' },
+  { key:'profit_before_tax',label:'Profit Before Tax' },
+  { key:'tax',              label:'Tax Expense' },
+  { key:'net_profit',       label:'Net Profit' },
+  { key:'eps',              label:'EPS (₹)' },
+  { key:'exceptional_items',label:'Exceptional Items' },
+];
+
+const BS_FIELDS = [
+  { key:'share_capital',    label:'Share Capital' },
+  { key:'reserves',         label:'Reserves & Surplus' },
+  { key:'total_equity',     label:'Total Equity' },
+  { key:'long_term_debt',   label:'Long-Term Borrowings' },
+  { key:'short_term_debt',  label:'Short-Term Borrowings' },
+  { key:'total_debt',       label:'Total Debt' },
+  { key:'total_liabilities',label:'Total Liabilities' },
+  { key:'fixed_assets',     label:'Fixed Assets (Net PPE)' },
+  { key:'investments',      label:'Investments' },
+  { key:'current_assets',   label:'Current Assets' },
+  { key:'inventory',        label:'Inventory' },
+  { key:'receivables',      label:'Trade Receivables' },
+  { key:'cash',             label:'Cash & Equivalents' },
+  { key:'current_liabilities',label:'Current Liabilities' },
+  { key:'working_capital',  label:'Working Capital' },
+  { key:'total_assets',     label:'Total Assets' },
+];
+
+const CF_FIELDS = [
+  { key:'operating_cf',  label:'Cash from Operations' },
+  { key:'capex',         label:'Capital Expenditure' },
+  { key:'free_cash_flow',label:'Free Cash Flow' },
+  { key:'investing_cf',  label:'Cash from Investing' },
+  { key:'financing_cf',  label:'Cash from Financing' },
+  { key:'net_cash_flow', label:'Net Cash Flow' },
+];
+
+function renderTables() {
+  const fin = currentData.financials || {};
+
+  renderTable('pl-table', fin.profit_loss, PL_FIELDS, 'profit_loss');
+  renderTable('bs-table', fin.balance_sheet, BS_FIELDS, 'balance_sheet',
+    /* balance sheet only has annual */ true);
+  renderTable('cf-table', fin.cash_flow, CF_FIELDS, 'cash_flow',
+    true);
+}
+
+function renderTable(tableId, stmtData, fields, stmtKey, forceAnnual=false) {
+  const table = document.getElementById(tableId);
+  if (!stmtData) { table.innerHTML = emptyRow(); return; }
+
+  const period = forceAnnual ? 'annual' : currentPeriod;
+  const bucket = stmtData[period] || stmtData['yearly'] || {};
+
+  if (!Object.keys(bucket).length) {
+    // Try fallback period
+    const alt = period === 'annual' ? 'quarterly' : 'annual';
+    const fallback = stmtData[alt] || {};
+    if (!Object.keys(fallback).length) { table.innerHTML = emptyRow(); return; }
+    renderTableFromBucket(table, fallback, fields, stmtKey, alt);
+    return;
+  }
+  renderTableFromBucket(table, bucket, fields, stmtKey, period);
+}
+
+function renderTableFromBucket(table, bucket, fields, stmtKey, periodType) {
+  const periods = Object.keys(bucket).sort((a,b) => b.localeCompare(a)).slice(0, 8);
+
+  // Header
+  let html = `<thead><tr><th>Reported Item</th>${periods.map(p=>`<th>${p}</th>`).join('')}</tr></thead><tbody>`;
+
+  fields.forEach(f => {
+    // Check if any period has this field
+    const hasAny = periods.some(p => bucket[p]?.[f.key] !== undefined && bucket[p]?.[f.key] !== null);
+    if (!hasAny) return; // skip rows that are entirely null
+
+    html += `<tr><td>${f.label}</td>`;
+    periods.forEach(p => {
+      const row = bucket[p] || {};
+      const val = row[f.key];
+      const conf = currentData?.confidence?.financials?.[stmtKey]?.[periodType]?.[p]?.[f.key];
+
+      if (val === null || val === undefined) {
+        html += `<td class="na-val" title="Not available from official filings">—</td>`;
+      } else {
+        const n = parseFloat(val);
+        const cls = f.key === 'eps' ? '' : (n < 0 ? 'neg' : 'pos');
+        const dotColor = conf === 'VERIFIED' ? 'var(--verified-c)' : conf === 'DERIVED' ? 'var(--derived-c)' : 'var(--na-c)';
+        const confTitle = conf || 'UNKNOWN';
+        html += `<td class="num ${cls}" title="Source confidence: ${confTitle}">
+          <span style="display:inline-block;width:5px;height:5px;border-radius:50%;background:${dotColor};margin-right:4px;vertical-align:middle;"></span>${fmt(val)}
+        </td>`;
+      }
+    });
+    html += `</tr>`;
+  });
+
+  html += '</tbody>';
+  table.innerHTML = html;
+}
+
+function emptyRow() {
+  return `<thead><tr><th>Reported Item</th></tr></thead><tbody><tr><td colspan="10" style="text-align:center;padding:2rem;color:var(--text3);font-size:0.82rem;">No data available for this period from official filings.</td></tr></tbody>`;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Insights
+// ─────────────────────────────────────────────────────────────────────────────
+const INSIGHT_ICONS = {
+  positive: '✅',
+  warning:  '⚠️',
+  negative: '🚨',
+  neutral:  'ℹ️',
+};
+
+function renderInsights() {
+  const insights = currentData.insights || [];
+  const grid = document.getElementById('insights-grid');
+
+  if (!insights.length) {
+    grid.innerHTML = `<div class="no-insights">No rule-based insights could be generated — insufficient filing data.</div>`;
+    return;
+  }
+
+  grid.innerHTML = insights.map(ins => `
+    <div class="insight-item ${ins.severity}">
+      <span class="insight-icon">${INSIGHT_ICONS[ins.severity] || 'ℹ️'}</span>
+      <div>
+        <div class="insight-text">${ins.message}</div>
+        <div class="insight-basis">basis: ${ins.basis}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Confidence Summary
+// ─────────────────────────────────────────────────────────────────────────────
+function renderConfidenceSummary() {
+  const meta = currentData.metadata || {};
+  const sources = (meta.data_sources || []).map(s =>
+    typeof s === 'string' ? s : (s.type || '')
+  ).filter(Boolean);
+
+  const uniq = [...new Set(sources)];
+  const updated = meta.last_updated
+    ? new Date(meta.last_updated).toLocaleDateString('en-IN', { day:'numeric', month:'short', year:'numeric' })
+    : '—';
+
+  document.getElementById('data-confidence-summary').innerHTML =
+    `<div>Sources: <strong>${uniq.join(', ') || 'NSE filings'}</strong></div>
+     <div>Unit: <strong>₹ Crores</strong> · Updated: <strong>${updated}</strong></div>
+     <div>Parser: <strong>${meta.parser_version || 'v3.0'}</strong></div>`;
+}
+</script>
+</body>
+</html>
