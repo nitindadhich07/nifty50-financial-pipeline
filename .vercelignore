@@ -1,0 +1,14 @@
+# Ignore large raw data and logs for Vercel deployment
+data/
+cache/
+logs/
+storage/
+__pycache__/
+*.pyc
+.DS_Store
+.vscode/
+.idea/
+extraction.log
+pipeline_v3/
+scripts/
+tests/
