@@ -1,5 +1,5 @@
-# Ignore large raw data and logs for Vercel deployment
-data/
+# Ignore large raw data folder at root, but ALLOW dashboard/data
+/data/
 cache/
 logs/
 storage/
