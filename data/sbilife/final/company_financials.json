@@ -48,7 +48,8 @@
         "Rent And Landing Fees": 1130100000.0,
         "Total Revenue": 1154124500000.0,
         "Operating Revenue": 1154124500000.0,
-        "Net Policyholder Benefits And Claims": 490569200000.0
+        "Net Policyholder Benefits And Claims": 490569200000.0,
+        "eps": 24.09
       },
       "FY2024": {
         "Tax Effect Of Unusual Items": 0.0,
@@ -87,7 +88,8 @@
         "Rent And Landing Fees": 1036300000.0,
         "Total Revenue": 1309255600000.0,
         "Operating Revenue": 1309255600000.0,
-        "Net Policyholder Benefits And Claims": 433756900000.0
+        "Net Policyholder Benefits And Claims": 433756900000.0,
+        "eps": 18.92
       },
       "FY2023": {
         "Tax Effect Of Unusual Items": 0.0,
@@ -126,7 +128,8 @@
         "Rent And Landing Fees": 964292000.0,
         "Total Revenue": 806390392000.0,
         "Operating Revenue": 806390392000.0,
-        "Net Policyholder Benefits And Claims": 306917846000.0
+        "Net Policyholder Benefits And Claims": 306917846000.0,
+        "eps": 17.19
       },
       "FY2022": {
         "Tax Effect Of Unusual Items": 0.0,
@@ -166,7 +169,8 @@
         "Rent And Landing Fees": 920548000.0,
         "Total Revenue": 829112363000.0,
         "Operating Revenue": 829112363000.0,
-        "Net Policyholder Benefits And Claims": 317392891000.0
+        "Net Policyholder Benefits And Claims": 317392891000.0,
+        "eps": 15.06
       },
       "FY2021": {
         "Otherunder Preferred Stock Dividend": -100000.0

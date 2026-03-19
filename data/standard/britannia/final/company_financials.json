@@ -6,7 +6,7 @@
     "sector": "Fast Moving Consumer Goods",
     "industry": "Food Products",
     "currency": "INR",
-    "unit": "\u20b9 Crores",
+    "unit": "₹ Crores",
     "price": 5856,
     "shares_outstanding": 240868296,
     "market_cap": 141052.47,
@@ -101,7 +101,7 @@
         "profit_before_tax": 919.03,
         "tax": 236.89,
         "net_profit": 679.96,
-        "eps": 0.0,
+        "eps": 28.23,
         "exceptional_items": null
       },
       "Jun 2025": {
@@ -116,7 +116,7 @@
         "profit_before_tax": 701.02,
         "tax": 180.89,
         "net_profit": 520.72,
-        "eps": 0.0,
+        "eps": 21.62,
         "exceptional_items": null
       },
       "Mar 2025": {
@@ -131,7 +131,7 @@
         "profit_before_tax": 751.93,
         "tax": 192.8,
         "net_profit": 559.95,
-        "eps": null,
+        "eps": 23.25,
         "exceptional_items": null
       }
     },
@@ -148,7 +148,7 @@
         "profit_before_tax": 2926.57,
         "tax": 748.71,
         "net_profit": 2178.73,
-        "eps": 0.0,
+        "eps": 90.45,
         "exceptional_items": null
       },
       "FY2024": {
@@ -163,7 +163,7 @@
         "profit_before_tax": 2913.47,
         "tax": 779.25,
         "net_profit": 2139.81,
-        "eps": 0.0,
+        "eps": 88.84,
         "exceptional_items": null
       },
       "FY2023": {
@@ -178,7 +178,7 @@
         "profit_before_tax": 3032.77,
         "tax": 716.45,
         "net_profit": 2321.77,
-        "eps": 0.0,
+        "eps": 96.39,
         "exceptional_items": null
       },
       "FY2022": {
@@ -193,7 +193,7 @@
         "profit_before_tax": 2078.33,
         "tax": 562.35,
         "net_profit": 1524.82,
-        "eps": 0.0,
+        "eps": 63.31,
         "exceptional_items": null
       }
     }

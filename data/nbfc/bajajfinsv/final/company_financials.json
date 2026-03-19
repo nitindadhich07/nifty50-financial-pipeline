@@ -6,7 +6,7 @@
     "sector": "Financial Services",
     "industry": "Finance",
     "currency": "INR",
-    "unit": "\u20b9 Crores",
+    "unit": "₹ Crores",
     "price": 1772.9,
     "shares_outstanding": 1600549988,
     "market_cap": 283761.51,
@@ -101,7 +101,7 @@
         "profit_before_tax": 5926.28,
         "tax": 1558.71,
         "net_profit": 2229.15,
-        "eps": 0.0,
+        "eps": 13.93,
         "exceptional_items": null
       },
       "Sep 2025": {
@@ -116,7 +116,7 @@
         "profit_before_tax": 6825.13,
         "tax": 2078.66,
         "net_profit": 2244.1,
-        "eps": 0.0,
+        "eps": 14.02,
         "exceptional_items": null
       },
       "Jun 2025": {
@@ -131,7 +131,7 @@
         "profit_before_tax": 7203.04,
         "tax": 1874.47,
         "net_profit": 2789.05,
-        "eps": 0.0,
+        "eps": 17.43,
         "exceptional_items": null
       },
       "Mar 2025": {
@@ -146,7 +146,7 @@
         "profit_before_tax": 6002.32,
         "tax": 1246.0,
         "net_profit": 2416.64,
-        "eps": null,
+        "eps": 15.1,
         "exceptional_items": null
       }
     },
@@ -163,7 +163,7 @@
         "profit_before_tax": 23748.21,
         "tax": 6190.57,
         "net_profit": 8872.31,
-        "eps": 0.0,
+        "eps": 55.43,
         "exceptional_items": null
       },
       "FY2024": {
@@ -178,7 +178,7 @@
         "profit_before_tax": 21375.03,
         "tax": 5779.67,
         "net_profit": 8147.79,
-        "eps": 0.0,
+        "eps": 50.91,
         "exceptional_items": null
       },
       "FY2023": {
@@ -193,7 +193,7 @@
         "profit_before_tax": 16811.13,
         "tax": 4601.59,
         "net_profit": 6417.28,
-        "eps": 0.0,
+        "eps": 40.09,
         "exceptional_items": null
       },
       "FY2022": {
@@ -208,7 +208,7 @@
         "profit_before_tax": 11270.58,
         "tax": 2957.05,
         "net_profit": 4556.77,
-        "eps": 0.0,
+        "eps": 28.47,
         "exceptional_items": null
       }
     }

@@ -15,6 +15,7 @@ class ProfitLoss:
     tax: Optional[float] = None
     net_profit: Optional[float] = None
     eps: Optional[float] = None
+    diluted_eps: Optional[float] = None
     exceptional_items: Optional[float] = None
 
 @dataclass

@@ -95,7 +95,7 @@
             "profit_before_tax": 5238.79,
             "tax": 1312.45,
             "net_profit": 4184.96,
-            "eps": 0.0
+            "eps": 4.5
           },
           "Jun 2025": {
             "revenue": 11196.22,
@@ -105,7 +105,7 @@
             "profit_before_tax": 4285.75,
             "tax": 867.99,
             "net_profit": 3630.58,
-            "eps": 0.0
+            "eps": 3.9
           },
           "Mar 2025": {
             "revenue": 12275.35,
@@ -114,7 +114,8 @@
             "interest": 2302.66,
             "profit_before_tax": 5011.3,
             "tax": 918.82,
-            "net_profit": 4142.87
+            "net_profit": 4142.87,
+            "eps": 4.45
           }
         }
       },
@@ -130,7 +131,7 @@
             "profit_before_tax": 19017.89,
             "tax": 3772.76,
             "net_profit": 15521.44,
-            "eps": 0.0
+            "eps": 16.69
           },
           "FY2024": {
             "revenue": 44202.75,
@@ -142,7 +143,7 @@
             "profit_before_tax": 19085.34,
             "tax": 2940.79,
             "net_profit": 15573.16,
-            "eps": 0.0
+            "eps": 16.74
           },
           "FY2023": {
             "revenue": 44005.22,
@@ -154,7 +155,7 @@
             "profit_before_tax": 17453.05,
             "tax": 2281.88,
             "net_profit": 15419.74,
-            "eps": 0.0
+            "eps": 16.58
           },
           "FY2022": {
             "revenue": 40789.99,
@@ -166,7 +167,7 @@
             "profit_before_tax": 20139.38,
             "tax": 2785.57,
             "net_profit": 16824.07,
-            "eps": 0.0
+            "eps": 18.09
           }
         },
         "balance_sheet": {
@@ -511,30 +512,34 @@
           "value": 4.19
         },
         {
+          "period": "Mar 2025",
+          "value": 4.45
+        },
+        {
           "period": "Jun 2025",
-          "value": 0.0
+          "value": 3.9
         },
         {
           "period": "Dec 2025",
-          "value": 0.0
+          "value": 4.5
         }
       ],
       "annual": [
         {
           "period": "FY2022",
-          "value": 0.0
+          "value": 18.09
         },
         {
           "period": "FY2023",
-          "value": 0.0
+          "value": 16.58
         },
         {
           "period": "FY2024",
-          "value": 0.0
+          "value": 16.74
         },
         {
           "period": "FY2025",
-          "value": 0.0
+          "value": 16.69
         }
       ]
     },
@@ -1037,7 +1042,8 @@
             "interest": "VERIFIED",
             "profit_before_tax": "VERIFIED",
             "tax": "VERIFIED",
-            "net_profit": "VERIFIED"
+            "net_profit": "VERIFIED",
+            "eps": "VERIFIED"
           }
         }
       },
@@ -1268,7 +1274,7 @@
         "label": "Dec 2024"
       }
     ],
-    "last_updated": "2026-03-17T11:51:20.571467+00:00",
+    "last_updated": "2026-03-19T11:57:56.048185+00:00",
     "unit": "\u20b9 Crores",
     "parser_version": "v4.0-PhaseB",
     "validation_passed": true,

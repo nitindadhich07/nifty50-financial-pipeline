@@ -6,7 +6,7 @@
     "sector": "Automobile and Auto Components",
     "industry": "Automobiles",
     "currency": "INR",
-    "unit": "\u20b9 Crores",
+    "unit": "₹ Crores",
     "price": 9111,
     "shares_outstanding": 279497838,
     "market_cap": 254650.48,
@@ -101,7 +101,7 @@
         "profit_before_tax": 3656.17,
         "tax": 906.35,
         "net_profit": 2749.82,
-        "eps": 0.0,
+        "eps": 98.38,
         "exceptional_items": null
       },
       "Sep 2025": {
@@ -116,7 +116,7 @@
         "profit_before_tax": 2998.66,
         "tax": 876.63,
         "net_profit": 2122.03,
-        "eps": 0.0,
+        "eps": 75.92,
         "exceptional_items": null
       },
       "Jun 2025": {
@@ -131,7 +131,7 @@
         "profit_before_tax": 2960.65,
         "tax": 750.21,
         "net_profit": 2210.44,
-        "eps": 0.0,
+        "eps": 79.09,
         "exceptional_items": null
       },
       "Mar 2025": {
@@ -146,7 +146,7 @@
         "profit_before_tax": 2484.23,
         "tax": 682.38,
         "net_profit": 1801.85,
-        "eps": null,
+        "eps": 64.47,
         "exceptional_items": null
       }
     },
@@ -163,7 +163,7 @@
         "profit_before_tax": 10223.53,
         "tax": 2898.8,
         "net_profit": 7324.73,
-        "eps": 0.0,
+        "eps": 262.07,
         "exceptional_items": null
       },
       "FY2024": {
@@ -178,7 +178,7 @@
         "profit_before_tax": 10040.04,
         "tax": 2331.8,
         "net_profit": 7708.24,
-        "eps": 0.0,
+        "eps": 275.79,
         "exceptional_items": null
       },
       "FY2023": {
@@ -193,7 +193,7 @@
         "profit_before_tax": 7841.98,
         "tax": 1781.77,
         "net_profit": 6060.21,
-        "eps": 0.0,
+        "eps": 216.82,
         "exceptional_items": null
       },
       "FY2022": {
@@ -208,7 +208,7 @@
         "profit_before_tax": 7651.68,
         "tax": 1485.81,
         "net_profit": 6165.87,
-        "eps": 0.0,
+        "eps": 220.61,
         "exceptional_items": null
       }
     }

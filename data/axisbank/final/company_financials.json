@@ -50,7 +50,8 @@
         "Insurance And Claims": 17949600000.0,
         "Rent And Landing Fees": 20901600000.0,
         "Total Revenue": 848908400000.0,
-        "Operating Revenue": 848908400000.0
+        "Operating Revenue": 848908400000.0,
+        "eps": 90.72
       },
       "FY2024": {
         "Tax Effect Of Unusual Items": 654581162.601626,
@@ -92,7 +93,8 @@
         "Insurance And Claims": 16105600000.0,
         "Rent And Landing Fees": 18338500000.0,
         "Total Revenue": 766030400000.0,
-        "Operating Revenue": 766030400000.0
+        "Operating Revenue": 766030400000.0,
+        "eps": 85.62
       },
       "FY2023": {
         "Tax Effect Of Unusual Items": 1738650000.0,
@@ -134,7 +136,8 @@
         "Insurance And Claims": 14255400000.0,
         "Rent And Landing Fees": 14812500000.0,
         "Total Revenue": 624158400000.0,
-        "Operating Revenue": 624158400000.0
+        "Operating Revenue": 624158400000.0,
+        "eps": 35.2
       },
       "FY2022": {
         "Tax Effect Of Unusual Items": -2856378532.192677,
@@ -176,7 +179,8 @@
         "Insurance And Claims": 12897400000.0,
         "Rent And Landing Fees": 13769800000.0,
         "Total Revenue": 511976400000.0,
-        "Operating Revenue": 511976400000.0
+        "Operating Revenue": 511976400000.0,
+        "eps": 46.04
       },
       "FY2021": {
         "Amortization": 0.0

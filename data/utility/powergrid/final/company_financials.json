@@ -6,7 +6,7 @@
     "sector": "Power",
     "industry": "Power",
     "currency": "INR",
-    "unit": "\u20b9 Crores",
+    "unit": "₹ Crores",
     "price": 297.1,
     "shares_outstanding": 9300603819,
     "market_cap": 276320.94,
@@ -101,7 +101,7 @@
         "profit_before_tax": 5238.79,
         "tax": 1312.45,
         "net_profit": 4184.96,
-        "eps": 0.0,
+        "eps": 4.5,
         "exceptional_items": null
       },
       "Jun 2025": {
@@ -116,7 +116,7 @@
         "profit_before_tax": 4285.75,
         "tax": 867.99,
         "net_profit": 3630.58,
-        "eps": 0.0,
+        "eps": 3.9,
         "exceptional_items": null
       },
       "Mar 2025": {
@@ -131,7 +131,7 @@
         "profit_before_tax": 5011.3,
         "tax": 918.82,
         "net_profit": 4142.87,
-        "eps": null,
+        "eps": 4.45,
         "exceptional_items": null
       }
     },
@@ -148,7 +148,7 @@
         "profit_before_tax": 19017.89,
         "tax": 3772.76,
         "net_profit": 15521.44,
-        "eps": 0.0,
+        "eps": 16.69,
         "exceptional_items": null
       },
       "FY2024": {
@@ -163,7 +163,7 @@
         "profit_before_tax": 19085.34,
         "tax": 2940.79,
         "net_profit": 15573.16,
-        "eps": 0.0,
+        "eps": 16.74,
         "exceptional_items": null
       },
       "FY2023": {
@@ -178,7 +178,7 @@
         "profit_before_tax": 17453.05,
         "tax": 2281.88,
         "net_profit": 15419.74,
-        "eps": 0.0,
+        "eps": 16.58,
         "exceptional_items": null
       },
       "FY2022": {
@@ -193,7 +193,7 @@
         "profit_before_tax": 20139.38,
         "tax": 2785.57,
         "net_profit": 16824.07,
-        "eps": 0.0,
+        "eps": 18.09,
         "exceptional_items": null
       }
     }

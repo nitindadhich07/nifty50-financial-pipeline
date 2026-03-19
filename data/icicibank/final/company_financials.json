@@ -48,7 +48,8 @@
         "Total Revenue": 2047152637000.0,
         "Operating Revenue": 2047152637000.0,
         "Occupancy And Equipment": 38200665000.0,
-        "Other Non Interest Expense": 658084121000.0
+        "Other Non Interest Expense": 658084121000.0,
+        "eps": 72.41
       },
       "FY2024": {
         "Tax Effect Of Unusual Items": 36167343.0,
@@ -92,7 +93,8 @@
         "Operating Revenue": 1612101952000.0,
         "Occupancy And Equipment": 36171827000.0,
         "Professional Expense And Contract Services Expense": 1759687000.0,
-        "Other Non Interest Expense": 570657210000.0
+        "Other Non Interest Expense": 570657210000.0,
+        "eps": 63.19
       },
       "FY2023": {
         "Tax Effect Of Unusual Items": 162773700.0,
@@ -137,7 +139,8 @@
         "Operating Revenue": 1355811552000.0,
         "Occupancy And Equipment": 34644161000.0,
         "Professional Expense And Contract Services Expense": 2020560000.0,
-        "Other Non Interest Expense": 470631640000.0
+        "Other Non Interest Expense": 470631640000.0,
+        "eps": 48.86
       },
       "FY2022": {
         "Tax Effect Of Unusual Items": 16990500.0,
@@ -182,7 +185,8 @@
         "Operating Revenue": 1163639822000.0,
         "Occupancy And Equipment": 26994748000.0,
         "Professional Expense And Contract Services Expense": 1926738000.0,
-        "Other Non Interest Expense": 430595198000.0
+        "Other Non Interest Expense": 430595198000.0,
+        "eps": 36.21
       },
       "FY2021": {
         "Rent Expense Supplemental": 13829516000.0,

@@ -6,7 +6,7 @@
     "sector": "Telecommunication",
     "industry": "Telecom - Services",
     "currency": "INR",
-    "unit": "\u20b9 Crores",
+    "unit": "₹ Crores",
     "price": 1823.4,
     "shares_outstanding": 5702105319,
     "market_cap": 1039721.88,
@@ -101,7 +101,7 @@
         "profit_before_tax": 12301.3,
         "tax": 3798.5,
         "net_profit": 6630.5,
-        "eps": 0.0,
+        "eps": 11.63,
         "exceptional_items": null
       },
       "Jun 2025": {
@@ -116,7 +116,7 @@
         "profit_before_tax": 10504.4,
         "tax": 3082.6,
         "net_profit": 5947.9,
-        "eps": 0.0,
+        "eps": 10.43,
         "exceptional_items": null
       },
       "Mar 2025": {
@@ -131,7 +131,7 @@
         "profit_before_tax": 9583.9,
         "tax": -2891.9,
         "net_profit": 11021.8,
-        "eps": null,
+        "eps": 19.33,
         "exceptional_items": null
       }
     },
@@ -148,7 +148,7 @@
         "profit_before_tax": 38398.5,
         "tax": 917.2,
         "net_profit": 33556.1,
-        "eps": 0.0,
+        "eps": 58.85,
         "exceptional_items": null
       },
       "FY2024": {
@@ -163,7 +163,7 @@
         "profit_before_tax": 12679.0,
         "tax": 4121.0,
         "net_profit": 7467.0,
-        "eps": 0.0,
+        "eps": 13.1,
         "exceptional_items": null
       },
       "FY2023": {
@@ -178,7 +178,7 @@
         "profit_before_tax": 16560.7,
         "tax": 4273.3,
         "net_profit": 8345.9,
-        "eps": 0.0,
+        "eps": 14.64,
         "exceptional_items": null
       },
       "FY2022": {
@@ -193,7 +193,7 @@
         "profit_before_tax": 12483.1,
         "tax": 4177.9,
         "net_profit": 4254.9,
-        "eps": 0.0,
+        "eps": 7.46,
         "exceptional_items": null
       }
     }
