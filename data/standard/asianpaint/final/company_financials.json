@@ -6,7 +6,7 @@
     "sector": "Consumer Durables",
     "industry": "Consumer Durables",
     "currency": "INR",
-    "unit": "\u20b9 Crores",
+    "unit": "₹ Crores",
     "price": 2240.5,
     "shares_outstanding": 959197790,
     "market_cap": 214908.26,
@@ -101,7 +101,7 @@
         "profit_before_tax": 1489.09,
         "tax": 415.17,
         "net_profit": 1059.87,
-        "eps": 0.0,
+        "eps": 11.05,
         "exceptional_items": null
       },
       "Sep 2025": {
@@ -116,7 +116,7 @@
         "profit_before_tax": 1391.52,
         "tax": 373.29,
         "net_profit": 993.59,
-        "eps": 0.0,
+        "eps": 10.36,
         "exceptional_items": null
       },
       "Jun 2025": {
@@ -131,7 +131,7 @@
         "profit_before_tax": 1508.71,
         "tax": 391.66,
         "net_profit": 1099.77,
-        "eps": 0.0,
+        "eps": 11.47,
         "exceptional_items": null
       },
       "Mar 2025": {
@@ -146,7 +146,7 @@
         "profit_before_tax": 1022.25,
         "tax": 321.42,
         "net_profit": 692.13,
-        "eps": null,
+        "eps": 7.22,
         "exceptional_items": null
       }
     },
@@ -163,7 +163,7 @@
         "profit_before_tax": 5103.07,
         "tax": 1393.36,
         "net_profit": 3667.23,
-        "eps": 0.0,
+        "eps": 38.23,
         "exceptional_items": null
       },
       "FY2024": {
@@ -178,7 +178,7 @@
         "profit_before_tax": 7347.77,
         "tax": 1790.08,
         "net_profit": 5460.23,
-        "eps": 0.0,
+        "eps": 56.92,
         "exceptional_items": null
       },
       "FY2023": {
@@ -193,7 +193,7 @@
         "profit_before_tax": 5688.83,
         "tax": 1493.5,
         "net_profit": 4106.45,
-        "eps": 0.0,
+        "eps": 42.81,
         "exceptional_items": null
       },
       "FY2022": {
@@ -208,7 +208,7 @@
         "profit_before_tax": 4187.72,
         "tax": 1102.91,
         "net_profit": 3030.57,
-        "eps": 0.0,
+        "eps": 31.59,
         "exceptional_items": null
       }
     }

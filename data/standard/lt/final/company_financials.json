@@ -6,7 +6,7 @@
     "sector": "Construction",
     "industry": "Civil Construction",
     "currency": "INR",
-    "unit": "\u20b9 Crores",
+    "unit": "₹ Crores",
     "price": 3536.5,
     "shares_outstanding": 1375611529,
     "market_cap": 486485.02,
@@ -101,7 +101,7 @@
         "profit_before_tax": 7160.98,
         "tax": 1987.99,
         "net_profit": 3215.11,
-        "eps": 0.0,
+        "eps": 23.37,
         "exceptional_items": null
       },
       "Jun 2025": {
@@ -116,7 +116,7 @@
         "profit_before_tax": 5859.53,
         "tax": 1533.96,
         "net_profit": 3617.19,
-        "eps": 0.0,
+        "eps": 26.3,
         "exceptional_items": null
       },
       "Mar 2025": {
@@ -131,7 +131,7 @@
         "profit_before_tax": 8014.02,
         "tax": 1880.58,
         "net_profit": 5497.26,
-        "eps": null,
+        "eps": 39.96,
         "exceptional_items": null
       }
     },
@@ -148,7 +148,7 @@
         "profit_before_tax": 23578.79,
         "tax": 5891.4,
         "net_profit": 15037.11,
-        "eps": 0.0,
+        "eps": 109.31,
         "exceptional_items": null
       },
       "FY2024": {
@@ -163,7 +163,7 @@
         "profit_before_tax": 20517.11,
         "tax": 4947.39,
         "net_profit": 13059.11,
-        "eps": 0.0,
+        "eps": 94.93,
         "exceptional_items": null
       },
       "FY2023": {
@@ -178,7 +178,7 @@
         "profit_before_tax": 17109.03,
         "tax": 4484.16,
         "net_profit": 10470.72,
-        "eps": 0.0,
+        "eps": 76.12,
         "exceptional_items": null
       },
       "FY2022": {
@@ -193,7 +193,7 @@
         "profit_before_tax": 14494.97,
         "tax": 4203.92,
         "net_profit": 8669.33,
-        "eps": 0.0,
+        "eps": 63.02,
         "exceptional_items": null
       }
     }

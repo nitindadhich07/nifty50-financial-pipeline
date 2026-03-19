@@ -95,7 +95,7 @@
             "profit_before_tax": 1148.43,
             "tax": 150.01,
             "net_profit": 998.42,
-            "eps": 0.0
+            "eps": 5.18
           },
           "Jun 2025": {
             "revenue": 5073.96,
@@ -105,7 +105,7 @@
             "profit_before_tax": 887.83,
             "tax": 241.24,
             "net_profit": 646.59,
-            "eps": 0.0
+            "eps": 3.35
           },
           "Mar 2025": {
             "revenue": 5447.64,
@@ -114,7 +114,8 @@
             "interest": 37.51,
             "profit_before_tax": 1192.17,
             "tax": 318.68,
-            "net_profit": 873.49
+            "net_profit": 873.49,
+            "eps": 4.53
           }
         }
       },
@@ -128,7 +129,7 @@
             "profit_before_tax": 4316.12,
             "tax": 1108.53,
             "net_profit": 3207.59,
-            "eps": 0.0
+            "eps": 16.63
           },
           "FY2022": {
             "revenue": 16789.53,
@@ -138,7 +139,7 @@
             "profit_before_tax": 3255.97,
             "tax": 865.45,
             "net_profit": 2390.52,
-            "eps": 0.0
+            "eps": 12.4
           }
         },
         "balance_sheet": {
@@ -414,22 +415,26 @@
           "value": 7.22
         },
         {
+          "period": "Mar 2025",
+          "value": 4.53
+        },
+        {
           "period": "Jun 2025",
-          "value": 0.0
+          "value": 3.35
         },
         {
           "period": "Dec 2025",
-          "value": 0.0
+          "value": 5.18
         }
       ],
       "annual": [
         {
           "period": "FY2022",
-          "value": 0.0
+          "value": 12.4
         },
         {
           "period": "FY2025",
-          "value": 0.0
+          "value": 16.63
         }
       ]
     },
@@ -796,7 +801,8 @@
             "interest": "VERIFIED",
             "profit_before_tax": "VERIFIED",
             "tax": "VERIFIED",
-            "net_profit": "VERIFIED"
+            "net_profit": "VERIFIED",
+            "eps": "VERIFIED"
           }
         }
       },
@@ -977,7 +983,7 @@
         "label": "Dec 2024"
       }
     ],
-    "last_updated": "2026-03-17T11:51:20.566844+00:00",
+    "last_updated": "2026-03-19T11:57:56.043080+00:00",
     "unit": "\u20b9 Crores",
     "parser_version": "v4.0-PhaseB",
     "validation_passed": true,

@@ -6,7 +6,7 @@
     "sector": "Chemicals",
     "industry": "Chemicals",
     "currency": "INR",
-    "unit": "\u20b9 Crores",
+    "unit": "₹ Crores",
     "price": 614.35,
     "shares_outstanding": 844164606,
     "market_cap": 51861.25,
@@ -101,7 +101,7 @@
         "profit_before_tax": 671.0,
         "tax": 181.0,
         "net_profit": 396.0,
-        "eps": 0.0,
+        "eps": 4.69,
         "exceptional_items": null
       },
       "Jun 2025": {
@@ -116,7 +116,7 @@
         "profit_before_tax": -190.0,
         "tax": -14.0,
         "net_profit": -88.0,
-        "eps": -0.0,
+        "eps": -1.04,
         "exceptional_items": null
       },
       "Mar 2025": {
@@ -131,7 +131,7 @@
         "profit_before_tax": 1377.0,
         "tax": 298.0,
         "net_profit": 896.0,
-        "eps": null,
+        "eps": 10.61,
         "exceptional_items": null
       }
     },
@@ -148,7 +148,7 @@
         "profit_before_tax": 829.0,
         "tax": 9.0,
         "net_profit": 897.0,
-        "eps": 0.0,
+        "eps": 10.63,
         "exceptional_items": null
       },
       "FY2024": {
@@ -163,7 +163,7 @@
         "profit_before_tax": -2087.0,
         "tax": -209.0,
         "net_profit": -1200.0,
-        "eps": -0.0,
+        "eps": -14.22,
         "exceptional_items": null
       },
       "FY2023": {
@@ -178,7 +178,7 @@
         "profit_before_tax": 5150.0,
         "tax": 736.0,
         "net_profit": 3570.0,
-        "eps": 0.0,
+        "eps": 42.29,
         "exceptional_items": null
       },
       "FY2022": {
@@ -193,7 +193,7 @@
         "profit_before_tax": 4966.0,
         "tax": 529.0,
         "net_profit": 3626.0,
-        "eps": 0.0,
+        "eps": 42.95,
         "exceptional_items": null
       }
     }

@@ -58,7 +58,8 @@
         "Gross Profit": 190428000000.0,
         "Cost Of Revenue": 135107000000.0,
         "Total Revenue": 325535000000.0,
-        "Operating Revenue": 325535000000.0
+        "Operating Revenue": 325535000000.0,
+        "eps": 67.89
       },
       "FY2024": {
         "Tax Effect Of Unusual Items": 1345040000.0,
@@ -109,7 +110,8 @@
         "Gross Profit": 163607000000.0,
         "Cost Of Revenue": 115557000000.0,
         "Total Revenue": 279164000000.0,
-        "Operating Revenue": 279164000000.0
+        "Operating Revenue": 279164000000.0,
+        "eps": 67.044
       },
       "FY2023": {
         "Tax Effect Of Unusual Items": 297750000.0,
@@ -159,7 +161,8 @@
         "Gross Profit": 139343000000.0,
         "Cost Of Revenue": 106536000000.0,
         "Total Revenue": 245879000000.0,
-        "Operating Revenue": 245879000000.0
+        "Operating Revenue": 245879000000.0,
+        "eps": 54.294
       },
       "FY2022": {
         "Tax Effect Of Unusual Items": -1169370000.0,
@@ -208,7 +211,8 @@
         "Gross Profit": 113840000000.0,
         "Cost Of Revenue": 100551000000.0,
         "Total Revenue": 214391000000.0,
-        "Operating Revenue": 214391000000.0
+        "Operating Revenue": 214391000000.0,
+        "eps": 28.416
       },
       "FY2021": {
         "Write Off": 8588000000.0,

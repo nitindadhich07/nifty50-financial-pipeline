@@ -6,7 +6,7 @@
     "sector": "Healthcare",
     "industry": "Pharmaceuticals",
     "currency": "INR",
-    "unit": "\u20b9 Crores",
+    "unit": "₹ Crores",
     "price": 6090,
     "shares_outstanding": 265468580,
     "market_cap": 161670.37,
@@ -101,7 +101,7 @@
         "profit_before_tax": 780.0,
         "tax": 197.0,
         "net_profit": 583.0,
-        "eps": 0.0,
+        "eps": 21.96,
         "exceptional_items": null
       },
       "Jun 2025": {
@@ -116,7 +116,7 @@
         "profit_before_tax": 733.0,
         "tax": 188.0,
         "net_profit": 545.0,
-        "eps": 0.0,
+        "eps": 20.53,
         "exceptional_items": null
       },
       "Mar 2025": {
@@ -131,7 +131,7 @@
         "profit_before_tax": 864.0,
         "tax": 202.0,
         "net_profit": 662.0,
-        "eps": null,
+        "eps": 24.94,
         "exceptional_items": null
       }
     },
@@ -148,7 +148,7 @@
         "profit_before_tax": 2916.0,
         "tax": 725.0,
         "net_profit": 2191.0,
-        "eps": 0.0,
+        "eps": 82.53,
         "exceptional_items": null
       },
       "FY2024": {
@@ -163,7 +163,7 @@
         "profit_before_tax": 2163.0,
         "tax": 563.0,
         "net_profit": 1600.0,
-        "eps": 0.0,
+        "eps": 60.27,
         "exceptional_items": null
       },
       "FY2023": {
@@ -178,7 +178,7 @@
         "profit_before_tax": 2369.0,
         "tax": 545.0,
         "net_profit": 1824.0,
-        "eps": 0.0,
+        "eps": 68.71,
         "exceptional_items": null
       },
       "FY2022": {
@@ -193,7 +193,7 @@
         "profit_before_tax": 3683.5,
         "tax": 723.05,
         "net_profit": 2960.45,
-        "eps": 0.0,
+        "eps": 111.52,
         "exceptional_items": null
       }
     }

@@ -50,7 +50,8 @@
         "Insurance And Claims": 90214162000.0,
         "Rent And Landing Fees": 12027226000.0,
         "Total Revenue": 762853099000.0,
-        "Operating Revenue": 762853099000.0
+        "Operating Revenue": 762853099000.0,
+        "eps": 22.258
       },
       "FY2024": {
         "Tax Effect Of Unusual Items": 17607567.034282,
@@ -92,7 +93,8 @@
         "Insurance And Claims": 83060279000.0,
         "Rent And Landing Fees": 9687465000.0,
         "Total Revenue": 696695998000.0,
-        "Operating Revenue": 696695998000.0
+        "Operating Revenue": 696695998000.0,
+        "eps": 18.29
       },
       "FY2023": {
         "Tax Effect Of Unusual Items": 26694693.420473,
@@ -134,7 +136,8 @@
         "Insurance And Claims": 72294023000.0,
         "Rent And Landing Fees": 9357718000.0,
         "Total Revenue": 518572514000.0,
-        "Operating Revenue": 518572514000.0
+        "Operating Revenue": 518572514000.0,
+        "eps": 14.992
       },
       "FY2022": {
         "Tax Effect Of Unusual Items": 88965944.845962,
@@ -176,7 +179,8 @@
         "Insurance And Claims": 65421371000.0,
         "Rent And Landing Fees": 8088815000.0,
         "Total Revenue": 459723509000.0,
-        "Operating Revenue": 459723509000.0
+        "Operating Revenue": 459723509000.0,
+        "eps": 12.152
       },
       "FY2021": {
         "Preferred Stock Dividends": 405000000.0

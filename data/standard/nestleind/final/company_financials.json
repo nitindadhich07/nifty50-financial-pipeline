@@ -6,7 +6,7 @@
     "sector": "Fast Moving Consumer Goods",
     "industry": "Food Products",
     "currency": "INR",
-    "unit": "\u20b9 Crores",
+    "unit": "₹ Crores",
     "price": 1207.1,
     "shares_outstanding": 1928314320,
     "market_cap": 232766.82,
@@ -101,7 +101,7 @@
         "profit_before_tax": 1148.43,
         "tax": 150.01,
         "net_profit": 998.42,
-        "eps": 0.0,
+        "eps": 5.18,
         "exceptional_items": null
       },
       "Jun 2025": {
@@ -116,7 +116,7 @@
         "profit_before_tax": 887.83,
         "tax": 241.24,
         "net_profit": 646.59,
-        "eps": 0.0,
+        "eps": 3.35,
         "exceptional_items": null
       },
       "Mar 2025": {
@@ -131,7 +131,7 @@
         "profit_before_tax": 1192.17,
         "tax": 318.68,
         "net_profit": 873.49,
-        "eps": null,
+        "eps": 4.53,
         "exceptional_items": null
       }
     },
@@ -148,7 +148,7 @@
         "profit_before_tax": 4316.12,
         "tax": 1108.53,
         "net_profit": 3207.59,
-        "eps": 0.0,
+        "eps": 16.63,
         "exceptional_items": null
       },
       "FY2022": {
@@ -163,7 +163,7 @@
         "profit_before_tax": 3255.97,
         "tax": 865.45,
         "net_profit": 2390.52,
-        "eps": 0.0,
+        "eps": 12.4,
         "exceptional_items": null
       }
     }

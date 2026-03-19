@@ -6,7 +6,7 @@
     "sector": "Metals & Mining",
     "industry": "Metals",
     "currency": "INR",
-    "unit": "\u20b9 Crores",
+    "unit": "₹ Crores",
     "price": 195.2,
     "shares_outstanding": 12483527171,
     "market_cap": 243678.45,
@@ -101,7 +101,7 @@
         "profit_before_tax": 3868.77,
         "tax": 1138.4,
         "net_profit": 2688.7,
-        "eps": 0.0,
+        "eps": 2.15,
         "exceptional_items": null
       },
       "Sep 2025": {
@@ -116,7 +116,7 @@
         "profit_before_tax": 4222.47,
         "tax": 1039.38,
         "net_profit": 3101.75,
-        "eps": 0.0,
+        "eps": 2.48,
         "exceptional_items": null
       },
       "Jun 2025": {
@@ -131,7 +131,7 @@
         "profit_before_tax": 3067.08,
         "tax": 1059.72,
         "net_profit": 2077.68,
-        "eps": 0.0,
+        "eps": 1.66,
         "exceptional_items": null
       },
       "Mar 2025": {
@@ -146,7 +146,7 @@
         "profit_before_tax": 2199.69,
         "tax": 998.81,
         "net_profit": 1300.81,
-        "eps": null,
+        "eps": 1.04,
         "exceptional_items": null
       }
     },
@@ -163,7 +163,7 @@
         "profit_before_tax": 8412.87,
         "tax": 5239.09,
         "net_profit": 3420.51,
-        "eps": 0.0,
+        "eps": 2.74,
         "exceptional_items": null
       },
       "FY2024": {
@@ -178,7 +178,7 @@
         "profit_before_tax": -1147.04,
         "tax": 3762.57,
         "net_profit": -4437.44,
-        "eps": -0.0,
+        "eps": -3.55,
         "exceptional_items": null
       },
       "FY2023": {
@@ -193,7 +193,7 @@
         "profit_before_tax": 18235.12,
         "tax": 10159.77,
         "net_profit": 8760.4,
-        "eps": 0.0,
+        "eps": 7.02,
         "exceptional_items": null
       },
       "FY2022": {
@@ -208,7 +208,7 @@
         "profit_before_tax": 50226.87,
         "tax": 8477.55,
         "net_profit": 40153.93,
-        "eps": 0.0,
+        "eps": 32.17,
         "exceptional_items": null
       }
     }

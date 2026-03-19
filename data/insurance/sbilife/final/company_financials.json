@@ -6,7 +6,7 @@
     "sector": "Financial Services",
     "industry": "Insurance",
     "currency": "INR",
-    "unit": "\u20b9 Crores",
+    "unit": "₹ Crores",
     "price": 1928,
     "shares_outstanding": 1003016796,
     "market_cap": 193381.64,
@@ -26,7 +26,7 @@
         "profit_before_tax": 597.53,
         "tax": 20.79,
         "net_profit": 576.74,
-        "eps": 0.0,
+        "eps": 5.75,
         "exceptional_items": null
       },
       "Jun 2025": {
@@ -41,7 +41,7 @@
         "profit_before_tax": 610.95,
         "tax": 16.58,
         "net_profit": 594.37,
-        "eps": 0.0,
+        "eps": 5.93,
         "exceptional_items": null
       },
       "Mar 2025": {
@@ -56,7 +56,7 @@
         "profit_before_tax": 840.61,
         "tax": 27.1,
         "net_profit": 813.51,
-        "eps": null,
+        "eps": 8.11,
         "exceptional_items": null
       },
       "Dec 2024": {
@@ -71,7 +71,7 @@
         "profit_before_tax": 571.61,
         "tax": 20.79,
         "net_profit": 550.82,
-        "eps": 0.0,
+        "eps": 5.49,
         "exceptional_items": null
       },
       "Sep 2024": {
@@ -86,7 +86,7 @@
         "profit_before_tax": 546.93,
         "tax": 17.51,
         "net_profit": 529.42,
-        "eps": 0.0,
+        "eps": 5.28,
         "exceptional_items": null
       },
       "Jun 2024": {
@@ -118,7 +118,7 @@
         "profit_before_tax": 2494.67,
         "tax": 81.37,
         "net_profit": 2413.3,
-        "eps": 0.0,
+        "eps": 24.06,
         "exceptional_items": null
       },
       "FY2024": {
@@ -133,7 +133,7 @@
         "profit_before_tax": 1942.11,
         "tax": 48.33,
         "net_profit": 1893.78,
-        "eps": 0.0,
+        "eps": 18.88,
         "exceptional_items": null
       },
       "FY2023": {
@@ -148,7 +148,7 @@
         "profit_before_tax": 1758.45,
         "tax": 37.87,
         "net_profit": 1720.57,
-        "eps": 0.0,
+        "eps": 17.15,
         "exceptional_items": null
       },
       "FY2022": {
@@ -163,7 +163,7 @@
         "profit_before_tax": 1560.76,
         "tax": 54.76,
         "net_profit": 1506.0,
-        "eps": 0.0,
+        "eps": 15.01,
         "exceptional_items": null
       }
     }

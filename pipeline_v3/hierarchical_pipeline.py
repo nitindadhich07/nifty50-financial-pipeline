@@ -172,7 +172,24 @@ class HierarchicalFinancialPipeline:
             pl = fin.profit_loss["annual"].get(fy)
             bs = fin.balance_sheet["annual"].get(fy)
             cf = fin.cash_flow["annual"].get(fy)
+            
+            # ── Automatic EPS Calculation if missing ─────────────────────────
+            if pl and pl.net_profit and pl.eps is None:
+                # Use current shares as fallback, or BS shares if available
+                shares = (bs.shares_outstanding if bs else None) or fin.company_info.get("shares_outstanding")
+                if shares:
+                    pl.eps = round((pl.net_profit * 10_000_000.0) / shares, 2)
+            
             fin.ratios["annual"][fy] = self.ratio_engine.compute_all(pl, bs, cf)
+            
+        # Same for standalone if it exists
+        st_annual_years = sorted(list(fin.standalone_profit_loss["annual"].keys()), reverse=True)
+        for fy in st_annual_years:
+            pl = fin.standalone_profit_loss["annual"].get(fy)
+            if pl and pl.net_profit and pl.eps is None:
+                shares = fin.company_info.get("shares_outstanding")
+                if shares:
+                    pl.eps = round((pl.net_profit * 10_000_000.0) / shares, 2)
 
         fin.growth["annual"]["revenue_yoy_pct"] = self.growth_engine.compute_yoy(fin.profit_loss["annual"], "revenue_from_operations")
         fin.growth["annual"]["net_profit_yoy_pct"] = self.growth_engine.compute_yoy(fin.profit_loss["annual"], "net_profit")
@@ -353,6 +370,7 @@ class HierarchicalFinancialPipeline:
                 "total_debt": ["Total Debt"],
                 "long_term_borrowings": ["Long Term Debt"],
                 "short_term_borrowings": ["Current Debt"],
+                "shares_outstanding": ["Ordinary Shares Number", "Share Issued"],
                 "cash_and_equivalents": ["Cash And Cash Equivalents", "Cash Cash Equivalents And Short Term Investments"],
                 "inventory": ["Inventory", "Inventories"],
                 "receivables": ["Receivables", "Accounts Receivable"],

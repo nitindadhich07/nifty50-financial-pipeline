@@ -6,7 +6,7 @@
     "sector": "IT",
     "industry": "IT - Software",
     "currency": "INR",
-    "unit": "\u20b9 Crores",
+    "unit": "₹ Crores",
     "price": 191.1,
     "shares_outstanding": 10488047796,
     "market_cap": 200426.59,
@@ -101,7 +101,7 @@
         "profit_before_tax": 4133.9,
         "tax": 988.9,
         "net_profit": 3119.0,
-        "eps": 0.0,
+        "eps": 2.97,
         "exceptional_items": null
       },
       "Sep 2025": {
@@ -116,7 +116,7 @@
         "profit_before_tax": 4282.4,
         "tax": 1020.0,
         "net_profit": 3246.2,
-        "eps": null,
+        "eps": 3.1,
         "exceptional_items": null
       },
       "Jun 2025": {
@@ -131,7 +131,7 @@
         "profit_before_tax": 4258.3,
         "tax": 921.8,
         "net_profit": 3330.4,
-        "eps": 0.0,
+        "eps": 3.18,
         "exceptional_items": null
       },
       "Mar 2025": {
@@ -146,7 +146,7 @@
         "profit_before_tax": 4743.0,
         "tax": 1154.9,
         "net_profit": 3569.6,
-        "eps": null,
+        "eps": 3.4,
         "exceptional_items": null
       }
     },
@@ -163,7 +163,7 @@
         "profit_before_tax": 17495.7,
         "tax": 4277.7,
         "net_profit": 13135.4,
-        "eps": 0.0,
+        "eps": 12.52,
         "exceptional_items": null
       },
       "FY2024": {
@@ -178,7 +178,7 @@
         "profit_before_tax": 14721.0,
         "tax": 3608.9,
         "net_profit": 11045.2,
-        "eps": 0.0,
+        "eps": 10.53,
         "exceptional_items": null
       },
       "FY2023": {
@@ -193,7 +193,7 @@
         "profit_before_tax": 14765.7,
         "tax": 3399.2,
         "net_profit": 11350.0,
-        "eps": 0.0,
+        "eps": 10.82,
         "exceptional_items": null
       },
       "FY2022": {
@@ -208,7 +208,7 @@
         "profit_before_tax": 15127.5,
         "tax": 2894.6,
         "net_profit": 12219.1,
-        "eps": 0.0,
+        "eps": 11.65,
         "exceptional_items": null
       }
     }

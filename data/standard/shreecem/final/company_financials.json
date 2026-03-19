@@ -6,7 +6,7 @@
     "sector": "Construction Materials",
     "industry": "Cement & Cement Products",
     "currency": "INR",
-    "unit": "\u20b9 Crores",
+    "unit": "₹ Crores",
     "price": 23695,
     "shares_outstanding": 36080748,
     "market_cap": 85493.33,
@@ -101,7 +101,7 @@
         "profit_before_tax": 323.96,
         "tax": 56.31,
         "net_profit": 266.7,
-        "eps": 0.0,
+        "eps": 73.92,
         "exceptional_items": null
       },
       "Jun 2025": {
@@ -116,7 +116,7 @@
         "profit_before_tax": 868.49,
         "tax": 224.83,
         "net_profit": 642.66,
-        "eps": 0.0,
+        "eps": 178.12,
         "exceptional_items": null
       },
       "Mar 2025": {
@@ -131,7 +131,7 @@
         "profit_before_tax": 757.67,
         "tax": 182.68,
         "net_profit": 574.32,
-        "eps": null,
+        "eps": 159.18,
         "exceptional_items": null
       }
     },
@@ -148,7 +148,7 @@
         "profit_before_tax": 1311.51,
         "tax": 187.71,
         "net_profit": 1122.77,
-        "eps": 0.0,
+        "eps": 311.18,
         "exceptional_items": null
       },
       "FY2024": {
@@ -163,7 +163,7 @@
         "profit_before_tax": 2959.2,
         "tax": 563.04,
         "net_profit": 2395.7,
-        "eps": 0.0,
+        "eps": 663.98,
         "exceptional_items": null
       },
       "FY2023": {
@@ -178,7 +178,7 @@
         "profit_before_tax": 1495.04,
         "tax": 225.9,
         "net_profit": 1270.7,
-        "eps": 0.0,
+        "eps": 352.18,
         "exceptional_items": null
       },
       "FY2022": {
@@ -193,7 +193,7 @@
         "profit_before_tax": 2891.82,
         "tax": 555.21,
         "net_profit": 2331.94,
-        "eps": 0.0,
+        "eps": 646.31,
         "exceptional_items": null
       }
     }

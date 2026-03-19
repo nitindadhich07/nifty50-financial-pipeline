@@ -6,7 +6,7 @@
     "sector": "Energy",
     "industry": "Oil & Gas",
     "currency": "INR",
-    "unit": "\u20b9 Crores",
+    "unit": "₹ Crores",
     "price": 1394.8,
     "shares_outstanding": 13532472634,
     "market_cap": 1887509.28,
@@ -101,7 +101,7 @@
         "profit_before_tax": 29697.0,
         "tax": 7530.0,
         "net_profit": 18645.0,
-        "eps": 0.0,
+        "eps": 13.78,
         "exceptional_items": null
       },
       "Jun 2025": {
@@ -116,7 +116,7 @@
         "profit_before_tax": 37146.0,
         "tax": 6465.0,
         "net_profit": 26994.0,
-        "eps": 0.0,
+        "eps": 19.95,
         "exceptional_items": null
       },
       "Mar 2025": {
@@ -131,7 +131,7 @@
         "profit_before_tax": 29103.0,
         "tax": 6669.0,
         "net_profit": 19407.0,
-        "eps": null,
+        "eps": 14.34,
         "exceptional_items": null
       }
     },
@@ -148,7 +148,7 @@
         "profit_before_tax": 106017.0,
         "tax": 25230.0,
         "net_profit": 69648.0,
-        "eps": 0.0,
+        "eps": 51.47,
         "exceptional_items": null
       },
       "FY2024": {
@@ -163,7 +163,7 @@
         "profit_before_tax": 104340.0,
         "tax": 25707.0,
         "net_profit": 69621.0,
-        "eps": 0.0,
+        "eps": 51.45,
         "exceptional_items": null
       },
       "FY2023": {
@@ -178,7 +178,7 @@
         "profit_before_tax": 94046.0,
         "tax": 20376.0,
         "net_profit": 66702.0,
-        "eps": 0.0,
+        "eps": 49.29,
         "exceptional_items": null
       },
       "FY2022": {
@@ -193,7 +193,7 @@
         "profit_before_tax": 82154.0,
         "tax": 15970.0,
         "net_profit": 60705.0,
-        "eps": 0.0,
+        "eps": 44.86,
         "exceptional_items": null
       }
     }
